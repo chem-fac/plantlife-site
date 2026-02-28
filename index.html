@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>技術者かねまるの「プラントライフ」| 化学を軸に視野が広がるPodcast</title>
+  <meta name="description" content="プラントライフは、化学プラントの技術者「かねまる」が化学と工場に関するトピックを分かりやすく紹介するPodcast番組です。">
+  <meta property="og:title" content="技術者かねまるの「プラントライフ」">
+  <meta property="og:description" content="化学を軸に視野が広がるPodcast">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════
+       HEADER — transparent glass style
+       ═══════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/logo-header.png" alt="PLANT LIFE" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="#home" class="nav-link active">ホーム</a>
+        <a href="#platforms" class="nav-link">聴き方</a>
+        <a href="#episodes" class="nav-link">エピソード</a>
+        <a href="#about" class="nav-link">番組について</a>
+        <a href="#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════
+         HERO — Dark chemistry-themed
+         ═══════════════════════════════════ -->
+    <section class="hero" id="home">
+      <!-- Hexagonal grid background -->
+
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="hero-title-line-1">化学を軸に、</span>
+            <span class="hero-title-line-2">視野が<em>広がる</em>。</span>
+          </h1>
+          <p class="hero-description">
+            化学プラントの技術者"かねまる"がお届けする「化学を軸に視野が広がる」ポッドキャスト。化学物質、資源循環、化学装置の仕組みまで、高度な科学技術も分かりやすく解説します。
+          </p>
+          <div class="hero-actions">
+            <a href="#episodes" class="btn-hero-primary">
+              <span class="btn-icon-circle">▶</span>
+              最新回を聴く
+            </a>
+            <a href="episodes/index.html" class="btn-hero-ghost">
+              エピソード一覧 →
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-artwork-frame">
+            <img src="images/podcast-artwork.png" alt="技術者かねまるの「プラントライフ」" class="hero-artwork">
+            <div class="hero-artwork-ring"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         PLATFORMS — Horizontal marquee style
+         ═══════════════════════════════════ -->
+    <section class="section platforms-section" id="platforms">
+      <div class="container">
+        <div class="section-label">LISTEN ON</div>
+        <h2 class="section-heading">お好きなプラットフォームで</h2>
+        <div class="platforms-row">
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener" class="platform-pill"
+            style="--logo-height:26px;">
+            <img src="images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener"
+            class="platform-pill" style="--logo-height:30px;">
+            <img src="images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener" class="platform-pill" style="--logo-height:32px;">
+            <img src="images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg"
+              alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
+            rel="noopener" class="platform-pill" style="--logo-height:30px;">
+            <img src="images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg"
+              alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener" class="platform-pill"
+            style="--logo-height:44px;">
+            <img src="images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+        </div>
+
+        <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promotion-card">
+          <div class="note-promo-icon">
+            <img src="images/note_icon.png" alt="note transcripts" loading="lazy">
+          </div>
+          <div class="note-promo-content">
+            <h3>エピソードの文字起こしをnoteで読む</h3>
+            <p>音声が聴けない時でも大丈夫！随所にリンクを載せた文章バージョンがnoteで読めます。</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         EPISODES — Latest 5 with thumbnails
+         ═══════════════════════════════════ -->
+    <section class="section episodes-section" id="episodes">
+      <div class="container">
+        <div class="section-label">EPISODES</div>
+        <div class="section-header-row">
+          <h2 class="section-heading">最新エピソード</h2>
+          <a href="episodes/index.html" class="link-arrow">
+            すべてのエピソード →
+          </a>
+        </div>
+
+        <!-- Latest episodes with thumbnails — loaded from episodes.json -->
+        <div class="ep-latest-grid" id="ep-latest-grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         ABOUT — Split panel + Bento grid
+         ═══════════════════════════════════ -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-label">ABOUT</div>
+        <h2 class="section-heading">番組について</h2>
+
+        <div class="about-split" style="align-items: center; gap: 32px;">
+          <div class="about-visual"
+            style="flex: 1; max-width: 320px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md);">
+            <img src="images/chemistry_hero.png" alt="化学を軸に視野が広がる番組" style="width: 100%; height: auto; display: block;">
+          </div>
+          <div class="about-text-panel" style="flex: 2;">
+            <p class="about-lead">
+              「プラントライフ」は化学を軸に皆さんの視野が広がるポッドキャストです。
+            </p>
+            <p>
+              化学物質の性質から、プラント設備の仕組み、技術者としての考え方まで、幅広いテーマを音声でお届けしています。通勤中や作業中にも気軽に聞ける技術コンテンツとして、5つのプラットフォームで配信中です。
+            </p>
+          </div>
+        </div>
+
+        <!-- Genre chips -->
+        <div class="genre-chips">
+          <span class="genre-chip"><i>🧪</i> 科学技術解説</span>
+          <span class="genre-chip"><i>🏭</i> プラント技術</span>
+          <span class="genre-chip"><i>💡</i> 技術者マインド</span>
+          <span class="genre-chip"><i>🎙️</i> ゲスト対談</span>
+          <span class="genre-chip"><i>🎉</i> 特別回</span>
+          <span class="genre-chip"><i>📰</i> ニュース</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TIMELINE — 番組の歩み
+         ═══════════════════════════════════ -->
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-label">HISTORY</div>
+        <h2 class="section-heading">番組の歩み</h2>
+
+        <div class="timeline">
+          <div class="timeline-track"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024.11</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_1.png" alt="配信開始" loading="lazy"></div>
+              <div class="timeline-card-content">
+                <h3>配信開始</h3>
+                <p>第1回を配信。プラントライフの歴史がスタート</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025.01</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_2.png" alt="ロゴ完成" loading="lazy"></div>
+              <div class="timeline-card-content">
+                <h3>ロゴ完成</h3>
+                <p>番組のアイデンティティとなるロゴが完成</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025.02</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_3.png" alt="定期配信開始" loading="lazy"></div>
+              <div class="timeline-card-content">
+                <h3>定期配信開始</h3>
+                <p>毎週水曜日の定期配信をスタート</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025.08</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_4.png" alt="科ポキアワード大賞" loading="lazy">
+              </div>
+              <div class="timeline-card-content">
+                <h3>科ポキアワード大賞</h3>
+                <p><a href="https://listen.style/p/kounoubu/pohjvc5h" target="_blank"
+                    rel="noopener">真夏の科ポキアワード</a>にて大賞を受賞</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025.10</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_5.png" alt="リアルイベント参加" loading="lazy">
+              </div>
+              <div class="timeline-card-content">
+                <h3>リアルイベント参加</h3>
+                <p><a href="https://mect-japan.com/2025/feature/event.html" target="_blank"
+                    rel="noopener">ものづくり系ポッドキャストの日 in MECT</a>・<a href="https://listen.style/event/36" target="_blank"
+                    rel="noopener">おまつりっすん2025</a>に参加</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025.11</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_6.png" alt="週2回配信へ" loading="lazy"></div>
+              <div class="timeline-card-content">
+                <h3>週2回配信へ</h3>
+                <p>毎週 水曜日・日曜日 の週2回配信にパワーアップ</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2026.03</div>
+            <div class="timeline-card">
+              <div class="timeline-img-wrap"><img src="images/timeline_event_8.png" alt="公式HP開設" loading="lazy"></div>
+              <div class="timeline-card-content">
+                <h3>公式HP開設</h3>
+                <p>番組の情報をまとめた公式サイトを開設</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         LINKS — Related activities
+         ═══════════════════════════════════ -->
+    <section class="section links-section">
+      <div class="container">
+        <div class="section-label">MORE FROM KANEMARU</div>
+        <h2 class="section-heading">もっと楽しむ</h2>
+        <div class="links-grid">
+          <a href="https://chem-fac.com/" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-logo"><img src="images/chemfac_thumb.png" alt="ChemFac" loading="lazy"></div>
+            <div class="link-card-text">
+              <h3>プラント技術解説サイト<br>ケムファク</h3>
+              <p>プラント技術の解説記事を発信</p>
+            </div>
+          </a>
+          <a href="https://monoist.itmedia.co.jp/mn/series/45879/" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-logo"><img src="images/monoist_thumb.png" alt="MONOist連載" loading="lazy"></div>
+            <div class="link-card-text">
+              <h3>MONOist連載<br>はじめての化学工学</h3>
+              <p>製造業系Webメディアで連載中</p>
+            </div>
+          </a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-logo"><img src="images/x_logo.png" alt="X" loading="lazy" style="max-height: 80px;">
+            </div>
+            <div class="link-card-text">
+              <h3>最新情報を取得<br>X</h3>
+              <p>リアルタイムで情報取得</p>
+            </div>
+          </a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener" class="link-card">
+            <div class="link-card-logo"><img src="images/note_logo.png" alt="note" loading="lazy"></div>
+            <div class="link-card-text">
+              <h3>コラム記事<br>note</h3>
+              <p>活動記録やコラムを掲載</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CTA — Minimal dark bar
+         ═══════════════════════════════════ -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-bar">
+          <div class="cta-item">
+            <h3>お便り歓迎</h3>
+            <p>番組へのご感想・ご質問をお待ちしています</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSckO0skaY1Nm-0ekGs3jOiuRt-bIq6RxynOGdK9uZ2_bxj8fA/viewform"
+              target="_blank" rel="noopener" class="cta-btn">お便りを送る</a>
+          </div>
+          <div class="cta-divider"></div>
+          <div class="cta-item">
+            <h3>お仕事の依頼</h3>
+            <p>執筆・講演・スポンサーなどのご相談</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSckO0skaY1Nm-0ekGs3jOiuRt-bIq6RxynOGdK9uZ2_bxj8fA/viewform"
+              target="_blank" rel="noopener" class="cta-btn">依頼する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════
+       FOOTER — Minimal
+       ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 技術者かねまるの「プラントライフ」</p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank">X</a>
+          <a href="https://note.com/chem_fac" target="_blank">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
