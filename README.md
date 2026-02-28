@@ -1,2 +1,2 @@
 # plantlife-site
-Podcast「プラントライフ」の紹介サイト
+Podcast「プラントライフ」の公式HP
