@@ -8,6 +8,7 @@ episodes.json と 各エピソード詳細ページを自動生成する。
   python build_episodes.py
 """
 
+import argparse
 import csv
 import json
 import os
@@ -145,6 +146,33 @@ def load_csv_data():
             }
 
     print(f"✅ CSV: {len(episodes)}件のエピソード")
+    return episodes
+
+
+# ── 既存のepisodes.jsonからURLデータを読み込む（CIモード用） ──
+def load_existing_json_data():
+    """既存の episodes.json からエピソードURL情報を読み込む"""
+    if not os.path.exists(OUTPUT_JSON):
+        print("⚠️ 既存の episodes.json が見つかりません")
+        return {}
+
+    print(f"📂 既存JSON読み込み中: {OUTPUT_JSON}")
+    with open(OUTPUT_JSON, encoding='utf-8') as f:
+        data = json.load(f)
+
+    episodes = {}
+    for ep in data:
+        ep_num = str(ep.get('number', ''))
+        if not ep_num:
+            continue
+        episodes[ep_num] = {
+            'number': ep_num,
+            'title': ep.get('title', ''),
+            'pub_date': ep.get('pub_date', ''),
+            'urls': ep.get('urls', {}),
+        }
+
+    print(f"✅ 既存JSON: {len(episodes)}件のエピソード")
     return episodes
 
 
@@ -306,35 +334,43 @@ def generate_episode_html(ep):
 
 # ── メイン処理 ──
 def main():
+    parser = argparse.ArgumentParser(description='プラントライフ Podcast サイト ビルドスクリプト')
+    parser.add_argument('--ci', action='store_true',
+                        help='CIモード: CSVの代わりに既存のepisodes.jsonからURL情報を読み込む')
+    args = parser.parse_args()
+
     os.makedirs(EPISODES_DIR, exist_ok=True)
 
-    # 1. CSVデータ読み込み
-    csv_data = load_csv_data()
-    if not csv_data:
-        print("❌ CSVデータが見つかりません")
-        return
+    # 1. URLデータ読み込み（CIモード or CSVモード）
+    if args.ci:
+        print("🔄 CIモードで実行中...")
+        url_data = load_existing_json_data()
+    else:
+        url_data = load_csv_data()
+        if not url_data:
+            print("❌ CSVデータが見つかりません")
+            return
 
     # 2. RSSデータ取得
     rss_data = fetch_rss_data()
 
-    # 3. マージ（RSSを主データソースとし、CSVのURLを補完）
+    # 3. マージ（RSSを主データソースとし、URLデータを補完）
     episodes = []
-    # まずRSSのエピソード番号をすべて処理
-    all_nums = set(rss_data.keys()) | set(csv_data.keys())
+    all_nums = set(rss_data.keys()) | set(url_data.keys())
     for ep_num in sorted(all_nums, key=lambda x: int(x)):
         rss = rss_data.get(ep_num, {})
-        csv_ep = csv_data.get(ep_num, {})
+        existing_ep = url_data.get(ep_num, {})
 
-        # CSVにしかないエピソードで、タイトルが#始まりでない場合はスキップ（紹介音源など）
-        if not rss and csv_ep:
-            csv_title = csv_ep.get('title', '')
-            if not is_numbered_episode(csv_title):
-                print(f"⏭️ スキップ（紹介音源）: {csv_title}")
+        # URLデータにしかないエピソードで、タイトルが#始まりでない場合はスキップ（紹介音源など）
+        if not rss and existing_ep:
+            ep_title = existing_ep.get('title', '')
+            if not is_numbered_episode(ep_title):
+                print(f"⏭️ スキップ（紹介音源）: {ep_title}")
                 continue
 
         thumbnail = rss.get('thumbnail', '')
         if rss.get('needs_ogp'):
-            listen_url = csv_ep.get('urls', {}).get('listen', '')
+            listen_url = existing_ep.get('urls', {}).get('listen', '')
             if listen_url:
                 ogp_img = fetch_listen_og_image(listen_url)
                 if ogp_img:
@@ -343,12 +379,12 @@ def main():
 
         ep = {
             'number': ep_num,
-            'title': rss.get('title_full', csv_ep.get('title', f'#{ep_num}')),
-            'pub_date': rss.get('pub_date', csv_ep.get('pub_date', '')),
+            'title': rss.get('title_full', existing_ep.get('title', f'#{ep_num}')),
+            'pub_date': rss.get('pub_date', existing_ep.get('pub_date', '')),
             'description': rss.get('description', ''),
             'thumbnail': thumbnail,
             'duration': rss.get('duration', ''),
-            'urls': csv_ep.get('urls', {}),
+            'urls': existing_ep.get('urls', {}),
         }
         episodes.append(ep)
 
