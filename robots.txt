@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plantlife.chem-fac.com/sitemap.xml
