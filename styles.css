@@ -1639,6 +1639,35 @@ img {
   }
 }
 
+.timeline-year-divider {
+  position: relative;
+  /* Track on mobile is left: 10px (width 2px -> center at 11px) */
+  /* Margin increased due to larger badge size to keep it perfectly centered */
+  margin: 56px 0 40px -38px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .timeline-year-divider {
+    /* Track on desktop is left: 8px (width 2px -> center at 9px) */
+    margin-left: -42px;
+  }
+}
+
+.timeline-year-badge {
+  background: var(--light-surface);
+  color: var(--brand);
+  border: 2px solid var(--brand);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 8px 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 105, 56, 0.1);
+}
+
 /* ══════════════════════════════════════
    NEWS — お知らせ
    ══════════════════════════════════════ */
