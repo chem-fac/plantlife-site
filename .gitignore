@@ -1,0 +1,12 @@
+# ビルドスクリプト（PodcastSiteBuilderリポジトリで管理）
+build_episodes.py
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+*.pyc
+__pycache__/
+
+# デプロイ用一時ディレクトリ
+_site/
