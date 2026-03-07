@@ -255,8 +255,8 @@ img {
 
 .nav-link:hover,
 .nav-link.active {
-  background: var(--brand);
-  color: white !important;
+  background: transparent;
+  color: var(--brand) !important;
 }
 
 .mobile-menu-btn {
