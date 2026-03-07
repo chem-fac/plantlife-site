@@ -253,10 +253,8 @@ img {
   color: var(--light-secondary);
 }
 
-.nav-link:hover,
-.nav-link.active {
-  background: transparent;
-  color: var(--brand) !important;
+.nav-link:hover {
+  opacity: 0.7;
 }
 
 .mobile-menu-btn {
