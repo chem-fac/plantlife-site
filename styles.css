@@ -14,13 +14,13 @@
   /* Hero palette (light green tint) */
   --hero-bg: #f5f7f6;
   --hero-surface: #e3ede6;
-  --hero-text: #1a2420;
+  --hero-text: #333333;
   --hero-muted: #5a6e62;
 
   /* Light palette (body) */
   --light-bg: #fafcfb;
   --light-surface: #ffffff;
-  --light-text: #1a2420;
+  --light-text: #333333;
   --light-secondary: #5a6e62;
   --light-muted: #95a69b;
   --light-border: #dfe8e2;
