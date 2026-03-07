@@ -12,7 +12,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/1-%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B-%E9%9F%B3%E5%A3%B0%E9%85%8D%E4%BF%A1%E3%81%AE%E3%83%88%E3%83%93%E3%83%A9%E5%8F%A9%E3%81%84%E3%81%A6%E3%81%BF%E3%81%9F-%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000683560166&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/cca0bd36-aa0a-4d04-8a85-daa1a56f4ad5/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-1-%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B%EF%BC%86%E9%9F%B3%E5%A3%B0%E9%85%8D%E4%BF%A1%E3%81%AE%E3%83%88%E3%83%93%E3%83%A9%E5%8F%A9%E3%81%84%E3%81%A6%E3%81%BF%E3%81%9F-%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=p7mfPSMIdQw"
-    }
+    },
+    "references": []
   },
   {
     "number": "2",
@@ -27,7 +28,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/2-%E6%B0%B4%E3%82%92%E5%86%B7%E3%82%84%E3%81%99%E3%81%A8%E6%B2%B8%E9%A8%B0%E3%81%99%E3%82%8B-%E7%9F%A5%E3%82%8C%E3%81%B0%E7%B4%8D%E5%BE%97%E3%81%AE%E7%89%A9%E7%90%86%E7%8F%BE%E8%B1%A1/id1789911793?i=1000683708558&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/8519ffe4-9bd5-4262-83ca-25fb6ac62910/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-2-%E6%B0%B4%E3%82%92%E5%86%B7%E3%82%84%E3%81%99%E3%81%A8%E6%B2%B8%E9%A8%B0%E3%81%99%E3%82%8B%EF%BC%81%EF%BC%9F%E7%9F%A5%E3%82%8C%E3%81%B0%E7%B4%8D%E5%BE%97%E3%81%AE%E7%89%A9%E7%90%86%E7%8F%BE%E8%B1%A1",
       "youtube": "https://www.youtube.com/watch?v=qYSHk9TlG48"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rxp0Agf8iGI?si=48y1DAMH0hBW_i9Z",
+        "title": "https://youtu.be/rxp0Agf8iGI?si=48y1DAMH0hBW_i9Z"
+      }
+    ]
   },
   {
     "number": "3",
@@ -42,7 +49,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/3-%E4%BB%8A%E5%B9%B4%E3%81%AE%E7%9B%AE%E6%A8%99-%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000686890951&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/2091374c-8e32-40fa-8930-734653923e14/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-3-%E4%BB%8A%E5%B9%B4%E3%81%AE%E7%9B%AE%E6%A8%99-%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=kh-G2ufB7bI"
-    }
+    },
+    "references": []
   },
   {
     "number": "4",
@@ -57,7 +65,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/4-%E7%94%9F%E7%94%A3%E8%A8%AD%E5%82%99%E5%B0%8E%E5%85%A5%E3%81%AE%E3%83%89%E3%82%BF%E3%83%90%E3%82%BF-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000690481777&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/f6882dc8-9769-4a5b-9739-fc0895e0363f/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-4-%E7%94%9F%E7%94%A3%E8%A8%AD%E5%82%99%E5%B0%8E%E5%85%A5%E3%81%AE%E3%83%89%E3%82%BF%E3%83%90%E3%82%BF-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=xi13H7LgA5Y"
-    }
+    },
+    "references": []
   },
   {
     "number": "5",
@@ -72,7 +81,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/5-%E5%8C%96%E5%AD%A6%E5%93%81%E3%81%A3%E3%81%A6%E3%83%A2%E3%83%8E%E3%81%A5%E3%81%8F%E3%82%8A%E6%84%9F%E3%81%82%E3%82%8B/id1789911793?i=1000696024852&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/be9cfb4c-1ea8-424b-b444-57236685ed1e/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-5-%E5%8C%96%E5%AD%A6%E5%93%81%E3%81%A3%E3%81%A6%E3%83%A2%E3%83%8E%E3%81%A5%E3%81%8F%E3%82%8A%E6%84%9F%E3%81%82%E3%82%8B%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=_qZlNO4R90Q"
-    }
+    },
+    "references": []
   },
   {
     "number": "6",
@@ -87,7 +97,21 @@
       "apple": "https://podcasts.apple.com/jp/podcast/6-3%E6%9C%888%E6%97%A5%E3%81%AF%E5%9B%BD%E9%9A%9B%E5%A5%B3%E6%80%A7%E3%83%87%E3%83%BC-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%A8%E5%83%8D%E3%81%8F%E5%A5%B3%E6%80%A7-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000697718883&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/ab384648-5390-4bdc-88d5-e31ee671e0c5/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-6-3%E6%9C%888%E6%97%A5%E3%81%AF%E5%9B%BD%E9%9A%9B%E5%A5%B3%E6%80%A7%E3%83%87%E3%83%BC%EF%BC%81%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%A8%E5%83%8D%E3%81%8F%E5%A5%B3%E6%80%A7%EF%BC%88%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5%EF%BC%89",
       "youtube": "https://www.youtube.com/watch?v=FsdNLl-iQOI"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.plan-international.jp/girlslab/meaning-womensday/",
+        "title": "https://www.plan-international.jp/girlslab/meaning-womensday/"
+      },
+      {
+        "url": "https://www.gender.go.jp/research/kenkyu/pdf/riko_sentaku_research_r03_gaiyo.pdf",
+        "title": "https://www.gender.go.jp/research/kenkyu/pdf/riko_sentaku_research_r03_gaiyo.pdf"
+      },
+      {
+        "url": "https://www.mext.go.jp/content/20230510-mxt_kiban01-100000016_1.pdf",
+        "title": "https://www.mext.go.jp/content/20230510-mxt_kiban01-100000016_1.pdf"
+      }
+    ]
   },
   {
     "number": "7",
@@ -102,7 +126,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/7-co2%E3%81%8B-%E8%B3%87%E6%BA%90%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%A3%E3%81%A6%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%9F-%E6%B3%A8%E7%9B%AE%E3%81%AEccus%E6%8A%80%E8%A1%93/id1789911793?i=1000698793673&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/5c6d7b44-7795-421b-954a-8ed74693b3b9/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-7-co2%E3%81%8B%E3%82%99%E8%B3%87%E6%BA%90%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%A3%E3%81%A6%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%9F%EF%BC%9F%E6%B3%A8%E7%9B%AE%E3%81%AEccus%E6%8A%80%E8%A1%93",
       "youtube": "https://www.youtube.com/watch?v=GKPPgS_XFno"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.mizuho-rt.co.jp/publication/2020/pdf/mhir20_ccu.pdf",
+        "title": "https://www.mizuho-rt.co.jp/publication/2020/pdf/mhir20_ccu.pdf"
+      }
+    ]
   },
   {
     "number": "8",
@@ -117,7 +147,37 @@
       "apple": "https://podcasts.apple.com/jp/podcast/8-%E6%A7%98%E3%80%85%E3%81%AA%E5%8C%96%E5%AD%A6%E5%93%81%E3%81%AE%E3%83%AA%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E6%89%8B%E6%B3%95%E3%82%92%E7%9F%A5%E3%82%8D%E3%81%86/id1789911793?i=1000699717303&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/bc2c2a36-7eb4-455e-8b22-5b3142ecee7a/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-8-%E6%A7%98%E3%80%85%E3%81%AA%E5%8C%96%E5%AD%A6%E5%93%81%E3%81%AE%E3%83%AA%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E6%89%8B%E6%B3%95%E3%82%92%E7%9F%A5%E3%82%8D%E3%81%86%EF%BC%81",
       "youtube": "https://www.youtube.com/watch?v=A-Me5JcAwAs"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.petbottle-rec.gr.jp/basic/product.html",
+        "title": "https://www.petbottle-rec.gr.jp/basic/product.html"
+      },
+      {
+        "url": "https://jp.mitsuichemicals.com/jp/sustainability/beplayer-replayer/soso/archive/column/recycle/2023-1102-01",
+        "title": "https://jp.mitsuichemicals.com/jp/sustainability/beplayer-replayer/soso/archive/column/recycle/2023-1102-01"
+      },
+      {
+        "url": "https://arc.asahi-kasei.co.jp/report/arc_report/pdf/rs-1069.pdf",
+        "title": "https://arc.asahi-kasei.co.jp/report/arc_report/pdf/rs-1069.pdf"
+      },
+      {
+        "url": "https://www.pwmi.or.jp/pdf/panf1.pdf",
+        "title": "https://www.pwmi.or.jp/pdf/panf1.pdf"
+      },
+      {
+        "url": "https://www.lion.co.jp/ja/news/2023/4302",
+        "title": "https://www.lion.co.jp/ja/news/2023/4302"
+      },
+      {
+        "url": "https://chemicaldaily.com/archives/603987",
+        "title": "https://chemicaldaily.com/archives/603987"
+      },
+      {
+        "url": "https://www.nikkakyo.org/system/files/%E5%BB%83%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%AE%E3%82%B1%E3%83%9F%E3%82%AB%E3%83%AB%E3%83%AA%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%8C%96%E5%AD%A6%E7%94%A3%E6%A5%AD%E3%81%AE%E3%81%82%E3%82%8B%E3%81%B9%E3%81%8D%E5%A7%BF%20%E6%96%87%E7%AB%A0%E7%B7%A8.pdf",
+        "title": "https://www.nikkakyo.org/system/files/%E5%BB%83%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%AE%E3%82%B1%E3%83%9F%E3%82%AB%E3%83%AB%E3%83%AA%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%8C%96%E5%AD%A6%E7%94%A3%E6%A5%AD%E3%81%AE%E3%81%82%E3%82%8B%E3%81%B9%E3%81%8D%E5%A7%BF%20%E6%96%87%E7%AB%A0%E7%B7%A8.pdf"
+      }
+    ]
   },
   {
     "number": "9",
@@ -132,7 +192,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/9-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%8F%B8%E4%BB%A4%E5%A1%94-dcs%E3%82%92%E7%9F%A5%E3%82%8C%E3%81%B0%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%8F%E3%82%8B%E5%B7%A5%E5%A0%B4%E3%81%AE%E8%A3%8F%E5%81%B4/id1789911793?i=1000700817828&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/3e3b6f80-218a-4095-8e2d-f209cb05ba8d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-9-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%8F%B8%E4%BB%A4%E5%A1%94%E3%80%9Cdcs%E3%82%92%E7%9F%A5%E3%82%8C%E3%81%B0%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%8F%E3%82%8B%E5%B7%A5%E5%A0%B4%E3%81%AE%E8%A3%8F%E5%81%B4",
       "youtube": "https://www.youtube.com/watch?v=dMHlhr59ewg"
-    }
+    },
+    "references": []
   },
   {
     "number": "10",
@@ -147,7 +208,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/10-%E7%84%A1%E6%96%99%E3%81%AE%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BFcoco-chemsep-%E3%81%8E%E3%82%8A%E3%81%8E%E3%82%8A%E3%81%A3%E3%81%99%E3%82%93/id1789911793?i=1000701481773&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/31edab3a-94ed-405e-a29e-10b2f08a3b1e/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-10-%E7%84%A1%E6%96%99%E3%81%AE%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BFcoco-chemsep-%E3%81%8E%E3%82%8A%E3%81%8E%E3%82%8A%E3%81%A3%E3%81%99%E3%82%93",
       "youtube": "https://www.youtube.com/watch?v=UkNvFGH37NE"
-    }
+    },
+    "references": []
   },
   {
     "number": "11",
@@ -162,7 +224,17 @@
       "apple": "https://podcasts.apple.com/jp/podcast/11-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B3%AA%E7%AE%A1%E7%90%86%E8%80%85%E3%81%AE%E3%81%93%E3%81%A8-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000702762749&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/1e95812d-6118-4140-b955-cc7fbe205b25/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-11-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B3%AA%E7%AE%A1%E7%90%86%E8%80%85%E3%81%AE%E3%81%93%E3%81%A8-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=_WW5lU1tQKA"
-    }
+    },
+    "references": [
+      {
+        "url": "https://keiyaku-watch.jp/media/hourei/kagakubusshitsukanrisya-2024/",
+        "title": "https://keiyaku-watch.jp/media/hourei/kagakubusshitsukanrisya-2024/"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_11389.html",
+        "title": "https://www.mhlw.go.jp/stf/newpage_11389.html"
+      }
+    ]
   },
   {
     "number": "12",
@@ -177,7 +249,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/12-%E6%96%B0%E5%B9%B4%E5%BA%A6-%E3%81%A0%E3%81%91%E3%81%A9%E8%A3%BD%E9%80%A0%E7%8F%BE%E5%A0%B4%E3%81%AF%E5%90%8C%E3%81%98%E9%A1%94%E3%81%B6%E3%82%8C/id1789911793?i=1000703664666&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/5b817c40-695a-40f0-9dc1-eaebe5baa9cd/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-12-%E6%96%B0%E5%B9%B4%E5%BA%A6%EF%BC%81%E3%81%A0%E3%81%91%E3%81%A9%E8%A3%BD%E9%80%A0%E7%8F%BE%E5%A0%B4%E3%81%AF%E5%90%8C%E3%81%98%E9%A1%94%E3%81%B6%E3%82%8C",
       "youtube": "https://www.youtube.com/watch?v=7oV8YilXc_g"
-    }
+    },
+    "references": []
   },
   {
     "number": "13",
@@ -192,7 +265,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/13-%E6%97%A9%E9%80%9F-%E5%A4%A7%E9%98%AA%E4%B8%87%E5%8D%9A%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F-%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%E5%8C%96%E5%AD%A6%E3%81%AE%E8%A9%B1%E3%81%A8%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC/id1789911793?i=1000704513357&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/1478bf3e-5688-4d95-a3d8-5d4c095b5754/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-13-%E6%97%A9%E9%80%9F%E3%80%81%E5%A4%A7%E9%98%AA%E4%B8%87%E5%8D%9A%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F%EF%BC%81%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%E5%8C%96%E5%AD%A6%E3%81%AE%E8%A9%B1%E3%81%A8%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC",
       "youtube": "https://www.youtube.com/watch?v=XzRdP3dpG6U"
-    }
+    },
+    "references": []
   },
   {
     "number": "14",
@@ -207,7 +281,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/14-%E5%8A%9B%E3%81%8C%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BF%9C%E3%82%92%E9%A7%86%E5%8B%95%E3%81%99%E3%82%8B%E3%83%A1%E3%82%AB%E3%83%8E%E3%82%B1%E3%83%9F%E3%82%AB%E3%83%AB-%E3%83%A2%E3%83%8E%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000705462806&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e32836d4-89c9-4509-a2b9-f552a9cbb18d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-14-%E5%8A%9B%E3%81%8C%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BF%9C%E3%82%92%E9%A7%86%E5%8B%95%E3%81%99%E3%82%8B%E3%83%A1%E3%82%AB%E3%83%8E%E3%82%B1%E3%83%9F%E3%82%AB%E3%83%AB-%E3%83%A2%E3%83%8E%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=lKfp7_EogaY"
-    }
+    },
+    "references": []
   },
   {
     "number": "15",
@@ -222,7 +297,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/15-%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%8C%96%E3%81%A0%E3%81%91%E3%81%98%E3%82%83%E3%81%AA%E3%81%84-%E9%9B%BB%E5%AD%90%E5%AE%9F%E9%A8%93%E3%83%8E%E3%83%BC%E3%83%88-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000706589801&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/eadc345a-69e4-4747-9233-9ce26c8dc150/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-15-%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%8C%96%E3%81%A0%E3%81%91%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%EF%BC%81%E9%9B%BB%E5%AD%90%E5%AE%9F%E9%A8%93%E3%83%8E%E3%83%BC%E3%83%88-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=fOds-x7L0is"
-    }
+    },
+    "references": []
   },
   {
     "number": "16",
@@ -237,7 +313,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/16-%E5%B0%82%E9%96%80%E5%9B%9E-dcs%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6fa%E3%81%AE%E6%96%B9%E5%90%91%E3%81%91%E3%81%AB%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/id1789911793?i=1000708378060&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/44b35826-d479-4a18-be62-3f2d6bc413c0/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-16-%E5%B0%82%E9%96%80%E5%9B%9E%E3%80%8Cdcs%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6fa%E3%81%AE%E6%96%B9%E5%90%91%E3%81%91%E3%81%AB%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B%E3%80%8D",
       "youtube": "https://www.youtube.com/watch?v=Bky1zpMJQM8"
-    }
+    },
+    "references": []
   },
   {
     "number": "17",
@@ -252,7 +329,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/17-%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B%E3%81%AE%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%A7notebooklm%E3%81%AB%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F/id1789911793?i=1000709189900&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/533802db-e41c-440e-9e4e-c81dfe2fecca/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-17-%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B%E3%81%AE%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%A7notebooklm%E3%81%AB%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F",
       "youtube": "https://www.youtube.com/watch?v=DfDT-vz_ky0"
-    }
+    },
+    "references": []
   },
   {
     "number": "18",
@@ -267,7 +345,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/18-%E8%A9%B1%E9%A1%8C%E3%81%AEpfas%E3%82%92%E5%B0%91%E3%81%97%E8%A9%B3%E3%81%97%E3%81%8F%E5%AD%A6%E3%82%93%E3%81%A7%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B/id1789911793?i=1000710174617&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/c88ad536-4f8a-41e7-9a4c-70942d7f5314/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-18-%E8%A9%B1%E9%A1%8C%E3%81%AEpfas%E3%82%92%E5%B0%91%E3%81%97%E8%A9%B3%E3%81%97%E3%81%8F%E5%AD%A6%E3%82%93%E3%81%A7%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=EiIPXbueZVE"
-    }
+    },
+    "references": [
+      {
+        "url": "https://cfcpj.jp/pfas.html",
+        "title": "https://cfcpj.jp/pfas.html"
+      },
+      {
+        "url": "https://www.chemicaldaily.co.jp/blog/column_chem_08",
+        "title": "https://www.chemicaldaily.co.jp/blog/column_chem_08"
+      },
+      {
+        "url": "https://www.chemical-substance.com/pops/aboutpops.html",
+        "title": "https://www.chemical-substance.com/pops/aboutpops.html"
+      },
+      {
+        "url": "https://www.env.go.jp/content/000242834.pdf",
+        "title": "https://www.env.go.jp/content/000242834.pdf"
+      }
+    ]
   },
   {
     "number": "19",
@@ -282,7 +378,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/19-%E4%B8%BB%E9%A3%9F%E3%81%8C%E9%80%B2%E5%8C%96-%E3%81%8A%E7%B1%B3%E3%81%8C%E7%87%83%E6%96%99-%E5%8C%96%E5%AD%A6%E5%93%81%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B%E6%9C%AA%E6%9D%A5%E5%9B%B3-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000711074736&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e83719f7-396a-4781-b716-8caae6a8a37f/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-19-%E4%B8%BB%E9%A3%9F%E3%81%8C%E9%80%B2%E5%8C%96%EF%BC%81%E3%81%8A%E7%B1%B3%E3%81%8C%E7%87%83%E6%96%99%E3%83%BB%E5%8C%96%E5%AD%A6%E5%93%81%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B%E6%9C%AA%E6%9D%A5%E5%9B%B3-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=T00loHTU6U0"
-    }
+    },
+    "references": [
+      {
+        "url": "https://biomassresin.official.ec",
+        "title": "https://biomassresin.official.ec"
+      },
+      {
+        "url": "https://www.kubota.co.jp/news/2024/management-20240530.html",
+        "title": "https://www.kubota.co.jp/news/2024/management-20240530.html"
+      },
+      {
+        "url": "https://foodlosspaper.com/kome-kami",
+        "title": "https://foodlosspaper.com/kome-kami"
+      },
+      {
+        "url": "https://mit-corp.biz/rice-husk-ash/",
+        "title": "https://mit-corp.biz/rice-husk-ash/"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/rpsj/68/3/68_111/_pdf",
+        "title": "https://www.jstage.jst.go.jp/article/rpsj/68/3/68_111/_pdf"
+      }
+    ]
   },
   {
     "number": "20",
@@ -297,7 +415,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/20-%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%81%8C%E9%A2%A8%E5%91%82%E4%B8%80%E6%9D%AF%E3%81%AE%E6%B0%B4%E3%81%A7%E5%87%BA%E6%9D%A5%E3%81%A6%E3%81%84%E3%82%8B-%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%92%E5%AD%A6%E3%81%BC%E3%81%86/id1789911793?i=1000712340420&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/b9e225f8-7472-453c-8fe9-2c71756ecaf2/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-20-%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%81%8C%E9%A2%A8%E5%91%82%E4%B8%80%E6%9D%AF%E3%81%AE%E6%B0%B4%E3%81%A7%E5%87%BA%E6%9D%A5%E3%81%A6%E3%81%84%E3%82%8B%EF%BC%81%EF%BC%9F%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%92%E5%AD%A6%E3%81%BC%E3%81%86",
       "youtube": "https://www.youtube.com/watch?v=j1osH7Z9m38"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.env.go.jp/water/virtual_water/kyouzai.html",
+        "title": "https://www.env.go.jp/water/virtual_water/kyouzai.html"
+      }
+    ]
   },
   {
     "number": "21",
@@ -312,7 +436,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/21-%E8%87%AA%E8%BA%AB%E3%81%AE%E6%88%90%E9%95%B7%E3%81%AB%E6%8A%80%E8%A1%93%E5%A3%AB%E5%8F%97%E9%A8%93%E3%81%AF%E3%81%A9%E3%81%86%E3%81%A7%E3%81%99%E3%81%8B/id1789911793?i=1000713307469&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e6e6de60-d5ef-48c4-92ac-d92dd0563b24/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-21-%E8%87%AA%E8%BA%AB%E3%81%AE%E6%88%90%E9%95%B7%E3%81%AB%E6%8A%80%E8%A1%93%E5%A3%AB%E5%8F%97%E9%A8%93%E3%81%AF%E3%81%A9%E3%81%86%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=lYWYVYTFNdM"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu7/attach/1413398.htm",
+        "title": "https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu7/attach/1413398.htm"
+      }
+    ]
   },
   {
     "number": "22",
@@ -327,7 +457,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/22-%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC-%E3%83%9C%E3%83%83%E3%82%B7%E3%83%A5%E6%B3%95-%E9%A3%9F%E7%B3%A7%E5%8D%B1%E6%A9%9F%E3%82%92%E6%95%91%E3%81%A3%E3%81%9F%E5%8C%96%E5%AD%A6%E3%81%AE%E5%A4%A7%E9%80%86%E8%BB%A2/id1789911793?i=1000714406783&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/7ce61db8-9bc3-4682-88e0-0abe8118eb40/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-22-%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%BB%E3%83%9C%E3%83%83%E3%82%B7%E3%83%A5%E6%B3%95%EF%BC%9A%E9%A3%9F%E7%B3%A7%E5%8D%B1%E6%A9%9F%E3%82%92%E6%95%91%E3%81%A3%E3%81%9F%E5%8C%96%E5%AD%A6%E3%81%AE%E5%A4%A7%E9%80%86%E8%BB%A2",
       "youtube": "https://www.youtube.com/watch?v=2WwSMw372cE"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.titech.ac.jp/public-relations/about/stories/ammonia-synthesis",
+        "title": "https://www.titech.ac.jp/public-relations/about/stories/ammonia-synthesis"
+      },
+      {
+        "url": "https://www.chart.co.jp/subject/rika/scnet/27/Sc27-2.pdf",
+        "title": "https://www.chart.co.jp/subject/rika/scnet/27/Sc27-2.pdf"
+      },
+      {
+        "url": "https://www.jst.go.jp/seika/bt2020-04.html",
+        "title": "https://www.jst.go.jp/seika/bt2020-04.html"
+      },
+      {
+        "url": "https://www.titech.ac.jp/news/2023/066470",
+        "title": "https://www.titech.ac.jp/news/2023/066470"
+      }
+    ]
   },
   {
     "number": "23",
@@ -342,7 +490,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/23-%E3%81%A8%E3%82%8D%E3%81%A8%E3%82%8D%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%81%A8%E6%88%A6%E3%81%88-%E7%B2%98%E5%BA%A6%E3%81%AE%E3%81%8A%E3%81%AF%E3%81%AA%E3%81%97-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5/id1789911793?i=1000715342441&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/95d1b42e-3d52-42e5-bbf6-71e71fec887a/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-23-%E3%81%A8%E3%82%8D%E3%81%A8%E3%82%8D%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%81%A8%E6%88%A6%E3%81%88%EF%BC%81%E7%B2%98%E5%BA%A6%E3%81%AE%E3%81%8A%E3%81%AF%E3%81%AA%E3%81%97-%E7%A7%91%E5%AD%A6%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5",
       "youtube": "https://www.youtube.com/watch?v=yMROaArNtiM"
-    }
+    },
+    "references": [
+      {
+        "url": "https://nitto.org/product/%E7%B2%98%E5%BA%A6%E8%A1%A8/",
+        "title": "https://nitto.org/product/%E7%B2%98%E5%BA%A6%E8%A1%A8/"
+      }
+    ]
   },
   {
     "number": "24",
@@ -357,7 +511,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/24-%E6%B0%B4%E7%B4%A0%E3%81%A3%E3%81%A613%E8%89%B2%E3%81%82%E3%82%93%E3%81%AD%E3%82%93/id1789911793?i=1000716387495&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/56b676de-0540-4666-8d22-ed6b93de734b/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-24-%E6%B0%B4%E7%B4%A0%E3%81%A3%E3%81%A613%E8%89%B2%E3%81%82%E3%82%93%E3%81%AD%E3%82%93",
       "youtube": "https://www.youtube.com/watch?v=Qy3L4cnpyoE"
-    }
+    },
+    "references": []
   },
   {
     "number": "25",
@@ -372,7 +527,33 @@
       "apple": "https://podcasts.apple.com/jp/podcast/25-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF/id1789911793?i=1000717423065&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e4b8c59c-d481-49d7-8c31-286e6b854377/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-25-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF",
       "youtube": "https://www.youtube.com/watch?v=Alhx1MqIIZA"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.env.go.jp/page_00357.html",
+        "title": "https://www.env.go.jp/page_00357.html"
+      },
+      {
+        "url": "https://www.mufg-firstsentier-sustainability.jp/content/dam/sustainabilityinstitute/assets/research/FSI_Sustainability-Investment-Institute-Report_abbreviated.pdf",
+        "title": "https://www.mufg-firstsentier-sustainability.jp/content/dam/sustainabilityinstitute/assets/research/FSI_Sustainability-Investment-Institute-Report_abbreviated.pdf"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41591-024-03453-1",
+        "title": "https://www.nature.com/articles/s41591-024-03453-1"
+      },
+      {
+        "url": "https://www.kaneka.co.jp/solutions/phbh/index.html",
+        "title": "https://www.kaneka.co.jp/solutions/phbh/index.html"
+      },
+      {
+        "url": "https://www.env.go.jp/water/post_113_00005.html",
+        "title": "https://www.env.go.jp/water/post_113_00005.html"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "26",
@@ -387,7 +568,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/26-%E6%8A%80%E8%A1%93%E5%A3%AB%E8%A9%A6%E9%A8%93%E3%81%AB%E6%B3%A8%E3%81%84%E3%81%A0%E5%8D%8A%E5%B9%B4%E9%96%93%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8D%E3%81%86/id1789911793?i=1000718524244&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/c419a7d2-2b11-4d0a-8d23-a3968d1d51c2/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-26-%E6%8A%80%E8%A1%93%E5%A3%AB%E8%A9%A6%E9%A8%93%E3%81%AB%E6%B3%A8%E3%81%84%E3%81%A0%E5%8D%8A%E5%B9%B4%E9%96%93%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8D%E3%81%86%EF%BC%81",
       "youtube": "https://www.youtube.com/watch?v=6AB1nrfn6FY"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "27",
@@ -402,7 +589,37 @@
       "apple": "https://podcasts.apple.com/jp/podcast/27-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%8C%E9%96%89%E9%8E%96%E3%81%97%E3%81%9F%E3%82%89%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%E3%81%AE-eneos-%E5%92%8C%E6%AD%8C%E5%B1%B1%E8%A3%BD%E6%B2%B9%E6%89%80%E3%82%92%E4%BE%8B%E3%81%AB/id1789911793?i=1000719698273&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/de35eb11-2d3c-4b83-afd5-fee01c261d39/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-27-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%8C%E9%96%89%E9%8E%96%E3%81%97%E3%81%9F%E3%82%89%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%E3%81%AE%EF%BC%9F%EF%BD%9Eeneos-%E5%92%8C%E6%AD%8C%E5%B1%B1%E8%A3%BD%E6%B2%B9%E6%89%80%E3%82%92%E4%BE%8B%E3%81%AB%EF%BD%9E",
       "youtube": "https://www.youtube.com/watch?v=D6Zw32PYFHU"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.eneos.co.jp/newsrelease/20220125_01_01_2008117.pdf",
+        "title": "https://www.eneos.co.jp/newsrelease/20220125_01_01_2008117.pdf"
+      },
+      {
+        "url": "https://www.pref.wakayama.lg.jp/prefg/063100/d00219922_d/fil/koushinban.pdf",
+        "title": "https://www.pref.wakayama.lg.jp/prefg/063100/d00219922_d/fil/koushinban.pdf"
+      },
+      {
+        "url": "https://www.meti.go.jp/shingikai/energy_environment/demand_forecast/pdf/20240426_1.pdf",
+        "title": "https://www.meti.go.jp/shingikai/energy_environment/demand_forecast/pdf/20240426_1.pdf"
+      },
+      {
+        "url": "https://www.fdma.go.jp/relocation/neuter/topics/fieldList4_16/pdf/r05/01/shiryou1-2.pdf",
+        "title": "https://www.fdma.go.jp/relocation/neuter/topics/fieldList4_16/pdf/r05/01/shiryou1-2.pdf"
+      },
+      {
+        "url": "https://www.jpca.or.jp/statistics/monthly/mainpd.html",
+        "title": "https://www.jpca.or.jp/statistics/monthly/mainpd.html"
+      },
+      {
+        "url": "https://www.kerc.or.jp/report/2024/12/1224.html",
+        "title": "https://www.kerc.or.jp/report/2024/12/1224.html"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "28",
@@ -417,7 +634,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/28-%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86listen-2023%E5%B9%B48%E6%9C%88%E3%81%AF%E4%BD%95%E3%81%97%E3%81%A6%E3%81%9F/id1789911793?i=1000720309317&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/cecffd34-244a-4307-9e2a-c2452328700d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-28-%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86listen%EF%BC%812023%E5%B9%B48%E6%9C%88%E3%81%AF%E4%BD%95%E3%81%97%E3%81%A6%E3%81%9F%EF%BC%9F%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=6DBYjpPEfFk"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "29",
@@ -432,7 +655,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/29-%E8%BA%AB%E8%BF%91%E3%81%AA-%E5%85%89%E3%82%8B-%E3%82%92%E5%8C%96%E5%AD%A6%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%A7%E5%AD%A6%E3%82%93%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86/id1789911793?i=1000720797396&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/2cc0e64b-76c6-436a-a02e-d64743ca86f2/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-29-%E8%BA%AB%E8%BF%91%E3%81%AA%E3%80%8C%E5%85%89%E3%82%8B%E3%80%8D%E3%82%92%E5%8C%96%E5%AD%A6%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%A7%E5%AD%A6%E3%82%93%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81",
       "youtube": "https://www.youtube.com/watch?v=83D7jjjIPsA"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "30",
@@ -447,7 +676,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/30-%E7%95%AA%E7%B5%84%E3%81%AE%E3%82%A2%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%AB%E8%BE%BC%E3%82%81%E3%81%9F%E6%83%B3%E3%81%84-%E3%82%B8%E3%83%A3%E3%82%B1%E3%82%AE%E3%82%AD%E9%80%A3%E5%8B%95%E4%BC%81%E7%94%BB/id1789911793?i=1000721712920&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/4f592b1e-a115-448a-9d1d-5b397c9883a7/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-30-%E7%95%AA%E7%B5%84%E3%81%AE%E3%82%A2%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%AB%E8%BE%BC%E3%82%81%E3%81%9F%E6%83%B3%E3%81%84-%E3%82%B8%E3%83%A3%E3%82%B1%E3%82%AE%E3%82%AD%E9%80%A3%E5%8B%95%E4%BC%81%E7%94%BB",
       "youtube": "https://www.youtube.com/watch?v=k8EyxKBB-8w"
-    }
+    },
+    "references": [
+      {
+        "url": "https://coconala.com/users/1829673",
+        "title": "https://coconala.com/users/1829673"
+      },
+      {
+        "url": "https://chemical-engineering-review.com/piping-and-instrumentation-diagram-composition/",
+        "title": "https://chemical-engineering-review.com/piping-and-instrumentation-diagram-composition/"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      },
+      {
+        "url": "https://camp-fire.jp/projects/866687/view?utm_campaign=cp_share_c_msg_projects_show",
+        "title": "https://camp-fire.jp/projects/866687/view?utm_campaign=cp_share_c_msg_projects_show"
+      }
+    ]
   },
   {
     "number": "31",
@@ -462,7 +709,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/31-%E8%84%B1%E7%82%AD%E7%B4%A0-%E3%81%AF%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E9%81%95%E3%81%86-%E7%84%A1%E3%81%8F%E3%81%99-%E3%82%88%E3%82%8A-%E5%9B%9E%E3%81%99-%E3%81%A8%E3%81%84%E3%81%86%E7%99%BA%E6%83%B3/id1789911793?i=1000722703651&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/12c9b430-4837-4c25-934b-40b9de45aef9/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-31-%E3%80%8C%E8%84%B1%E7%82%AD%E7%B4%A0%E3%80%8D%E3%81%AF%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E9%81%95%E3%81%86%E2%80%95%E2%80%95%E2%80%9C%E7%84%A1%E3%81%8F%E3%81%99%E2%80%9D%E3%82%88%E3%82%8A%E2%80%9C%E5%9B%9E%E3%81%99%E2%80%9D%E3%81%A8%E3%81%84%E3%81%86%E7%99%BA%E6%83%B3",
       "youtube": "https://www.youtube.com/watch?v=vMz7QTuQsrU"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.chemistry.or.jp/news/information/post-443.html",
+        "title": "https://www.chemistry.or.jp/news/information/post-443.html"
+      },
+      {
+        "url": "https://www.iea.org/reports/achieving-net-zero-heavy-industry-sectors-in-g7-members/executive-summary",
+        "title": "https://www.iea.org/reports/achieving-net-zero-heavy-industry-sectors-in-g7-members/executive-summary"
+      },
+      {
+        "url": "https://www.meti.go.jp/shingikai/sankoshin/green_innovation/industrial_restructuring/pdf/011_03_00.pdf",
+        "title": "https://www.meti.go.jp/shingikai/sankoshin/green_innovation/industrial_restructuring/pdf/011_03_00.pdf"
+      },
+      {
+        "url": "https://www.pwmi.or.jp/pdf/panf1.pdf?_klpuid=GwKq2LGpnkQhX6L36mXkc%2Fwwf%2Fkumagai%2Fbusiness%2Fkumagai%2Fdata%2Fdir%2Fkanie%2Ftdlc%2Fkondo%2Ffuruichi%2Fmri%2Fpwc%2Fcon%2F%2Fdata%2Fdata%2F%2Fdata%2Fkumagai%2Fbusiness%2F",
+        "title": "https://www.pwmi.or.jp/pdf/panf1.pdf?_klpuid=GwKq2LGpnkQhX6L36mXkc%2Fwwf%2Fkumagai%2Fbusiness%2Fkumagai%2Fdata%2Fdir%2Fkanie%2Ftdlc%2Fkondo%2Ffuruichi%2Fmri%2Fpwc%2Fcon%2F%2Fdata%2Fdata%2F%2Fdata%2Fkumagai%2Fbusiness%2F"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "32",
@@ -477,7 +746,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/32-%E6%B6%88%E3%81%88%E3%82%8B%E6%B0%B4-%E6%B6%88%E3%81%88%E3%82%8B%E7%86%B1-%E6%B0%97%E5%8C%96%E7%86%B1%E3%81%A7%E8%AA%AD%E3%81%BF%E8%A7%A3%E3%81%8F%E6%97%A5%E5%B8%B8%E3%81%A8%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A/id1789911793?i=1000723644836&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/4613e63f-9ff1-432f-8820-111d08de09b0/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-32-%E6%B6%88%E3%81%88%E3%82%8B%E6%B0%B4%E3%80%81%E6%B6%88%E3%81%88%E3%82%8B%E7%86%B1%EF%BC%8D%E6%B0%97%E5%8C%96%E7%86%B1%E3%81%A7%E8%AA%AD%E3%81%BF%E8%A7%A3%E3%81%8F%E6%97%A5%E5%B8%B8%E3%81%A8%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A",
       "youtube": "https://www.youtube.com/watch?v=3Mh9AKElWZw"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.wbgt.env.go.jp/wbgt.php",
+        "title": "https://www.wbgt.env.go.jp/wbgt.php"
+      },
+      {
+        "url": "https://www.kuken-coolingtower.com/knowledge/construction/",
+        "title": "https://www.kuken-coolingtower.com/knowledge/construction/"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/001476821.pdf",
+        "title": "https://www.mhlw.go.jp/content/001476821.pdf"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "33",
@@ -492,7 +779,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/33-%E6%B0%B4%E3%81%A8%E6%B2%B9%E3%81%AE%E4%BA%8C%E5%88%80%E6%B5%81-%E4%B8%96%E7%95%8C%E3%82%92%E6%B7%B7%E3%81%9C%E3%82%8B-%E7%95%8C%E9%9D%A2%E6%B4%BB%E6%80%A7%E5%89%A4/id1789911793?i=1000724628527&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/55e9d25c-4570-405a-80af-6d8aac6b8c10/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-33-%E6%B0%B4%E3%81%A8%E6%B2%B9%E3%81%AE%E4%BA%8C%E5%88%80%E6%B5%81%EF%BC%81%E4%B8%96%E7%95%8C%E3%82%92%E6%B7%B7%E3%81%9C%E3%82%8B%E3%80%8C%E7%95%8C%E9%9D%A2%E6%B4%BB%E6%80%A7%E5%89%A4%E3%80%8D",
       "youtube": "https://www.youtube.com/watch?v=KkHwRsVH2QY"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.kao.com/jp/kaonokao/openthekao/vol2/3/",
+        "title": "https://www.kao.com/jp/kaonokao/openthekao/vol2/3/"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/oleoscience/22/9/22_471/_pdf",
+        "title": "https://www.jstage.jst.go.jp/article/oleoscience/22/9/22_471/_pdf"
+      },
+      {
+        "url": "https://www.mizuho-ind.co.jp/labo/about/flow-condition/",
+        "title": "https://www.mizuho-ind.co.jp/labo/about/flow-condition/"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "34",
@@ -507,7 +812,33 @@
       "apple": "https://podcasts.apple.com/jp/podcast/34-%E3%81%8A%E4%BE%BF%E3%82%8A%E5%9B%9E-%E3%81%84%E3%81%A4%E3%81%8B%E3%82%89%E5%8C%96%E5%AD%A6%E3%81%AB%E8%88%88%E5%91%B3%E3%82%92%E6%8C%81%E3%81%A3%E3%81%9F%E3%81%AE/id1789911793?i=1000725783135&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/817225ab-f985-4a15-aede-04c4c2e6c1b1/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-34-%E3%80%90%E3%81%8A%E4%BE%BF%E3%82%8A%E5%9B%9E%E3%80%91%E3%81%84%E3%81%A4%E3%81%8B%E3%82%89%E5%8C%96%E5%AD%A6%E3%81%AB%E8%88%88%E5%91%B3%E3%82%92%E6%8C%81%E3%81%A3%E3%81%9F%E3%81%AE%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=CXGV-_RAhdI"
-    }
+    },
+    "references": [
+      {
+        "url": "https://goodtoy.jp/archive/2004/15.html",
+        "title": "https://goodtoy.jp/archive/2004/15.html"
+      },
+      {
+        "url": "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A5%E3%83%90%E3%83%B3",
+        "title": "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A5%E3%83%90%E3%83%B3"
+      },
+      {
+        "url": "https://murase-lab.org/research/16helicene/",
+        "title": "https://murase-lab.org/research/16helicene/"
+      },
+      {
+        "url": "https://omedstu.jimdofree.com/2017/12/10/%E3%83%8A%E3%83%8E%E3%83%97%E3%82%B7%E3%83%A3%E3%83%B3%E3%81%A8%E5%8C%96%E5%AD%A6%E6%95%99%E8%82%B2/",
+        "title": "https://omedstu.jimdofree.com/2017/12/10/%E3%83%8A%E3%83%8E%E3%83%97%E3%82%B7%E3%83%A3%E3%83%B3%E3%81%A8%E5%8C%96%E5%AD%A6%E6%95%99%E8%82%B2/"
+      },
+      {
+        "url": "https://curiousokinawa.com/blog/2016/09/13/energyfluorescence/",
+        "title": "https://curiousokinawa.com/blog/2016/09/13/energyfluorescence/"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "35",
@@ -522,7 +853,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/35-bbq%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E4%BC%9D%E7%86%B1%E3%81%AE3%E8%A6%81%E7%B4%A0/id1789911793?i=1000727110223&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/519125f9-08d6-40a1-b25d-ebee210d5f8d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-35-bbq%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E4%BC%9D%E7%86%B1%E3%81%AE3%E8%A6%81%E7%B4%A0",
       "youtube": "https://www.youtube.com/watch?v=KM9q9VjBNK0"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "36",
@@ -537,7 +874,45 @@
       "apple": "https://podcasts.apple.com/jp/podcast/36-%E8%B1%9A%E9%AA%A8%E3%82%B9%E3%83%BC%E3%83%97%E3%81%A7%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%81%8C%E8%B5%B0%E3%82%8B-%E3%83%90%E3%82%A4%E3%82%AA%E3%83%87%E3%82%A3%E3%83%BC%E3%82%BC%E3%83%AB%E7%87%83%E6%96%99%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/id1789911793?i=1000728118431&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/89e480a8-1132-4551-b8cb-c0d84b343d95/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-36-%E8%B1%9A%E9%AA%A8%E3%82%B9%E3%83%BC%E3%83%97%E3%81%A7%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%81%8C%E8%B5%B0%E3%82%8B%EF%BC%81%EF%BC%9F%E3%83%90%E3%82%A4%E3%82%AA%E3%83%87%E3%82%A3%E3%83%BC%E3%82%BC%E3%83%AB%E7%87%83%E6%96%99%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9",
       "youtube": "https://www.youtube.com/watch?v=-eSQPjD-fUQ"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.aburatou.co.jp/bdf/whatis",
+        "title": "https://www.aburatou.co.jp/bdf/whatis"
+      },
+      {
+        "url": "https://www.morinaga.co.jp/sustainability/works/work_45.html",
+        "title": "https://www.morinaga.co.jp/sustainability/works/work_45.html"
+      },
+      {
+        "url": "https://j-margarine.com/kiso2/lard/",
+        "title": "https://j-margarine.com/kiso2/lard/"
+      },
+      {
+        "url": "https://www.suisan.or.jp/html/kisochishiki.html",
+        "title": "https://www.suisan.or.jp/html/kisochishiki.html"
+      },
+      {
+        "url": "https://www.ramen.jp/oyakudachi/secret/soup/",
+        "title": "https://www.ramen.jp/oyakudachi/secret/soup/"
+      },
+      {
+        "url": "https://www.isgnet.jp/greasetrap/about/",
+        "title": "https://www.isgnet.jp/greasetrap/about/"
+      },
+      {
+        "url": "https://www.fnn.jp/articles/-/799134",
+        "title": "https://www.fnn.jp/articles/-/799134"
+      },
+      {
+        "url": "https://fukuoka-yokamon.com/cities/shingu_machi/nishidasyouun",
+        "title": "https://fukuoka-yokamon.com/cities/shingu_machi/nishidasyouun"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "37",
@@ -552,7 +927,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/37-%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AB%E5%8C%96%E5%AD%A6%E8%B3%9E%E3%81%AE%E3%82%AB%E3%82%AE%E3%81%AB%E3%81%AA%E3%82%8B%E8%A7%A6%E5%AA%92%E3%81%AE%E8%A9%B1/id1789911793?i=1000729399376&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/65c46b79-5f41-49c4-aee8-5212e9fc8b31/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-37-%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AB%E5%8C%96%E5%AD%A6%E8%B3%9E%E3%81%AE%E3%82%AB%E3%82%AE%E3%81%AB%E3%81%AA%E3%82%8B%E8%A7%A6%E5%AA%92%E3%81%AE%E8%A9%B1",
       "youtube": "https://www.youtube.com/watch?v=2UddE_qWUYQ"
-    }
+    },
+    "references": [
+      {
+        "url": "https://motor-fan.jp/article/9273/",
+        "title": "https://motor-fan.jp/article/9273/"
+      },
+      {
+        "url": "https://www.chart.co.jp/subject/rika/scnet/40/sc40-1.pdf",
+        "title": "https://www.chart.co.jp/subject/rika/scnet/40/sc40-1.pdf"
+      },
+      {
+        "url": "https://www.chem-station.com/blog/2010/10/2010-6.html",
+        "title": "https://www.chem-station.com/blog/2010/10/2010-6.html"
+      },
+      {
+        "url": "https://cmaj.jp/check/?privfile=47-50-48-49-57-47-48-51-47-50-48-46-112-100-102&amp;catfile=all",
+        "title": "https://cmaj.jp/check/?privfile=47-50-48-49-57-47-48-51-47-50-48-46-112-100-102&amp;catfile=all"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "38",
@@ -567,7 +964,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/38-%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%A7%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E7%A8%AE%E9%A1%9E%E3%81%8C%E5%A4%9A%E3%81%84%E3%81%AE/id1789911793?i=1000730680166&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/62f0c79b-055e-49a3-9509-b1a6cd992cc6/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-38-%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%A7%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E7%A8%AE%E9%A1%9E%E3%81%8C%E5%A4%9A%E3%81%84%E3%81%AE%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=9D7ETS2Ga0Q"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "39",
@@ -582,7 +985,37 @@
       "apple": "https://podcasts.apple.com/jp/podcast/39-%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E8%A7%A3%E8%AA%AC-%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AB%E5%8C%96%E5%AD%A6%E8%B3%9E2025-%E6%9C%89%E6%A9%9F%E9%87%91%E5%B1%9E%E6%A7%8B%E9%80%A0%E4%BD%93mof/id1789911793?i=1000731860227&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e48199f7-8bb2-4ae9-95e2-6f01c1042908/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-39-%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E8%A7%A3%E8%AA%AC%EF%BC%81%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AB%E5%8C%96%E5%AD%A6%E8%B3%9E2025%EF%BC%88%E6%9C%89%E6%A9%9F%E9%87%91%E5%B1%9E%E6%A7%8B%E9%80%A0%E4%BD%93mof%EF%BC%89",
       "youtube": "https://www.youtube.com/watch?v=fCy6lVJUnHU"
-    }
+    },
+    "references": [
+      {
+        "url": "https://note.com/sibucho_labo/n/nc43cd992d600",
+        "title": "https://note.com/sibucho_labo/n/nc43cd992d600"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4YbNzlOoa1Lb1U0AhyaC1PK7v-fV2ytCVg/viewform",
+        "title": "https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4YbNzlOoa1Lb1U0AhyaC1PK7v-fV2ytCVg/viewform"
+      },
+      {
+        "url": "https://www.chem-station.com/chemglossary/2025/10/richard-robson.html",
+        "title": "https://www.chem-station.com/chemglossary/2025/10/richard-robson.html"
+      },
+      {
+        "url": "https://www.icems.kyoto-u.ac.jp/more/scope/pcp/",
+        "title": "https://www.icems.kyoto-u.ac.jp/more/scope/pcp/"
+      },
+      {
+        "url": "https://arc.asahi-kasei.co.jp/report/arc_report/pdf/RS-1057.pdf",
+        "title": "https://arc.asahi-kasei.co.jp/report/arc_report/pdf/RS-1057.pdf"
+      },
+      {
+        "url": "https://www.chem-station.com/blog/2025/10/nobel2025.html",
+        "title": "https://www.chem-station.com/blog/2025/10/nobel2025.html"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "40",
@@ -597,7 +1030,21 @@
       "apple": "https://podcasts.apple.com/jp/podcast/40-%E9%9B%91%E8%AB%87%E5%9B%9E-%E3%83%AA%E3%82%A2%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%BC%B1%E3%81%95%E3%81%8C%E9%9A%9B%E7%AB%8B%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/id1789911793?i=1000732457978&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/69167070-5454-4445-a18e-9a1b4113c259/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-40-%E3%80%90%E9%9B%91%E8%AB%87%E5%9B%9E%E3%80%91%E3%83%AA%E3%82%A2%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%BC%B1%E3%81%95%E3%81%8C%E9%9A%9B%E7%AB%8B%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F",
       "youtube": "https://www.youtube.com/watch?v=gP1C0UPYb84"
-    }
+    },
+    "references": [
+      {
+        "url": "https://note.com/sibucho_labo/n/nc43cd992d600",
+        "title": "https://note.com/sibucho_labo/n/nc43cd992d600"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4YbNzlOoa1Lb1U0AhyaC1PK7v-fV2ytCVg/viewform",
+        "title": "https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4YbNzlOoa1Lb1U0AhyaC1PK7v-fV2ytCVg/viewform"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "41",
@@ -612,7 +1059,49 @@
       "apple": "https://podcasts.apple.com/jp/podcast/41-%E5%8C%96%E5%AD%A6%E3%81%AE%E6%97%A5%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E3%83%A2%E3%83%AB-mol-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E5%AD%A6%E3%82%93%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86/id1789911793?i=1000732873510&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/f4e57386-7eb7-4428-91ab-7a907b8b5bb7/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-41-%E5%8C%96%E5%AD%A6%E3%81%AE%E6%97%A5%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E3%83%A2%E3%83%AB-mol-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E5%AD%A6%E3%82%93%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81",
       "youtube": "https://www.youtube.com/watch?v=SZMiZLOALmQ"
-    }
+    },
+    "references": [
+      {
+        "url": "https://note.com/sibucho_labo/n/nc43cd992d600",
+        "title": "https://note.com/sibucho_labo/n/nc43cd992d600"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4YbNzlOoa1Lb1U0AhyaC1PK7v-fV2ytCVg/viewform",
+        "title": "https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4YbNzlOoa1Lb1U0AhyaC1PK7v-fV2ytCVg/viewform"
+      },
+      {
+        "url": "https://www.chemistry.or.jp/know/molday.html",
+        "title": "https://www.chemistry.or.jp/know/molday.html"
+      },
+      {
+        "url": "https://www.dainippon-tosho.co.jp/unit/list/mol.html",
+        "title": "https://www.dainippon-tosho.co.jp/unit/list/mol.html"
+      },
+      {
+        "url": "https://www.try-it.jp/chapters-9049/sections-9050/lessons-9059/",
+        "title": "https://www.try-it.jp/chapters-9049/sections-9050/lessons-9059/"
+      },
+      {
+        "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/keiryo/policy/newkgdifinition190520.html",
+        "title": "https://www.shouhiseikatu.metro.tokyo.lg.jp/keiryo/policy/newkgdifinition190520.html"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/kakyoshi/65/9/65_462/_pdf",
+        "title": "https://www.jstage.jst.go.jp/article/kakyoshi/65/9/65_462/_pdf"
+      },
+      {
+        "url": "https://unit.aist.go.jp/nmij/library/nmij_icp/kilogram.html",
+        "title": "https://unit.aist.go.jp/nmij/library/nmij_icp/kilogram.html"
+      },
+      {
+        "url": "https://www.miraikan.jst.go.jp/events/202510204251.html",
+        "title": "https://www.miraikan.jst.go.jp/events/202510204251.html"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "42",
@@ -627,7 +1116,21 @@
       "apple": "https://podcasts.apple.com/jp/podcast/42-%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5-in-mect-2025-%E5%AF%BE%E8%AB%87-%E9%AB%98%E6%A9%8B%E3%82%AF%E3%83%AA%E3%82%B9%E3%81%AEfa-radio-%E9%AB%98%E6%A9%8B%E3%81%95%E3%82%93/id1789911793?i=1000733929097&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/32bc34a6-1919-4554-a1c4-f7ebc235d3eb/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-42-%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E7%B3%BB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E3%81%AE%E6%97%A5-in-mect-2025%EF%BC%88%E5%AF%BE%E8%AB%87%EF%BC%9A%E9%AB%98%E6%A9%8B%E3%82%AF%E3%83%AA%E3%82%B9%E3%81%AEfa_radio-%E9%AB%98%E6%A9%8B%E3%81%95%E3%82%93%EF%BC%89",
       "youtube": "https://www.youtube.com/watch?v=X78M4z8p2uw"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/episode/0ecCwHbKYMCjf4IWfWNnAy",
+        "title": "https://open.spotify.com/episode/0ecCwHbKYMCjf4IWfWNnAy"
+      },
+      {
+        "url": "https://youtu.be/X78M4z8p2uw?si=naPAz4jU5CAn_wcX",
+        "title": "https://youtu.be/X78M4z8p2uw?si=naPAz4jU5CAn_wcX"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "43",
@@ -642,7 +1145,33 @@
       "apple": "https://podcasts.apple.com/jp/podcast/43-%E3%81%AE%E3%82%93%E3%81%B3%E3%82%8A%E6%A5%BD%E3%81%97%E3%82%80%E7%B4%85%E8%91%89%E3%81%A8%E5%8C%96%E5%AD%A6-%E3%81%8A%E6%95%A3%E6%AD%A9%E3%81%A8%E5%85%B1%E3%81%AB/id1789911793?i=1000734647109&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/8f4ae20e-ccc8-4afa-bb06-4b2de9a9ba7b/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-43-%E3%81%AE%E3%82%93%E3%81%B3%E3%82%8A%E6%A5%BD%E3%81%97%E3%82%80%E7%B4%85%E8%91%89%E3%81%A8%E5%8C%96%E5%AD%A6%EF%BD%9E%E3%81%8A%E6%95%A3%E6%AD%A9%E3%81%A8%E5%85%B1%E3%81%AB%EF%BD%9E",
       "youtube": "https://www.youtube.com/watch?v=rXybQ4Jx5sk"
-    }
+    },
+    "references": [
+      {
+        "url": "https://global.canon/ja/technology/kids/mystery/m_01_15.html",
+        "title": "https://global.canon/ja/technology/kids/mystery/m_01_15.html"
+      },
+      {
+        "url": "https://www.shinrin-ringyou.com/topics/kaede.php",
+        "title": "https://www.shinrin-ringyou.com/topics/kaede.php"
+      },
+      {
+        "url": "https://www.fmyokohama.jp/sun/2022/11/post-1-2.html",
+        "title": "https://www.fmyokohama.jp/sun/2022/11/post-1-2.html"
+      },
+      {
+        "url": "https://biodiversity.pref.fukuoka.lg.jp/futsushu/zatsugakustory/autumn_leaves.html",
+        "title": "https://biodiversity.pref.fukuoka.lg.jp/futsushu/zatsugakustory/autumn_leaves.html"
+      },
+      {
+        "url": "https://buna.info/article/1929/",
+        "title": "https://buna.info/article/1929/"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "44",
@@ -657,7 +1186,17 @@
       "apple": "https://podcasts.apple.com/jp/podcast/44-%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%BB%E3%83%83%E3%83%88%E3%81%AE-%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83-%E3%81%AB%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BF%9C%E8%A3%85%E7%BD%AE/id1789911793?i=1000735274070&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e4f82469-aefa-45a0-8f45-aa9a69301b4e/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-44-%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%BB%E3%83%83%E3%83%88%E3%81%AE-%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83-%E3%81%AB%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BF%9C%E8%A3%85%E7%BD%AE%EF%BC%81%EF%BC%9F",
       "youtube": "https://www.youtube.com/watch?v=88WrX3RkK6k"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/SF4Vul6ATys?si=QRN7nN5ZZZ2NVhp0",
+        "title": "https://youtu.be/SF4Vul6ATys?si=QRN7nN5ZZZ2NVhp0"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "45",
@@ -672,7 +1211,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/45-%E3%81%8A%E3%81%BE%E3%81%A4%E3%82%8A%E3%81%A3%E3%81%99%E3%82%93%E6%84%9F%E6%83%B3-%E3%82%B2%E3%82%B9%E3%83%88-%E3%82%AF%E3%83%AB%E3%83%9E%E3%81%AE%E4%B8%AD%E3%81%8B%E3%82%89%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF-%E3%81%B2%E3%82%8D%E3%81%B2%E3%82%8D%E3%81%97-%E3%81%95%E3%82%93/id1789911793?i=1000735894220&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/525ccb57-bbcd-4048-b8ca-ee58970de690/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-45-%E3%81%8A%E3%81%BE%E3%81%A4%E3%82%8A%E3%81%A3%E3%81%99%E3%82%93%E6%84%9F%E6%83%B3%EF%BC%88%E3%82%B2%E3%82%B9%E3%83%88%EF%BC%9A%E3%82%AF%E3%83%AB%E3%83%9E%E3%81%AE%E4%B8%AD%E3%81%8B%E3%82%89%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF-%E2%80%9D%E3%81%B2%E3%82%8D%E3%81%B2%E3%82%8D%E3%81%97%E2%80%9D%E3%81%95%E3%82%93%EF%BC%89",
       "youtube": "https://www.youtube.com/watch?v=h6gDj4370yc"
-    }
+    },
+    "references": [
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "46",
@@ -687,7 +1232,37 @@
       "apple": "https://podcasts.apple.com/jp/podcast/46-%E5%87%84%E3%81%84%E3%81%9E%E5%88%87%E5%89%8A%E6%B2%B9-%E5%8C%96%E5%AD%A6%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%A7%E8%A6%8B%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86/id1789911793?i=1000736320959&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/0322d48f-ba3c-4cc5-a4c8-df5686468492/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-46-%E5%87%84%E3%81%84%E3%81%9E%E5%88%87%E5%89%8A%E6%B2%B9%EF%BC%81%E5%8C%96%E5%AD%A6%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%A7%E8%A6%8B%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81",
       "youtube": "https://www.youtube.com/watch?v=YwiHV1Qirtk"
-    }
+    },
+    "references": [
+      {
+        "url": "https://jp.meviy.misumi-ec.com/info/ja/howto/metal-machining/25192/",
+        "title": "https://jp.meviy.misumi-ec.com/info/ja/howto/metal-machining/25192/"
+      },
+      {
+        "url": "https://www.kyodoyushi.co.jp/knowledge/cut_oil/about/",
+        "title": "https://www.kyodoyushi.co.jp/knowledge/cut_oil/about/"
+      },
+      {
+        "url": "https://sanwachemical.co.jp/blog/kisochishiki/",
+        "title": "https://sanwachemical.co.jp/blog/kisochishiki/"
+      },
+      {
+        "url": "https://www.jalos.jp/jalos/qa/articles/006-L093.htm",
+        "title": "https://www.jalos.jp/jalos/qa/articles/006-L093.htm"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/jos1956/10/2/10_2_76/_article/-char/ja",
+        "title": "https://www.jstage.jst.go.jp/article/jos1956/10/2/10_2_76/_article/-char/ja"
+      },
+      {
+        "url": "https://www.nks-ris.co.jp/knowledge-oil-02/",
+        "title": "https://www.nks-ris.co.jp/knowledge-oil-02/"
+      },
+      {
+        "url": "https://youtu.be/rhV9sy346vY",
+        "title": "https://youtu.be/rhV9sy346vY"
+      }
+    ]
   },
   {
     "number": "47",
@@ -702,7 +1277,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/47-%E8%B3%87%E6%A0%BC%E8%A9%A6%E9%A8%93%E3%81%AE-%E3%82%84%E3%82%81%E3%81%A9%E3%81%8D-%E6%8A%80%E8%A1%93%E5%A3%AB%E8%A9%A6%E9%A8%93%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8%E3%82%B5%E3%83%B3%E3%82%AF%E3%82%B3%E3%82%B9%E3%83%88%E3%81%AE%E7%BD%A0/id1789911793?i=1000736859151&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/20591553-0ef3-4096-ab8e-7928ef5d22b8/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-47-%E8%B3%87%E6%A0%BC%E8%A9%A6%E9%A8%93%E3%81%AE%E2%80%9D%E3%82%84%E3%82%81%E3%81%A9%E3%81%8D%E2%80%9D%E3%80%9C%E6%8A%80%E8%A1%93%E5%A3%AB%E8%A9%A6%E9%A8%93%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8%E3%82%B5%E3%83%B3%E3%82%AF%E3%82%B3%E3%82%B9%E3%83%88%E3%81%AE%E7%BD%A0%E3%80%9C",
       "youtube": "https://www.youtube.com/watch?v=Jx1lgtyAapU"
-    }
+    },
+    "references": []
   },
   {
     "number": "48",
@@ -717,7 +1293,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/48-%E7%9F%A5%E3%81%A3%E3%81%A6%E8%BA%AB%E3%82%92%E5%AE%88%E3%82%8B-%E9%85%B8%E7%B4%A0%E6%AC%A0%E4%B9%8F%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/id1789911793?i=1000737312323&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/ff9bf312-a65c-4512-bc74-a3d9b943224a/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-48-%E7%9F%A5%E3%81%A3%E3%81%A6%E8%BA%AB%E3%82%92%E5%AE%88%E3%82%8B%EF%BC%81-%E9%85%B8%E7%B4%A0%E6%AC%A0%E4%B9%8F%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98",
       "youtube": "https://www.youtube.com/watch?v=XjblC8Dq1Uk"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.tokushima-u.ac.jp/docs/65554.html",
+        "title": "https://www.tokushima-u.ac.jp/docs/65554.html"
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/347M50002000042/",
+        "title": "https://laws.e-gov.go.jp/law/347M50002000042/"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11200000/000628946.pdf",
+        "title": "https://www.mhlw.go.jp/content/11200000/000628946.pdf"
+      },
+      {
+        "url": "https://www.kokusen.go.jp/news/data/n-20230921_1.html",
+        "title": "https://www.kokusen.go.jp/news/data/n-20230921_1.html"
+      }
+    ]
   },
   {
     "number": "49",
@@ -732,7 +1326,17 @@
       "apple": "https://podcasts.apple.com/jp/podcast/49-%E7%B6%99%E7%B6%9A%E3%81%AE%E7%A7%98%E8%A8%A3-%E6%AF%8E%E6%9C%88%E3%81%AE%E6%B4%BB%E5%8B%95%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E7%99%BA%E4%BF%A1%E3%81%97%E3%82%88%E3%81%86/id1789911793?i=1000737931489&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/e37a8bdf-4fd5-463a-bc22-b09c6cb531ef/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-49-%E3%80%90%E7%B6%99%E7%B6%9A%E3%81%AE%E7%A7%98%E8%A8%A3%E3%80%91%E6%AF%8E%E6%9C%88%E3%81%AE%E6%B4%BB%E5%8B%95%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E7%99%BA%E4%BF%A1%E3%81%97%E3%82%88%E3%81%86%EF%BC%81",
       "youtube": "https://www.youtube.com/watch?v=wMCpa1ms_nk"
-    }
+    },
+    "references": [
+      {
+        "url": "https://note.com/rivi/n/n66ee8a323eda",
+        "title": "https://note.com/rivi/n/n66ee8a323eda"
+      },
+      {
+        "url": "https://note.com/rivi/m/m452a97ae7192",
+        "title": "https://note.com/rivi/m/m452a97ae7192"
+      }
+    ]
   },
   {
     "number": "50",
@@ -747,7 +1351,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/50-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B%E6%99%82%E3%81%AB%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/id1789911793?i=1000738425039&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/6a98dc62-44d4-4503-8c98-4a2c1a047901/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-50-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B%E6%99%82%E3%81%AB%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8",
       "youtube": "https://www.youtube.com/watch?v=N0Yt9-EUHnc"
-    }
+    },
+    "references": []
   },
   {
     "number": "51",
@@ -762,7 +1367,21 @@
       "apple": "https://podcasts.apple.com/jp/podcast/51-%E3%83%AC%E3%82%BE%E3%83%8A%E3%83%83%E3%82%AF%E8%AA%95%E7%94%9F%E3%81%AB%E5%90%91%E3%81%91%E3%81%9F1%E5%85%86%E5%86%86%E3%81%AE%E5%A4%A7%E5%8B%9D%E8%B2%A0/id1789911793?i=1000738922522&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/7322d28b-8dd9-484a-a719-02eb1c083749/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-51-%E3%83%AC%E3%82%BE%E3%83%8A%E3%83%83%E3%82%AF%E8%AA%95%E7%94%9F%E3%81%AB%E5%90%91%E3%81%91%E3%81%9F1%E5%85%86%E5%86%86%E3%81%AE%E5%A4%A7%E5%8B%9D%E8%B2%A0",
       "youtube": "https://www.youtube.com/watch?v=TXqfHWdv6h4"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.resonac.com/jp/corporate/history.html",
+        "title": "https://www.resonac.com/jp/corporate/history.html"
+      },
+      {
+        "url": "https://www.resonac.com/jp/corporate/name-change.html",
+        "title": "https://www.resonac.com/jp/corporate/name-change.html"
+      },
+      {
+        "url": "https://www.crasus.co.jp/corporate/corporate.html",
+        "title": "https://www.crasus.co.jp/corporate/corporate.html"
+      }
+    ]
   },
   {
     "number": "52",
@@ -777,7 +1396,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/52-%E7%A5%9D1%E5%91%A8%E5%B9%B4-%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A8%E3%83%AA%E3%82%B9%E3%83%8A%E3%83%BC%E3%81%AE%E5%A3%B0%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%88%E3%81%9F-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95-%E3%81%AE%E7%8F%BE%E5%9C%A8%E5%9C%B0/id1789911793?i=1000739375330&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/da8e3552-af67-4b99-9935-97a0583e85a5/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-52-%E7%A5%9D1%E5%91%A8%E5%B9%B4%EF%BC%81%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A8%E3%83%AA%E3%82%B9%E3%83%8A%E3%83%BC%E3%81%AE%E5%A3%B0%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%88%E3%81%9F%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D%E3%81%AE%E7%8F%BE%E5%9C%A8%E5%9C%B0",
       "youtube": "https://www.youtube.com/watch?v=5IEyzKs0Kpo"
-    }
+    },
+    "references": []
   },
   {
     "number": "53",
@@ -792,7 +1412,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/53-%E6%B3%A8%E7%9B%AE%E3%81%AE%E5%8C%96%E5%AD%A6%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B92025-%E6%96%B0%E8%A6%8F%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B3%AA%E3%81%8B%E3%82%89%E6%A5%AD%E7%95%8C%E5%86%8D%E7%B7%A8%E3%81%BE%E3%81%A7/id1789911793?i=1000740016081&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/39beeca7-1671-467a-a459-ba82130c65dc/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-53-%E6%B3%A8%E7%9B%AE%E3%81%AE%E5%8C%96%E5%AD%A6%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B92025%EF%BD%9E%E6%96%B0%E8%A6%8F%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B3%AA%E3%81%8B%E3%82%89%E6%A5%AD%E7%95%8C%E5%86%8D%E7%B7%A8%E3%81%BE%E3%81%A7%EF%BD%9E",
       "youtube": "https://www.youtube.com/watch?v=10_-yKCnwJo"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.exa-corp.co.jp/column/conservation-1.html",
+        "title": "https://www.exa-corp.co.jp/column/conservation-1.html"
+      },
+      {
+        "url": "https://www.nikkei.com/article/DGXZQOUC173WY0X10C25A9000000/",
+        "title": "https://www.nikkei.com/article/DGXZQOUC173WY0X10C25A9000000/"
+      },
+      {
+        "url": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/release/2025/250903_1_2.pdf",
+        "title": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/release/2025/250903_1_2.pdf"
+      },
+      {
+        "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2448341-dow-to-install-nuclear-power-at-seadrift",
+        "title": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2448341-dow-to-install-nuclear-power-at-seadrift"
+      },
+      {
+        "url": "http://blog.livedoor.jp/route408/archives/52368739.html",
+        "title": "http://blog.livedoor.jp/route408/archives/52368739.html"
+      }
+    ]
   },
   {
     "number": "54",
@@ -807,7 +1449,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/54-%E3%82%BC%E3%83%AD%E3%83%AA%E3%82%B9%E3%82%AF%E3%81%AF%E5%B9%BB%E6%83%B3-%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%82%8B-%E3%82%BC%E3%83%AD%E7%81%BD/id1789911793?i=1000740483073&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/641047d9-c3f4-4536-855c-7dc233c6a036/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-54-%E3%82%BC%E3%83%AD%E3%83%AA%E3%82%B9%E3%82%AF%E3%81%AF%E5%B9%BB%E6%83%B3%EF%BC%9F%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%82%8B%E3%80%8C%E3%82%BC%E3%83%AD%E7%81%BD%E3%80%8D",
       "youtube": "https://www.youtube.com/watch?v=Off0vCXETZg"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/playlist/4A75XoQHa5sALOxn90E5L4?si=o4WH1QwDTRO8wjXu_ozBOQ&amp;pi=m4BbaDfHTIOCR",
+        "title": "https://open.spotify.com/playlist/4A75XoQHa5sALOxn90E5L4?si=o4WH1QwDTRO8wjXu_ozBOQ&amp;pi=m4BbaDfHTIOCR"
+      },
+      {
+        "url": "https://www.check-roudou.mhlw.go.jp/study/roudousya_roudousaigai.html",
+        "title": "https://www.check-roudou.mhlw.go.jp/study/roudousya_roudousaigai.html"
+      },
+      {
+        "url": "https://www.e-stat.go.jp/dbview?sid=0003385942",
+        "title": "https://www.e-stat.go.jp/dbview?sid=0003385942"
+      },
+      {
+        "url": "https://www.fdma.go.jp/pressrelease/houdou/items/c42c3d6f3f64dbd74b408e38c97581393d877b81.pdf",
+        "title": "https://www.fdma.go.jp/pressrelease/houdou/items/c42c3d6f3f64dbd74b408e38c97581393d877b81.pdf"
+      },
+      {
+        "url": "https://x.com/karaage_rutsubo/status/1157112554910437377",
+        "title": "https://x.com/karaage_rutsubo/status/1157112554910437377"
+      }
+    ]
   },
   {
     "number": "55",
@@ -822,7 +1486,33 @@
       "apple": "https://podcasts.apple.com/jp/podcast/55-%E9%87%8E%E6%9A%AE%E3%81%AA%E5%8C%96%E5%AD%A6-ff%E3%81%AE%E3%82%A8%E3%83%BC%E3%83%86%E3%83%AB-%E6%88%A6%E9%97%98%E4%B8%AD%E3%81%AB%E4%BD%BF%E3%81%86%E3%81%A8%E5%8D%B1%E9%99%BA%E3%81%99%E3%81%8E%E3%82%8B%E8%AA%AC/id1789911793?i=1000741160282&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/97d8a6ab-af94-4240-b961-73cbca5399ea/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-55-%E3%80%90%E9%87%8E%E6%9A%AE%E3%81%AA%E5%8C%96%E5%AD%A6%E3%80%91ff%E3%81%AE%E3%82%A8%E3%83%BC%E3%83%86%E3%83%AB%E3%80%81%E6%88%A6%E9%97%98%E4%B8%AD%E3%81%AB%E4%BD%BF%E3%81%86%E3%81%A8%E5%8D%B1%E9%99%BA%E3%81%99%E3%81%8E%E3%82%8B%E8%AA%AC",
       "youtube": "https://www.youtube.com/watch?v=jCrZxEgVWtA"
-    }
+    },
+    "references": [
+      {
+        "url": "https://adventar.org/calendars/11914",
+        "title": "https://adventar.org/calendars/11914"
+      },
+      {
+        "url": "https://open.spotify.com/episode/3VxDXLJOrQ9IzEivjrMsMh?si=8s2QP2sbTG23wnvp0Aof6w&amp;nd=1&amp;dlsi=b2a933fc3eb04cc8",
+        "title": "https://open.spotify.com/episode/3VxDXLJOrQ9IzEivjrMsMh?si=8s2QP2sbTG23wnvp0Aof6w&amp;nd=1&amp;dlsi=b2a933fc3eb04cc8"
+      },
+      {
+        "url": "https://yacky-sanfu.com/jin-1/",
+        "title": "https://yacky-sanfu.com/jin-1/"
+      },
+      {
+        "url": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0105-0115.html",
+        "title": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0105-0115.html"
+      },
+      {
+        "url": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0102-0365.html",
+        "title": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0102-0365.html"
+      },
+      {
+        "url": "http://blog.livedoor.jp/route408/archives/52079281.html",
+        "title": "http://blog.livedoor.jp/route408/archives/52079281.html"
+      }
+    ]
   },
   {
     "number": "56",
@@ -837,7 +1527,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/56-%E3%81%8A%E4%BE%BF%E3%82%8A%E5%9B%9E-%E6%B8%A9%E5%BA%A6%E3%81%AE%E5%8D%98%E4%BD%8D-%E7%A1%AC%E3%81%95%E3%81%A8%E7%B2%97%E3%81%95%E3%81%AE%E8%A1%A8%E7%8F%BE/id1789911793?i=1000741585261&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/99e7e770-62b9-490b-9c57-19aa9cb76209/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-56-%E3%80%90%E3%81%8A%E4%BE%BF%E3%82%8A%E5%9B%9E%E3%80%91%E6%B8%A9%E5%BA%A6%E3%81%AE%E5%8D%98%E4%BD%8D-%E7%A1%AC%E3%81%95%E3%81%A8%E7%B2%97%E3%81%95%E3%81%AE%E8%A1%A8%E7%8F%BE",
       "youtube": "https://www.youtube.com/watch?v=1FI-NXYuz_E"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.yokogawa.com/jp-yes/use-info/column/67/",
+        "title": "https://www.yokogawa.com/jp-yes/use-info/column/67/"
+      },
+      {
+        "url": "http://www.sci-museum.kita.osaka.jp/~nozo/universe/physics/ps058.pdf",
+        "title": "http://www.sci-museum.kita.osaka.jp/~nozo/universe/physics/ps058.pdf"
+      },
+      {
+        "url": "https://info-lathe1000.com/lathe-explanation-of-new-and-old-surface-roughness-surface-roughness-indicators-ra-rz-rmax-ry-rzjis/",
+        "title": "https://info-lathe1000.com/lathe-explanation-of-new-and-old-surface-roughness-surface-roughness-indicators-ra-rz-rmax-ry-rzjis/"
+      },
+      {
+        "url": "https://www.keyence.co.jp/ss/products/recorder/testing-machine/material/hardness.jsp",
+        "title": "https://www.keyence.co.jp/ss/products/recorder/testing-machine/material/hardness.jsp"
+      },
+      {
+        "url": "https://jp.misumi-ec.com/tech-info/categories/plastic_mold_design/pl06/c0731.html",
+        "title": "https://jp.misumi-ec.com/tech-info/categories/plastic_mold_design/pl06/c0731.html"
+      }
+    ]
   },
   {
     "number": "57",
@@ -852,7 +1564,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/57-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%82%82-%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2-%E3%81%AE%E6%99%82%E4%BB%A3%E3%81%B8-%E8%87%AA%E5%BE%8B%E5%88%B6%E5%BE%A1ai%E3%81%8C%E6%8F%8F%E3%81%8F%E6%9C%AA%E6%9D%A5/id1789911793?i=1000742144138&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/eb45901e-0a9e-468d-bd11-3976a354d283/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-57-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%82%82%E3%80%8E%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E3%80%8F%E3%81%AE%E6%99%82%E4%BB%A3%E3%81%B8%EF%BC%81-%E8%87%AA%E5%BE%8B%E5%88%B6%E5%BE%A1ai%E3%81%8C%E6%8F%8F%E3%81%8F%E6%9C%AA%E6%9D%A5",
       "youtube": "https://www.youtube.com/watch?v=Xu38IG_NlMk"
-    }
+    },
+    "references": []
   },
   {
     "number": "58",
@@ -867,7 +1580,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/58-%E6%B8%AC%E3%82%8C%E3%81%AA%E3%81%84-%E3%82%92%E6%89%93%E3%81%A1%E7%A0%B4%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E9%AD%85%E5%8A%9B%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/id1789911793?i=1000742516476&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/3f55200a-fc6d-434b-bd84-51fdb9a9d757/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-58-%E6%B8%AC%E3%82%8C%E3%81%AA%E3%81%84%E2%80%A6%E3%82%92%E6%89%93%E3%81%A1%E7%A0%B4%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E9%AD%85%E5%8A%9B%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9",
       "youtube": "https://www.youtube.com/watch?v=sj2IUzOPK6E"
-    }
+    },
+    "references": []
   },
   {
     "number": "59",
@@ -882,7 +1596,13 @@
       "apple": "https://podcasts.apple.com/jp/podcast/59-%E5%A4%89%E5%8C%96%E3%82%92%E6%81%90%E3%82%8C%E3%82%8B%E3%81%AA-2025%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A%E3%81%A82026%E3%81%AE%E7%9B%AE%E6%A8%99/id1789911793?i=1000742893843&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/de8f1d0a-6ff0-4b9a-ad35-0f0dd4652838/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-59-%E5%A4%89%E5%8C%96%E3%82%92%E6%81%90%E3%82%8C%E3%82%8B%E3%81%AA%EF%BC%812025%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A%E3%81%A82026%E3%81%AE%E7%9B%AE%E6%A8%99",
       "youtube": "https://www.youtube.com/watch?v=HnrQO73fHw4"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/playlist/16TPBSPvXjYNjMVVAd3eSK?si=RejHp3QRTEaMBltrjGEs9w",
+        "title": "https://open.spotify.com/playlist/16TPBSPvXjYNjMVVAd3eSK?si=RejHp3QRTEaMBltrjGEs9w"
+      }
+    ]
   },
   {
     "number": "60",
@@ -897,7 +1617,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/60-%E8%BB%A2%E8%81%B7-%E7%AC%91%E3%81%A3%E3%81%A6%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E3%82%92%E8%A8%80%E3%81%86%E3%81%9F%E3%82%81%E3%81%AB-%E8%AA%A0%E5%AE%9F%E3%81%A7%E3%81%82%E3%82%8C/id1789911793?i=1000744030448&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/98243d71-5bc7-4b5d-8265-ef499a57a829/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-60-%E3%80%90%E8%BB%A2%E8%81%B7%E3%80%91%E7%AC%91%E3%81%A3%E3%81%A6%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E3%82%92%E8%A8%80%E3%81%86%E3%81%9F%E3%82%81%E3%81%AB%E3%80%81%E8%AA%A0%E5%AE%9F%E3%81%A7%E3%81%82%E3%82%8C",
       "youtube": "https://www.youtube.com/watch?v=FXBHbfI4Ua4"
-    }
+    },
+    "references": []
   },
   {
     "number": "61",
@@ -912,7 +1633,17 @@
       "apple": "https://podcasts.apple.com/jp/podcast/61-%E5%AD%90%E3%81%A9%E3%82%82%E3%81%8C%E5%8C%96%E5%AD%A6%E3%81%AB%E8%88%88%E5%91%B3%E3%82%92%E3%82%82%E3%81%A4%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%97%E3%81%9F%E3%82%89%E8%89%AF%E3%81%84%E3%81%AE%E3%81%8B-%E3%82%B2%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%88%E3%83%BC%E3%82%AF-%E3%83%AC%E3%83%B3-%E3%81%95%E3%82%93/id1789911793?i=1000744623034&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/43a3b064-85b5-4135-9f3b-e3cd782a9070/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-61-%E5%AD%90%E3%81%A9%E3%82%82%E3%81%8C%E5%8C%96%E5%AD%A6%E3%81%AB%E8%88%88%E5%91%B3%E3%82%92%E3%82%82%E3%81%A4%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%97%E3%81%9F%E3%82%89%E8%89%AF%E3%81%84%E3%81%AE%E3%81%8B%EF%BC%9F-%E3%82%B2%E3%82%B9%E3%83%88%EF%BC%9A%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%88%E3%83%BC%E3%82%AF-%E2%80%9D%E3%83%AC%E3%83%B3%E2%80%9D%E3%81%95%E3%82%93",
       "youtube": "https://www.youtube.com/watch?v=DHi3TkuEFp0"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/episode/5Ms7LDr9rCVqsvfPEJkah9?si=nOt6I7qyTJSZUeFfCYXgYg",
+        "title": "https://open.spotify.com/episode/5Ms7LDr9rCVqsvfPEJkah9?si=nOt6I7qyTJSZUeFfCYXgYg"
+      },
+      {
+        "url": "https://scien-talk.com/",
+        "title": "https://scien-talk.com/"
+      }
+    ]
   },
   {
     "number": "62",
@@ -927,7 +1658,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/62-%E8%A3%BD%E9%80%A0%E6%A5%AD%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%82%92%E5%BA%83%E3%81%92%E3%82%8B%E4%BB%95%E6%8E%9B%E3%81%91-%E7%B6%99%E7%B6%9A%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E7%B5%8C%E9%A8%93%E5%80%A4-%E3%82%B2%E3%82%B9%E3%83%88-%E9%AB%98%E6%A9%8B%E3%82%AF%E3%83%AA%E3%82%B9%E3%81%AEfa-radio-%E9%AB%98%E6%A9%8B%E3%81%95%E3%82%93/id1789911793?i=1000745045064&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/c25e0ce3-e6ee-4c1e-b6f6-c0f0b84c2556/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-62-%E8%A3%BD%E9%80%A0%E6%A5%AD%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%82%92%E5%BA%83%E3%81%92%E3%82%8B%E4%BB%95%E6%8E%9B%E3%81%91%EF%BD%9C%E7%B6%99%E7%B6%9A%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E7%B5%8C%E9%A8%93%E5%80%A4%EF%BC%88%E3%82%B2%E3%82%B9%E3%83%88%EF%BC%9A%E9%AB%98%E6%A9%8B%E3%82%AF%E3%83%AA%E3%82%B9%E3%81%AEfa_radio-%E9%AB%98%E6%A9%8B%E3%81%95%E3%82%93%EF%BC%89",
       "youtube": ""
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/episode/5DdXJ6fFyDrBu5uinQNcnP?si=J9BvBL1qTGadhwbCJXUMNA",
+        "title": "https://open.spotify.com/episode/5DdXJ6fFyDrBu5uinQNcnP?si=J9BvBL1qTGadhwbCJXUMNA"
+      },
+      {
+        "url": "https://open.spotify.com/episode/7h8nLdK9UBlONEjfxeEsPr",
+        "title": "https://open.spotify.com/episode/7h8nLdK9UBlONEjfxeEsPr"
+      },
+      {
+        "url": "https://x.com/fulhause",
+        "title": "https://x.com/fulhause"
+      },
+      {
+        "url": "https://fa-study.connpass.com/",
+        "title": "https://fa-study.connpass.com/"
+      },
+      {
+        "url": "https://fa-study.connpass.com/event/378153/",
+        "title": "https://fa-study.connpass.com/event/378153/"
+      }
+    ]
   },
   {
     "number": "63",
@@ -942,7 +1695,21 @@
       "apple": "https://podcasts.apple.com/jp/podcast/63-%E8%B2%AC%E4%BB%BB%E3%82%92%E5%8F%96%E3%82%8B%E3%81%A8%E3%81%AF%E7%97%9B%E3%81%BF%E3%82%92%E8%B2%A0%E3%81%86%E3%81%93%E3%81%A8-%E6%8A%80%E8%A1%93%E8%80%85%E3%81%AE%E8%A1%8C%E5%8B%95%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E6%BC%AB%E7%94%BB-%E5%AE%87%E5%AE%99%E5%85%84%E5%BC%9F-%E3%81%A8-one-outs/id1789911793?i=1000745568120&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/12422554-ac65-4460-ad58-b62ac3341241/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-63-%E3%80%8C%E8%B2%AC%E4%BB%BB%E3%82%92%E5%8F%96%E3%82%8B%E3%81%A8%E3%81%AF%E7%97%9B%E3%81%BF%E3%82%92%E8%B2%A0%E3%81%86%E3%81%93%E3%81%A8%E3%80%8D%E6%8A%80%E8%A1%93%E8%80%85%E3%81%AE%E8%A1%8C%E5%8B%95%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E6%BC%AB%E7%94%BB%E3%80%8E%E5%AE%87%E5%AE%99%E5%85%84%E5%BC%9F%E3%80%8F%E3%81%A8%E3%80%8Eone-outs%E3%80%8F",
       "youtube": "https://www.youtube.com/watch?v=tfPB0oTFF9U"
-    }
+    },
+    "references": [
+      {
+        "url": "https://amzn.to/4qplYw2",
+        "title": "https://amzn.to/4qplYw2"
+      },
+      {
+        "url": "https://amzn.to/3LERpUn",
+        "title": "https://amzn.to/3LERpUn"
+      },
+      {
+        "url": "https://amzn.to/3NqQJlZ",
+        "title": "https://amzn.to/3NqQJlZ"
+      }
+    ]
   },
   {
     "number": "64",
@@ -957,7 +1724,21 @@
       "apple": "https://podcasts.apple.com/jp/podcast/64-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%A4%A9%E6%95%B5-%E8%85%90%E9%A3%9F-%E9%87%91%E5%B1%9E%E3%81%A8%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%AE%E5%8A%A3%E5%8C%96%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E3%81%A8%E5%AF%BE%E7%AD%96/id1789911793?i=1000745949757&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/c9b0ec25-0f15-4345-91f7-8a8e91816026/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-64-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%A4%A9%E6%95%B5%E3%80%8C%E8%85%90%E9%A3%9F%E3%80%8D%EF%BC%9A%E9%87%91%E5%B1%9E%E3%81%A8%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%AE%E5%8A%A3%E5%8C%96%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E3%81%A8%E5%AF%BE%E7%AD%96",
       "youtube": "https://www.youtube.com/watch?v=fN8ggjxZt78"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/episode/5Ay6saq9VhX20QltYW8gqs",
+        "title": "https://open.spotify.com/episode/5Ay6saq9VhX20QltYW8gqs"
+      },
+      {
+        "url": "https://www.tts-inspection.com/ja/learn-maintenance/2102-maintenance_02/?doing_wp_cron=1768941587.2059180736541748046875",
+        "title": "https://www.tts-inspection.com/ja/learn-maintenance/2102-maintenance_02/?doing_wp_cron=1768941587.2059180736541748046875"
+      },
+      {
+        "url": "https://aims-online.com/apps/note/causes-of-plastic-degradation-and-countermeasures/?srsltid=AfmBOorXGLP6__2MrACIuQLl0_kxVuBDMJC7CkRbSzjqF8ZjxT4we1_z",
+        "title": "https://aims-online.com/apps/note/causes-of-plastic-degradation-and-countermeasures/?srsltid=AfmBOorXGLP6__2MrACIuQLl0_kxVuBDMJC7CkRbSzjqF8ZjxT4we1_z"
+      }
+    ]
   },
   {
     "number": "65",
@@ -972,7 +1753,41 @@
       "apple": "https://podcasts.apple.com/jp/podcast/65-%E5%AE%9F%E7%94%9F%E6%B4%BB%E3%81%A8%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B%E8%A6%96%E7%82%B9-%E5%A4%A7%E5%AD%A6%E5%85%A5%E5%AD%A6%E5%85%B1%E9%80%9A%E3%83%86%E3%82%B9%E3%83%88-%E5%8C%96%E5%AD%A6-2026/id1789911793?i=1000746504255&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/48f32c11-0480-4c2b-9fae-df60adb49fc7/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-65-%E5%AE%9F%E7%94%9F%E6%B4%BB%E3%81%A8%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B%E8%A6%96%E7%82%B9%EF%BD%9C%E5%A4%A7%E5%AD%A6%E5%85%A5%E5%AD%A6%E5%85%B1%E9%80%9A%E3%83%86%E3%82%B9%E3%83%88%E3%80%8C%E5%8C%96%E5%AD%A6%E3%80%8D2026",
       "youtube": "https://www.youtube.com/watch?v=GFEEp2K-aDU"
-    }
+    },
+    "references": [
+      {
+        "url": "https://partsa.nikkei.com/parts/ds/unikyotsu/2026/kagaku2026q.pdf",
+        "title": "https://partsa.nikkei.com/parts/ds/unikyotsu/2026/kagaku2026q.pdf"
+      },
+      {
+        "url": "https://www.data.jma.go.jp/kaiyou/db/mar_env/knowledge/oa/acidification.html",
+        "title": "https://www.data.jma.go.jp/kaiyou/db/mar_env/knowledge/oa/acidification.html"
+      },
+      {
+        "url": "https://kimika.net/r3roppousaimitsu.html",
+        "title": "https://kimika.net/r3roppousaimitsu.html"
+      },
+      {
+        "url": "https://www.city.iwaki.lg.jp/www/contents/1547339083008/index.html",
+        "title": "https://www.city.iwaki.lg.jp/www/contents/1547339083008/index.html"
+      },
+      {
+        "url": "https://www.shinshu-u.ac.jp/faculty/medicine/chair/i-shika/until 2003 HP/resident note/reside yueki/yueki2.html",
+        "title": "https://www.shinshu-u.ac.jp/faculty/medicine/chair/i-shika/until 2003 HP/resident note/reside yueki/yueki2.html"
+      },
+      {
+        "url": "http://hrein.jp/technology",
+        "title": "http://hrein.jp/technology"
+      },
+      {
+        "url": "https://www.morinaga.co.jp/protein/columns/detail/?id=20&amp;category=health",
+        "title": "https://www.morinaga.co.jp/protein/columns/detail/?id=20&amp;category=health"
+      },
+      {
+        "url": "https://www.electronics.toray/column/polyimide_01.html",
+        "title": "https://www.electronics.toray/column/polyimide_01.html"
+      }
+    ]
   },
   {
     "number": "66",
@@ -987,7 +1802,45 @@
       "apple": "https://podcasts.apple.com/jp/podcast/66-%E6%95%99%E9%A4%8A%E3%81%A8%E3%81%97%E3%81%A6%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%83%AA%E3%83%81%E3%82%A6%E3%83%A0%E3%82%A4%E3%82%AA%E3%83%B3%E9%9B%BB%E6%B1%A0%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/id1789911793?i=1000746916031&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/73d8f86c-b8a1-4695-bd54-28f6f5ef083c/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-66-%E6%95%99%E9%A4%8A%E3%81%A8%E3%81%97%E3%81%A6%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84%E3%83%AA%E3%83%81%E3%82%A6%E3%83%A0%E3%82%A4%E3%82%AA%E3%83%B3%E9%9B%BB%E6%B1%A0%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98",
       "youtube": "https://www.youtube.com/watch?v=_i0Re5ASDwo"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.global.toshiba/jp/products-solutions/battery/scib/about-scib/more/batteryschool/episode1.html",
+        "title": "https://www.global.toshiba/jp/products-solutions/battery/scib/about-scib/more/batteryschool/episode1.html"
+      },
+      {
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2301/16/news020.html",
+        "title": "https://monoist.itmedia.co.jp/mn/articles/2301/16/news020.html"
+      },
+      {
+        "url": "https://www.daikinchemicals.com/jp/magazine/report-column-lithium-ion-battery-06.html",
+        "title": "https://www.daikinchemicals.com/jp/magazine/report-column-lithium-ion-battery-06.html"
+      },
+      {
+        "url": "https://www.jetro.go.jp/biznews/2025/06/2ec0c18d54b6d458.html",
+        "title": "https://www.jetro.go.jp/biznews/2025/06/2ec0c18d54b6d458.html"
+      },
+      {
+        "url": "https://www.hitachi-hightech.com/jp/ja/products/manufacturing-related/lithium-battery-solutions/kb/kb_jnl01.html",
+        "title": "https://www.hitachi-hightech.com/jp/ja/products/manufacturing-related/lithium-battery-solutions/kb/kb_jnl01.html"
+      },
+      {
+        "url": "https://youtu.be/v2oGwKY_-_0?si=sn4clWvEw8zgFCj4",
+        "title": "https://youtu.be/v2oGwKY_-_0?si=sn4clWvEw8zgFCj4"
+      },
+      {
+        "url": "https://www.wsew.jp/hub/ja-jp/blog/article_95.html",
+        "title": "https://www.wsew.jp/hub/ja-jp/blog/article_95.html"
+      },
+      {
+        "url": "https://open.spotify.com/episode/5ue1IzowyqjsdcN3655mXr?si=5iC-pFkmSwmg95uMZ6o8rw",
+        "title": "https://open.spotify.com/episode/5ue1IzowyqjsdcN3655mXr?si=5iC-pFkmSwmg95uMZ6o8rw"
+      },
+      {
+        "url": "https://at-electrode.com/faq/",
+        "title": "https://at-electrode.com/faq/"
+      }
+    ]
   },
   {
     "number": "67",
@@ -1002,7 +1855,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/67-%E8%87%AA%E5%88%86-%E5%8C%96%E5%AD%A6%E5%A5%BD%E3%81%8D%E3%81%AA%E3%82%93-%E9%81%8E%E5%8E%BB%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E7%A7%81%E3%81%AE%E6%80%A7%E6%A0%BC/id1789911793?i=1000747497434&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/93580686-108c-4393-9ece-50f2af548f48/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-67-%E8%87%AA%E5%88%86%E3%80%81%E5%8C%96%E5%AD%A6%E5%A5%BD%E3%81%8D%E3%81%AA%E3%82%93%EF%BC%9F%E9%81%8E%E5%8E%BB%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E7%A7%81%E3%81%AE%E6%80%A7%E6%A0%BC",
       "youtube": "https://www.youtube.com/watch?v=Nl1JbUpGdiU"
-    }
+    },
+    "references": []
   },
   {
     "number": "68",
@@ -1017,7 +1871,25 @@
       "apple": "https://podcasts.apple.com/jp/podcast/68-%E6%B8%A9%E6%B3%89%E3%81%AE-%E3%81%82%E3%81%9F%E3%81%9F%E3%81%8B-%E3%81%84-%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E8%A8%AD%E5%82%99%E3%81%AE%E8%A9%B1/id1789911793?i=1000747920734&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/5d2d724c-1e3d-486c-a1f4-c441b778fd21/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-68-%E6%B8%A9%E6%B3%89%E3%81%AE%E3%80%8C%E3%81%82%E3%81%9F%E3%81%9F%E3%81%8B%EF%BD%9E%EF%BD%9E%E3%81%84%E3%80%8D%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E8%A8%AD%E5%82%99%E3%81%AE%E8%A9%B1",
       "youtube": "https://www.youtube.com/watch?v=tSpZ3ntQes4"
-    }
+    },
+    "references": [
+      {
+        "url": "https://www.itoyanagi.co.jp/news/150/",
+        "title": "https://www.itoyanagi.co.jp/news/150/"
+      },
+      {
+        "url": "https://hisaka-magokoro.com/shop/pages/hotspring.aspx",
+        "title": "https://hisaka-magokoro.com/shop/pages/hotspring.aspx"
+      },
+      {
+        "url": "https://jxpa.gr.jp/about.pdf",
+        "title": "https://jxpa.gr.jp/about.pdf"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/topics/bukyoku/kenkou/legionella/about.html",
+        "title": "https://www.mhlw.go.jp/topics/bukyoku/kenkou/legionella/about.html"
+      }
+    ]
   },
   {
     "number": "69",
@@ -1032,7 +1904,17 @@
       "apple": "https://podcasts.apple.com/jp/podcast/69-%E3%81%BF%E3%82%93%E3%81%AA%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%A8%E6%80%9D%E3%82%8F%E3%81%AA%E3%81%84%E3%81%A7-%E7%94%B7%E7%A4%BE%E4%BC%9A%E3%81%AE-%E5%A4%9C%E3%81%AE%E4%BB%98%E3%81%8D%E5%90%88%E3%81%84-%E3%81%A8%E3%83%90%E3%83%AA%E3%82%A2/id1789911793?i=1000748697256&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/0da829db-12cb-47ed-8d47-d89da6dc7e25/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-69-%E3%81%BF%E3%82%93%E3%81%AA%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%A8%E6%80%9D%E3%82%8F%E3%81%AA%E3%81%84%E3%81%A7%EF%BC%81%E7%94%B7%E7%A4%BE%E4%BC%9A%E3%81%AE%E3%80%8C%E5%A4%9C%E3%81%AE%E4%BB%98%E3%81%8D%E5%90%88%E3%81%84%E3%80%8D%E3%81%A8%E3%83%90%E3%83%AA%E3%82%A2",
       "youtube": "https://www.youtube.com/watch?v=ocjS3L-ib4g"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/playlist/6pOcLdvW4npGSCvwzoQP1r?si=seeEKYZER-qpdxbVwIqfPA&amp;nd=1&amp;dlsi=a5542a3fd9fc4b92",
+        "title": "https://open.spotify.com/playlist/6pOcLdvW4npGSCvwzoQP1r?si=seeEKYZER-qpdxbVwIqfPA&amp;nd=1&amp;dlsi=a5542a3fd9fc4b92"
+      },
+      {
+        "url": "https://www.unesco-school.mext.go.jp/international-day/international-day-of-women-and-girls-in-science-2-11/",
+        "title": "https://www.unesco-school.mext.go.jp/international-day/international-day-of-women-and-girls-in-science-2-11/"
+      }
+    ]
   },
   {
     "number": "70",
@@ -1047,7 +1929,29 @@
       "apple": "https://podcasts.apple.com/jp/podcast/70-%E7%A1%AC%E3%81%8F%E3%81%99%E3%82%8B-%E8%BB%9F%E3%82%89%E3%81%8B%E3%81%8F%E3%81%99%E3%82%8B-%E9%89%84%E3%81%AE%E9%81%8B%E5%91%BD%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B-%E7%86%B1%E5%87%A6%E7%90%86-%E3%81%AE%E8%A9%B1/id1789911793?i=1000749137851&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/ec6dae0a-3e23-4fbe-bc83-6946691b893d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-70-%E7%A1%AC%E3%81%8F%E3%81%99%E3%82%8B%EF%BC%9F%E8%BB%9F%E3%82%89%E3%81%8B%E3%81%8F%E3%81%99%E3%82%8B%EF%BC%9F%E9%89%84%E3%81%AE%E9%81%8B%E5%91%BD%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B%E3%80%8C%E7%86%B1%E5%87%A6%E7%90%86%E3%80%8D%E3%81%AE%E8%A9%B1",
       "youtube": ""
-    }
+    },
+    "references": [
+      {
+        "url": "https://xtech.nikkei.com/atcl/nxt/column/18/01309/00006/?P=2",
+        "title": "https://xtech.nikkei.com/atcl/nxt/column/18/01309/00006/?P=2"
+      },
+      {
+        "url": "https://www.keyence.co.jp/ss/products/recorder/heat/basics/type.jsp",
+        "title": "https://www.keyence.co.jp/ss/products/recorder/heat/basics/type.jsp"
+      },
+      {
+        "url": "https://www.takayamaweb.co.jp/technology/index16.html",
+        "title": "https://www.takayamaweb.co.jp/technology/index16.html"
+      },
+      {
+        "url": "https://www.meihaku.jp/sword-basic/yakiire-science/",
+        "title": "https://www.meihaku.jp/sword-basic/yakiire-science/"
+      },
+      {
+        "url": "https://seihin-sekkei.com/plastic-words/thermal-history/",
+        "title": "https://seihin-sekkei.com/plastic-words/thermal-history/"
+      }
+    ]
   },
   {
     "number": "71",
@@ -1062,7 +1966,41 @@
       "apple": "https://podcasts.apple.com/jp/podcast/71-%E7%9F%A5%E8%82%B2%E8%8F%93%E5%AD%90-%E3%81%8A%E3%81%88%E3%81%8B%E3%81%8D%E3%82%B0%E3%83%9F%E3%83%A9%E3%83%B3%E3%83%89-%E3%81%A7%E9%81%8A%E3%81%BC%E3%81%86-%E5%8E%9F%E6%9D%90%E6%96%99%E3%81%8B%E3%82%89%E6%83%B3%E5%83%8F%E3%81%99%E3%82%8B%E5%8E%9F%E7%90%86/id1789911793?i=1000749763393&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/903ba956-2841-4b33-aac5-9a3d3d9aad7c/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-71-%E7%9F%A5%E8%82%B2%E8%8F%93%E5%AD%90%E3%80%8C%E3%81%8A%E3%81%88%E3%81%8B%E3%81%8D%E3%82%B0%E3%83%9F%E3%83%A9%E3%83%B3%E3%83%89%E3%80%8D%E3%81%A7%E9%81%8A%E3%81%BC%E3%81%86%EF%BC%81%E5%8E%9F%E6%9D%90%E6%96%99%E3%81%8B%E3%82%89%E6%83%B3%E5%83%8F%E3%81%99%E3%82%8B%E5%8E%9F%E7%90%86",
       "youtube": "https://www.youtube.com/watch?v=o_GM7L8xxmk"
-    }
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/episode/5fRaqwbCcYccLBu5CncHQJ",
+        "title": "https://open.spotify.com/episode/5fRaqwbCcYccLBu5CncHQJ"
+      },
+      {
+        "url": "https://www.kracie.co.jp/products/foods/10008671_21123.html",
+        "title": "https://www.kracie.co.jp/products/foods/10008671_21123.html"
+      },
+      {
+        "url": "https://youtu.be/2MNKBzoXEXo?si=veSwa1Hjk9v2Oqse",
+        "title": "https://youtu.be/2MNKBzoXEXo?si=veSwa1Hjk9v2Oqse"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/fiber/65/12/65_12_P_444/_pdf",
+        "title": "https://www.jstage.jst.go.jp/article/fiber/65/12/65_12_P_444/_pdf"
+      },
+      {
+        "url": "https://kobeche.co.jp/dev_column_post/gradation-column/",
+        "title": "https://kobeche.co.jp/dev_column_post/gradation-column/"
+      },
+      {
+        "url": "https://www.dic-global.com/ja/contents/scene/spirulina/",
+        "title": "https://www.dic-global.com/ja/contents/scene/spirulina/"
+      },
+      {
+        "url": "https://www.taishotechnos.co.jp/products/pigment.html",
+        "title": "https://www.taishotechnos.co.jp/products/pigment.html"
+      },
+      {
+        "url": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0103-1085.html",
+        "title": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0103-1085.html"
+      }
+    ]
   },
   {
     "number": "72",
@@ -1077,7 +2015,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/72-%E9%9B%91%E8%AB%87-%E6%9C%80%E8%BF%91%E3%81%AE%E7%8A%B6%E6%B3%81%E3%81%A8%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E8%A9%B1/id1789911793?i=1000750207597&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/de9cb5d1-5624-48db-8cbd-942d66c88f52/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-72-%E9%9B%91%E8%AB%87%EF%BC%9A%E6%9C%80%E8%BF%91%E3%81%AE%E7%8A%B6%E6%B3%81%E3%81%A8%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E8%A9%B1",
       "youtube": "https://www.youtube.com/watch?v=dNKh7EGxcjA"
-    }
+    },
+    "references": []
   },
   {
     "number": "73",
@@ -1092,7 +2031,8 @@
       "apple": "https://podcasts.apple.com/jp/podcast/73-%E9%9B%91%E8%AB%87-%E6%84%9F%E8%AC%9D-%E8%A6%87%E6%B0%97%E3%81%8C%E6%88%BB%E3%82%89%E3%81%AA%E3%81%84-%E6%9C%A8%E3%81%93%E3%82%8A%E3%81%AE%E3%82%B8%E3%83%AC%E3%83%B3%E3%83%9E/id1789911793?i=1000751252152&uo=4",
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/3ef3c2cf-2720-4186-bb40-c7924a0919be/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-73-%E9%9B%91%E8%AB%87%EF%BC%9A%E6%84%9F%E8%AC%9D%EF%BC%86%E8%A6%87%E6%B0%97%E3%81%8C%E6%88%BB%E3%82%89%E3%81%AA%E3%81%84%EF%BC%86%E6%9C%A8%E3%81%93%E3%82%8A%E3%81%AE%E3%82%B8%E3%83%AC%E3%83%B3%E3%83%9E",
       "youtube": "https://www.youtube.com/watch?v=XpIs7Q5ZOqE"
-    }
+    },
+    "references": []
   },
   {
     "number": "74",
@@ -1101,6 +2041,34 @@
     "description": "今回はものづくり系ポッドキャストの日の共通テーマ「三次元」にちなんで、立体化学の話をしています！キラルは奥が深い。📚参考資料リモネン https://www.motoko-aromalab.com/post/2018/05/14/香りの科学-第4回目サリドマイド事件 https://www.mhlw.go.jp/stf2/shingi2/2r9852000000rwbu-att/2r9852000000rwkk.pdf過去の医薬品等の健康被害から学ぶもの https://www.pmrj.jp/publications/02/shiryo_slides/yakugai_shiryo_sengo...",
     "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/TQEgITgFpIqajmmNGqt7Db5nvxxVoVEHlPx2H2YJ.png",
     "duration": "00:15:52",
-    "urls": {}
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/xyq2q6gl"
+    },
+    "references": [
+      {
+        "url": "https://www.motoko-aromalab.com/post/2018/05/14/%E9%A6%99%E3%82%8A%E3%81%AE%E7%A7%91%E5%AD%A6-%E7%AC%AC4%E5%9B%9E%E7%9B%AE",
+        "title": "https://www.motoko-aromalab.com/post/2018/05/14/香りの科学-第4回目"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf2/shingi2/2r9852000000rwbu-att/2r9852000000rwkk.pdf",
+        "title": "https://www.mhlw.go.jp/stf2/shingi2/2r9852000000rwbu-att/2r9852000000rwkk.pdf"
+      },
+      {
+        "url": "https://www.pmrj.jp/publications/02/shiryo_slides/yakugai_shiryo_sengo.pdf",
+        "title": "https://www.pmrj.jp/publications/02/shiryo_slides/yakugai_shiryo_sengo.pdf"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/kakyoshi/70/5/70_258/_pdf",
+        "title": "https://www.jstage.jst.go.jp/article/kakyoshi/70/5/70_258/_pdf"
+      },
+      {
+        "url": "https://www.jpo.go.jp/news/koho/info/document/nobel-patent-panel/panel-noyori.pdf",
+        "title": "https://www.jpo.go.jp/news/koho/info/document/nobel-patent-panel/panel-noyori.pdf"
+      },
+      {
+        "url": "https://seisan.server-shared.com/723/723-37.pdf",
+        "title": "https://seisan.server-shared.com/723/723-37.pdf"
+      }
+    ]
   }
 ]
