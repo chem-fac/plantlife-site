@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://plantlife.chem-fac.com/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/history/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260307-podcastmixer.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260307-official-site.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/1.html</loc>
@@ -319,5 +319,9 @@
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/74.html</loc>
     <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://plantlife.chem-fac.com/episodes/75.html</loc>
+    <lastmod>2026-03-07</lastmod>
   </url>
 </urlset>
