@@ -2079,7 +2079,7 @@
     "number": "75",
     "title": "#75 プラントライフの公式ホームページを作りました！",
     "pub_date": "2026-03-07",
-    "description": "遂に公式ホームページを作りました！！そして雑談系ポッドキャストの日オープニングトークテーマ「春」🌸にちなんで花粉症と日本化学会の話を……技術者かねまるの「プラントライフ」公式ホームページはこちら！ https://plantlife.chem-fac.com/――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・日曜日 の朝に更新！LISTENで先行公開後、各種Podcastアプリ（Spotify/Apple/Amazon/Yo...",
+    "description": "遂に公式ホームページを作りました！！そして雑談系ポッドキャストの日オープニングトークテーマ「春」🌸にちなんで花粉症と日本化学会の話を……技術者かねまるの「プラントライフ」公式ホームページはこちら！ https://plantlife.chem-fac.com/――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントের技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・日曜日 の朝に更新！LISTENで先行公開後、各種Podcastアプリ（Spotify/Apple/Amazon/Yo...",
     "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/pRI7t27Grk2wI1h7NLb1ptCYPCmNv5warA4qjyb1.png",
     "duration": "00:12:49",
     "urls": {
@@ -2090,5 +2090,35 @@
       "youtube": "https://www.youtube.com/watch?v=puKYYFWvSF4"
     },
     "references": []
+  },
+  {
+    "number": "76",
+    "title": "#76 天然物を人工的に作れ！全合成のロマン",
+    "pub_date": "2026-03-11",
+    "description": "ものづくり系ポッドキャストの日、共通テーマ「人工」に関連して、天然物の全合成の話をしました！複雑で果てしない合成の道がそこにはある！――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール：毎週 水曜日・日曜日 の朝に更新！",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/jIQyfzFCWmOb7K4D1jVkQRitn4o9JpMnDStnIhaU_resized.png",
+    "duration": "00:20:23",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/xsqrk94v",
+      "spotify": "https://open.spotify.com/episode/2Sa216vFfywFNEQJa3cYIN",
+      "apple": "https://podcasts.apple.com/jp/podcast/76-%E5%A4%A9%E7%84%B6%E7%89%A9%E3%82%92%E4%BA%BA%E5%B7%A5%E7%9A%84%E3%81%AB%E4%BD%9C%E3%82%8C-%E5%85%A8%E5%90%88%E6%88%90%E3%81%AE%E3%83%AD%E3%83%9E%E3%83%B3/id1789911793?i=1000754553417",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/7a2d6958-db0c-4092-89c8-f10c5aa9340e/",
+      "youtube": "https://www.youtube.com/watch?v=JpXMhY3kLto"
+    },
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/chemistry/1902/fischer/biographical/",
+        "title": "Emil Fischer – Biographical - NobelPrize.org"
+      },
+      {
+        "url": "https://pubs.acs.org/doi/10.1021/jacs.5c20700",
+        "title": "Tetrodotoxin Synthesis 2026 - JACS"
+      },
+      {
+        "url": "https://www.msd-life-science-foundation.or.jp/banyu_oldsite/sympo/fukuoka/2010/pdf/gist_nishikawa.pdf",
+        "title": "テトロドトキシンの合成---古くて新しい天然物の合成---"
+      }
+    ]
   }
 ]
+
