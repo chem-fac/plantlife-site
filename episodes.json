@@ -357,7 +357,7 @@
       },
       {
         "url": "https://www.chemical-substance.com/pops/aboutpops.html",
-        "title": "POPsæ¡ç´ã¨ã¯"
+        "title": "https://www.chemical-substance.com/pops/aboutpops.html"
       },
       {
         "url": "https://www.env.go.jp/content/000242834.pdf",
@@ -684,7 +684,7 @@
       },
       {
         "url": "https://chemical-engineering-review.com/piping-and-instrumentation-diagram-composition/",
-        "title": "P&#038;IDの全体構成について解説：レジェンド・P&#038;ID・連結図・ヘッダー系統図など - 化学工学レビュワー"
+        "title": "https://chemical-engineering-review.com/piping-and-instrumentation-diagram-composition/"
       },
       {
         "url": "https://youtu.be/rhV9sy346vY",
@@ -754,7 +754,7 @@
       },
       {
         "url": "https://www.kuken-coolingtower.com/knowledge/construction/",
-        "title": "空調設備で使われる冷却塔の仕組みと構造│冷却塔大学"
+        "title": "https://www.kuken-coolingtower.com/knowledge/construction/"
       },
       {
         "url": "https://www.mhlw.go.jp/content/001476821.pdf",
@@ -771,7 +771,7 @@
     "title": "#33 水と油の二刀流！世界を混ぜる「界面活性剤」",
     "pub_date": "2025-09-02",
     "description": "今回は界面活性剤の話をします。水と油、混ざらないはずの2つを取り持つ分子の働きを、身近な事例から工場で使う装置まで紹介します。科学系ポッドキャストの日、共通テーマ「二刀流」に関する内容です。----【参考資料】・界面科学について https://www.kao.com/jp/kaonokao/openthekao/vol2/3/・界面－界面活性剤の種類とはたらき－ https://www.jstage.jst.go.jp/article/oleoscience/22/9/22_471/_pdf・高速撹拌機による流動状態 https://www.mizuho-ind.co.jp/labo/abo...",
-    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/h1fUtL4sZwRKfWFHjFKuekkbKyDjgKG2PWtaZTjE_resized.png",
+    "thumbnail": "https://image.listen.style/img/UK0vu_UNtYELctAgK2AiM1DljM2bcrP3aLEhFQUBvdg/resize:fill:1200:1200/aHR0cHM6Ly9pbWFnZS5saXN0ZW4uc3R5bGUvcC8wMWpoYTBiY2h4Y2premg3NjI3ZzRjbjc1Mi9pbWFnZXMvaDFmVXRMNHNad1JLZldGSGpGS3Vla2tiS3lEamdLRzJQV3RhWlRqRV9yZXNpemVkLnBuZw.jpg",
     "duration": "00:08:27",
     "urls": {
       "listen": "https://listen.style/p/14rlng1w/h0r5xwsl",
@@ -791,7 +791,7 @@
       },
       {
         "url": "https://www.mizuho-ind.co.jp/labo/about/flow-condition/",
-        "title": "🍒 高速撹拌機による流動状態 ｜ カクハンラボ ｜ みづほ工業株式会社"
+        "title": "https://www.mizuho-ind.co.jp/labo/about/flow-condition/"
       },
       {
         "url": "https://youtu.be/rhV9sy346vY",
@@ -824,7 +824,7 @@
       },
       {
         "url": "https://murase-lab.org/research/16helicene/",
-        "title": "[16]Helicene | The Murase Group"
+        "title": "https://murase-lab.org/research/16helicene/"
       },
       {
         "url": "https://omedstu.jimdofree.com/2017/12/10/%E3%83%8A%E3%83%8E%E3%83%97%E3%82%B7%E3%83%A3%E3%83%B3%E3%81%A8%E5%8C%96%E5%AD%A6%E6%95%99%E8%82%B2/",
@@ -832,7 +832,7 @@
       },
       {
         "url": "https://curiousokinawa.com/blog/2016/09/13/energyfluorescence/",
-        "title": "エナジードリンクの蛍光 | キュリオス沖縄ブログ"
+        "title": "https://curiousokinawa.com/blog/2016/09/13/energyfluorescence/"
       },
       {
         "url": "https://youtu.be/rhV9sy346vY",
@@ -898,7 +898,7 @@
       },
       {
         "url": "https://www.isgnet.jp/greasetrap/about/",
-        "title": "グリストラップ(グリーストラップ)とは?｜グリストラップ清掃のアイエスジー"
+        "title": "https://www.isgnet.jp/greasetrap/about/"
       },
       {
         "url": "https://www.fnn.jp/articles/-/799134",
@@ -1001,7 +1001,7 @@
       },
       {
         "url": "https://www.icems.kyoto-u.ac.jp/more/scope/pcp/",
-        "title": "PCP/MOF の世界へ | iCeMSリサーチスコープ | 京都大学アイセムス"
+        "title": "https://www.icems.kyoto-u.ac.jp/more/scope/pcp/"
       },
       {
         "url": "https://arc.asahi-kasei.co.jp/report/arc_report/pdf/RS-1057.pdf",
@@ -1153,7 +1153,7 @@
       },
       {
         "url": "https://www.shinrin-ringyou.com/topics/kaede.php",
-        "title": "ã¢ãã¸ï¼ç´èï¼ã¨ã«ã¨ãï¼æ¥)"
+        "title": "https://www.shinrin-ringyou.com/topics/kaede.php"
       },
       {
         "url": "https://www.fmyokohama.jp/sun/2022/11/post-1-2.html",
@@ -1161,11 +1161,11 @@
       },
       {
         "url": "https://biodiversity.pref.fukuoka.lg.jp/futsushu/zatsugakustory/autumn_leaves.html",
-        "title": "紅葉はなぜ起きる？ ～葉の色が変わる仕組み～ | 生きもの雑学コーナー | 県内の動植物種について知りたい（身近な生きもの） | 生物多様性情報総合プラットフォーム 福岡生きものステーション"
+        "title": "https://biodiversity.pref.fukuoka.lg.jp/futsushu/zatsugakustory/autumn_leaves.html"
       },
       {
         "url": "https://buna.info/article/1929/",
-        "title": "なぜ紅葉するの？ 葉の色が変わる「色素」のメカニズム｜記事カテゴリ｜BuNa - Bun-ichi Nature Web Magazine ｜文一総合出版"
+        "title": "https://buna.info/article/1929/"
       },
       {
         "url": "https://youtu.be/rhV9sy346vY",
@@ -1641,7 +1641,7 @@
       },
       {
         "url": "https://scien-talk.com/",
-        "title": "サイエントーク | 科学系ポッドキャスト | サイエンスをエンタメっぽく語るポッドキャスト"
+        "title": "https://scien-talk.com/"
       }
     ]
   },
@@ -1765,7 +1765,7 @@
       },
       {
         "url": "https://kimika.net/r3roppousaimitsu.html",
-        "title": "六方最密構造（単位格子に含む原子数・配位数・高さ・充填率の求め方など） | 化学のグルメ"
+        "title": "https://kimika.net/r3roppousaimitsu.html"
       },
       {
         "url": "https://www.city.iwaki.lg.jp/www/contents/1547339083008/index.html",
@@ -1777,7 +1777,7 @@
       },
       {
         "url": "http://hrein.jp/technology",
-        "title": "有機ハイドライド技術 | 株式会社フレイン・エナジー　Hrein Energy"
+        "title": "http://hrein.jp/technology"
       },
       {
         "url": "https://www.morinaga.co.jp/protein/columns/detail/?id=20&amp;category=health",
@@ -1785,7 +1785,7 @@
       },
       {
         "url": "https://www.electronics.toray/column/polyimide_01.html",
-        "title": "ããªã¤ããã®åºç¤ç¥è­ï½ã©ã®ããã«ä½¿ããã¦ããããè§£èª¬ | è£½åã©ã¤ã³ããã | æ±ã¬ã®é»å­æå ±ææ"
+        "title": "404 NOT FOUND"
       }
     ]
   },
@@ -1838,7 +1838,7 @@
       },
       {
         "url": "https://at-electrode.com/faq/",
-        "title": "よくある質問 - ATエレクトロード株式会社「ATEC」"
+        "title": "https://at-electrode.com/faq/"
       }
     ]
   },
@@ -1941,7 +1941,7 @@
       },
       {
         "url": "https://www.takayamaweb.co.jp/technology/index16.html",
-        "title": "熱処理の種類｜技術情報｜タカヤマ"
+        "title": "https://www.takayamaweb.co.jp/technology/index16.html"
       },
       {
         "url": "https://www.meihaku.jp/sword-basic/yakiire-science/",
@@ -1949,7 +1949,7 @@
       },
       {
         "url": "https://seihin-sekkei.com/plastic-words/thermal-history/",
-        "title": "熱履歴／thermal history - 製品設計知識"
+        "title": "https://seihin-sekkei.com/plastic-words/thermal-history/"
       }
     ]
   },
@@ -1986,7 +1986,7 @@
       },
       {
         "url": "https://kobeche.co.jp/dev_column_post/gradation-column/",
-        "title": "色鮮やか！クチナシ色素のグラデーション - 食品添加物、着色料・色素の研究開発と製造なら神戸化成株式会社"
+        "title": "https://kobeche.co.jp/dev_column_post/gradation-column/"
       },
       {
         "url": "https://www.dic-global.com/ja/contents/scene/spirulina/",
@@ -1994,7 +1994,7 @@
       },
       {
         "url": "https://www.taishotechnos.co.jp/products/pigment.html",
-        "title": "é£ç¨è²ç´  - è£½åç´¹ä»ï½æ ªå¼ä¼ç¤¾ã¿ã¤ã·ã§ã¼ãã¯ãã¹"
+        "title": "https://www.taishotechnos.co.jp/products/pigment.html"
       },
       {
         "url": "https://labchem-wako.fujifilm.com/jp/product/detail/W01W0103-1085.html",
@@ -2135,5 +2135,27 @@
       "youtube": "https://www.youtube.com/watch?v=g6NLOx7_KdI"
     },
     "references": []
+  },
+  {
+    "number": "78",
+    "title": "#78 中東情勢の件で学ぶ石油化学",
+    "pub_date": "2026-03-17",
+    "description": "最近話題になっている中東情勢に関連して、石油化学への影響やプラントの運転事情について話してみました！📚参考資料原油高だけではない中東情勢緊迫化の試練 https://www.mizuho-rt.co.jp/business/research/report/pdf/report260313.pdf国内エチレン減産広がる　水島・京葉も稼働調整 https://chemicaldaily.com/archives/778510――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。📅 配信スケジュール毎週 水曜日・日曜日 の朝...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/JPtz0WsyqO631cIMk0lYyHkW03P7RKQB61oNjB7K_resized.png",
+    "duration": "00:17:58",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/pnsbqi5f",
+      "apple": "https://podcasts.apple.com/jp/podcast/78-%E4%B8%AD%E6%9D%B1%E6%83%85%E5%8B%A2%E3%81%AE%E4%BB%B6%E3%81%A7%E5%AD%A6%E3%81%B6%E7%9F%B3%E6%B2%B9%E5%8C%96%E5%AD%A6/id1789911793?i=1000755837777&uo=4"
+    },
+    "references": [
+      {
+        "url": "https://www.mizuho-rt.co.jp/business/research/report/pdf/report260313.pdf",
+        "title": "https://www.mizuho-rt.co.jp/business/research/report/pdf/report260313.pdf"
+      },
+      {
+        "url": "https://chemicaldaily.com/archives/778510",
+        "title": "国内エチレン減産広がる　水島・京葉も稼働調整 : 化学工業日報 電子版"
+      }
+    ]
   }
 ]
