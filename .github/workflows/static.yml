@@ -29,6 +29,9 @@ jobs:
         with:
           enablement: true
 
+      - name: Remove development files from deployment
+        run: rm -rf _dev/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
