@@ -2193,5 +2193,35 @@
         "title": "https://amzn.to/4rHb5py"
       }
     ]
+  },
+  {
+    "number": "80",
+    "title": "#80 硫酸ジメチル事故から考える 化学物質の怖さとSDSの重要性",
+    "pub_date": "2026-03-31",
+    "description": "先日、硫酸ジメチルに関する事故の報道がされました。個人的には結構驚きで、注目した点について話してみました。📚参考資料硫酸ジメチル事故の内容 https://www.saitama-np.co.jp/articles/187733/postDetail関東化学の事故のお知らせ https://www.kanto.co.jp/news.html硫酸ジメチルSDS https://www.tcichemicals.com/JP/ja/p/D0797#docomentsSectionPDP硫酸ジメチルハザード評価シート https://www.cerij.or.jp/evaluation_docume...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/eCr3QP2FCTQYTUIATDxvfKWnyAOZSyHBOmVSKJl7_resized.png",
+    "duration": "00:14:30",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/glrkhwgy",
+      "apple": "https://podcasts.apple.com/jp/podcast/80-%E7%A1%AB%E9%85%B8%E3%82%B8%E3%83%A1%E3%83%81%E3%83%AB%E4%BA%8B%E6%95%85%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B-%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B3%AA%E3%81%AE%E6%80%96%E3%81%95%E3%81%A8sds%E3%81%AE%E9%87%8D%E8%A6%81%E6%80%A7/id1789911793?i=1000758516033&uo=4"
+    },
+    "references": [
+      {
+        "url": "https://www.saitama-np.co.jp/articles/187733/postDetail",
+        "title": "https://www.saitama-np.co.jp/articles/187733/postDetail"
+      },
+      {
+        "url": "https://www.kanto.co.jp/news.html",
+        "title": "https://www.kanto.co.jp/news.html"
+      },
+      {
+        "url": "https://www.tcichemicals.com/JP/ja/p/D0797#docomentsSectionPDP",
+        "title": "https://www.tcichemicals.com/JP/ja/p/D0797#docomentsSectionPDP"
+      },
+      {
+        "url": "https://www.cerij.or.jp/evaluation_document/hazard/F98_27.pdf",
+        "title": "https://www.cerij.or.jp/evaluation_document/hazard/F98_27.pdf"
+      }
+    ]
   }
 ]
