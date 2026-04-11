@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initScrollReveal();
   initLatestEpisodes();
+  initShareButtons();
 });
 
 /* ── Sticky header ── */
@@ -132,7 +133,7 @@ function initLatestEpisodes() {
         if (m) displayTitle = m[1];
 
         const card = document.createElement('a');
-        card.href = `episodes/${ep.number}.html`;
+        card.href = `episodes/${ep.number}/`;
         card.className = 'ep-latest-card';
 
         card.innerHTML = `
@@ -179,4 +180,48 @@ function escapeHtml(str) {
   const d = document.createElement('div');
   d.textContent = str;
   return d.innerHTML;
+}
+
+/* ── Share buttons ── */
+function initShareButtons() {
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  const shareContainer = document.createElement('div');
+  shareContainer.className = 'share-buttons';
+  shareContainer.id = 'share-buttons';
+
+  shareContainer.innerHTML = `
+    <span class="share-buttons__label">Share</span>
+    <a href="https://x.com/intent/tweet?url=${pageUrl}&text=${pageTitle}"
+       target="_blank" rel="noopener noreferrer"
+       class="share-btn share-btn--x" data-tooltip="Xでシェア" aria-label="Xでシェア">
+      <img src="/images/x_logo.png" alt="X">
+    </a>
+    <a href="https://note.com/intent/post?url=${pageUrl}"
+       target="_blank" rel="noopener noreferrer"
+       class="share-btn share-btn--note" data-tooltip="noteでシェア" aria-label="noteでシェア">
+      <img src="/images/note_n.png" alt="note">
+    </a>
+    <a href="https://social-plugins.line.me/lineit/share?url=${pageUrl}"
+       target="_blank" rel="noopener noreferrer"
+       class="share-btn share-btn--line" data-tooltip="LINEでシェア" aria-label="LINEでシェア">
+      <img src="/images/LINE_icon.png" alt="LINE">
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=${pageUrl}"
+       target="_blank" rel="noopener noreferrer"
+       class="share-btn share-btn--facebook" data-tooltip="Facebookでシェア" aria-label="Facebookでシェア">
+      <img src="/images/Facebook_icon.png" alt="Facebook">
+    </a>
+  `;
+
+  document.body.appendChild(shareContainer);
+
+  // Show/hide based on scroll position
+  const showAfter = 300;
+  const onScroll = () => {
+    shareContainer.classList.toggle('visible', window.scrollY > showAfter);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }

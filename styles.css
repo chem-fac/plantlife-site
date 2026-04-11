@@ -1854,3 +1854,208 @@ img {
     font-size: 1.4rem;
   }
 }
+
+/* ══════════════════════════════════════
+   SHARE BUTTONS — Floating side bar
+   ══════════════════════════════════════ */
+.share-buttons {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+}
+
+.share-buttons.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.share-buttons__label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--light-muted);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--light-surface);
+  border: 1px solid var(--light-border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s var(--ease);
+  color: var(--light-secondary);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.share-btn:hover {
+  transform: scale(1.15);
+  box-shadow: var(--shadow-md);
+}
+
+.share-btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* X (Twitter) */
+.share-btn--x {
+  color: #000000;
+}
+.share-btn--x:hover {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+/* note */
+.share-btn--note {
+  color: #41C9B4;
+}
+.share-btn--note:hover {
+  background: #41C9B4;
+  border-color: #41C9B4;
+  color: #ffffff;
+}
+
+/* LINE */
+.share-btn--line {
+  color: #06C755;
+}
+.share-btn--line:hover {
+  background: #06C755;
+  border-color: #06C755;
+  color: #ffffff;
+}
+
+/* Facebook */
+.share-btn--facebook {
+  color: #1877F2;
+}
+.share-btn--facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  color: #ffffff;
+}
+
+/* Tooltip */
+.share-btn[data-tooltip] {
+  position: relative;
+}
+
+.share-btn[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--light-text);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.share-btn[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* Mobile: bottom fixed bar */
+@media (max-width: 1200px) {
+  .share-buttons {
+    left: 12px;
+  }
+
+  .share-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .share-btn img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .share-buttons__label {
+    display: none;
+  }
+
+  .share-btn[data-tooltip]::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .share-buttons {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--light-border);
+    padding: 10px 16px;
+    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .share-buttons__label {
+    display: none;
+  }
+
+  .share-btn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    box-shadow: none;
+    border-radius: var(--radius-md);
+    background: transparent;
+    flex: 1;
+    max-width: 80px;
+  }
+
+  .share-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .share-btn img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Add padding to footer so it's not hidden behind share bar */
+  .footer {
+    padding-bottom: 64px;
+  }
+}

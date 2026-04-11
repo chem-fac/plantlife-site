@@ -152,7 +152,7 @@
                 <a href="/#platforms" class="nav-link">配信先</a>
                 <a href="/#episodes" class="nav-link active">エピソード</a>
                 <a href="/#about" class="nav-link">番組について</a>
-                <a href="../history/index.html" class="nav-link">番組の歩み</a>
+                <a href="../history/" class="nav-link">番組の歩み</a>
                 <a href="/#contact" class="nav-link">お問い合わせ</a>
             </nav>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
@@ -252,7 +252,7 @@
                     if (m) title = m[1];
 
                     const card = document.createElement('a');
-                    card.href = `${ep.number}.html`;
+                    card.href = `${ep.number}/`;
                     card.className = 'all-ep-card';
                     card.innerHTML = `
             <div class="all-ep-thumb">
