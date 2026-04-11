@@ -193,7 +193,7 @@ function initShareButtons() {
 
   shareContainer.innerHTML = `
     <span class="share-buttons__label">Share</span>
-    <a href="https://x.com/intent/tweet?url=${pageUrl}&text=${pageTitle}"
+    <a href="https://x.com/intent/tweet?url=${pageUrl}&text=${pageTitle}&hashtags=プラントライフ&via=chem_fac"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-btn--x" data-tooltip="Xでシェア" aria-label="Xでシェア">
       <img src="/images/x_logo.png" alt="X">
