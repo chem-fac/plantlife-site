@@ -2538,5 +2538,23 @@
         "title": "しゃべり足りない部"
       }
     ]
+  },
+  {
+    "number": "86",
+    "title": "#86 身近な湿度、説明できる？？",
+    "pub_date": "2026-04-21",
+    "description": "Xで話題だった湿度100％の話に絡めて、湿度の意味や露点という別の指標も含めて話してみました！📚参考資料霧や霜の定義 https://www.jma.go.jp/jma/kishou/know/yougo_hp/kori.html――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・日曜日 の朝に更新！LISTENで先行公開後、各種Podcastアプリ（Spotify/Apple/Amazon/YouTube）にも配信されます。...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/X4hAzVn7U8ERNbOwtuUO3g2soZWBUQTyJJhRzTmF.png",
+    "duration": "00:13:13",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/82wgasrk",
+      "apple": "https://podcasts.apple.com/jp/podcast/86-%E8%BA%AB%E8%BF%91%E3%81%AA%E6%B9%BF%E5%BA%A6-%E8%AA%AC%E6%98%8E%E3%81%A7%E3%81%8D%E3%82%8B/id1789911793?i=1000762966274&uo=4"
+    },
+    "references": [
+      {
+        "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/kori.html",
+        "title": "霧や霜の定義"
+      }
+    ]
   }
 ]
