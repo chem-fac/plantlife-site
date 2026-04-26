@@ -2390,7 +2390,7 @@
     "number": "85",
     "title": "#85 人生史：私を構成する30のコンテンツ",
     "pub_date": "2026-04-18",
-    "description": "「私を構成する30のコンテンツ」という配信を見かけまして、面白そうなのでやってみました！生まれてから現在まで、コンテンツと共にどのような人生を歩んできたのか話しました。🔖紹介したコンテンツポケットモンスター緑 https://www.pokemon.co.jp/game/other/gb-rg/夢水清志郎事件ノートシリーズ(はやみねかおる) https://cocreco.kodansha.co.jp/lp/books?lp=yumemizuクッキングパパ https://www.kodansha.co.jp/titles/1000000029釣りバカ日誌 https://bigcomics....",
+    "description": "「私を構成する30のコンテンツ」という配信を見かけまして、面白そうなのでやってみました！生まれてから現在まで、コンテンツと共にどのような人生を歩んできたのか話しました。🔖紹介したコンテンツポケットモンスター緑 https://www.pokemon.co.jp/game/other/gb-rg/夢水清志郎事件ノートシリーズ(はやみねかおる) https://amzn.to/4t0gPLIhttps://amzn.to/4t1lfSHクッキングパパ https://amzn.to/3OPTjD0釣りバカ日誌 https://amzn.to/3Qw1WTUBARレモン・ハート https://am...",
     "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/LRtJfYJ7d4CbOmltaomO9eve7Xvn68QPAKcQNIId.png",
     "duration": "00:48:08",
     "urls": {
@@ -2406,20 +2406,24 @@
         "title": "ポケットモンスター緑"
       },
       {
-        "url": "https://cocreco.kodansha.co.jp/lp/books?lp=yumemizu",
-        "title": "夢水清志郎事件ノートシリーズ(はやみねかおる)"
+        "url": "https://amzn.to/4t0gPLI",
+        "title": "夢水清志郎事件ノートシリーズ ( はやみねかおる )"
       },
       {
-        "url": "https://www.kodansha.co.jp/titles/1000000029",
+        "url": "https://amzn.to/4t1lfSH",
+        "title": "Amazon.co.jp"
+      },
+      {
+        "url": "https://amzn.to/3OPTjD0",
         "title": "クッキングパパ"
       },
       {
-        "url": "https://bigcomics.jp/series/eefd782c099a3",
+        "url": "https://amzn.to/3Qw1WTU",
         "title": "釣りバカ日誌"
       },
       {
-        "url": "https://piccoma.com/web/product/16874?etype=episode",
-        "title": "レモンハート"
+        "url": "https://amzn.to/3OqMRCB",
+        "title": "BAR レモン・ハート"
       },
       {
         "url": "https://www.pokemon-card.com/",
@@ -2557,6 +2561,39 @@
       {
         "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/kori.html",
         "title": "霧や霜の定義"
+      }
+    ]
+  },
+  {
+    "number": "87",
+    "title": "#87 素晴らしき機能美！撹拌翼（かくはんよく）の世界",
+    "pub_date": "2026-04-25",
+    "description": "今回はビデオポッドキャスト回です！液体を混ぜる撹拌機、のプロペラ部分である撹拌翼の見た目や機能について話しました！🎪イベントのお知らせPODCASTMIXER 2.0 https://podcastmixer.jp/日時：2026年5月16日（土）OPEN 11:00 / START 11:30 / END 16:00場所：兵庫県神戸市 aiDolce価格：事前販売 ¥3,000（当日券なし）📖記事紹介中堅化学メーカーから大手へ。化学プラント技術者が転職で考えたこと https://note.com/chem_fac/n/n78c63f7b2171📚参考資料住友重機械プロセス機器 MAXBLE...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/bwKaXJLHZX6zcSaZdYiqPlAGFeUQtW5vvugz0IBS.png",
+    "duration": "00:23:20",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/gvurycyq",
+      "spotify": "https://open.spotify.com/episode/34T9EGNGmItj0KNMvUFZFa",
+      "apple": "https://podcasts.apple.com/jp/podcast/87-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E6%A9%9F%E8%83%BD%E7%BE%8E-%E6%92%B9%E6%8B%8C%E7%BF%BC-%E3%81%8B%E3%81%8F%E3%81%AF%E3%82%93%E3%82%88%E3%81%8F-%E3%81%AE%E4%B8%96%E7%95%8C/id1789911793?i=1000763608921&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/3bcd66b9-a490-4dca-b737-0f7fcfe3e017/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-87-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E6%A9%9F%E8%83%BD%E7%BE%8E%EF%BC%81%E6%92%B9%E6%8B%8C%E7%BF%BC%EF%BC%88%E3%81%8B%E3%81%8F%E3%81%AF%E3%82%93%E3%82%88%E3%81%8F%EF%BC%89%E3%81%AE%E4%B8%96%E7%95%8C",
+      "youtube": "https://www.youtube.com/watch?v=nSSk8cuNzOI"
+    },
+    "references": [
+      {
+        "url": "https://podcastmixer.jp/",
+        "title": "PODCASTMIXER 2.0"
+      },
+      {
+        "url": "https://www.shi-pe.shi.co.jp/products/mixing/maxblendclub/tokuseifureimu.html",
+        "title": "住友重機械プロセス機器 MAXBLEND（マックスブレンド）"
+      },
+      {
+        "url": "https://www.kobelco-eco.co.jp/product/pdf/process/product/logborn.pdf",
+        "title": "神鋼環境ソリューション ログボーン"
+      },
+      {
+        "url": "https://www.satake.co.jp/research/technical/supermix/",
+        "title": "佐竹マルチミクス 撹拌翼スーパーミックスシリーズ"
       }
     ]
   }
