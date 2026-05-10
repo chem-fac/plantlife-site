@@ -2699,5 +2699,27 @@
         "title": "ベントナイトとは？"
       }
     ]
+  },
+  {
+    "number": "91",
+    "title": "#91 ナフサってなんだ？不足するとなぜ困る？プラスチックを支える出発点",
+    "pub_date": "2026-05-09",
+    "description": "話題のナフサ、そもそも何なの？？という話をしてみました。📚参考資料ナフサとは https://www.eneos.co.jp/binran/part02/chapter01/section02.html2026年3月度エチレンプラント稼働率 https://www.jpca.or.jp/files/statistics/monthly/memo/202603_memo.pdf――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/ae4AdABIEQNNZIFVSMIsJtUgMJssNuV5dpCDREgV.png",
+    "duration": "00:16:22",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/pcfgki0h",
+      "apple": "https://podcasts.apple.com/jp/podcast/91-%E3%83%8A%E3%83%95%E3%82%B5%E3%81%A3%E3%81%A6%E3%81%AA%E3%82%93%E3%81%A0-%E4%B8%8D%E8%B6%B3%E3%81%99%E3%82%8B%E3%81%A8%E3%81%AA%E3%81%9C%E5%9B%B0%E3%82%8B-%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E5%87%BA%E7%99%BA%E7%82%B9/id1789911793?i=1000766985144&uo=4"
+    },
+    "references": [
+      {
+        "url": "https://www.eneos.co.jp/binran/part02/chapter01/section02.html",
+        "title": "ナフサとは"
+      },
+      {
+        "url": "https://www.jpca.or.jp/files/statistics/monthly/memo/202603_memo.pdf",
+        "title": "2026年3月度エチレンプラント稼働率"
+      }
+    ]
   }
 ]
