@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  # actions/checkout@v4 等を Node.js 24 で動かす（2026-09でNode 20廃止予定）
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
