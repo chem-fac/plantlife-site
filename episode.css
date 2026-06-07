@@ -111,6 +111,39 @@
     white-space: pre-wrap;
 }
 
+/* タグチップ（詳細ページ） */
+.ep-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.ep-tag-chip {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--brand);
+    background: var(--brand-50);
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.2s var(--ease);
+}
+
+.ep-tag-chip::before {
+    content: "#";
+    opacity: 0.55;
+    margin-right: 2px;
+}
+
+.ep-tag-chip:hover {
+    border-color: var(--brand);
+    background: #fff;
+}
+
 /* Platform links */
 .ep-detail-platforms {
     border-top: 1px solid var(--light-border);
