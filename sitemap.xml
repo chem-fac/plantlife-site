@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://plantlife.chem-fac.com/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/history/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260411-share-button/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260318-pfn-book-reading/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260308-listen-pickup/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260307-podcastmixer/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/news/20260307-official-site/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/1/</loc>
@@ -431,5 +431,9 @@
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/99/</loc>
     <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://plantlife.chem-fac.com/episodes/100/</loc>
+    <lastmod>2026-06-06</lastmod>
   </url>
 </urlset>
