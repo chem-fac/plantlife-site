@@ -1465,7 +1465,7 @@
         "title": "【速報】2010年ノーベル化学賞決定！『クロスカップリング反応』に！！"
       },
       {
-        "url": "https://cmaj.jp/check/?privfile=47-50-48-49-57-47-48-51-47-50-48-46-112-100-102&amp;catfile=all",
+        "url": "https://cmaj.jp/check/?privfile=47-50-48-49-57-47-48-51-47-50-48-46-112-100-102&catfile=all",
         "title": "チーグラーナッタ触媒"
       },
       {
@@ -2212,7 +2212,7 @@
     },
     "references": [
       {
-        "url": "https://open.spotify.com/playlist/4A75XoQHa5sALOxn90E5L4?si=o4WH1QwDTRO8wjXu_ozBOQ&amp;pi=m4BbaDfHTIOCR",
+        "url": "https://open.spotify.com/playlist/4A75XoQHa5sALOxn90E5L4?si=o4WH1QwDTRO8wjXu_ozBOQ&pi=m4BbaDfHTIOCR",
         "title": "「0」 #科学系ポッドキャストの日 2025年12月 - playlist by サイエントーク / 科学のポッドキャスト | Spotify"
       },
       {
@@ -2268,7 +2268,7 @@
         "title": "ポッドキャスト Advent Calendar 2025 - Adventar"
       },
       {
-        "url": "https://open.spotify.com/episode/3VxDXLJOrQ9IzEivjrMsMh?si=8s2QP2sbTG23wnvp0Aof6w&amp;nd=1&amp;dlsi=b2a933fc3eb04cc8",
+        "url": "https://open.spotify.com/episode/3VxDXLJOrQ9IzEivjrMsMh?si=8s2QP2sbTG23wnvp0Aof6w&nd=1&dlsi=b2a933fc3eb04cc8",
         "title": "#12　12月から連想する「ニルスのふしぎな旅」 - 声でたどる物語～朗読の本棚 | Podcast on Spotify"
       },
       {
@@ -2699,8 +2699,8 @@
         "title": "有機ハイドライド技術"
       },
       {
-        "url": "https://www.healthy-pass.co.jp/blog/20160729/",
-        "title": "タンパク質とペプチドとアミノ酸の違い"
+        "url": "https://www.morinaga.co.jp/protein/columns/detail/?id=20&category=health",
+        "title": "タンパク質・アミノ酸・ペプチド"
       },
       {
         "url": "https://www.electronics.toray/column/polyimide_01.html",
@@ -2882,7 +2882,7 @@
     },
     "references": [
       {
-        "url": "https://open.spotify.com/playlist/6pOcLdvW4npGSCvwzoQP1r?si=seeEKYZER-qpdxbVwIqfPA&amp;nd=1&amp;dlsi=a5542a3fd9fc4b92",
+        "url": "https://open.spotify.com/playlist/6pOcLdvW4npGSCvwzoQP1r?si=seeEKYZER-qpdxbVwIqfPA&nd=1&dlsi=a5542a3fd9fc4b92",
         "title": "今回のテーマのSpotifyプレイリストはこちら！"
       },
       {
@@ -3416,7 +3416,7 @@
     },
     "references": [
       {
-        "url": "https://open.spotify.com/playlist/7DYWRfTZIbXM3VBWnKXxaC?si=ywf2XlnJQqaROWSTr_QN8A&amp;nd=1&amp;dlsi=021ddcc0a9604d90",
+        "url": "https://open.spotify.com/playlist/7DYWRfTZIbXM3VBWnKXxaC?si=ywf2XlnJQqaROWSTr_QN8A&nd=1&dlsi=021ddcc0a9604d90",
         "title": "共通テーマ「社会」のプレイリストはこちら！"
       },
       {
@@ -4161,8 +4161,8 @@
         "title": "図解　産業を支えるYOKOGAWA - 紙パルプ編"
       },
       {
-        "url": "https://web.tuat.ac.jp/~plant-biomass-chem/outline.html",
-        "title": "植物バイオマス化学研究室について"
+        "url": "https://web.tuat.ac.jp/~plant-biomass-chem/fundamental",
+        "title": "リグニンとは"
       },
       {
         "url": "https://www.jstage.jst.go.jp/article/jsms1963/16/169/16_169_790/_pdf",
@@ -4379,5 +4379,28 @@
       "DX",
       "転職"
     ]
+  },
+  {
+    "number": "101",
+    "title": "#101 実験室ではうまくいくのに？スケールアップ効果の話",
+    "pub_date": "2026-06-09",
+    "description": "#科学系ポッドキャストの日 共通テーマ「効果」に合わせて、スケールアップ効果について話してみました！単純に大きくすれば良い、というわけではありません。「効果」のプレイリストはこちら！https://open.spotify.com/playlist/6BSDGYgOKJH0BAaiDeqK0N?si=zae52l-CQnqUs4NtyJe5vA――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・日曜日 の朝に更新！LISTEN...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/CtM7bOHI2ColCuUAKAfdQxsbwhFkfSonlBJkzeSO.png",
+    "duration": "00:23:30",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/kuubpiyi",
+      "apple": "https://podcasts.apple.com/jp/podcast/101-%E5%AE%9F%E9%A8%93%E5%AE%A4%E3%81%A7%E3%81%AF%E3%81%86%E3%81%BE%E3%81%8F%E3%81%84%E3%81%8F%E3%81%AE%E3%81%AB-%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E5%8A%B9%E6%9E%9C%E3%81%AE%E8%A9%B1/id1789911793?i=1000771925375&uo=4",
+      "spotify": "https://open.spotify.com/episode/29lzEF8bfwSzZV2mJXNBzJ",
+      "youtube": "https://www.youtube.com/watch?v=9O-kX8JOB5E",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/f5ecacbb-13c1-4c7d-85d8-2d01cb555936/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-101-%E5%AE%9F%E9%A8%93%E5%AE%A4%E3%81%A7%E3%81%AF%E3%81%86%E3%81%BE%E3%81%8F%E3%81%84%E3%81%8F%E3%81%AE%E3%81%AB%EF%BC%9F%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E5%8A%B9%E6%9E%9C%E3%81%AE%E8%A9%B1"
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/playlist/6BSDGYgOKJH0BAaiDeqK0N?si=zae52l-CQnqUs4NtyJe5vA",
+        "title": "「効果」 #科学系ポッドキャストの日 2026年6月 - playlist by サイエントーク / 科学のポッドキャスト | Spotify"
+      }
+    ],
+    "tags": [],
+    "keywords": []
   }
 ]
