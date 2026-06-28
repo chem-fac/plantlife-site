@@ -333,3 +333,42 @@
     word-break: break-all;
     font-family: var(--font-mono);
 }
+
+/* ── 文字起こし ── */
+.ep-detail-transcript {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--light-border);
+}
+
+.ep-detail-transcript-heading {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.transcript-body {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.transcript-body p {
+    margin: 0 0 0.85em;
+}
+
+.transcript-body .transcript-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--light-text);
+    margin: 2em 0 0.9em;
+    padding-left: 12px;
+    border-left: 3px solid var(--brand);
+    line-height: 1.5;
+}
+
+.transcript-body .transcript-heading:first-child {
+    margin-top: 0;
+}
