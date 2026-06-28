@@ -109,6 +109,8 @@
     color: var(--light-secondary);
     line-height: 1.9;
     white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 /* タグチップ（詳細ページ） */
@@ -353,6 +355,8 @@
     color: var(--light-text);
     font-size: 0.95rem;
     line-height: 1.9;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .transcript-body p {
