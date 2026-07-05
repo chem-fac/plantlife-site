@@ -4563,5 +4563,52 @@
     "references": [],
     "tags": [],
     "keywords": []
+  },
+  {
+    "number": "108",
+    "title": "#108 油圧で使うアルコール？水グリコール系作動油の世界",
+    "pub_date": "2026-07-05",
+    "description": "#科学系ポッドキャストの日 の共通テーマ「アルコール」に関連して、アルコールの一種であるグリコールを使った油圧作動油について話しました！ホストは「工業高校農業部」です！参加番組のアルコールエピソードはこちら。https://open.spotify.com/playlist/0au9Y6lAZqOXTNouWkm26q?si=1fIzmUKtS3CaIheRF22TWg科学系ポッドキャストの日とは？https://scien-talk.com/science_podcast/📚参考資料油圧ショベル・ミニショベルの仕組みについて　https://www.yanmar.com/jp/constru...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/gW8f3C11t62GwwaUrz54h21VBCiQoMZ21Ydd9Ns7_resized.png",
+    "duration": "00:20:18",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/lej2rwkh",
+      "apple": "https://podcasts.apple.com/jp/podcast/108-%E6%B2%B9%E5%9C%A7%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%AB-%E6%B0%B4%E3%82%B0%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%E7%B3%BB%E4%BD%9C%E5%8B%95%E6%B2%B9%E3%81%AE%E4%B8%96%E7%95%8C/id1789911793?i=1000775476805&uo=4",
+      "spotify": "https://open.spotify.com/episode/3XBnMOOXv6VMXp2wRgTYjB",
+      "youtube": "https://www.youtube.com/watch?v=QxtsAFin79U",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/283b4235-7358-40de-80b9-f647766d4fcc/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-108-%E6%B2%B9%E5%9C%A7%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%AB%EF%BC%9F%E6%B0%B4%E3%82%B0%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%E7%B3%BB%E4%BD%9C%E5%8B%95%E6%B2%B9%E3%81%AE%E4%B8%96%E7%95%8C"
+    },
+    "references": [
+      {
+        "url": "https://open.spotify.com/playlist/0au9Y6lAZqOXTNouWkm26q?si=1fIzmUKtS3CaIheRF22TWg",
+        "title": "ホストは「工業高校農業部」です！参加番組のアルコールエピソードはこちら。"
+      },
+      {
+        "url": "https://scien-talk.com/science_podcast/",
+        "title": "科学系ポッドキャストの日とは？"
+      },
+      {
+        "url": "https://www.yanmar.com/jp/construction/tips/column/basis_02.html",
+        "title": "油圧ショベル・ミニショベルの仕組みについて"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/jjfpss/54/4/54_167/_pdf/-char/ja",
+        "title": "水グリコール系難燃性作動油の状態監視システムの開発について"
+      },
+      {
+        "url": "https://anzeninfo.mhlw.go.jp/anzen/gmsds/107-21-1.html",
+        "title": "エチレングリコール"
+      },
+      {
+        "url": "https://www.juntsu.co.jp/qa/qa0519.php",
+        "title": "難燃性作動液の種類と特長"
+      },
+      {
+        "url": "https://www.juntsu.co.jp/qa/qa0516.php",
+        "title": "水-グリコール系作動液のチェックポイント"
+      }
+    ],
+    "tags": [],
+    "keywords": []
   }
 ]
