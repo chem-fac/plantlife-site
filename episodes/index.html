@@ -6,13 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>全エピソード一覧 | プラントライフ</title>
     <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/" />
-    <meta name="description" content="技術者かねまるの「プラントライフ」全エピソード一覧。化学・プラント技術の解説をお好きなプラットフォームで。">
+    <meta name="description" content="技術者かねまるの「プラントライフ」全エピソード一覧。化学・プラント技術の解説をキーワード検索・テーマ絞り込みで探せます。">
+    <meta property="og:site_name" content="プラントライフ">
+    <meta property="og:title" content="全エピソード一覧 | プラントライフ">
+    <meta property="og:description" content="化学・プラント技術の解説をキーワード検索・テーマ絞り込みで探せます。">
+    <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/">
+    <meta property="og:image" content="https://plantlife.chem-fac.com/images/ogp-default.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://plantlife.chem-fac.com/images/ogp-default.png">
+    <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://image.listen.style">
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=202604111">
+    <link rel="stylesheet" href="../styles.css?v=20260711">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <style>
         .all-ep-main {
@@ -31,6 +42,42 @@
         /* Search */
         .ep-search-wrap {
             margin-bottom: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px 20px;
+        }
+
+        .ep-sort {
+            display: inline-flex;
+            gap: 4px;
+            background: var(--light-surface);
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-pill);
+            padding: 3px;
+        }
+
+        .ep-sort-btn {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--light-secondary);
+            background: transparent;
+            border: none;
+            padding: 7px 14px;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: all 0.2s var(--ease);
+        }
+
+        .ep-sort-btn.active {
+            background: var(--brand);
+            color: #fff;
+        }
+
+        .all-ep-duration {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--light-muted);
         }
 
         .ep-search {
@@ -214,6 +261,7 @@
 </head>
 
 <body>
+    <a href="#all-ep-grid" class="skip-link">本文へスキップ</a>
     <header class="header scrolled" id="header">
         <div class="header-inner">
             <a href="/" class="header-logo">
@@ -221,8 +269,8 @@
             </a>
             <nav class="header-nav" id="header-nav">
                 <a href="/" class="nav-link">ホーム</a>
-                <a href="/#platforms" class="nav-link">配信先</a>
-                <a href="/#episodes" class="nav-link active">エピソード</a>
+                <a href="/start/" class="nav-link">はじめての方へ</a>
+                <a href="/episodes/" class="nav-link active">エピソード</a>
                 <a href="/#about" class="nav-link">番組について</a>
                 <a href="../history/" class="nav-link">番組の歩み</a>
                 <a href="/#contact" class="nav-link">お問い合わせ</a>
@@ -241,6 +289,10 @@
             <div class="ep-search-wrap">
                 <input type="search" id="ep-search" class="ep-search"
                     placeholder="キーワードで検索（例：ポンプ、腐食、転職…）">
+                <div class="ep-sort" role="group" aria-label="並び順">
+                    <button type="button" class="ep-sort-btn active" data-order="desc">新しい順</button>
+                    <button type="button" class="ep-sort-btn" data-order="asc">古い順（#1から）</button>
+                </div>
             </div>
 
             <div class="ep-filter-bar" id="ep-filter-bar"></div>
@@ -260,30 +312,32 @@
                 <div class="footer-nav-group">
                     <h4>つながる</h4>
                     <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
                     <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
                     <a href="/#contact">お問い合わせ</a>
                 </div>
                 <div class="footer-nav-group">
                     <h4>聴く</h4>
-                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank">Spotify</a>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
                     <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
-                        target="_blank">Apple Podcasts</a>
-                    <a href="https://listen.style/p/14rlng1w" target="_blank">LISTEN</a>
+                        target="_blank" rel="noopener">Apple Podcasts</a>
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
                 </div>
                 <div class="footer-nav-group">
                     <h4>&nbsp;</h4>
                     <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4"
-                        target="_blank">Amazon
+                        target="_blank" rel="noopener">Amazon
                         Music</a>
-                    <a href="https://www.youtube.com/@chem_fac" target="_blank">YouTube</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 技術者かねまるの「プラントライフ」</p>
                 <div class="footer-socials">
-                    <a href="https://x.com/chem_fac" target="_blank">X</a>
-                    <a href="https://note.com/chem_fac" target="_blank">note</a>
-                    <a href="https://www.youtube.com/@chem_fac" target="_blank">YouTube</a>
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
                 </div>
             </div>
         </div>
@@ -298,6 +352,7 @@
             const filterBar = document.getElementById('ep-filter-bar');
             let allEpisodes = [];
             let activeTag = '';
+            let sortOrder = 'desc';
 
             // フィルタバーでのタグ表示順（統制語彙）。これ以外のタグは末尾に追加。
             const TAG_ORDER = [
@@ -390,9 +445,22 @@
                     ].join(' ').toLowerCase();
                     return haystack.includes(q);
                 });
+                filtered.sort((a, b) => sortOrder === 'asc'
+                    ? parseInt(a.number) - parseInt(b.number)
+                    : parseInt(b.number) - parseInt(a.number));
                 renderEpisodes(filtered);
                 syncUrl(q);
             }
+
+            // 並び順トグル
+            document.querySelectorAll('.ep-sort-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    sortOrder = btn.dataset.order;
+                    document.querySelectorAll('.ep-sort-btn').forEach(b =>
+                        b.classList.toggle('active', b === btn));
+                    applyFilters();
+                });
+            });
 
             function syncUrl(q) {
                 const p = new URLSearchParams();
@@ -428,7 +496,7 @@
             <div class="all-ep-body">
               <span class="all-ep-num">#${ep.number}</span>
               <h3 class="all-ep-title">${escapeHtml(title)}</h3>
-              <span class="all-ep-date">${ep.pub_date || ''}</span>
+              <span class="all-ep-date">${ep.pub_date || ''}${ep.duration ? ` <span class="all-ep-duration">⏱ ${escapeHtml(ep.duration)}</span>` : ''}</span>
               ${tagsHtml ? `<div class="all-ep-tags">${tagsHtml}</div>` : ''}
             </div>
           `;

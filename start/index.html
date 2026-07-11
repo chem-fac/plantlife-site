@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>はじめての方へ | プラントライフ</title>
+    <link rel="canonical" href="https://plantlife.chem-fac.com/start/" />
+    <meta name="description"
+        content="プラントライフを初めて聴く方へ。100を超えるエピソードから、あなたに合った「まず聴く3本」をタイプ別にご案内します。">
+    <meta property="og:site_name" content="プラントライフ">
+    <meta property="og:title" content="はじめての方へ | プラントライフ">
+    <meta property="og:description" content="100を超えるエピソードから、あなたに合った「まず聴く3本」をタイプ別にご案内します。">
+    <meta property="og:url" content="https://plantlife.chem-fac.com/start/">
+    <meta property="og:image" content="https://plantlife.chem-fac.com/images/ogp-default.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://plantlife.chem-fac.com/images/ogp-default.png">
+    <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」"
+        href="https://rss.listen.style/p/14rlng1w/rss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://image.listen.style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=20260711">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <style>
+        .start-main {
+            padding-top: calc(var(--header-h) + 40px);
+            padding-bottom: 80px;
+            min-height: 80vh;
+        }
+
+        .start-intro {
+            max-width: 940px;
+            margin-bottom: 12px;
+        }
+
+        /* 長い文が途中で折れないよう、各文は1行に収める（狭い画面では自然に折り返す） */
+        .start-intro p {
+            line-break: strict;
+        }
+
+        .start-intro p {
+            font-size: 0.98rem;
+            color: var(--light-secondary);
+            line-height: 1.9;
+        }
+
+        .start-hero-visual {
+            margin-top: 24px;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--light-border);
+        }
+
+        .start-hero-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .start-group {
+            margin-top: 48px;
+        }
+
+        .start-group-head {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+
+        .start-group-head h2 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--light-text);
+        }
+
+        .start-group-sub {
+            font-size: 0.85rem;
+            color: var(--light-muted);
+        }
+
+        .start-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .start-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: var(--light-surface);
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-lg);
+            padding: 20px 22px;
+            transition: all 0.3s var(--ease);
+        }
+
+        .start-card:hover {
+            border-color: var(--brand);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .start-card-num {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--brand);
+        }
+
+        .start-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--light-text);
+            line-height: 1.5;
+        }
+
+        .start-card-why {
+            font-size: 0.85rem;
+            color: var(--light-secondary);
+            line-height: 1.7;
+        }
+
+        .start-card-badge {
+            align-self: flex-start;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #fff;
+            background: var(--accent-warm);
+            padding: 2px 10px;
+            border-radius: var(--radius-pill);
+        }
+
+        .start-listen {
+            margin-top: 64px;
+            padding: 36px;
+            background: var(--brand-light);
+            border-radius: var(--radius-xl);
+            text-align: center;
+        }
+
+        .start-listen h2 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--light-text);
+            margin-bottom: 8px;
+        }
+
+        .start-listen p {
+            font-size: 0.9rem;
+            color: var(--light-secondary);
+            margin-bottom: 22px;
+        }
+
+        .start-platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .start-platforms a {
+            display: inline-flex;
+            align-items: center;
+            height: 56px;
+            padding: 0 22px;
+            background: #fff;
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-md);
+            transition: all 0.3s var(--ease);
+        }
+
+        .start-platforms a:hover {
+            border-color: var(--brand);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .start-platforms img {
+            height: var(--logo-height, 26px);
+            width: auto;
+        }
+
+        @media (max-width: 900px) {
+            .start-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B3DFR92WNS');
+    </script>
+</head>
+
+<body>
+    <a href="#start-groups" class="skip-link">本文へスキップ</a>
+    <header class="header scrolled" id="header">
+        <div class="header-inner">
+            <a href="/" class="header-logo">
+                <img src="../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+            </a>
+            <nav class="header-nav" id="header-nav">
+                <a href="/" class="nav-link">ホーム</a>
+                <a href="/start/" class="nav-link active">はじめての方へ</a>
+                <a href="/episodes/" class="nav-link">エピソード</a>
+                <a href="/#about" class="nav-link">番組について</a>
+                <a href="/history/" class="nav-link">番組の歩み</a>
+                <a href="/#contact" class="nav-link">お問い合わせ</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="start-main">
+        <div class="container">
+            <div class="section-label">START HERE</div>
+            <h1 class="section-heading">はじめての方へ</h1>
+            <div class="start-intro">
+                <p>
+                    「プラントライフ」は化学プラントの技術者かねまるが、化学を軸に視野が広がる話をお届けするポッドキャストです。<br>
+                    エピソードは100本以上。どこから聴こうか迷ったら、あなたに近いところから選んでみてください。<br>
+                    毎週 水曜・日曜に更新、1回は15〜25分ほどです。
+                </p>
+            </div>
+
+            <div class="start-hero-visual">
+                <img src="../images/start_hero.png" alt="プラントライフへようこそ" width="1200" height="600" loading="lazy">
+            </div>
+
+            <div id="start-groups">
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>まずは身近な化学から</h2>
+                        <span class="start-group-sub">一般・学生の方へ</span>
+                    </div>
+                    <div class="start-cards">
+                        <a href="/episodes/104/" class="start-card">
+                            <span class="start-card-num">#104</span>
+                            <span class="start-card-title">日焼け止めはどうやって紫外線を防ぐのか？</span>
+                            <span class="start-card-why">毎日使うものに隠れた化学。「身近なのに知らない」を解きほぐす入口にぴったりの回です。</span>
+                        </a>
+                        <a href="/episodes/66/" class="start-card">
+                            <span class="start-card-num">#66</span>
+                            <span class="start-card-title">教養として知りたいリチウムイオン電池の基礎知識</span>
+                            <span class="start-card-why">ニュースでよく聞く電池の話を、基礎からやさしく。仕組みが分かると世界の見え方が変わります。</span>
+                        </a>
+                        <a href="/episodes/68/" class="start-card">
+                            <span class="start-card-num">#68</span>
+                            <span class="start-card-title">温泉の「あたたか〜い」を支える設備の話</span>
+                            <span class="start-card-why">身近な温泉を入口に、熱を運ぶ装置の世界へ。プラントの話が一気に親しみやすくなります。</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>現場と技術をもっと深く</h2>
+                        <span class="start-group-sub">プラント・技術職の方へ</span>
+                    </div>
+                    <div class="start-cards">
+                        <a href="/episodes/87/" class="start-card">
+                            <span class="start-card-num">#87</span>
+                            <span class="start-card-title">素晴らしき機能美！撹拌翼（かくはんよく）の世界</span>
+                            <span class="start-card-why">何気なく使う撹拌翼を技術者目線で。「なぜこの形なのか」を語る、現場派に刺さる回です。</span>
+                        </a>
+                        <a href="/episodes/101/" class="start-card">
+                            <span class="start-card-num">#101</span>
+                            <span class="start-card-title">実験室ではうまくいくのに？スケールアップ効果の話</span>
+                            <span class="start-card-why">ラボと実機のギャップという、プロセス開発の永遠のテーマを分かりやすく解説します。</span>
+                        </a>
+                        <a href="/episodes/78/" class="start-card">
+                            <span class="start-card-num">#78</span>
+                            <span class="start-card-title">中東情勢の件で学ぶ石油化学</span>
+                            <span class="start-card-why">時事ニュースと化学産業をつなぐ回。技術が社会とどうつながるかを実感できます。</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>番組とかねまるを知る</h2>
+                        <span class="start-group-sub">まず雰囲気をつかみたい方へ</span>
+                    </div>
+                    <div class="start-cards">
+                        <a href="/episodes/100/" class="start-card">
+                            <span class="start-card-num">#100</span>
+                            <span class="start-card-title">あらためて自己紹介します！私の仕事と情報発信5年の振り返り</span>
+                            <span class="start-card-why">ホストの人となりと番組の背景がまるごと分かる、通算100回の節目の回です。</span>
+                        </a>
+                        <a href="/episodes/23/" class="start-card">
+                            <span class="start-card-badge">科ポキアワード大賞</span>
+                            <span class="start-card-num">#23</span>
+                            <span class="start-card-title">とろとろストレスと戦え！粘度のおはなし</span>
+                            <span class="start-card-why">科学系ポッドキャストのアワードで大賞を受賞した回。番組の魅力が詰まっています。</span>
+                        </a>
+                        <a href="/episodes/98/" class="start-card">
+                            <span class="start-card-num">#98</span>
+                            <span class="start-card-title">リラックスの香りはプラントから！（対談：ハジメテアロマ 蜜のあじ子さん）</span>
+                            <span class="start-card-why">ゲストとの対談回。化学が思わぬところでつながる、聴いていて楽しい人気回です。</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start-listen">
+                <h2>お好きなプラットフォームで聴く</h2>
+                <p>各エピソードのページでは、サイト上でそのまま再生もできます。フォローすると新着を見逃しません。</p>
+                <div class="start-platforms">
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener" style="--logo-height:24px;">
+                        <img src="../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+                    </a>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener"
+                        style="--logo-height:28px;">
+                        <img src="../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+                    </a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1789911793" target="_blank" rel="noopener"
+                        style="--logo-height:30px;">
+                        <img src="../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg"
+                            alt="Apple Podcastsで聴く" loading="lazy">
+                    </a>
+                    <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
+                        rel="noopener" style="--logo-height:28px;">
+                        <img src="../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg"
+                            alt="Amazon Musicで聴く" loading="lazy">
+                    </a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener"
+                        style="--logo-height:40px;">
+                        <img src="../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く"
+                            loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+                </div>
+                <div class="footer-nav-group">
+                    <h4>つながる</h4>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+                    <a href="/#contact">お問い合わせ</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>聴く</h4>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1789911793" target="_blank" rel="noopener">Apple
+                        Podcasts</a>
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>&nbsp;</h4>
+                    <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
+                        rel="noopener">Amazon Music</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 技術者かねまるの「プラントライフ」</p>
+                <div class="footer-socials">
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=20260711"></script>
+</body>
+
+</html>

@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initLatestEpisodes();
   initShareButtons();
+  initTranscriptToc();
+  initBackToTop();
+  initAnalyticsEvents();
 });
 
 /* ── Clean up hash on landing (e.g. /#episodes from sub-pages) ── */
@@ -44,14 +47,18 @@ function initMobileMenu() {
   const btn = document.getElementById('mobile-menu-btn');
   const nav = document.getElementById('header-nav');
   if (!btn || !nav) return;
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'header-nav');
   btn.addEventListener('click', () => {
-    btn.classList.toggle('open');
+    const open = btn.classList.toggle('open');
     nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   nav.querySelectorAll('.nav-link').forEach(link =>
     link.addEventListener('click', () => {
       btn.classList.remove('open');
       nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
     })
   );
 }
@@ -128,14 +135,20 @@ function initScrollReveal() {
 /* ── Latest 5 episodes with thumbnails ── */
 function initLatestEpisodes() {
   const grid = document.getElementById('ep-latest-grid');
-  if (!grid) return;
+  const statCount = document.getElementById('stat-ep-count');
+  if (!grid && !statCount) return;
 
   fetch('episodes.json')
     .then(r => r.json())
     .then(data => {
+      const valid = data.filter(ep => ep.number && parseInt(ep.number) > 0);
+
+      // ヒーローのエピソード数スタットを実データで更新（話数増加でも自動追従）
+      if (statCount) statCount.textContent = valid.length;
+      if (!grid) return;
+
       // Sort newest first, take top 5
-      const latest = data
-        .filter(ep => ep.number && parseInt(ep.number) > 0)
+      const latest = valid
         .sort((a, b) => parseInt(b.number) - parseInt(a.number))
         .slice(0, 5);
 
@@ -160,7 +173,7 @@ function initLatestEpisodes() {
               ${ep.duration ? `<span>⏱ ${ep.duration}</span>` : ''}
             </div>
             <h3 class="ep-latest-title">${escapeHtml(displayTitle)}</h3>
-            <p class="ep-latest-desc">${escapeHtml((ep.description || '').slice(0, 120))}${(ep.description || '').length > 120 ? '...' : ''}</p>
+            <p class="ep-latest-desc">${escapeHtml(cleanDescription(ep.description).slice(0, 120))}${cleanDescription(ep.description).length > 120 ? '…' : ''}</p>
           </div>
         `;
 
@@ -193,6 +206,23 @@ function escapeHtml(str) {
   const d = document.createElement('div');
   d.textContent = str;
   return d.innerHTML;
+}
+
+/* 説明文から参考資料・URL・番組定型文を取り除いて表示用にする
+   （build_episodes.py の clean_description と同じ考え方） */
+function cleanDescription(desc) {
+  if (!desc) return '';
+  let text = desc.replace(/ /g, ' ').replace(/　/g, ' ');
+  const markers = ['――', '📚', '📅', '💬', '🎧', '🔖', 'LISTEN共通トークテーマ',
+    'LISTENで開く', 'LISTENで先行公開', '参考資料', 'http://', 'https://', '\n', '\r'];
+  let cut = text.length;
+  markers.forEach(mk => {
+    const i = text.indexOf(mk);
+    if (i !== -1 && i < cut) cut = i;
+  });
+  text = text.slice(0, cut).replace(/\s+/g, ' ').trim();
+  if (!text) text = desc.replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
+  return text;
 }
 
 /* ── Share buttons ── */
@@ -237,4 +267,118 @@ function initShareButtons() {
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+}
+
+/* ── Episode number from URL (/episodes/{n}/) ── */
+function currentEpisodeNumber() {
+  const m = location.pathname.match(/\/episodes\/(\d+)\//);
+  return m ? m[1] : '';
+}
+
+/* ── Transcript table of contents (all episode pages) ── */
+function initTranscriptToc() {
+  const body = document.querySelector('.transcript-body');
+  if (!body) return;
+  const headings = body.querySelectorAll('.transcript-heading');
+  if (headings.length < 2) return; // 見出しが1つ以下なら目次は作らない
+
+  const toc = document.createElement('nav');
+  toc.className = 'transcript-toc';
+  toc.setAttribute('aria-label', '文字起こしの目次');
+
+  const list = document.createElement('ol');
+  list.className = 'transcript-toc-list';
+
+  headings.forEach((h, i) => {
+    if (!h.id) h.id = `talk-${i + 1}`;
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `#${h.id}`;
+    a.textContent = h.textContent;
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+
+  const title = document.createElement('div');
+  title.className = 'transcript-toc-title';
+  title.innerHTML = '<span>🎧</span><span>この回の目次</span>';
+  toc.appendChild(title);
+  toc.appendChild(list);
+
+  body.insertBefore(toc, body.firstChild);
+}
+
+/* ── Back to top button (episode pages) ── */
+function initBackToTop() {
+  if (!document.querySelector('.ep-detail-main')) return;
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'ページの先頭へ戻る');
+  btn.innerHTML = '↑';
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  document.body.appendChild(btn);
+
+  const onScroll = () => btn.classList.toggle('visible', window.scrollY > 600);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+/* ── GA4 event tracking (funnel measurement) ── */
+function track(name, params) {
+  if (typeof gtag === 'function') gtag('event', name, params || {});
+}
+
+function initAnalyticsEvents() {
+  const ep = currentEpisodeNumber();
+  const placement = ep ? 'episode' : (document.body.classList.contains('history-page') ? 'history' : 'home');
+
+  const platformOf = (href) => {
+    if (/open\.spotify\.com/.test(href)) return 'spotify';
+    if (/podcasts\.apple\.com/.test(href)) return 'apple';
+    if (/music\.amazon/.test(href)) return 'amazon';
+    if (/youtube\.com|youtu\.be/.test(href)) return 'youtube';
+    if (/listen\.style/.test(href)) return 'listen';
+    return '';
+  };
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href') || '';
+
+    // 応援(メンバーシップ)
+    if (/note\.com\/[^/]+\/membership/.test(href)) {
+      track('membership_click', { placement, ep_number: ep });
+      return;
+    }
+    // note（記事・マガジン・プロフィール）
+    if (/note\.com/.test(href)) {
+      track('note_click', { placement, ep_number: ep });
+      return;
+    }
+    // お便り・お問い合わせフォーム
+    if (/docs\.google\.com\/forms/.test(href)) {
+      track('contact_click', { placement });
+      return;
+    }
+    // シェアボタン
+    const shareBtn = a.closest('.share-btn');
+    if (shareBtn) {
+      const cls = [...shareBtn.classList].find(c => c.startsWith('share-btn--'));
+      track('share_click', { platform: cls ? cls.replace('share-btn--', '') : '', placement });
+      return;
+    }
+    // 配信プラットフォーム
+    const p = platformOf(href);
+    if (p) {
+      track('platform_click', { platform: p, placement, ep_number: ep });
+    }
+  });
+
+  // サイト内プレイヤーで実際に再生が始まったら計測（「その場で聴く」の核指標）
+  document.querySelectorAll('.ep-audio').forEach((audio) => {
+    audio.addEventListener('play', () => {
+      track('audio_play', { ep_number: ep });
+    }, { once: true });
+  });
 }

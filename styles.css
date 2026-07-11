@@ -22,7 +22,8 @@
   --light-surface: #ffffff;
   --light-text: #333333;
   --light-secondary: #5a6e62;
-  --light-muted: #95a69b;
+  /* WCAG AA (4.5:1) を満たすミュート色。以前の #95a69b は約2.5:1で不合格だった */
+  --light-muted: #6b7d72;
   --light-border: #dfe8e2;
 
   /* Accents */
@@ -241,11 +242,11 @@ img {
 }
 
 .nav-link {
-  padding: 6px 14px;
+  padding: 8px 14px;
   border-radius: var(--radius-pill);
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--dark-text);
+  color: var(--light-secondary);
   transition: all 0.2s;
 }
 
@@ -255,6 +256,12 @@ img {
 
 .nav-link:hover {
   opacity: 0.7;
+}
+
+.nav-link.active {
+  color: var(--brand);
+  background: var(--brand-50);
+  font-weight: 600;
 }
 
 .mobile-menu-btn {
@@ -297,7 +304,11 @@ img {
    ══════════════════════════════════════ */
 .hero {
   min-height: 80vh;
-  background: var(--hero-bg);
+  /* ベースのブランド色＋隅のやわらかなグロー */
+  background:
+    radial-gradient(circle at 82% 22%, rgba(0, 105, 56, 0.10), transparent 42%),
+    radial-gradient(circle at 12% 78%, rgba(65, 201, 180, 0.10), transparent 45%),
+    var(--hero-bg);
   display: flex;
   align-items: center;
   position: relative;
@@ -309,8 +320,9 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('images/メインビジュアル背景.png') center center / cover no-repeat;
-  opacity: 0.15;
+  /* 分子・六角形の微細テクスチャ（低透過で敷く） */
+  background: url('images/hero_bg_texture.png') center center / cover no-repeat;
+  opacity: 0.55;
   z-index: 0;
   pointer-events: none;
 }
@@ -973,15 +985,67 @@ img {
 .personality-name {
   font-size: 1.25rem;
   font-weight: 700;
-  font-family: var(--font-mplus);
-  color: var(--text);
+  font-family: var(--font-display);
+  color: var(--light-text);
 }
 
 .personality-desc {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--text-light);
+  color: var(--light-secondary);
   margin: 0;
+}
+
+.personality-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.personality-links a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand);
+  background: var(--brand-50);
+  border: 1px solid var(--light-border);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s var(--ease);
+}
+
+.personality-links a:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.about-facts {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.about-facts li {
+  font-size: 0.9rem;
+  color: var(--light-secondary);
+  line-height: 1.6;
+  padding-left: 14px;
+  border-left: 3px solid var(--brand);
+}
+
+.about-facts strong {
+  display: inline-block;
+  min-width: 6.5em;
+  color: var(--light-text);
+  font-weight: 700;
+}
+
+.about-facts a {
+  color: var(--brand);
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -1001,8 +1065,13 @@ img {
 
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.link-card--support {
+  background: linear-gradient(135deg, var(--brand-light), #ffffff);
+  border-color: var(--brand);
 }
 
 .link-card {
@@ -1036,6 +1105,19 @@ img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+}
+
+/* 応援(メンバーシップ)カードの手書きタイトルは他カードと同じロゴ枠(100px)に収める */
+
+/* noteロゴだけ少し大きめに */
+.link-card-logo img[src*="note_logo"] {
+  transform: scale(1.2);
+}
+
+/* 「note メンバーシップ」を太字＋他カードと同じ濃さに */
+.link-card--support .link-card-text p {
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
 .link-card-text h3 {
@@ -2060,5 +2142,75 @@ img {
   /* Add padding to footer so it's not hidden behind share bar */
   .footer {
     padding-bottom: 64px;
+  }
+}
+
+/* ══════════════════════════════════════
+   THEMES — テーマから探す（トップ）
+   ══════════════════════════════════════ */
+.theme-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.theme-chip {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--light-secondary);
+  background: var(--light-surface);
+  border: 1px solid var(--light-border);
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s var(--ease);
+}
+
+.theme-chip:hover {
+  border-color: var(--brand);
+  color: #fff;
+  background: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ══════════════════════════════════════
+   ACCESSIBILITY — フォーカス表示・スキップリンク・動きの抑制
+   ══════════════════════════════════════ */
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 2000;
+  background: var(--brand);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  font-weight: 600;
+  transition: top 0.2s var(--ease);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }

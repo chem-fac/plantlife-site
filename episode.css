@@ -376,3 +376,229 @@
 .transcript-body .transcript-heading:first-child {
     margin-top: 0;
 }
+
+/* ══════════════════════════════════════
+   NATIVE PLAYER — この場で聴く
+   ══════════════════════════════════════ */
+.ep-detail-player {
+    margin-bottom: 24px;
+}
+
+.ep-audio {
+    width: 100%;
+    height: 48px;
+    border-radius: var(--radius-pill);
+}
+
+.ep-detail-platforms-sub {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--light-secondary);
+    margin-bottom: 14px;
+}
+
+/* ══════════════════════════════════════
+   PREV / NEXT NAV — タイトル付き
+   ══════════════════════════════════════ */
+.ep-nav-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 40%;
+}
+
+.ep-nav-home {
+    flex-direction: row;
+}
+
+.ep-nav-next {
+    text-align: right;
+}
+
+.ep-nav-arrow {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ep-nav-title {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--light-secondary);
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ══════════════════════════════════════
+   RELATED EPISODES — 関連するエピソード
+   ══════════════════════════════════════ */
+.ep-detail-related {
+    border-top: 1px solid var(--light-border);
+    padding-top: 40px;
+    margin-top: 8px;
+}
+
+.ep-detail-related-heading {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.ep-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.ep-related-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.3s var(--ease);
+}
+
+.ep-related-card:hover {
+    border-color: var(--brand);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.ep-related-thumb {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.ep-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ep-related-body {
+    padding: 10px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ep-related-num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--brand);
+}
+
+.ep-related-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--light-text);
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ══════════════════════════════════════
+   TRANSCRIPT TOC — 目次（script.jsが生成）
+   ══════════════════════════════════════ */
+.transcript-toc {
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+    margin-bottom: 28px;
+}
+
+.transcript-toc-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transcript-toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.transcript-toc-list a {
+    font-size: 0.82rem;
+    color: var(--light-secondary);
+    line-height: 1.5;
+    text-decoration: none;
+    border-left: 2px solid var(--light-border);
+    padding-left: 10px;
+    transition: color 0.2s, border-color 0.2s;
+    display: block;
+}
+
+.transcript-toc-list a:hover {
+    color: var(--brand);
+    border-left-color: var(--brand);
+}
+
+.transcript-heading {
+    scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
+/* トップに戻る（フローティング） */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 44px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 900;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .ep-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .ep-nav-link {
+        max-width: 42%;
+    }
+
+    .back-to-top {
+        right: 14px;
+        bottom: 76px;
+    }
+}
