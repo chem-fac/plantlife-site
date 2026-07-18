@@ -2214,3 +2214,13 @@ img {
     scroll-behavior: auto;
   }
 }
+/* ══════════════════════════════════════
+   読みもの特集「身近な化学工学」（トップページ）
+   ══════════════════════════════════════ */
+
+.yomimono-lead {
+  color: var(--light-secondary);
+  line-height: 1.9;
+  max-width: 640px;
+  margin-bottom: 24px;
+}
