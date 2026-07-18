@@ -366,6 +366,9 @@
     max-width: 640px;
     color: var(--light-secondary);
     line-height: 2;
+    /* 単語の途中で改行しない（対応ブラウザでは文節単位で折り返す） */
+    word-break: auto-phrase;
+    line-break: strict;
 }
 
 .feature-grid {
