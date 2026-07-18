@@ -602,3 +602,49 @@
         bottom: 76px;
     }
 }
+/* ══════════════════════════════════════
+   この回を記事で読む（特集「身近な化学工学」への相互リンク。
+   article_manifest.json に記事がある回のみ build_episodes.py が挿入）
+   ══════════════════════════════════════ */
+
+.ep-detail-article-link {
+    margin-top: 40px;
+}
+
+.article-promo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-left: 4px solid var(--brand);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.article-promo-card:hover {
+    border-color: var(--brand);
+    box-shadow: var(--shadow-md);
+}
+
+.article-promo-label {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--brand);
+}
+
+.article-promo-title {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--light-text);
+}
+
+.article-promo-desc {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--light-secondary);
+}
