@@ -249,6 +249,11 @@
     color: var(--light-muted);
 }
 
+/* 再生時間の時計アイコン（ビルダーがインラインSVGで出力。文字のベースラインに合わせる） */
+.icon-clock {
+    vertical-align: -0.12em;
+}
+
 .article-episode-title {
     font-weight: 700;
     line-height: 1.5;
