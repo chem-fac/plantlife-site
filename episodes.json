@@ -4942,8 +4942,25 @@
         "title": "タイヤ・路面摩耗粉塵の発生抑制"
       }
     ],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "化学物質・材料",
+      "化学反応",
+      "環境・資源循環"
+    ],
+    "keywords": [
+      "カーボンブラック",
+      "加硫",
+      "硫黄",
+      "架橋",
+      "天然ゴム",
+      "脱硫",
+      "熱分解",
+      "サーマルリサイクル",
+      "マテリアルリサイクル",
+      "マイクロプラスチック",
+      "摩耗",
+      "ものづくり系ポッドキャストの日"
+    ]
   },
   {
     "number": "111",
@@ -4961,8 +4978,25 @@
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/29d84c73-aad2-4b8d-b1c6-f9546391070d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-111-%E5%AD%90%E3%81%A9%E3%82%82%E3%81%8C%E3%83%A2%E3%83%8E%E3%81%A5%E3%81%8F%E3%82%8A%E3%81%A8%E7%B4%A0%E6%9D%90%E3%81%AB%E8%88%88%E5%91%B3%E3%82%92%E6%8C%81%E3%81%A1%E5%A7%8B%E3%82%81%E3%81%9F%EF%BC%81%E3%81%91%E3%81%A9%E4%BC%9D%E3%81%88%E3%81%A5%E3%82%89%E3%81%84%E2%80%A6%E2%80%A6"
     },
     "references": [],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "化学物質・材料",
+      "科学・雑学",
+      "業界・ビジネス"
+    ],
+    "keywords": [
+      "ポリ乳酸",
+      "PLA",
+      "3Dプリンター",
+      "瞬間接着剤",
+      "ホットメルト接着剤",
+      "グルーガン",
+      "ステンレス",
+      "シリコンゴム",
+      "打ち抜き",
+      "プレス加工",
+      "研磨",
+      "パルプ"
+    ]
   },
   {
     "number": "112",
@@ -4993,8 +5027,25 @@
         "title": "アルコール代謝のしくみ"
       }
     ],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "化学物質・材料",
+      "プラント設備・装置",
+      "安全・トラブル"
+    ],
+    "keywords": [
+      "酢酸",
+      "氷酢酸",
+      "凝固点",
+      "蒸気トレース",
+      "引火点",
+      "爆発範囲",
+      "腐食",
+      "ステンレス",
+      "SUS304",
+      "SUS316",
+      "二相ステンレス",
+      "塩化物"
+    ]
   },
   {
     "number": "113",
@@ -5049,8 +5100,25 @@
         "title": "サランラップの素材（ポリ塩化ビニリデン）｜旭化成"
       }
     ],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "化学物質・材料",
+      "科学・雑学",
+      "環境・資源循環"
+    ],
+    "keywords": [
+      "可塑剤",
+      "PVC",
+      "ポリ塩化ビニル",
+      "塩素",
+      "軟質塩ビ",
+      "ビニル基",
+      "ポリ塩化ビニリデン",
+      "サランラップ",
+      "ダイオキシン",
+      "自己消火性",
+      "苛性ソーダ",
+      "クロールアルカリ"
+    ]
   },
   {
     "number": "114",
@@ -5068,7 +5136,59 @@
       "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/918272e6-9ced-40bd-a111-389a9bc128c1/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-114-%E5%BF%99%E3%81%97%E3%81%84%E6%99%82%E4%BB%A3%E3%81%AB%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88ai%E7%B7%A8%E9%9B%86"
     },
     "references": [],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "番組・コラボ企画",
+      "計測・制御・DX"
+    ],
+    "keywords": [
+      "自動化",
+      "クロードコード",
+      "Claude Code",
+      "Codex",
+      "ChatGPT",
+      "Whisper",
+      "FFmpeg",
+      "Python",
+      "LISTEN",
+      "文字起こし",
+      "拍手",
+      "BGM"
+    ]
+  },
+  {
+    "number": "115",
+    "title": "#115 なんでスピリタスは100度じゃないの？越えられない96度の壁",
+    "pub_date": "2026-07-29",
+    "description": "強いお酒スピリタスでも96度、せっかくなら100度にしたらよかったのに！と思うけど上手くいかない事情があります。📚参考資料蒸留工学-基礎と応用-『化学工学の進歩37』#107 パーツが変われば別人です！置換基のおはなし https://plantlife.chem-fac.com/episodes/107/#108 油圧で使うアルコール？水グリコール系作動油の世界 https://plantlife.chem-fac.com/episodes/108/#112 凍って！燃えて！金属も溶かす！？お酢の意外な素顔 https://plantlife.chem-fac.com/episodes/11...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/eJqOplveDFEcdZslhLnb8ZHBjO9uvW20v9IbcN5H.png",
+    "duration": "00:18:04",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/uRgUq3NlcGqSAz02hm5WOnjRl9kIaSTa6mH4SHNq.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/mycsdkdg",
+      "spotify": "https://open.spotify.com/episode/2fTyNE3d2UkUzviUfP5s4D",
+      "apple": "https://podcasts.apple.com/jp/podcast/115-%E3%81%AA%E3%82%93%E3%81%A7%E3%82%B9%E3%83%94%E3%83%AA%E3%82%BF%E3%82%B9%E3%81%AF100%E5%BA%A6%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%AE-%E8%B6%8A%E3%81%88%E3%82%89%E3%82%8C%E3%81%AA%E3%81%8496%E5%BA%A6%E3%81%AE%E5%A3%81/id1789911793?i=1000778765773&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/9467ea12-7439-47b7-92c8-0d29e0e6fe74/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-115-%E3%81%AA%E3%82%93%E3%81%A7%E3%82%B9%E3%83%94%E3%83%AA%E3%82%BF%E3%82%B9%E3%81%AF100%E5%BA%A6%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%AE%EF%BC%9F%E8%B6%8A%E3%81%88%E3%82%89%E3%82%8C%E3%81%AA%E3%81%8496%E5%BA%A6%E3%81%AE%E5%A3%81",
+      "youtube": "https://www.youtube.com/watch?v=RSvoN0FbniI"
+    },
+    "references": [],
+    "tags": [
+      "化学工学",
+      "化学物質・材料",
+      "プラント設備・装置"
+    ],
+    "keywords": [
+      "共沸",
+      "蒸留",
+      "蒸留塔",
+      "エタノール",
+      "無水エタノール",
+      "モレキュラーシーブ",
+      "分子ふるい",
+      "ゼオライト",
+      "吸着",
+      "活性炭",
+      "ウォッカ",
+      "酵母"
+    ]
   }
 ]
