@@ -5212,8 +5212,24 @@
         "title": "#バブ談系ポッドキャストの日 - playlist by まいこう | Spotify"
       }
     ],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "番組・コラボ企画",
+      "科学・雑学"
+    ],
+    "keywords": [
+      "育児",
+      "子育て",
+      "0歳児",
+      "ミルク",
+      "吐き戻し",
+      "哺乳瓶",
+      "成長曲線",
+      "赤子",
+      "バブリング",
+      "ハイチェア",
+      "体温",
+      "バブ談系ポッドキャストの日"
+    ]
   },
   {
     "number": "117",
@@ -5231,7 +5247,65 @@
       "youtube": "https://www.youtube.com/watch?v=GvMqmGHn5ls"
     },
     "references": [],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "プロセス・運転管理",
+      "プラント設備・装置",
+      "環境・資源循環"
+    ],
+    "keywords": [
+      "工業用水",
+      "純水",
+      "超純水",
+      "イオン交換",
+      "逆浸透",
+      "冷却水",
+      "クーリングタワー",
+      "ドレン",
+      "排水",
+      "カルキ",
+      "半導体",
+      "化学系ポッドキャストの日"
+    ]
+  },
+  {
+    "number": "118",
+    "title": "#118 水をかけると沸騰する不思議な現象（#2リメイク）",
+    "pub_date": "2026-08-23",
+    "description": "なぜか水をかけて沸騰する不思議な現象を解説しました！#2のリメイクエピソードです。📚参考資料【解説付き】水は冷やすと沸騰する https://www.youtube.com/watch?v=rxp0Agf8iGI#2 水を冷やすと沸騰する！？知れば納得の物理現象 https://plantlife.chem-fac.com/episodes/2/――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・日曜日 の朝に更新！LISTE...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/paRKAOJOSfcSW592zNwqv7PWTYcH7QIKNR3SKPVM.jpg",
+    "duration": "00:20:31",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/tHWHlKDVZYq9dHOHh3fsOgNsKby9T23SMYX1tYlw.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/ypyckojk",
+      "spotify": "https://open.spotify.com/episode/4dUlUapcoZaWTdSks8ASP2",
+      "apple": "https://podcasts.apple.com/jp/podcast/118-%E6%B0%B4%E3%82%92%E3%81%8B%E3%81%91%E3%82%8B%E3%81%A8%E6%B2%B8%E9%A8%B0%E3%81%99%E3%82%8B%E4%B8%8D%E6%80%9D%E8%AD%B0%E3%81%AA%E7%8F%BE%E8%B1%A1-2%E3%83%AA%E3%83%A1%E3%82%A4%E3%82%AF/id1789911793?i=1000785165755&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/6e2679b3-68ff-42c8-8a6f-98714fa0f08c/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-118-%E6%B0%B4%E3%82%92%E3%81%8B%E3%81%91%E3%82%8B%E3%81%A8%E6%B2%B8%E9%A8%B0%E3%81%99%E3%82%8B%E4%B8%8D%E6%80%9D%E8%AD%B0%E3%81%AA%E7%8F%BE%E8%B1%A1%EF%BC%88-2%E3%83%AA%E3%83%A1%E3%82%A4%E3%82%AF%EF%BC%89",
+      "youtube": "https://www.youtube.com/watch?v=i9kkCh9_RN8"
+    },
+    "references": [
+      {
+        "url": "https://www.youtube.com/watch?v=rxp0Agf8iGI",
+        "title": "【解説付き】水は冷やすと沸騰する"
+      }
+    ],
+    "tags": [
+      "化学工学",
+      "科学・雑学",
+      "プロセス・運転管理"
+    ],
+    "keywords": [
+      "蒸気圧",
+      "飽和蒸気圧",
+      "減圧沸騰",
+      "沸点",
+      "大気圧",
+      "真空",
+      "減圧蒸留",
+      "フリーズドライ",
+      "昇華",
+      "圧力鍋",
+      "富士山",
+      "蒸気加熱"
+    ]
   }
 ]
