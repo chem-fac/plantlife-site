@@ -5333,7 +5333,97 @@
         "title": "#雑談系ポッドキャストの日 について"
       }
     ],
-    "tags": [],
-    "keywords": []
+    "tags": [
+      "番組・コラボ企画",
+      "計測・制御・DX",
+      "仕事・キャリア"
+    ],
+    "keywords": [
+      "AI倫理",
+      "ファクトチェック",
+      "画像生成",
+      "ディレクション",
+      "ヒューマンエラー",
+      "RDKit",
+      "構造式",
+      "ミッドジャーニー",
+      "Midjourney",
+      "しゃべり足りない部",
+      "雑談系ポッドキャストの日",
+      "対談"
+    ]
+  },
+  {
+    "number": "120",
+    "title": "#120 読まずに引く本、便覧を読もう！",
+    "pub_date": "2026-08-26",
+    "description": "今回はLISTENイベント「声の読書感想文」に参加して、便覧について紹介しました！https://listen.style/event/69📚参考資料化学工学便覧 改訂七版（化学工学会 編・丸善出版）https://www.amazon.co.jp/dp/4621083880?tag=podcast00-22機械工学便覧 DVD-ROM版（日本機械学会）https://www.amazon.co.jp/dp/488898235X?tag=podcast00-22Pump Handbook 4th Edition（ポンプハンドブック・英語）https://www.amazon.co.jp/dp/...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/4oFGvccm15N4ATsuyZasW2w76nPyBVBqN2RN1aTZ.jpg",
+    "duration": "00:14:02",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/8D0T8NyzHQrDiMyWe6EF0gMN9peEcbUM7mXfAxCg.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/3savabjq",
+      "spotify": "https://open.spotify.com/episode/4EZWJuFk68EsnnWNhFqIJD",
+      "apple": "https://podcasts.apple.com/jp/podcast/120-%E8%AA%AD%E3%81%BE%E3%81%9A%E3%81%AB%E5%BC%95%E3%81%8F%E6%9C%AC-%E4%BE%BF%E8%A6%A7%E3%82%92%E8%AA%AD%E3%82%82%E3%81%86/id1789911793?i=1000785979884&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/50c5ae75-e6d9-4900-85b7-5a23aab8366f/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-120-%E8%AA%AD%E3%81%BE%E3%81%9A%E3%81%AB%E5%BC%95%E3%81%8F%E6%9C%AC%E3%80%81%E4%BE%BF%E8%A6%A7%E3%82%92%E8%AA%AD%E3%82%82%E3%81%86%EF%BC%81",
+      "youtube": "https://www.youtube.com/watch?v=HNk1ou52Dzo"
+    },
+    "references": [
+      {
+        "url": "https://www.amazon.co.jp/dp/4621083880?tag=podcast00-22",
+        "title": "化学工学便覧 改訂七版（化学工学会 編・丸善出版）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/488898235X?tag=podcast00-22",
+        "title": "機械工学便覧 DVD-ROM版（日本機械学会）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/0071460446?tag=podcast00-22",
+        "title": "Pump Handbook 4th Edition（ポンプハンドブック・英語）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/4254102623?tag=podcast00-22",
+        "title": "発光の事典（朝倉書店）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/4621305212?tag=podcast00-22",
+        "title": "化学便覧 基礎編 改訂6版（日本化学会 編・丸善出版）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/4769200285?tag=podcast00-22",
+        "title": "熱交換器設計ハンドブック（工学図書）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/4819033093?tag=podcast00-22",
+        "title": "新版バルブ便覧（日本バルブ工業会 編）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/4621305697?tag=podcast00-22",
+        "title": "化学物質の爆発・危険性ハンドブック（丸善出版）"
+      },
+      {
+        "url": "https://www.eneos.co.jp/binran/",
+        "title": "石油便覧（ENEOS・無料）"
+      }
+    ],
+    "tags": [
+      "科学・雑学",
+      "化学工学",
+      "番組・コラボ企画"
+    ],
+    "keywords": [
+      "便覧",
+      "化学工学便覧",
+      "機械工学便覧",
+      "化学便覧",
+      "ハンドブック",
+      "物性値",
+      "パラメーター",
+      "全文検索",
+      "PDF",
+      "自炊",
+      "石油便覧",
+      "声の読書感想文"
+    ]
   }
 ]
