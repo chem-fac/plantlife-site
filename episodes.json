@@ -1628,7 +1628,7 @@
     "title": "#40 【雑談回】リアルに対する弱さが際立ってきた",
     "pub_date": "2025-10-19",
     "description": "今回は雑談系ポッドキャストの日に参加して、オープニングテーマ「話したいけど話せてないこと」について話しています。皆さんは”ネット上の姿”と”現実の姿”に乖離はありますか？【宣伝①】ものづくり系ポッドキャストの日 in MECT2025に参加します！https://note.com/sibucho_labo/n/nc43cd992d600　日時：2025年10月24日(金) 16:00～18:00　場所 ：ポートメッセなごや　参加費：無料 (出入り自由)　※要申込　申込フォーム：https://docs.google.com/forms/d/e/1FAIpQLSd-WU6m-vg4x4sL4Yb...",
-    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/h626XuInUW0sS5VSoRdKfLWQ5tBzwU1cLjGXFNLT.png",
+    "thumbnail": "https://image.listen.style/img/Z2neWS6hthkRjLi_YHHqpt1xLeO1D4R1WVTRZmYq3Dc/resize:fill:1200:1200/aHR0cHM6Ly9pbWFnZS5saXN0ZW4uc3R5bGUvcC8wMWpoYTBiY2h4Y2premg3NjI3ZzRjbjc1Mi9pbWFnZXMvaDYyNlh1SW5VVzBzUzVWU29SZEtmTFdRNXRCendVMWNMakdYRk5MVC5wbmc.jpg",
     "duration": "00:15:11",
     "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/JmG34TBKGz6TaLos_GEg0QnAKLwJz81pTWaWMy07RrmcrWswN2ONAz5ag_converted.mp3",
     "urls": {
@@ -5571,5 +5571,24 @@
       "ヨビノリ",
       "お笑いを流行らせようポッドキャストの日"
     ]
+  },
+  {
+    "number": "123",
+    "title": "#123 結局は人頼み｜化学プラントの手仕込み",
+    "pub_date": "2026-09-02",
+    "description": "#ものづくり系ポッドキャストの日 の共通テーマ「手作業」に関連して、タンクへの粉体・ドラム缶の手仕込み作業について話しました。大変なら自動化すればいいじゃん！と言われても、どうしても難しいんです……――――プラントライフは、化学プラントの技術者「かねまる」が、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。感想は #プラントライフ を付けてXにてお待ちしています！📅 配信スケジュール毎週 水曜日・日曜日 の朝に更新！LISTENで先行公開後、各種Podcastアプリ（Spotify/Apple/Amazon/YouTube）にも配信されます。🖥️ 公式ホームページ技術者かね...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/Oek1UPCMz9hL3XqhFrxYdJSgNMTWEvr4OMtwGUqI.jpg",
+    "duration": "00:22:36",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/febjtT1saCfNrnLcxDtNwkpdVShp2vTs69VnE4pg.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/123-relying-on-people-chemical-plant-handmade-xusnwzof",
+      "apple": "https://podcasts.apple.com/jp/podcast/123-%E7%B5%90%E5%B1%80%E3%81%AF%E4%BA%BA%E9%A0%BC%E3%81%BF-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E6%89%8B%E4%BB%95%E8%BE%BC%E3%81%BF/id1789911793?i=1000787252893&uo=4",
+      "spotify": "https://open.spotify.com/episode/6aET6BjSNq80RJbclXDdSp",
+      "youtube": "https://www.youtube.com/watch?v=2T9NAxDHPS4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/18ae08ad-d44e-43f5-aaea-fed938fe1a2c/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-123-%E7%B5%90%E5%B1%80%E3%81%AF%E4%BA%BA%E9%A0%BC%E3%81%BF%EF%BD%9C%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E6%89%8B%E4%BB%95%E8%BE%BC%E3%81%BF"
+    },
+    "references": [],
+    "tags": [],
+    "keywords": []
   }
 ]
