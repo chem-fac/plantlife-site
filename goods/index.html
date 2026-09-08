@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グッズ | プラントライフ</title>
+    <link rel="canonical" href="https://plantlife.chem-fac.com/goods/" />
+    <meta name="description"
+        content="プラントライフのグッズ紹介。番組アイコンの50mm角ステッカーを作りました。裏面のQRコードから番組サイトにアクセスできます。イベント会場で配布しています。">
+    <meta property="og:site_name" content="プラントライフ">
+    <meta property="og:title" content="グッズ | プラントライフ">
+    <meta property="og:description" content="番組アイコンの50mm角ステッカーを作りました。イベント会場で配布しています。">
+    <meta property="og:url" content="https://plantlife.chem-fac.com/goods/">
+    <meta property="og:image" content="https://plantlife.chem-fac.com/images/ogp-goods.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://plantlife.chem-fac.com/images/ogp-goods.png">
+    <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」"
+        href="https://rss.listen.style/p/14rlng1w/rss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=20260711">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <style>
+        .goods-main {
+            padding-top: calc(var(--header-h) + 40px);
+            padding-bottom: 80px;
+            min-height: 80vh;
+        }
+
+        .goods-intro {
+            max-width: 940px;
+            margin-bottom: 8px;
+        }
+
+        .goods-intro p {
+            font-size: 0.98rem;
+            color: var(--light-secondary);
+            line-height: 1.9;
+        }
+
+        .goods-item {
+            max-width: 940px;
+            margin-top: 40px;
+        }
+
+        .goods-item h2 {
+            font-family: var(--font-body);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--light-text);
+            margin: 0 0 16px;
+            padding-left: 14px;
+            border-left: 3px solid var(--brand);
+            line-height: 1.5;
+        }
+
+        .goods-visual {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--light-border);
+            box-shadow: var(--shadow-md);
+            background: #fff;
+        }
+
+        .goods-visual img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .goods-body {
+            margin-top: 24px;
+        }
+
+        .goods-body p {
+            font-size: 0.98rem;
+            color: var(--light-text);
+            line-height: 1.9;
+            margin: 0 0 14px;
+        }
+
+        .goods-spec {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            column-gap: 24px;
+            row-gap: 8px;
+            margin: 20px 0 0;
+            padding: 20px 24px;
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-md);
+            background: var(--light-surface);
+            font-size: 0.93rem;
+        }
+
+        .goods-spec dt {
+            color: var(--light-muted);
+            font-weight: 500;
+        }
+
+        .goods-spec dd {
+            margin: 0;
+            color: var(--light-text);
+        }
+
+        .goods-sub {
+            margin-top: 32px;
+        }
+
+        .goods-sub h3 {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--light-text);
+            margin: 0 0 10px;
+        }
+
+        .goods-events {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .goods-events li {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+            align-items: baseline;
+            padding: 12px 0;
+            border-top: 1px solid var(--light-border);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .goods-events li:last-child {
+            border-bottom: 1px solid var(--light-border);
+        }
+
+        .goods-events time {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--brand);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .goods-events .goods-event-note {
+            color: var(--light-muted);
+            font-size: 0.88rem;
+        }
+
+        .goods-note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--light-muted);
+            line-height: 1.8;
+        }
+
+        .goods-cta {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 16px;
+        }
+
+        @media (max-width: 600px) {
+            .goods-spec {
+                grid-template-columns: 1fr;
+                row-gap: 2px;
+            }
+
+            .goods-spec dt {
+                margin-top: 8px;
+            }
+
+            .goods-spec dt:first-child {
+                margin-top: 0;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B3DFR92WNS');
+    </script>
+</head>
+
+<body>
+    <a href="#goods-content" class="skip-link">本文へスキップ</a>
+    <header class="header scrolled" id="header">
+        <div class="header-inner">
+            <a href="/" class="header-logo">
+                <img src="../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+            </a>
+            <nav class="header-nav" id="header-nav">
+                <a href="/" class="nav-link">ホーム</a>
+                <a href="/start/" class="nav-link">はじめての方へ</a>
+                <a href="/episodes/" class="nav-link">エピソード</a>
+                <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+                <a href="/#about" class="nav-link">番組について</a>
+                <a href="/#contact" class="nav-link">お問い合わせ</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="goods-main" id="goods-content">
+        <div class="container">
+            <div class="section-label">GOODS</div>
+            <h1 class="section-heading">グッズ</h1>
+
+            <div class="goods-intro">
+                <p>
+                    プラントライフのグッズを紹介します。
+                    番組を聴いてくださる方との接点を、音声だけでなく手に取れる形でも作りたいと思い、まずステッカーを作りました。
+                </p>
+            </div>
+
+            <section class="goods-item">
+                <h2>プラントライフ ステッカー</h2>
+
+                <figure class="goods-visual">
+                    <!-- 狭い画面では画像内の文字が読めなくなるため、文字なしの表裏画像に切り替える -->
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="../images/goods_sticker_plain_1600x900.png">
+                        <img src="../images/goods_sticker_1600x900.png"
+                            alt="プラントライフのステッカー。表面は番組アイコン、裏面は番組サイトへのQRコード" width="1600"
+                            height="900">
+                    </picture>
+                </figure>
+
+                <div class="goods-body">
+                    <p>
+                        表面は番組アイコン、裏面は番組サイトへつながるQRコードです。
+                        ノートPCや手帳に貼れる50mm角にしました。
+                    </p>
+
+                    <dl class="goods-spec">
+                        <dt>サイズ</dt>
+                        <dd>シール 50×50mm（台紙 60×60mm）</dd>
+                        <dt>素材</dt>
+                        <dd>アート紙・PP加工（ツヤあり）</dd>
+                        <dt>裏面</dt>
+                        <dd>番組名・キャッチコピー・番組サイトのQRコード</dd>
+                    </dl>
+
+                    <div class="goods-sub">
+                        <h3>配布の予定と実績</h3>
+                        <ul class="goods-events">
+                            <li>
+                                <time datetime="2026-09-13">2026.09.13</time>
+                                <span>PODCAST STICKER BASE 02（東新宿）</span>
+                                <span class="goods-event-note">Podcast Sticker Wall にて配布</span>
+                            </li>
+                        </ul>
+                        <p class="goods-note">
+                            現在、通販は行っていません。イベント会場での配布が中心です。
+                            新しい配布の機会や、次のグッズができたときは、<a href="../news/">お知らせ</a>とXでご案内します。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="goods-cta">
+                <a href="../news/" class="btn-hero-primary">お知らせを見る</a>
+                <a href="/" class="btn-hero-ghost">ホームへ戻る</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+                </div>
+                <div class="footer-nav-group">
+                    <h4>つながる</h4>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+                    <a href="/history/">番組の歩み</a>
+                    <a href="/goods/">グッズ</a>
+                    <a href="/#contact">お問い合わせ</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>聴く</h4>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1789911793" target="_blank" rel="noopener">Apple
+                        Podcasts</a>
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>&nbsp;</h4>
+                    <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
+                        rel="noopener">Amazon Music</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 技術者かねまるの「プラントライフ」</p>
+                <div class="footer-socials">
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=20260711"></script>
+</body>
+
+</html>
