@@ -5676,5 +5676,57 @@
       "ニッケル水素電池",
       "科学系ポッドキャストの日"
     ]
+  },
+  {
+    "number": "125",
+    "title": "#125 普通は光らないはずが！？凝集誘起発光（AIE）",
+    "pub_date": "2026-09-09",
+    "description": "溶液だと光らなくて固体だと光る、そんな常識から外れた面白い特性である凝集誘起発光（AIEE）を紹介しました！📚参考資料有機超分子の発光－分子をどのように集め光らせるか－ https://www.jstage.jst.go.jp/article/photogrst/79/4/79_319/_pdf/-char/ja凝集誘起発光とは何か？その本質が明らかに https://www.titech.ac.jp/news/2020/047135J. Luo et al., Chem. Commun. 2001, 1740–1741（AIEEの初報）　https://pubs.rsc.org/cc/art...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dzpkx2FHKyO47Ogn3b20XjrSGkO9YF6BtKra4hP1.jpg",
+    "duration": "00:14:08",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/RUEt8ekfMckm0k0Zdo7nTLo5JCHiYNr4va5woxS6.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/125-aggregation-induced-emission-aie-qovgbcvd",
+      "spotify": "https://open.spotify.com/episode/6YkaoCQcAAswvvrZgsUTPv",
+      "apple": "https://podcasts.apple.com/jp/podcast/125-%E6%99%AE%E9%80%9A%E3%81%AF%E5%85%89%E3%82%89%E3%81%AA%E3%81%84%E3%81%AF%E3%81%9A%E3%81%8C-%E5%87%9D%E9%9B%86%E8%AA%98%E8%B5%B7%E7%99%BA%E5%85%89-aie/id1789911793?i=1000788535128&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/a1a332fc-2954-45b2-b8eb-cb796530de93/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-125-%E6%99%AE%E9%80%9A%E3%81%AF%E5%85%89%E3%82%89%E3%81%AA%E3%81%84%E3%81%AF%E3%81%9A%E3%81%8C%EF%BC%81%EF%BC%9F%E5%87%9D%E9%9B%86%E8%AA%98%E8%B5%B7%E7%99%BA%E5%85%89%EF%BC%88aie%EF%BC%89",
+      "youtube": "https://www.youtube.com/watch?v=_GywskuQYHg"
+    },
+    "references": [
+      {
+        "url": "https://www.jstage.jst.go.jp/article/photogrst/79/4/79_319/_pdf/-char/ja",
+        "title": "有機超分子の発光－分子をどのように集め光らせるか－"
+      },
+      {
+        "url": "https://www.titech.ac.jp/news/2020/047135",
+        "title": "凝集誘起発光とは何か？その本質が明らかに"
+      },
+      {
+        "url": "https://pubs.rsc.org/cc/article-abstract/37/18/1740/146459/Aggregation-induced-emission-of-1-methyl-1-2-3-4-5?redirectedFrom=fulltext",
+        "title": "J. Luo et al., Chem. Commun. 2001, 1740–1741（AIEEの初報）"
+      },
+      {
+        "url": "https://www.tcichemicals.com/JP/ja/p/T0167",
+        "title": "テトラフェニルエチレンの構造式"
+      }
+    ],
+    "tags": [
+      "化学物質・材料",
+      "科学・雑学"
+    ],
+    "keywords": [
+      "蛍光",
+      "蛍光物質",
+      "紫外線",
+      "テトラフェニルエチレン",
+      "TPE",
+      "プロペラ型",
+      "濃度消光",
+      "有機EL",
+      "希薄溶液",
+      "固体発光",
+      "aggregation-induced emission",
+      "分子設計"
+    ]
   }
 ]
