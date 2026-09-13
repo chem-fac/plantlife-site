@@ -5728,5 +5728,53 @@
       "aggregation-induced emission",
       "分子設計"
     ]
+  },
+  {
+    "number": "126",
+    "title": "#126 電気を通すプラスチック！ノーベル化学賞、白川英樹さんの功績",
+    "pub_date": "2026-09-13",
+    "description": "2026年8月24日に亡くなられた白川英樹さんへの追悼の意を込めて、導電性高分子について話しました。📚参考資料【訃報】ノーベル化学賞受賞者 白川英樹名誉教授｜筑波大学 https://www.tsukuba.ac.jp/news/20260903154606.htmlThe Nobel Prize in Chemistry 2000 – Popular information｜ノーベル財団 https://www.nobelprize.org/prizes/chemistry/2000/popular-information/Hideki Shirakawa – Biographical｜ノー...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/ccp8wt2l9cxcMdObNh0bhUqiN5T25XJ97NNMxQss.jpg",
+    "duration": "00:23:25",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/K8r1MTb9tnwEIu7CGrZiIpmcC1Nd1rxCIR7xpZYA.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/126-hideki-shirakawa-nobel-prize-conductive-plastic",
+      "apple": "https://podcasts.apple.com/jp/podcast/126-%E9%9B%BB%E6%B0%97%E3%82%92%E9%80%9A%E3%81%99%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF-%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AB%E5%8C%96%E5%AD%A6%E8%B3%9E-%E7%99%BD%E5%B7%9D%E8%8B%B1%E6%A8%B9%E3%81%95%E3%82%93%E3%81%AE%E5%8A%9F%E7%B8%BE/id1789911793?i=1000789213065&uo=4",
+      "spotify": "https://open.spotify.com/episode/5UVcctxh0Mgb24CLeWOHmA",
+      "youtube": "https://www.youtube.com/watch?v=ewlFnKvChwk",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/d840a2b3-102a-4648-a11a-b7292cf7b70b/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-126-%E9%9B%BB%E6%B0%97%E3%82%92%E9%80%9A%E3%81%99%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%EF%BC%81%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AB%E5%8C%96%E5%AD%A6%E8%B3%9E%E3%80%81%E7%99%BD%E5%B7%9D%E8%8B%B1%E6%A8%B9%E3%81%95%E3%82%93%E3%81%AE%E5%8A%9F%E7%B8%BE"
+    },
+    "references": [
+      {
+        "url": "https://www.tsukuba.ac.jp/news/20260903154606.html",
+        "title": "【訃報】ノーベル化学賞受賞者 白川英樹名誉教授｜筑波大学"
+      },
+      {
+        "url": "https://www.nobelprize.org/prizes/chemistry/2000/popular-information/",
+        "title": "The Nobel Prize in Chemistry 2000 – Popular information｜ノーベル財団"
+      },
+      {
+        "url": "https://www.nobelprize.org/prizes/chemistry/2000/shirakawa/biographical/",
+        "title": "Hideki Shirakawa – Biographical｜ノーベル財団"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/oubutsu/77/8/77_903/_pdf/-char/ja",
+        "title": "白川英樹「学際領域における導電性ポリマーの研究とノーベル化学賞」（オーラルヒストリー）応用物理 77巻8号 2008年｜応用物理学会"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/kakyoshi/67/2/67_82/_pdf",
+        "title": "白川英樹「導電性高分子の発見と導電機構」化学と教育 67巻2号 2019年｜日本化学会"
+      },
+      {
+        "url": "https://www.jstage.jst.go.jp/article/electrochemistry/71/7/71_586/_pdf",
+        "title": "白川英樹「導電性高分子」Electrochemistry 71巻7号 2003年｜電気化学会"
+      },
+      {
+        "url": "https://group.nagase.com/nagasechemtex/denatron/museum/whats-denatron/20241014/",
+        "title": "PEDOT:PSSとは？（導電機構と用途）｜ナガセケムテックス"
+      }
+    ],
+    "tags": [],
+    "keywords": []
   }
 ]
