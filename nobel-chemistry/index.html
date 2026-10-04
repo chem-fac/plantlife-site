@@ -25,7 +25,6 @@
   <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://image.listen.style">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/article.css">
@@ -95,62 +94,22 @@
   margin-bottom: 28px;
 }
 
-/* パンくずと、エピソードの探し方（エピソード一覧の上部にも同じものを置いている） */
-.fx-breadcrumb {
-  margin-bottom: 14px;
-}
-
-.fx-browse {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 12px;
-  margin-bottom: 28px;
-}
-
-.fx-browse-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--light-muted);
-}
-
-.fx-browse-tabs {
-  display: inline-flex;
-  gap: 4px;
-  max-width: 100%;
-  padding: 4px;
-  overflow-x: auto;
-  background: var(--brand-50);
-  border: 1px solid var(--brand-10);
-  border-radius: var(--radius-pill);
-  scrollbar-width: none;
-}
-
-.fx-browse-tabs::-webkit-scrollbar {
-  display: none;
-}
-
-.fx-browse-link {
-  flex: none;
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--light-secondary);
-  white-space: nowrap;
-  transition: background-color 0.15s, color 0.15s;
-}
-
-.fx-browse-link:hover {
-  background: var(--light-surface);
-  color: var(--brand);
-}
-
-.fx-browse-link[aria-current="page"] {
-  background: var(--brand);
-  color: #fff;
-}
+/* パンくずと「エピソードを探す」の切り替えは styles.css（エピソード一覧と同じ定義を共有する） */
 /* ノーベル化学賞から探す */
+
+/* 入れ物はエピソード一覧・周期表と同じ幅にして、パンくずと「エピソードを探す」の位置をそろえる
+   （ページを切り替えても動かないように）。一覧は読みやすい幅のまま左に寄せる */
+.feature-container.nb-container {
+  max-width: var(--max-w);
+}
+
+.nb-controls,
+.nb-result,
+.nb-nav,
+.nb-decade {
+  max-width: 852px;
+}
+
 .nb-controls {
   display: flex;
   flex-wrap: wrap;
@@ -402,7 +361,7 @@
 
   <main class="article-main" id="main-content">
     <div class="feature-container nb-container">
-      <nav class="article-breadcrumb fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/episodes/">エピソード</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">ノーベル化学賞から探す</span></nav>
+      <nav class="fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><a href="/episodes/">エピソード</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><span aria-current="page">ノーベル化学賞から探す</span></nav>
       <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link">テーマ・キーワード</a><a href="/elements/" class="fx-browse-link">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link" aria-current="page">ノーベル化学賞</a></span></nav>
       <header class="feature-hero nb-hero">
         <p class="feature-eyebrow">プラントライフの特集</p>
@@ -431,7 +390,7 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/39/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/0i63YkKST1hpx2G6ZObQ4KjYXqD1ETt0xWCwHKeX_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">この受賞の回</span><span class="fx-ep-title">#39 初心者向け解説！ノーベル化学賞2025（有機金属構造体MOF）</span><span class="fx-ep-note">金属イオンと有機分子を組み合わせた分子サイズのジャングルジム「MOF」の仕組み、受賞した3人の役割、CO2回収やガス貯蔵などの使い道を解説しています。</span></span></a>
+              <a href="/episodes/39/" class="fx-ep-link"><img src="/images/episodes/39-51ee53b67b-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">この受賞の回</span><span class="fx-ep-title">#39 初心者向け解説！ノーベル化学賞2025（有機金属構造体MOF）</span><span class="fx-ep-note">金属イオンと有機分子を組み合わせた分子サイズのジャングルジム「MOF」の仕組み、受賞した3人の役割、CO2回収やガス貯蔵などの使い道を解説しています。</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/2025/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
@@ -597,10 +556,10 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/14/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/PODzkpBRWZGK7wYLZlLPmeZszK3UTnQE0dpcxwO0_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#14 力が化学反応を駆動するメカノケミカル(モノづくり系ポッドキャストの日)</span><span class="fx-ep-note">触媒の例として、受賞対象の鈴木・宮浦カップリングに触れています</span></span></a>
+              <a href="/episodes/14/" class="fx-ep-link"><img src="/images/episodes/14-520a28c509-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#14 力が化学反応を駆動するメカノケミカル(モノづくり系ポッドキャストの日)</span><span class="fx-ep-note">触媒の例として、受賞対象の鈴木・宮浦カップリングに触れています</span></span></a>
             </li>
             <li class="fx-ep">
-              <a href="/episodes/37/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/c9EINjbgjAKQHJoxmG0YUCKiJFb9WpJD4LVV5cAy_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#37 ノーベル化学賞のカギになる触媒の話</span><span class="fx-ep-note">触媒が関わる受賞として、鈴木・宮浦クロスカップリングを紹介しています</span></span></a>
+              <a href="/episodes/37/" class="fx-ep-link"><img src="/images/episodes/37-b1097fa0db-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#37 ノーベル化学賞のカギになる触媒の話</span><span class="fx-ep-note">触媒が関わる受賞として、鈴木・宮浦クロスカップリングを紹介しています</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/2010/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
@@ -710,7 +669,7 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/74/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/TQEgITgFpIqajmmNGqt7Db5nvxxVoVEHlPx2H2YJ.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#74 化学式は3次元で見るべし！興味深い立体化学の世界</span><span class="fx-ep-note">不斉合成の例として、野依良治さんのキラル触媒BINAPに触れています</span></span></a>
+              <a href="/episodes/74/" class="fx-ep-link"><img src="/images/episodes/74-cb85517929-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#74 化学式は3次元で見るべし！興味深い立体化学の世界</span><span class="fx-ep-note">不斉合成の例として、野依良治さんのキラル触媒BINAPに触れています</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/2001/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
@@ -725,7 +684,7 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/126/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/ccp8wt2l9cxcMdObNh0bhUqiN5T25XJ97NNMxQss.jpg" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">この受賞の回</span><span class="fx-ep-title">#126 電気を通すプラスチック！ノーベル化学賞、白川英樹さんの功績</span><span class="fx-ep-note">白川英樹さんの功績である、電気を通すプラスチック（導電性高分子）について話しています。</span></span></a>
+              <a href="/episodes/126/" class="fx-ep-link"><img src="/images/episodes/126-fab977c379-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">この受賞の回</span><span class="fx-ep-title">#126 電気を通すプラスチック！ノーベル化学賞、白川英樹さんの功績</span><span class="fx-ep-note">白川英樹さんの功績である、電気を通すプラスチック（導電性高分子）について話しています。</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/2000/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
@@ -1136,7 +1095,7 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/37/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/c9EINjbgjAKQHJoxmG0YUCKiJFb9WpJD4LVV5cAy_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#37 ノーベル化学賞のカギになる触媒の話</span><span class="fx-ep-note">触媒が関わる受賞として、チーグラー・ナッタ触媒を紹介しています</span></span></a>
+              <a href="/episodes/37/" class="fx-ep-link"><img src="/images/episodes/37-b1097fa0db-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#37 ノーベル化学賞のカギになる触媒の話</span><span class="fx-ep-note">触媒が関わる受賞として、チーグラー・ナッタ触媒を紹介しています</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/1963/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
@@ -1458,7 +1417,7 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/22/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dh5uAc14JRBPScNXo7X7E4LqQiHOUFsuxAjGfWDJ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#22 ハーバー・ボッシュ法：食糧危機を救った化学の大逆転</span><span class="fx-ep-note">工業化を進めたボッシュの受賞（1931年）に触れています</span></span></a>
+              <a href="/episodes/22/" class="fx-ep-link"><img src="/images/episodes/22-53478d5966-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#22 ハーバー・ボッシュ法：食糧危機を救った化学の大逆転</span><span class="fx-ep-note">工業化を進めたボッシュの受賞（1931年）に触れています</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/1931/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
@@ -1587,10 +1546,10 @@
               </div>
               <ul class="fx-eps nb-eps">
             <li class="fx-ep">
-              <a href="/episodes/22/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dh5uAc14JRBPScNXo7X7E4LqQiHOUFsuxAjGfWDJ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#22 ハーバー・ボッシュ法：食糧危機を救った化学の大逆転</span><span class="fx-ep-note">アンモニア合成法を開発したハーバーの受賞（1918年）に触れています</span></span></a>
+              <a href="/episodes/22/" class="fx-ep-link"><img src="/images/episodes/22-53478d5966-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#22 ハーバー・ボッシュ法：食糧危機を救った化学の大逆転</span><span class="fx-ep-note">アンモニア合成法を開発したハーバーの受賞（1918年）に触れています</span></span></a>
             </li>
             <li class="fx-ep">
-              <a href="/episodes/109/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#109 肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか</span><span class="fx-ep-note">肥料の原料アンモニアを作るハーバー・ボッシュ法の受賞に触れています</span></span></a>
+              <a href="/episodes/109/" class="fx-ep-link"><img src="/images/episodes/109-086036eda8-400.webp" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">受賞に触れた回</span><span class="fx-ep-title">#109 肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか</span><span class="fx-ep-note">肥料の原料アンモニアを作るハーバー・ボッシュ法の受賞に触れています</span></span></a>
             </li>
               </ul>
               <a href="https://www.nobelprize.org/prizes/chemistry/1918/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>

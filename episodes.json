@@ -29,7 +29,9 @@
       "ものづくり系ポッドキャストの日",
       "PLC",
       "発信活動"
-    ]
+    ],
+    "thumb_s": "/images/episodes/1-11a3937a38-400.webp",
+    "thumb_l": "/images/episodes/1-11a3937a38-800.webp"
   },
   {
     "number": "2",
@@ -65,7 +67,9 @@
       "真空",
       "物理現象",
       "水"
-    ]
+    ],
+    "thumb_s": "/images/episodes/2-36e340eecb-400.webp",
+    "thumb_l": "/images/episodes/2-36e340eecb-800.webp"
   },
   {
     "number": "3",
@@ -95,7 +99,9 @@
       "ものづくり系ポッドキャストの日",
       "ブログ",
       "化学部門"
-    ]
+    ],
+    "thumb_s": "/images/episodes/3-73ba13d622-400.webp",
+    "thumb_l": "/images/episodes/3-73ba13d622-800.webp"
   },
   {
     "number": "4",
@@ -127,7 +133,9 @@
       "蒸留塔",
       "ろ過器",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/4-1bbcc5e605-400.webp",
+    "thumb_l": "/images/episodes/4-1bbcc5e605-800.webp"
   },
   {
     "number": "5",
@@ -160,7 +168,9 @@
       "ポリエチレン",
       "分子量分布",
       "石油化学"
-    ]
+    ],
+    "thumb_s": "/images/episodes/5-f835d8a4f7-400.webp",
+    "thumb_l": "/images/episodes/5-f835d8a4f7-800.webp"
   },
   {
     "number": "6",
@@ -204,7 +214,9 @@
       "3K",
       "理系",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/6-1d14b6a6d1-400.webp",
+    "thumb_l": "/images/episodes/6-1d14b6a6d1-800.webp"
   },
   {
     "number": "7",
@@ -241,7 +253,9 @@
       "炭素循環",
       "水素",
       "オレフィン"
-    ]
+    ],
+    "thumb_s": "/images/episodes/7-e3e8799b72-400.webp",
+    "thumb_l": "/images/episodes/7-e3e8799b72-800.webp"
   },
   {
     "number": "8",
@@ -301,7 +315,9 @@
       "ペレット",
       "プラスチック",
       "資源循環"
-    ]
+    ],
+    "thumb_s": "/images/episodes/8-33ba58ae70-400.webp",
+    "thumb_l": "/images/episodes/8-33ba58ae70-800.webp"
   },
   {
     "number": "9",
@@ -334,7 +350,9 @@
       "PID制御",
       "運転管理",
       "FAラジオ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/9-3ee428f749-400.webp",
+    "thumb_l": "/images/episodes/9-3ee428f749-800.webp"
   },
   {
     "number": "10",
@@ -366,7 +384,9 @@
       "化学工学",
       "シミュレーション",
       "フリーソフト"
-    ]
+    ],
+    "thumb_s": "/images/episodes/10-25959f9a17-400.webp",
+    "thumb_l": "/images/episodes/10-25959f9a17-800.webp"
   },
   {
     "number": "11",
@@ -406,7 +426,9 @@
       "SDS",
       "労災",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/11-da2e3974e1-400.webp",
+    "thumb_l": "/images/episodes/11-da2e3974e1-800.webp"
   },
   {
     "number": "12",
@@ -437,7 +459,9 @@
       "経験",
       "トラブル対応",
       "つながリッスン"
-    ]
+    ],
+    "thumb_s": "/images/episodes/12-cd262fd236-400.webp",
+    "thumb_l": "/images/episodes/12-cd262fd236-800.webp"
   },
   {
     "number": "13",
@@ -469,7 +493,9 @@
       "人工芝",
       "和紙",
       "テックスメイド"
-    ]
+    ],
+    "thumb_s": "/images/episodes/13-df7c4cc61c-400.webp",
+    "thumb_l": "/images/episodes/13-df7c4cc61c-800.webp"
   },
   {
     "number": "14",
@@ -501,7 +527,9 @@
       "鈴木宮浦カップリング",
       "パラジウム",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/14-520a28c509-400.webp",
+    "thumb_l": "/images/episodes/14-520a28c509-800.webp"
   },
   {
     "number": "15",
@@ -531,7 +559,9 @@
       "デジタル化",
       "ELN",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/15-594ef3300e-400.webp",
+    "thumb_l": "/images/episodes/15-594ef3300e-800.webp"
   },
   {
     "number": "16",
@@ -565,7 +595,9 @@
       "連続プロセス",
       "バッチプロセス",
       "専門回"
-    ]
+    ],
+    "thumb_s": "/images/episodes/16-25fd8523bb-400.webp",
+    "thumb_l": "/images/episodes/16-25fd8523bb-800.webp"
   },
   {
     "number": "17",
@@ -595,7 +627,9 @@
       "ポッドキャスト",
       "Google",
       "AI"
-    ]
+    ],
+    "thumb_s": "/images/episodes/17-e4eca0385d-400.webp",
+    "thumb_l": "/images/episodes/17-e4eca0385d-800.webp"
   },
   {
     "number": "18",
@@ -644,7 +678,9 @@
       "規制",
       "環境",
       "水質"
-    ]
+    ],
+    "thumb_s": "/images/episodes/18-66b5b54c2b-400.webp",
+    "thumb_l": "/images/episodes/18-66b5b54c2b-800.webp"
   },
   {
     "number": "19",
@@ -697,7 +733,9 @@
       "カーボンニュートラル",
       "化学品",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/19-09959a9be1-400.webp",
+    "thumb_l": "/images/episodes/19-09959a9be1-800.webp"
   },
   {
     "number": "20",
@@ -733,7 +771,9 @@
       "環境省",
       "牛肉",
       "コーヒー"
-    ]
+    ],
+    "thumb_s": "/images/episodes/20-b3e58daefe-400.webp",
+    "thumb_l": "/images/episodes/20-b3e58daefe-800.webp"
   },
   {
     "number": "21",
@@ -768,7 +808,9 @@
       "口頭試験",
       "化学部門",
       "キャリア"
-    ]
+    ],
+    "thumb_s": "/images/episodes/21-b75da4aa69-400.webp",
+    "thumb_l": "/images/episodes/21-b75da4aa69-800.webp"
   },
   {
     "number": "22",
@@ -818,7 +860,9 @@
       "オストワルト法",
       "食糧危機",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/22-53478d5966-400.webp",
+    "thumb_l": "/images/episodes/22-53478d5966-800.webp"
   },
   {
     "number": "23",
@@ -855,7 +899,9 @@
       "ミリパスカル秒",
       "レオロジー",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/23-5a60870503-400.webp",
+    "thumb_l": "/images/episodes/23-5a60870503-800.webp"
   },
   {
     "number": "24",
@@ -887,7 +933,9 @@
       "再生可能エネルギー",
       "カーボンニュートラル",
       "エネルギーキャリア"
-    ]
+    ],
+    "thumb_s": "/images/episodes/24-30da757ced-400.webp",
+    "thumb_l": "/images/episodes/24-30da757ced-800.webp"
   },
   {
     "number": "25",
@@ -943,7 +991,9 @@
       "マイクロカプセル",
       "生態系",
       "5mm"
-    ]
+    ],
+    "thumb_s": "/images/episodes/25-ac2f3b20ae-400.webp",
+    "thumb_l": "/images/episodes/25-ac2f3b20ae-800.webp"
   },
   {
     "number": "26",
@@ -978,7 +1028,9 @@
       "勉強",
       "つながリッスン",
       "キャリア"
-    ]
+    ],
+    "thumb_s": "/images/episodes/26-0ee981103d-400.webp",
+    "thumb_l": "/images/episodes/26-0ee981103d-800.webp"
   },
   {
     "number": "27",
@@ -1041,7 +1093,9 @@
       "稼働率",
       "石油化学",
       "工場閉鎖"
-    ]
+    ],
+    "thumb_s": "/images/episodes/27-3675d13429-400.webp",
+    "thumb_l": "/images/episodes/27-3675d13429-800.webp"
   },
   {
     "number": "28",
@@ -1075,7 +1129,9 @@
       "イベント",
       "つながリッスン",
       "振り返り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/28-667e31c3b2-400.webp",
+    "thumb_l": "/images/episodes/28-667e31c3b2-800.webp"
   },
   {
     "number": "29",
@@ -1112,7 +1168,9 @@
       "化学発光",
       "色素",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/29-983a34aae6-400.webp",
+    "thumb_l": "/images/episodes/29-983a34aae6-800.webp"
   },
   {
     "number": "30",
@@ -1158,7 +1216,9 @@
       "ケムファク",
       "MONOist",
       "ジャケギキ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/30-75f7b51b5e-400.webp",
+    "thumb_l": "/images/episodes/30-75f7b51b5e-800.webp"
   },
   {
     "number": "31",
@@ -1211,7 +1271,9 @@
       "電池材料",
       "日本化学会",
       "カーボンニュートラル"
-    ]
+    ],
+    "thumb_s": "/images/episodes/31-38df942e1c-400.webp",
+    "thumb_l": "/images/episodes/31-38df942e1c-800.webp"
   },
   {
     "number": "32",
@@ -1260,7 +1322,9 @@
       "打ち水",
       "潜熱",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/32-6240dc2512-400.webp",
+    "thumb_l": "/images/episodes/32-6240dc2512-800.webp"
   },
   {
     "number": "33",
@@ -1309,7 +1373,9 @@
       "洗剤",
       "マヨネーズ",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/33-8324ca1dfd-400.webp",
+    "thumb_l": "/images/episodes/33-8324ca1dfd-800.webp"
   },
   {
     "number": "34",
@@ -1365,7 +1431,9 @@
       "大学",
       "化学メーカー",
       "生産技術"
-    ]
+    ],
+    "thumb_s": "/images/episodes/34-da92db66df-400.webp",
+    "thumb_l": "/images/episodes/34-da92db66df-800.webp"
   },
   {
     "number": "35",
@@ -1402,7 +1470,9 @@
       "熱移動",
       "自然対流",
       "強制対流"
-    ]
+    ],
+    "thumb_s": "/images/episodes/35-ce12bafdce-400.webp",
+    "thumb_l": "/images/episodes/35-ce12bafdce-800.webp"
   },
   {
     "number": "36",
@@ -1471,7 +1541,9 @@
       "エステル交換",
       "グリーストラップ",
       "廃食油"
-    ]
+    ],
+    "thumb_s": "/images/episodes/36-b02c8b6b2f-400.webp",
+    "thumb_l": "/images/episodes/36-b02c8b6b2f-800.webp"
   },
   {
     "number": "37",
@@ -1522,7 +1594,9 @@
       "反応速度",
       "不均一触媒",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/37-b1097fa0db-400.webp",
+    "thumb_l": "/images/episodes/37-b1097fa0db-800.webp"
   },
   {
     "number": "38",
@@ -1560,7 +1634,9 @@
       "PET",
       "樹脂",
       "重合"
-    ]
+    ],
+    "thumb_s": "/images/episodes/38-b71eb1b747-400.webp",
+    "thumb_l": "/images/episodes/38-b71eb1b747-800.webp"
   },
   {
     "number": "39",
@@ -1621,7 +1697,9 @@
       "ゼオライト",
       "活性炭",
       "金属イオン"
-    ]
+    ],
+    "thumb_s": "/images/episodes/39-51ee53b67b-400.webp",
+    "thumb_l": "/images/episodes/39-51ee53b67b-800.webp"
   },
   {
     "number": "40",
@@ -1663,7 +1741,9 @@
       "話し方",
       "発信",
       "雑談系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/40-1dff096ef1-400.webp",
+    "thumb_l": "/images/episodes/40-1dff096ef1-800.webp"
   },
   {
     "number": "41",
@@ -1735,7 +1815,9 @@
       "化学の日",
       "単位",
       "パスカル"
-    ]
+    ],
+    "thumb_s": "/images/episodes/41-ec377689a0-400.webp",
+    "thumb_l": "/images/episodes/41-ec377689a0-800.webp"
   },
   {
     "number": "42",
@@ -1779,7 +1861,9 @@
       "キャリア",
       "生産技術",
       "リアルイベント"
-    ]
+    ],
+    "thumb_s": "/images/episodes/42-0ca3f39d03-400.webp",
+    "thumb_l": "/images/episodes/42-0ca3f39d03-800.webp"
   },
   {
     "number": "43",
@@ -1835,7 +1919,9 @@
       "カエデ",
       "色素",
       "つながリッスン"
-    ]
+    ],
+    "thumb_s": "/images/episodes/43-60a97133af-400.webp",
+    "thumb_l": "/images/episodes/43-60a97133af-800.webp"
   },
   {
     "number": "44",
@@ -1875,7 +1961,9 @@
       "攪拌",
       "トリビア",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/44-9247bc2efc-400.webp",
+    "thumb_l": "/images/episodes/44-9247bc2efc-800.webp"
   },
   {
     "number": "45",
@@ -1909,7 +1997,9 @@
       "ひろひろし",
       "感想",
       "登壇"
-    ]
+    ],
+    "thumb_s": "/images/episodes/45-df22556653-400.webp",
+    "thumb_l": "/images/episodes/45-df22556653-800.webp"
   },
   {
     "number": "46",
@@ -1971,7 +2061,9 @@
       "乳化",
       "防錆",
       "MECT"
-    ]
+    ],
+    "thumb_s": "/images/episodes/46-8dc8a858c9-400.webp",
+    "thumb_l": "/images/episodes/46-8dc8a858c9-800.webp"
   },
   {
     "number": "47",
@@ -2001,7 +2093,9 @@
       "二次試験",
       "倫理",
       "キャリア"
-    ]
+    ],
+    "thumb_s": "/images/episodes/47-1fb232bb30-400.webp",
+    "thumb_l": "/images/episodes/47-1fb232bb30-800.webp"
   },
   {
     "number": "48",
@@ -2049,7 +2143,9 @@
       "窒息",
       "事故",
       "測定器"
-    ]
+    ],
+    "thumb_s": "/images/episodes/48-6fc2d87bde-400.webp",
+    "thumb_l": "/images/episodes/48-6fc2d87bde-800.webp"
   },
   {
     "number": "49",
@@ -2087,7 +2183,9 @@
       "モチベーション",
       "ものづくり仲間",
       "note"
-    ]
+    ],
+    "thumb_s": "/images/episodes/49-e888a3019c-400.webp",
+    "thumb_l": "/images/episodes/49-e888a3019c-800.webp"
   },
   {
     "number": "50",
@@ -2119,7 +2217,9 @@
       "コンタミ",
       "ランニングコスト",
       "設備設計"
-    ]
+    ],
+    "thumb_s": "/images/episodes/50-a7af6d601e-400.webp",
+    "thumb_l": "/images/episodes/50-a7af6d601e-800.webp"
   },
   {
     "number": "51",
@@ -2163,7 +2263,9 @@
       "半導体材料",
       "リチウムイオン電池材料",
       "化学業界再編"
-    ]
+    ],
+    "thumb_s": "/images/episodes/51-e7749b8ecb-400.webp",
+    "thumb_l": "/images/episodes/51-e7749b8ecb-800.webp"
   },
   {
     "number": "52",
@@ -2193,7 +2295,9 @@
       "振り返り",
       "科学系ポッドキャストの日",
       "マインド"
-    ]
+    ],
+    "thumb_s": "/images/episodes/52-6ab52245bb-400.webp",
+    "thumb_l": "/images/episodes/52-6ab52245bb-800.webp"
   },
   {
     "number": "53",
@@ -2247,7 +2351,9 @@
       "三菱ケミカル",
       "住友化学",
       "出光"
-    ]
+    ],
+    "thumb_s": "/images/episodes/53-2571ea4e5d-400.webp",
+    "thumb_l": "/images/episodes/53-2571ea4e5d-800.webp"
   },
   {
     "number": "54",
@@ -2300,7 +2406,9 @@
       "爆発",
       "リスクアセスメント",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/54-4728e9f61d-400.webp",
+    "thumb_l": "/images/episodes/54-4728e9f61d-800.webp"
   },
   {
     "number": "55",
@@ -2356,7 +2464,9 @@
       "FF",
       "野暮な化学",
       "有機溶媒"
-    ]
+    ],
+    "thumb_s": "/images/episodes/55-cd968ed73e-400.webp",
+    "thumb_l": "/images/episodes/55-cd968ed73e-800.webp"
   },
   {
     "number": "56",
@@ -2411,7 +2521,9 @@
       "HRC",
       "単位",
       "お便り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/56-1511b359e8-400.webp",
+    "thumb_l": "/images/episodes/56-1511b359e8-800.webp"
   },
   {
     "number": "57",
@@ -2443,7 +2555,9 @@
       "ベテラン",
       "AI",
       "温度圧力流量"
-    ]
+    ],
+    "thumb_s": "/images/episodes/57-802aba5c03-400.webp",
+    "thumb_l": "/images/episodes/57-802aba5c03-800.webp"
   },
   {
     "number": "58",
@@ -2475,7 +2589,9 @@
       "実験計画法",
       "タグチメソッド",
       "多変量解析"
-    ]
+    ],
+    "thumb_s": "/images/episodes/58-508dab4850-400.webp",
+    "thumb_l": "/images/episodes/58-508dab4850-800.webp"
   },
   {
     "number": "59",
@@ -2510,7 +2626,9 @@
       "リニューアル",
       "トンマナ",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/59-741923c933-400.webp",
+    "thumb_l": "/images/episodes/59-741923c933-800.webp"
   },
   {
     "number": "60",
@@ -2539,7 +2657,9 @@
       "キャリア",
       "人間関係",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/60-51ac496fa9-400.webp",
+    "thumb_l": "/images/episodes/60-51ac496fa9-800.webp"
   },
   {
     "number": "61",
@@ -2579,7 +2699,9 @@
       "対談",
       "ゲスト",
       "科学コミュニケーション"
-    ]
+    ],
+    "thumb_s": "/images/episodes/61-f3f844f9ef-400.webp",
+    "thumb_l": "/images/episodes/61-f3f844f9ef-800.webp"
   },
   {
     "number": "62",
@@ -2631,7 +2753,9 @@
       "対談",
       "ゲスト",
       "音声配信"
-    ]
+    ],
+    "thumb_s": "/images/episodes/62-da99c19178-400.webp",
+    "thumb_l": "/images/episodes/62-da99c19178-800.webp"
   },
   {
     "number": "63",
@@ -2675,7 +2799,9 @@
       "モチベーション",
       "技術者",
       "推し漫画"
-    ]
+    ],
+    "thumb_s": "/images/episodes/63-65c97701d4-400.webp",
+    "thumb_l": "/images/episodes/63-65c97701d4-800.webp"
   },
   {
     "number": "64",
@@ -2721,7 +2847,9 @@
       "プラスチック劣化",
       "ステンレス",
       "配管"
-    ]
+    ],
+    "thumb_s": "/images/episodes/64-905a710429-400.webp",
+    "thumb_l": "/images/episodes/64-905a710429-800.webp"
   },
   {
     "number": "65",
@@ -2785,7 +2913,9 @@
       "高校化学",
       "進路",
       "お便り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/65-41802ce4ae-400.webp",
+    "thumb_l": "/images/episodes/65-41802ce4ae-800.webp"
   },
   {
     "number": "66",
@@ -2855,7 +2985,9 @@
       "ナトリウムイオン電池",
       "充電",
       "バッテリー"
-    ]
+    ],
+    "thumb_s": "/images/episodes/66-d15ed6382e-400.webp",
+    "thumb_l": "/images/episodes/66-d15ed6382e-800.webp"
   },
   {
     "number": "67",
@@ -2884,7 +3016,9 @@
       "発信",
       "モチベーション",
       "目的"
-    ]
+    ],
+    "thumb_s": "/images/episodes/67-3b2d877fd0-400.webp",
+    "thumb_l": "/images/episodes/67-3b2d877fd0-800.webp"
   },
   {
     "number": "68",
@@ -2932,7 +3066,9 @@
       "循環",
       "ポンプ",
       "つながリッスン"
-    ]
+    ],
+    "thumb_s": "/images/episodes/68-d332545674-400.webp",
+    "thumb_l": "/images/episodes/68-d332545674-800.webp"
   },
   {
     "number": "69",
@@ -2974,7 +3110,9 @@
       "製造業",
       "ひよっこ研究者",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/69-49f95ebfd2-400.webp",
+    "thumb_l": "/images/episodes/69-49f95ebfd2-800.webp"
   },
   {
     "number": "70",
@@ -3028,7 +3166,9 @@
       "炭素",
       "変態点",
       "結晶構造"
-    ]
+    ],
+    "thumb_s": "/images/episodes/70-0052240407-400.webp",
+    "thumb_l": "/images/episodes/70-0052240407-800.webp"
   },
   {
     "number": "71",
@@ -3092,7 +3232,9 @@
       "ペクチン",
       "着色料",
       "お絵かきグミランド"
-    ]
+    ],
+    "thumb_s": "/images/episodes/71-db71587b40-400.webp",
+    "thumb_l": "/images/episodes/71-db71587b40-800.webp"
   },
   {
     "number": "72",
@@ -3121,7 +3263,9 @@
       "転職",
       "メンタル",
       "セルフケア"
-    ]
+    ],
+    "thumb_s": "/images/episodes/72-017f4a0efd-400.webp",
+    "thumb_l": "/images/episodes/72-017f4a0efd-800.webp"
   },
   {
     "number": "73",
@@ -3150,7 +3294,9 @@
       "転職",
       "休養",
       "コメント"
-    ]
+    ],
+    "thumb_s": "/images/episodes/73-22753a2cf0-400.webp",
+    "thumb_l": "/images/episodes/73-22753a2cf0-800.webp"
   },
   {
     "number": "74",
@@ -3207,7 +3353,9 @@
       "正四面体",
       "鏡像異性体",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/74-cb85517929-400.webp",
+    "thumb_l": "/images/episodes/74-cb85517929-800.webp"
   },
   {
     "number": "75",
@@ -3235,7 +3383,9 @@
       "舌下治療",
       "日本化学会",
       "雑談系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/75-6389117299-400.webp",
+    "thumb_l": "/images/episodes/75-6389117299-800.webp"
   },
   {
     "number": "76",
@@ -3279,7 +3429,9 @@
       "香り成分",
       "人工",
       "化学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/76-be3b842768-400.webp",
+    "thumb_l": "/images/episodes/76-be3b842768-800.webp"
   },
   {
     "number": "77",
@@ -3310,7 +3462,9 @@
       "Python",
       "生成AI",
       "エラー"
-    ]
+    ],
+    "thumb_s": "/images/episodes/77-23e33caa9a-400.webp",
+    "thumb_l": "/images/episodes/77-23e33caa9a-800.webp"
   },
   {
     "number": "78",
@@ -3352,7 +3506,9 @@
       "ヘルスケア",
       "石化",
       "お便り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/78-43808e8357-400.webp",
+    "thumb_l": "/images/episodes/78-43808e8357-800.webp"
   },
   {
     "number": "79",
@@ -3398,7 +3554,9 @@
       "家庭",
       "子育て",
       "高市"
-    ]
+    ],
+    "thumb_s": "/images/episodes/79-2fc14725e1-400.webp",
+    "thumb_l": "/images/episodes/79-2fc14725e1-800.webp"
   },
   {
     "number": "80",
@@ -3447,7 +3605,9 @@
       "化学物質",
       "事故",
       "保護具"
-    ]
+    ],
+    "thumb_s": "/images/episodes/80-709c12ec09-400.webp",
+    "thumb_l": "/images/episodes/80-709c12ec09-800.webp"
   },
   {
     "number": "81",
@@ -3479,7 +3639,9 @@
       "アラーム",
       "運転管理",
       "プロセス"
-    ]
+    ],
+    "thumb_s": "/images/episodes/81-b1bcfa551c-400.webp",
+    "thumb_l": "/images/episodes/81-b1bcfa551c-800.webp"
   },
   {
     "number": "82",
@@ -3531,7 +3693,9 @@
       "グローブバルブ",
       "蛇口",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/82-9af151172b-400.webp",
+    "thumb_l": "/images/episodes/82-9af151172b-800.webp"
   },
   {
     "number": "83",
@@ -3601,7 +3765,9 @@
       "高橋クリスのFAラジオ",
       "番組紹介",
       "学習"
-    ]
+    ],
+    "thumb_s": "/images/episodes/83-92e27796f0-400.webp",
+    "thumb_l": "/images/episodes/83-92e27796f0-800.webp"
   },
   {
     "number": "84",
@@ -3667,7 +3833,9 @@
       "アモルファス",
       "エステル結合",
       "お便り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/84-26075c3c1e-400.webp",
+    "thumb_l": "/images/episodes/84-26075c3c1e-800.webp"
   },
   {
     "number": "85",
@@ -3839,7 +4007,9 @@
       "小説",
       "自己紹介",
       "しゃべり足りない部"
-    ]
+    ],
+    "thumb_s": "/images/episodes/85-58a38cadc2-400.webp",
+    "thumb_l": "/images/episodes/85-58a38cadc2-800.webp"
   },
   {
     "number": "86",
@@ -3874,7 +4044,9 @@
       "結露",
       "温度",
       "露点"
-    ]
+    ],
+    "thumb_s": "/images/episodes/86-e382b83758-400.webp",
+    "thumb_l": "/images/episodes/86-e382b83758-800.webp"
   },
   {
     "number": "87",
@@ -3923,7 +4095,9 @@
       "プロペラ",
       "反応",
       "ビデオポッドキャスト"
-    ]
+    ],
+    "thumb_s": "/images/episodes/87-7830bca4f7-400.webp",
+    "thumb_l": "/images/episodes/87-7830bca4f7-800.webp"
   },
   {
     "number": "88",
@@ -3977,7 +4151,9 @@
       "消防法",
       "引火",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/88-6692b08628-400.webp",
+    "thumb_l": "/images/episodes/88-6692b08628-800.webp"
   },
   {
     "number": "89",
@@ -4031,7 +4207,9 @@
       "中和",
       "溶解度",
       "お便り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/89-726969a933-400.webp",
+    "thumb_l": "/images/episodes/89-726969a933-800.webp"
   },
   {
     "number": "90",
@@ -4076,7 +4254,9 @@
       "結晶構造",
       "機能性材料",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/90-ec9fb8a0e9-400.webp",
+    "thumb_l": "/images/episodes/90-ec9fb8a0e9-800.webp"
   },
   {
     "number": "91",
@@ -4119,7 +4299,9 @@
       "石油化学",
       "プラスチック原料",
       "お便り"
-    ]
+    ],
+    "thumb_s": "/images/episodes/91-ab370dbc6e-400.webp",
+    "thumb_l": "/images/episodes/91-ab370dbc6e-800.webp"
   },
   {
     "number": "92",
@@ -4167,7 +4349,9 @@
       "木材",
       "森林資源",
       "告知"
-    ]
+    ],
+    "thumb_s": "/images/episodes/92-333acffdc2-400.webp",
+    "thumb_l": "/images/episodes/92-333acffdc2-800.webp"
   },
   {
     "number": "93",
@@ -4200,7 +4384,9 @@
       "巡回",
       "化学プラント",
       "転職"
-    ]
+    ],
+    "thumb_s": "/images/episodes/93-af26a32f50-400.webp",
+    "thumb_l": "/images/episodes/93-af26a32f50-800.webp"
   },
   {
     "number": "94",
@@ -4229,7 +4415,9 @@
       "ひろひろし",
       "玉クロフェス",
       "ネットワーキング"
-    ]
+    ],
+    "thumb_s": "/images/episodes/94-24c3163e58-400.webp",
+    "thumb_l": "/images/episodes/94-24c3163e58-800.webp"
   },
   {
     "number": "95",
@@ -4278,7 +4466,9 @@
       "漂白",
       "製紙",
       "森っぽい話"
-    ]
+    ],
+    "thumb_s": "/images/episodes/95-e3d1ebbe47-400.webp",
+    "thumb_l": "/images/episodes/95-e3d1ebbe47-800.webp"
   },
   {
     "number": "96",
@@ -4349,7 +4539,9 @@
       "木材",
       "LISTEN",
       "番組紹介"
-    ]
+    ],
+    "thumb_s": "/images/episodes/96-d407ec9c37-400.webp",
+    "thumb_l": "/images/episodes/96-d407ec9c37-800.webp"
   },
   {
     "number": "97",
@@ -4380,7 +4572,9 @@
       "結晶構造",
       "ピタゴラスイッチ",
       "サイエントーク"
-    ]
+    ],
+    "thumb_s": "/images/episodes/97-26d2a6d87e-400.webp",
+    "thumb_l": "/images/episodes/97-26d2a6d87e-800.webp"
   },
   {
     "number": "98",
@@ -4413,7 +4607,9 @@
       "対談",
       "PODCAST MIXER",
       "ビデオポッドキャスト"
-    ]
+    ],
+    "thumb_s": "/images/episodes/98-8d5da66ccc-400.webp",
+    "thumb_l": "/images/episodes/98-8d5da66ccc-800.webp"
   },
   {
     "number": "99",
@@ -4445,7 +4641,9 @@
       "入力バリデーション",
       "設計",
       "宣伝"
-    ]
+    ],
+    "thumb_s": "/images/episodes/99-4abced331c-400.webp",
+    "thumb_l": "/images/episodes/99-4abced331c-800.webp"
   },
   {
     "number": "100",
@@ -4478,7 +4676,9 @@
       "化学工学計算",
       "DX",
       "転職"
-    ]
+    ],
+    "thumb_s": "/images/episodes/100-6782a93531-400.webp",
+    "thumb_l": "/images/episodes/100-6782a93531-800.webp"
   },
   {
     "number": "101",
@@ -4519,7 +4719,9 @@
       "相似則",
       "科学系ポッドキャストの日",
       "実機"
-    ]
+    ],
+    "thumb_s": "/images/episodes/101-cd2b64ea3a-400.webp",
+    "thumb_l": "/images/episodes/101-cd2b64ea3a-800.webp"
   },
   {
     "number": "102",
@@ -4555,7 +4757,9 @@
       "フィードバック",
       "神経系",
       "異常検知"
-    ]
+    ],
+    "thumb_s": "/images/episodes/102-ce851a9ee0-400.webp",
+    "thumb_l": "/images/episodes/102-ce851a9ee0-800.webp"
   },
   {
     "number": "103",
@@ -4591,7 +4795,9 @@
       "学び直し",
       "情報発信",
       "リスキリング"
-    ]
+    ],
+    "thumb_s": "/images/episodes/103-24610d9db6-400.webp",
+    "thumb_l": "/images/episodes/103-24610d9db6-800.webp"
   },
   {
     "number": "104",
@@ -4647,7 +4853,9 @@
       "SPF",
       "PA",
       "化学構造"
-    ]
+    ],
+    "thumb_s": "/images/episodes/104-a86f0f1256-400.webp",
+    "thumb_l": "/images/episodes/104-a86f0f1256-800.webp"
   },
   {
     "number": "105",
@@ -4681,7 +4889,9 @@
       "泣いた〇〇",
       "LISTENイベント",
       "音楽"
-    ]
+    ],
+    "thumb_s": "/images/episodes/105-2f5c81ace3-400.webp",
+    "thumb_l": "/images/episodes/105-2f5c81ace3-800.webp"
   },
   {
     "number": "106",
@@ -4718,7 +4928,9 @@
       "雑談系ポッドキャストの日",
       "メディア",
       "誠実な発信"
-    ]
+    ],
+    "thumb_s": "/images/episodes/106-a7b17f6d82-400.webp",
+    "thumb_l": "/images/episodes/106-a7b17f6d82-800.webp"
   },
   {
     "number": "107",
@@ -4751,7 +4963,9 @@
       "分子構造",
       "誘導体",
       "プロピレングリコール"
-    ]
+    ],
+    "thumb_s": "/images/episodes/107-f7ac20abf1-400.webp",
+    "thumb_l": "/images/episodes/107-f7ac20abf1-800.webp"
   },
   {
     "number": "108",
@@ -4814,7 +5028,9 @@
       "作動流体",
       "科学系ポッドキャストの日",
       "不燃"
-    ]
+    ],
+    "thumb_s": "/images/episodes/108-3d9d102f46-400.webp",
+    "thumb_l": "/images/episodes/108-3d9d102f46-800.webp"
   },
   {
     "number": "109",
@@ -4899,7 +5115,9 @@
       "中東情勢",
       "エルニーニョ",
       "カプロラクタム"
-    ]
+    ],
+    "thumb_s": "/images/episodes/109-086036eda8-400.webp",
+    "thumb_l": "/images/episodes/109-086036eda8-800.webp"
   },
   {
     "number": "110",
@@ -4960,7 +5178,9 @@
       "マイクロプラスチック",
       "摩耗",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/110-1029db252e-400.webp",
+    "thumb_l": "/images/episodes/110-1029db252e-800.webp"
   },
   {
     "number": "111",
@@ -4996,7 +5216,9 @@
       "プレス加工",
       "研磨",
       "パルプ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/111-73200a1267-400.webp",
+    "thumb_l": "/images/episodes/111-73200a1267-800.webp"
   },
   {
     "number": "112",
@@ -5045,7 +5267,9 @@
       "SUS316",
       "二相ステンレス",
       "塩化物"
-    ]
+    ],
+    "thumb_s": "/images/episodes/112-41ef8e0bcc-400.webp",
+    "thumb_l": "/images/episodes/112-41ef8e0bcc-800.webp"
   },
   {
     "number": "113",
@@ -5118,7 +5342,9 @@
       "自己消火性",
       "苛性ソーダ",
       "クロールアルカリ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/113-5dc7bef2d5-400.webp",
+    "thumb_l": "/images/episodes/113-5dc7bef2d5-800.webp"
   },
   {
     "number": "114",
@@ -5153,7 +5379,9 @@
       "文字起こし",
       "拍手",
       "BGM"
-    ]
+    ],
+    "thumb_s": "/images/episodes/114-1cc19cbcc1-400.webp",
+    "thumb_l": "/images/episodes/114-1cc19cbcc1-800.webp"
   },
   {
     "number": "115",
@@ -5189,7 +5417,9 @@
       "活性炭",
       "ウォッカ",
       "酵母"
-    ]
+    ],
+    "thumb_s": "/images/episodes/115-0f2624abdb-400.webp",
+    "thumb_l": "/images/episodes/115-0f2624abdb-800.webp"
   },
   {
     "number": "116",
@@ -5229,7 +5459,9 @@
       "ハイチェア",
       "体温",
       "バブ談系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/116-173543007c-400.webp",
+    "thumb_l": "/images/episodes/116-173543007c-800.webp"
   },
   {
     "number": "117",
@@ -5265,7 +5497,9 @@
       "カルキ",
       "半導体",
       "化学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/117-03b7235bbc-400.webp",
+    "thumb_l": "/images/episodes/117-03b7235bbc-800.webp"
   },
   {
     "number": "118",
@@ -5306,7 +5540,9 @@
       "圧力鍋",
       "富士山",
       "蒸気加熱"
-    ]
+    ],
+    "thumb_s": "/images/episodes/118-41f0749aa1-400.webp",
+    "thumb_l": "/images/episodes/118-41f0749aa1-800.webp"
   },
   {
     "number": "119",
@@ -5351,7 +5587,9 @@
       "しゃべり足りない部",
       "雑談系ポッドキャストの日",
       "対談"
-    ]
+    ],
+    "thumb_s": "/images/episodes/119-508c4528c1-400.webp",
+    "thumb_l": "/images/episodes/119-508c4528c1-800.webp"
   },
   {
     "number": "120",
@@ -5424,7 +5662,9 @@
       "自炊",
       "石油便覧",
       "声の読書感想文"
-    ]
+    ],
+    "thumb_s": "/images/episodes/120-c3d9dbd488-400.webp",
+    "thumb_l": "/images/episodes/120-c3d9dbd488-800.webp"
   },
   {
     "number": "121",
@@ -5466,7 +5706,9 @@
       "子育て",
       "データ引き継ぎ",
       "ポッキャトークテーマ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/121-fcf2b55132-400.webp",
+    "thumb_l": "/images/episodes/121-fcf2b55132-800.webp"
   },
   {
     "number": "122",
@@ -5570,7 +5812,9 @@
       "マクマリー",
       "ヨビノリ",
       "お笑いを流行らせようポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/122-8cfc8e4318-400.webp",
+    "thumb_l": "/images/episodes/122-8cfc8e4318-800.webp"
   },
   {
     "number": "123",
@@ -5608,7 +5852,9 @@
       "空調服",
       "マッスルスーツ",
       "ものづくり系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/123-d6fe3fbe2a-400.webp",
+    "thumb_l": "/images/episodes/123-d6fe3fbe2a-800.webp"
   },
   {
     "number": "124",
@@ -5675,7 +5921,9 @@
       "メタネーション",
       "ニッケル水素電池",
       "科学系ポッドキャストの日"
-    ]
+    ],
+    "thumb_s": "/images/episodes/124-980a40a089-400.webp",
+    "thumb_l": "/images/episodes/124-980a40a089-800.webp"
   },
   {
     "number": "125",
@@ -5727,7 +5975,9 @@
       "固体発光",
       "aggregation-induced emission",
       "分子設計"
-    ]
+    ],
+    "thumb_s": "/images/episodes/125-27b21de512-400.webp",
+    "thumb_l": "/images/episodes/125-27b21de512-800.webp"
   },
   {
     "number": "126",
@@ -5792,7 +6042,9 @@
       "ポリチオフェン",
       "タッチパネル",
       "帯電防止"
-    ]
+    ],
+    "thumb_s": "/images/episodes/126-fab977c379-400.webp",
+    "thumb_l": "/images/episodes/126-fab977c379-800.webp"
   },
   {
     "number": "127",
@@ -5827,7 +6079,9 @@
       "定期配信",
       "収録環境",
       "グッズ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/127-80a912343b-400.webp",
+    "thumb_l": "/images/episodes/127-80a912343b-800.webp"
   },
   {
     "number": "128",
@@ -5868,7 +6122,9 @@
       "学会",
       "裁量労働制",
       "対談"
-    ]
+    ],
+    "thumb_s": "/images/episodes/128-ec10803e57-400.webp",
+    "thumb_l": "/images/episodes/128-ec10803e57-800.webp"
   },
   {
     "number": "129",
@@ -5923,7 +6179,9 @@
       "ボイラー",
       "トマトペースト",
       "ケチャップ"
-    ]
+    ],
+    "thumb_s": "/images/episodes/129-116806430a-400.webp",
+    "thumb_l": "/images/episodes/129-116806430a-800.webp"
   },
   {
     "number": "130",
@@ -5994,7 +6252,9 @@
       "サーマルリサイクル",
       "モノマテリアル",
       "詰め替えパック"
-    ]
+    ],
+    "thumb_s": "/images/episodes/130-5e01184ec0-400.webp",
+    "thumb_l": "/images/episodes/130-5e01184ec0-800.webp"
   },
   {
     "number": "131",
@@ -6056,6 +6316,8 @@
       "マルヤス機械",
       "ピタゴラスイッチ",
       "JIS"
-    ]
+    ],
+    "thumb_s": "/images/episodes/131-e7d43f653d-400.webp",
+    "thumb_l": "/images/episodes/131-e7d43f653d-800.webp"
   }
 ]
