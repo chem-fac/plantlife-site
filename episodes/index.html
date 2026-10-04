@@ -19,11 +19,10 @@
     <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://image.listen.style">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=20260711">
+    <link rel="stylesheet" href="../styles.css?v=20261005">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <style>
         .all-ep-main {
@@ -96,59 +95,23 @@
         .ep-search:focus {
             outline: none;
             border-color: var(--brand);
+            box-shadow: 0 0 0 3px var(--brand-10);
         }
 
-        /* エピソードを探す（周期表・ノーベル化学賞の特集ページと同じ見た目） */
-        .fx-browse {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px 12px;
-            margin-bottom: 28px;
-        }
-
-        .fx-browse-label {
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--light-muted);
-        }
-
-        .fx-browse-tabs {
-            display: inline-flex;
-            gap: 4px;
-            max-width: 100%;
-            padding: 4px;
-            overflow-x: auto;
-            background: var(--brand-50);
-            border: 1px solid var(--brand-10);
-            border-radius: var(--radius-pill);
-            scrollbar-width: none;
-        }
-
-        .fx-browse-tabs::-webkit-scrollbar {
-            display: none;
-        }
-
-        .fx-browse-link {
-            flex: none;
-            padding: 6px 14px;
-            border-radius: var(--radius-pill);
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--light-secondary);
+        /* 画面には出さず、読み上げにだけ渡すラベル */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
             white-space: nowrap;
-            transition: background-color 0.15s, color 0.15s;
+            border: 0;
         }
 
-        .fx-browse-link:hover {
-            background: var(--light-surface);
-            color: var(--brand);
-        }
-
-        .fx-browse-link[aria-current="page"] {
-            background: var(--brand);
-            color: #fff;
-        }
+        /* 「エピソードを探す」のパンくずと切り替えは styles.css（周期表・ノーベル化学賞と共通） */
 
         /* Tag filter bar */
         .ep-filter-bar {
@@ -182,11 +145,16 @@
             color: #fff;
         }
 
+        /* 件数は薄くしすぎない（透明度0.6では背景との差が足りなかった） */
         .ep-filter-chip .ep-filter-count {
-            opacity: 0.6;
+            color: var(--light-muted);
             font-family: var(--font-mono);
             font-size: 0.72rem;
             margin-left: 4px;
+        }
+
+        .ep-filter-chip.active .ep-filter-count {
+            color: rgba(255, 255, 255, 0.85);
         }
 
         /* Card tags */
@@ -283,9 +251,54 @@
         .ep-no-results {
             text-align: center;
             padding: 48px 0;
-            color: var(--light-muted);
+            color: var(--light-secondary);
             font-size: 0.9rem;
+        }
+
+        .ep-no-results[hidden] {
             display: none;
+        }
+
+        .ep-no-results p {
+            margin-bottom: 14px;
+        }
+
+        .ep-no-results-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .ep-no-results-links a,
+        .ep-no-results-links button {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--brand);
+            background: var(--light-surface);
+            border: 1px solid var(--light-border);
+            padding: 7px 16px;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .ep-no-results-links a:hover,
+        .ep-no-results-links button:hover {
+            border-color: var(--brand);
+            background: var(--brand-50);
+        }
+
+        .all-ep-date .icon-clock {
+            vertical-align: -0.12em;
+        }
+
+        /* 日付の途中（「2026-09-」と「30」）で改行しない */
+        .all-ep-date time,
+        .all-ep-duration {
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
         }
 
         @media (max-width: 1024px) {
@@ -336,25 +349,34 @@
 
     <main class="all-ep-main">
         <div class="container">
+            <nav class="fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><span aria-current="page">エピソード</span></nav>
             <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link" aria-current="page">テーマ・キーワード</a><a href="/elements/" class="fx-browse-link">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link">ノーベル化学賞</a></span></nav>
 
             <div class="section-label">ALL EPISODES</div>
             <h1 class="section-heading">全エピソード一覧</h1>
 
-            <div class="ep-search-wrap">
+            <div class="ep-search-wrap" role="search">
+                <label for="ep-search" class="visually-hidden">エピソードをキーワードで検索</label>
                 <input type="search" id="ep-search" class="ep-search"
-                    placeholder="キーワードで検索（例：ポンプ、腐食、転職…）">
+                    placeholder="キーワードで検索（例：ポンプ、腐食、転職…）" autocomplete="off" enterkeyhint="search">
                 <div class="ep-sort" role="group" aria-label="並び順">
-                    <button type="button" class="ep-sort-btn active" data-order="desc">新しい順</button>
-                    <button type="button" class="ep-sort-btn" data-order="asc">古い順（#1から）</button>
+                    <button type="button" class="ep-sort-btn active" data-order="desc" aria-pressed="true">新しい順</button>
+                    <button type="button" class="ep-sort-btn" data-order="asc" aria-pressed="false">古い順（#1から）</button>
                 </div>
             </div>
 
-            <div class="ep-filter-bar" id="ep-filter-bar"></div>
+            <div class="ep-filter-bar" id="ep-filter-bar" role="group" aria-label="テーマで絞り込む"></div>
 
-            <div class="all-ep-count" id="ep-count"></div>
+            <div class="all-ep-count" id="ep-count" aria-live="polite"></div>
             <div class="all-ep-grid" id="all-ep-grid"></div>
-            <p class="ep-no-results" id="ep-no-results">一致するエピソードが見つかりませんでした</p>
+            <div class="ep-no-results" id="ep-no-results" hidden>
+                <p>一致するエピソードが見つかりませんでした。言葉を短くするか、別の言い方で試してみてください。</p>
+                <div class="ep-no-results-links">
+                    <button type="button" id="ep-clear">条件をクリア</button>
+                    <a href="/elements/">周期表から探す</a>
+                    <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -414,6 +436,7 @@
             const countEl = document.getElementById('ep-count');
             const noResults = document.getElementById('ep-no-results');
             const filterBar = document.getElementById('ep-filter-bar');
+            const clearBtn = document.getElementById('ep-clear');
             let allEpisodes = [];
             let activeTag = '';
             let sortOrder = 'desc';
@@ -425,13 +448,28 @@
                 '仕事・キャリア', '業界・ビジネス', '科学・雑学', '番組・コラボ企画'
             ];
 
-            // Mobile menu
+            // 再生時間の時計アイコン（エピソードページと同じ。絵文字はアイコン代わりに使わない）
+            const CLOCK_SVG = '<svg class="icon-clock" width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">'
+                + '<circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/>'
+                + '<path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>';
+
+            // Mobile menu（Escキーでも閉じる）
             const btn = document.getElementById('mobile-menu-btn');
             const nav = document.getElementById('header-nav');
             if (btn && nav) {
-                btn.addEventListener('click', () => {
-                    btn.classList.toggle('open');
-                    nav.classList.toggle('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-controls', 'header-nav');
+                const setMenu = open => {
+                    btn.classList.toggle('open', open);
+                    nav.classList.toggle('open', open);
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                };
+                btn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape' && nav.classList.contains('open')) {
+                        setMenu(false);
+                        btn.focus();
+                    }
                 });
             }
 
@@ -444,14 +482,39 @@
             activeTag = params.get('tag') || '';
             if (params.get('q')) search.value = params.get('q');
 
+            // 検索の表記ゆれをそろえる（全角半角・大文字小文字・カタカナとひらがな・区切りの記号）。
+            // 周期表・ノーベル化学賞の絞り込み（build_features.py の search_key）と同じ規則
+            function searchKey(text) {
+                return String(text || '').normalize('NFKC').toLowerCase()
+                    .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
+                    .replace(/[\s・=＝.,、。]/g, '');
+            }
+
+            // 空白で区切った言葉は、すべてを含む回だけに絞る（例：「ポンプ 腐食」）
+            function queryTerms(q) {
+                return String(q || '').normalize('NFKC').split(/\s+/).map(searchKey).filter(Boolean);
+            }
+
             fetch('../episodes.json')
                 .then(r => r.json())
                 .then(data => {
                     allEpisodes = data
                         .filter(ep => ep.number && parseInt(ep.number) > 0)
                         .sort((a, b) => parseInt(b.number) - parseInt(a.number));
+                    allEpisodes.forEach(ep => {
+                        ep._key = searchKey([
+                            ep.title,
+                            ep.description || '',
+                            `#${ep.number}`,
+                            (ep.tags || []).join(' '),
+                            (ep.keywords || []).join(' ')
+                        ].join(' '));
+                    });
                     buildFilterBar();
                     applyFilters();
+                })
+                .catch(() => {
+                    countEl.textContent = 'エピソードを読み込めませんでした。ページを再読み込みしてください。';
                 });
 
             // タグの一覧（出現回数つき）を作り、フィルタバーを描画
@@ -480,6 +543,7 @@
                 chip.type = 'button';
                 chip.dataset.tag = tagValue;
                 chip.className = 'ep-filter-chip' + (tagValue === activeTag ? ' active' : '');
+                chip.setAttribute('aria-pressed', tagValue === activeTag ? 'true' : 'false');
                 chip.innerHTML = `${escapeHtml(label)}<span class="ep-filter-count">${count}</span>`;
                 chip.addEventListener('click', () => {
                     activeTag = (activeTag === tagValue) ? '' : tagValue;
@@ -491,28 +555,23 @@
 
             function updateChipStates() {
                 filterBar.querySelectorAll('.ep-filter-chip').forEach(chip => {
-                    chip.classList.toggle('active', chip.dataset.tag === activeTag);
+                    const on = chip.dataset.tag === activeTag;
+                    chip.classList.toggle('active', on);
+                    chip.setAttribute('aria-pressed', on ? 'true' : 'false');
                 });
             }
 
             function applyFilters() {
-                const q = search.value.toLowerCase().trim();
+                const q = search.value.trim();
+                const terms = queryTerms(q);
                 const filtered = allEpisodes.filter(ep => {
                     if (activeTag && !(ep.tags || []).includes(activeTag)) return false;
-                    if (!q) return true;
-                    const haystack = [
-                        ep.title,
-                        ep.description || '',
-                        ep.number,
-                        (ep.tags || []).join(' '),
-                        (ep.keywords || []).join(' ')
-                    ].join(' ').toLowerCase();
-                    return haystack.includes(q);
+                    return terms.every(t => ep._key.includes(t));
                 });
                 filtered.sort((a, b) => sortOrder === 'asc'
                     ? parseInt(a.number) - parseInt(b.number)
                     : parseInt(b.number) - parseInt(a.number));
-                renderEpisodes(filtered);
+                renderEpisodes(filtered, q);
                 syncUrl(q);
             }
 
@@ -520,8 +579,10 @@
             document.querySelectorAll('.ep-sort-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     sortOrder = btn.dataset.order;
-                    document.querySelectorAll('.ep-sort-btn').forEach(b =>
-                        b.classList.toggle('active', b === btn));
+                    document.querySelectorAll('.ep-sort-btn').forEach(b => {
+                        b.classList.toggle('active', b === btn);
+                        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+                    });
                     applyFilters();
                 });
             });
@@ -534,13 +595,15 @@
                 history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
             }
 
-            function renderEpisodes(episodes) {
+            function renderEpisodes(episodes, q) {
                 grid.innerHTML = '';
                 let label = `${episodes.length}件のエピソード`;
                 if (activeTag) label += ` ・ タグ「${activeTag}」`;
+                if (q) label += ` ・ 「${q}」`;
                 countEl.textContent = label;
-                noResults.style.display = episodes.length === 0 ? 'block' : 'none';
+                noResults.hidden = episodes.length !== 0;
 
+                const frag = document.createDocumentFragment();
                 episodes.forEach(ep => {
                     let title = ep.title;
                     const m = title.match(/^#?\d+\s+(.+)/);
@@ -550,22 +613,25 @@
                         `<span class="all-ep-tag" data-tag="${escapeHtml(t)}">${escapeHtml(t)}</span>`
                     ).join('');
 
+                    // 画像は縮小版（400px）。代替テキストは空にする（すぐ下にタイトルがあり、読み上げが二重になるため）
+                    const thumb = ep.thumb_s || ep.thumbnail || '../images/podcast-artwork.png';
                     const card = document.createElement('a');
                     card.href = `${ep.number}/`;
                     card.className = 'all-ep-card';
                     card.innerHTML = `
             <div class="all-ep-thumb">
-              <img src="${escapeHtml(ep.thumbnail || '../images/podcast-artwork.png')}" alt="${escapeHtml(title)}" loading="lazy">
+              <img src="${escapeHtml(thumb)}" alt="" width="400" height="400" loading="lazy" decoding="async">
             </div>
             <div class="all-ep-body">
               <span class="all-ep-num">#${ep.number}</span>
               <h3 class="all-ep-title">${escapeHtml(title)}</h3>
-              <span class="all-ep-date">${ep.pub_date || ''}${ep.duration ? ` <span class="all-ep-duration">⏱ ${escapeHtml(ep.duration)}</span>` : ''}</span>
+              <span class="all-ep-date"><time>${escapeHtml(ep.pub_date || '')}</time>${ep.duration ? ` <span class="all-ep-duration">${CLOCK_SVG} ${escapeHtml(ep.duration)}</span>` : ''}</span>
               ${tagsHtml ? `<div class="all-ep-tags">${tagsHtml}</div>` : ''}
             </div>
           `;
-                    grid.appendChild(card);
+                    frag.appendChild(card);
                 });
+                grid.appendChild(frag);
             }
 
             // カード内タグのクリックはエピソード遷移させず、その場で絞り込む
@@ -580,6 +646,17 @@
                 applyFilters();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
+
+            // 見つからなかったときの「条件をクリア」
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    activeTag = '';
+                    search.value = '';
+                    updateChipStates();
+                    applyFilters();
+                    search.focus();
+                });
+            }
 
             let searchTimer;
             search.addEventListener('input', () => {

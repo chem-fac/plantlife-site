@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initShareButtons();
   initTranscriptToc();
   initBackToTop();
+  initEpisodePlayButton();
   initAnalyticsEvents();
 });
 
@@ -49,23 +50,28 @@ function initMobileMenu() {
   if (!btn || !nav) return;
   btn.setAttribute('aria-expanded', 'false');
   btn.setAttribute('aria-controls', 'header-nav');
-  btn.addEventListener('click', () => {
-    const open = btn.classList.toggle('open');
-    nav.classList.toggle('open');
+  const setMenu = (open) => {
+    btn.classList.toggle('open', open);
+    nav.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
+  };
+  btn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
   nav.querySelectorAll('.nav-link').forEach(link =>
-    link.addEventListener('click', () => {
-      btn.classList.remove('open');
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    })
+    link.addEventListener('click', () => setMenu(false))
   );
+  // Escキーでも閉じる（キーボード操作で開いたままにならないように）
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      setMenu(false);
+      btn.focus();
+    }
+  });
 }
 
 /* ── Smooth scroll for anchor links ── */
 function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
+  // 再生ボタン（data-ep-play）はその場で再生するので、スクロールの対象から外す
+  document.querySelectorAll('a[href^="#"]:not([data-ep-play])').forEach(link => {
     link.addEventListener('click', e => {
       const id = link.getAttribute('href').slice(1);
       const target = document.getElementById(id);
@@ -79,7 +85,10 @@ function initSmoothScroll() {
 /* ── Active navigation ── */
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
-  const links = document.querySelectorAll('.nav-link');
+  // ページ内の見出しを指すリンク（トップの「ホーム」など）だけを切り替える。
+  // 他のページの現在地（例：ノーベル化学賞のページの「エピソード」）を消さないため
+  const links = [...document.querySelectorAll('.nav-link')]
+    .filter(l => (l.getAttribute('href') || '').startsWith('#'));
   if (!sections.length || !links.length) return;
 
   const observer = new IntersectionObserver(
@@ -147,10 +156,15 @@ function initLatestEpisodes() {
       if (statCount) statCount.textContent = valid.length;
       if (!grid) return;
 
-      // Sort newest first, take top 5
+      // 新しい順に6件（PCの5列では5件だけ見せる。3列・2列の画面で最後の行が欠けないように）
       const latest = valid
         .sort((a, b) => parseInt(b.number) - parseInt(a.number))
-        .slice(0, 5);
+        .slice(0, 6);
+
+      // 再生時間の時計アイコン（エピソードページと同じ。絵文字はアイコン代わりに使わない）
+      const clockSvg = '<svg class="icon-clock" width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">'
+        + '<circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/>'
+        + '<path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>';
 
       latest.forEach((ep, i) => {
         // Clean title
@@ -162,15 +176,18 @@ function initLatestEpisodes() {
         card.href = `episodes/${ep.number}/`;
         card.className = 'ep-latest-card';
 
+        // 画像は縮小版（400px。build_episodes.py が作る）。代替テキストは空にする
+        // （すぐ下にタイトルがあり、読み上げが二重になるため）
+        const thumb = ep.thumb_s || ep.thumbnail || 'images/podcast-artwork.png';
         card.innerHTML = `
           <div class="ep-latest-thumb">
-            <img src="${escapeHtml(ep.thumbnail || 'images/podcast-artwork.png')}" alt="${escapeHtml(displayTitle)}" loading="lazy">
+            <img src="${escapeHtml(thumb)}" alt="" width="400" height="400" loading="lazy" decoding="async">
             <span class="ep-latest-number">#${ep.number}</span>
           </div>
           <div class="ep-latest-body">
             <div class="ep-latest-meta">
               <time>${ep.pub_date || ''}</time>
-              ${ep.duration ? `<span>⏱ ${ep.duration}</span>` : ''}
+              ${ep.duration ? `<span>${clockSvg} ${escapeHtml(ep.duration)}</span>` : ''}
             </div>
             <h3 class="ep-latest-title">${escapeHtml(displayTitle)}</h3>
             <p class="ep-latest-desc">${escapeHtml(cleanDescription(ep.description).slice(0, 120))}${cleanDescription(ep.description).length > 120 ? '…' : ''}</p>
@@ -227,6 +244,8 @@ function cleanDescription(desc) {
 
 /* ── Share buttons ── */
 function initShareButtons() {
+  // 404ページなど、共有しても意味のないページには出さない（<body data-no-share>）
+  if (document.body.hasAttribute('data-no-share')) return;
   const pageUrl = encodeURIComponent(window.location.href);
   const pageTitle = encodeURIComponent(document.title);
 
@@ -321,6 +340,53 @@ function initBackToTop() {
   const onScroll = () => btn.classList.toggle('visible', window.scrollY > 600);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+}
+
+/* ── この回を再生（エピソードページ。タイトル下のボタンを「この回を聴く」のプレイヤーにつなぐ） ──
+   スマホでは聴く欄が最初の画面に入らないため、タイトルのすぐ下から再生・一時停止できるようにする。
+   ボタンの文字は「再生する」「一時停止」で同じ長さにして、押しても幅が変わらないようにしている。 */
+function initEpisodePlayButton() {
+  const playBtn = document.querySelector('[data-ep-play]');
+  const audio = document.querySelector('.ep-audio');
+  if (!playBtn || !audio) return;
+  const label = playBtn.querySelector('.ep-play-label');
+  playBtn.setAttribute('role', 'button');
+
+  const sync = () => {
+    const playing = !audio.paused && !audio.ended;
+    playBtn.classList.toggle('is-playing', playing);
+    if (label) label.textContent = playing ? '一時停止' : '再生する';
+  };
+
+  const toggle = () => {
+    if (audio.paused || audio.ended) {
+      const p = audio.play();
+      // 再生できなかったとき（通信の失敗など）は表示を戻し、下のプレイヤーと各アプリのリンクへ移動する
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          audio.pause();
+          sync();
+          document.getElementById('ep-listen')?.scrollIntoView({ block: 'start' });
+        });
+      }
+    } else {
+      audio.pause();
+    }
+  };
+
+  playBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggle();
+  });
+  // role="button" のリンクなので、スペースキーでも押せるようにする
+  playBtn.addEventListener('keydown', (e) => {
+    if (e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  ['play', 'playing', 'pause', 'ended'].forEach(ev => audio.addEventListener(ev, sync));
+  sync();
 }
 
 /* ── GA4 event tracking (funnel measurement) ── */

@@ -109,6 +109,43 @@
     letter-spacing: -0.01em;
 }
 
+/* タイトル下の再生ボタン（下の「この回を聴く」のプレイヤーを操作する。script.js がつなぐ） */
+.ep-play-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 148px;
+    margin: -4px 0 22px;
+    padding: 12px 24px 12px 20px;
+    border-radius: var(--radius-pill);
+    background: var(--brand);
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 4px 14px rgba(0, 105, 56, 0.22);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.ep-play-btn:hover {
+    background: var(--brand-dark);
+    box-shadow: 0 6px 18px rgba(0, 105, 56, 0.28);
+}
+
+.ep-play-icon {
+    flex: none;
+}
+
+.ep-play-icon-pause,
+.ep-play-btn.is-playing .ep-play-icon-play {
+    display: none;
+}
+
+.ep-play-btn.is-playing .ep-play-icon-pause {
+    display: inline;
+}
+
 .ep-detail-desc {
     font-size: 0.92rem;
     color: var(--light-secondary);
@@ -273,8 +310,29 @@
         padding: 6px 10px;
     }
 
+    /* ページ上部の前後ナビは番号だけにして詰める（タイトル付きのナビはページ下部にある） */
+    .ep-detail-main > .container > .ep-detail-nav:first-child {
+        margin-bottom: 24px;
+        padding: 8px 0 14px;
+    }
+
+    .ep-detail-main > .container > .ep-detail-nav:first-child .ep-nav-title {
+        display: none;
+    }
+
+    /* 配信サービスは2列に並べ、縦に長くなりすぎないようにする（奇数の最後の1つは横いっぱい） */
     .ep-detail-platforms-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ep-detail-platform {
+        height: 64px;
+        padding: 10px 12px;
+    }
+
+    .ep-detail-platform:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
     }
 }
 
@@ -356,7 +414,9 @@
     margin-bottom: 20px;
 }
 
+/* 読みやすい行の長さにそろえる（読みもの記事の本文と同じ760px） */
 .transcript-body {
+    max-width: 760px;
     color: var(--light-text);
     font-size: 0.95rem;
     line-height: 1.9;

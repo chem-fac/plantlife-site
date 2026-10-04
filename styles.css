@@ -22,8 +22,9 @@
   --light-surface: #ffffff;
   --light-text: #333333;
   --light-secondary: #5a6e62;
-  /* WCAG AA (4.5:1) を満たすミュート色。以前の #95a69b は約2.5:1で不合格だった */
-  --light-muted: #6b7d72;
+  /* WCAG AA (4.5:1) を満たすミュート色。以前の #95a69b は約2.5:1で不合格だった。
+     #6b7d72 も白地で4.37:1と足りなかったため、薄緑の地（#f2f7f4）でも4.5:1を超える #63756a にした */
+  --light-muted: #63756a;
   --light-border: #dfe8e2;
 
   /* Accents */
@@ -321,7 +322,7 @@ img {
   position: absolute;
   inset: 0;
   /* 分子・六角形の微細テクスチャ（低透過で敷く） */
-  background: url('images/hero_bg_texture.png') center center / cover no-repeat;
+  background: url('images/hero_bg_texture.jpg') center center / cover no-repeat;
   opacity: 0.55;
   z-index: 0;
   pointer-events: none;
@@ -842,15 +843,30 @@ img {
 
 .ep-latest-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 0 8px;
 }
 
+/* 日付の途中で改行しない（狭いカードで「2026-09-」と「30」に分かれていた） */
 .ep-latest-meta time,
 .ep-latest-meta span {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--light-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.ep-latest-meta .icon-clock {
+  vertical-align: -0.12em;
+}
+
+/* 最新は6件を読み込み、5列のPCでは5件、3列・2列の画面では6件を見せて行をそろえる */
+@media (min-width: 1025px) {
+  .ep-latest-card:nth-child(n+6) {
+    display: none;
+  }
 }
 
 .ep-latest-title {
@@ -1453,6 +1469,15 @@ img {
     gap: 24px;
   }
 
+  /* 「聴く」の続き（見出しが空の列）は、1列表示では前の列につなげる（空の見出しで大きな隙間が出ていた） */
+  .footer-top > .footer-nav-group:last-child {
+    margin-top: -24px;
+  }
+
+  .footer-top > .footer-nav-group:last-child h4 {
+    display: none;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 12px;
@@ -1467,19 +1492,58 @@ img {
     font-size: 1.8rem;
   }
 
+  /* スマホでは最初の画面に「最新エピソードを聴く」まで入るように、絵と余白を少し詰める */
+  .hero-inner {
+    gap: 28px;
+  }
+
+  .hero-artwork-frame {
+    width: 220px;
+    height: 220px;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .hero-stats {
-    flex-direction: column;
-    gap: 16px;
+  .btn-hero-primary,
+  .btn-hero-ghost {
+    justify-content: center;
   }
 
-  .hero-stat-divider {
-    width: 32px;
-    height: 1px;
+  /* 数字の3項目は横一列のまま（縦に積むとヒーローだけで1画面半になっていた） */
+  .hero-stats {
+    gap: 18px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  /* 見出しと「すべての〜 →」が並ばないときは、リンクを次の行へ回す（見出しが細切れに折り返さないように） */
+  .section-header-row {
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 6px;
+    margin-bottom: 28px;
+  }
+
+  .section-header-row .section-heading {
+    margin-bottom: 0;
+  }
+
+  .section-header-row .link-arrow {
+    white-space: nowrap;
+  }
+
+  /* 最新エピソードのカードは日付と再生時間が1行に収まるよう、内側の余白を少し詰める */
+  .ep-latest-body {
+    padding: 10px 10px 12px;
+  }
+
+  .ep-latest-meta {
+    gap: 0 6px;
   }
 
   .about-bento {
@@ -2154,6 +2218,63 @@ img {
 /* ══════════════════════════════════════
    THEMES — テーマから探す（トップ）
    ══════════════════════════════════════ */
+
+/* キーワードで探す（エピソード一覧の検索 /episodes/?q= へ送る） */
+.home-search {
+  margin: 0 0 22px;
+}
+
+.home-search-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--light-text);
+}
+
+.home-search-row {
+  display: flex;
+  gap: 8px;
+  max-width: 560px;
+}
+
+.home-search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 20px;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-pill);
+  background: var(--light-surface);
+  color: var(--light-text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.home-search-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-10);
+}
+
+.home-search-btn {
+  flex: none;
+  padding: 0 24px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--brand);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.home-search-btn:hover {
+  background: var(--brand-dark);
+}
+
 .theme-chips {
   display: flex;
   flex-wrap: wrap;
@@ -2304,4 +2425,102 @@ img {
   /* 単語の途中で改行しない（対応ブラウザでは文節単位で折り返す） */
   word-break: auto-phrase;
   line-break: strict;
+}
+
+/* ══════════════════════════════════════
+   エピソードを探す — パンくずと切り替え
+   エピソード一覧・周期表・ノーベル化学賞の3ページで同じ定義を使い、
+   ページを行き来しても切り替えの位置が動かないようにする
+   ══════════════════════════════════════ */
+/* 1行に収める（狭い画面で折り返すと、ページごとに切り替えの高さがずれるため） */
+.fx-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--light-muted);
+  white-space: nowrap;
+}
+
+.fx-breadcrumb > * {
+  flex: none;
+}
+
+.fx-breadcrumb > [aria-current] {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fx-breadcrumb a {
+  color: var(--light-muted);
+}
+
+.fx-breadcrumb a:hover {
+  color: var(--brand);
+}
+
+.fx-breadcrumb-sep {
+  color: var(--light-border);
+}
+
+.fx-browse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 28px;
+}
+
+.fx-browse-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--light-muted);
+}
+
+/* 選択肢はいつも全部見せる。入りきらない幅では横にはみ出さず折り返す */
+.fx-browse-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 100%;
+  padding: 4px;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-10);
+  border-radius: var(--radius-pill);
+}
+
+.fx-browse-link {
+  flex: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--light-secondary);
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.fx-browse-link:hover {
+  background: var(--light-surface);
+  color: var(--brand);
+}
+
+.fx-browse-link[aria-current="page"] {
+  background: var(--brand);
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .fx-browse-tabs {
+    border-radius: var(--radius-lg);
+  }
+
+  .fx-browse-link {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+  }
 }

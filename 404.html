@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 2026年3〜4月の旧URL（/episodes/12.html）は、今のURL（/episodes/12/）へ移す -->
+    <script>
+        (function () {
+            var m = location.pathname.match(/^\/episodes\/(\d+)(?:\.html|\/index\.html)?\/?$/);
+            if (m && location.pathname !== '/episodes/' + m[1] + '/') {
+                location.replace('/episodes/' + m[1] + '/' + location.search + location.hash);
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページが見つかりません | プラントライフ</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="お探しのページが見つかりません。技術者かねまるの「プラントライフ」のエピソードは、エピソード一覧から探せます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=20261005">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <style>
+        .nf-main {
+            padding-top: calc(var(--header-h) + 56px);
+            padding-bottom: 88px;
+            min-height: 70vh;
+        }
+
+        .nf-lead {
+            max-width: 640px;
+            margin: -16px 0 32px;
+            color: var(--light-secondary);
+            line-height: 1.9;
+        }
+
+        .nf-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            max-width: 920px;
+            margin-top: 8px;
+        }
+
+        .nf-link {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 16px 18px;
+            background: var(--light-surface);
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+        }
+
+        .nf-link:hover {
+            border-color: var(--brand);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nf-link strong {
+            font-size: 0.98rem;
+            color: var(--light-text);
+        }
+
+        .nf-link span {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: var(--light-secondary);
+        }
+    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+
+</head>
+
+<body class="not-found-page" data-no-share>
+    <a href="#nf-main" class="skip-link">本文へスキップ</a>
+    <!-- Header -->
+    <header class="header scrolled" id="header">
+        <div class="header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+            </a>
+            <nav class="header-nav" id="header-nav">
+                <a href="/" class="nav-link">ホーム</a>
+                <a href="/start/" class="nav-link">はじめての方へ</a>
+                <a href="/episodes/" class="nav-link">エピソード</a>
+                <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+                <a href="/goods/" class="nav-link">グッズ</a>
+                <a href="/#about" class="nav-link">番組について</a>
+                <a href="/#contact" class="nav-link">お問い合わせ</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="nf-main" id="nf-main">
+        <div class="container">
+            <div class="section-label">404 NOT FOUND</div>
+            <h1 class="section-heading">ページが見つかりません</h1>
+            <p class="nf-lead">お探しのページは、移動したか、なくなった可能性があります。聴きたい回は、キーワードやテーマから探せます。</p>
+
+            <form class="home-search" action="/episodes/" method="get" role="search">
+                <label for="nf-search-q" class="home-search-label">キーワードで探す</label>
+                <div class="home-search-row">
+                    <input type="search" id="nf-search-q" name="q" class="home-search-input" placeholder="例：ポンプ、腐食、転職" autocomplete="off" enterkeyhint="search">
+                    <button type="submit" class="home-search-btn">探す</button>
+                </div>
+            </form>
+
+            <div class="nf-links">
+                <a href="/episodes/" class="nf-link">
+                    <strong>エピソード一覧</strong>
+                    <span>テーマやキーワードで絞り込めます</span>
+                </a>
+                <a href="/start/" class="nf-link">
+                    <strong>はじめての方へ</strong>
+                    <span>最初に聴いてほしい回を選んでいます</span>
+                </a>
+                <a href="/elements/" class="nf-link">
+                    <strong>周期表から探す</strong>
+                    <span>元素ごとに、取り上げた回をまとめています</span>
+                </a>
+                <a href="/nobel-chemistry/" class="nf-link">
+                    <strong>ノーベル化学賞から探す</strong>
+                    <span>1901年からの受賞と、関連する回</span>
+                </a>
+                <a href="/" class="nf-link">
+                    <strong>トップページ</strong>
+                    <span>最新エピソードとお知らせ</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+                </div>
+                <div class="footer-nav-group">
+                    <h4>探す</h4>
+                    <a href="/episodes/">エピソード一覧</a>
+                    <a href="/elements/">周期表から探す</a>
+                    <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+                    <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>つながる</h4>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+                    <a href="/history/">番組の歩み</a>
+                    <a href="/goods/">グッズ</a>
+                    <a href="/#contact">お問い合わせ</a>
+                    <a href="/privacy/">プライバシーポリシー</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>聴く</h4>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1789911793" target="_blank" rel="noopener">Apple Podcasts</a>
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>&nbsp;</h4>
+                    <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon Music</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+                <div class="footer-socials">
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js?v=20261005"></script>
+</body>
+
+</html>
