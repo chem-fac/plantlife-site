@@ -1907,6 +1907,12 @@ img {
   line-height: 1.7;
 }
 
+.news-detail-body a:not([class]) {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .news-detail-cta {
   display: flex;
   gap: 16px;
