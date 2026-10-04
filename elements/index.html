@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="/article.css">
   <link rel="icon" href="/images/favicon.png" type="image/png">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "周期表から探す | プラントライフ", "description": "番組で取り上げた元素に色を付けた周期表です。マスを選ぶと、原子番号・原子量・分類と、その元素を取り上げた回が表示されます。", "url": "https://plantlife.chem-fac.com/elements/", "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "周期表から探す", "item": "https://plantlife.chem-fac.com/elements/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "周期表から探す", "item": "https://plantlife.chem-fac.com/elements/"}]}</script>
   <style>
 /* 特集ページ共通：回へのリンク一覧（周期表・ノーベル化学賞） */
 .fx-eps {
@@ -94,6 +94,62 @@
 .feature-hero.nb-hero {
   margin-bottom: 28px;
 }
+
+/* パンくずと、エピソードの探し方（エピソード一覧の上部にも同じものを置いている） */
+.fx-breadcrumb {
+  margin-bottom: 14px;
+}
+
+.fx-browse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 28px;
+}
+
+.fx-browse-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--light-muted);
+}
+
+.fx-browse-tabs {
+  display: inline-flex;
+  gap: 4px;
+  max-width: 100%;
+  padding: 4px;
+  overflow-x: auto;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-10);
+  border-radius: var(--radius-pill);
+  scrollbar-width: none;
+}
+
+.fx-browse-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.fx-browse-link {
+  flex: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--light-secondary);
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.fx-browse-link:hover {
+  background: var(--light-surface);
+  color: var(--brand);
+}
+
+.fx-browse-link[aria-current="page"] {
+  background: var(--brand);
+  color: #fff;
+}
 /* 周期表から探す */
 .pt-container {
   /* 色分けの色。隣り合う区分どうしは色覚の違いがあっても見分けられる組み合わせにしてある */
@@ -115,10 +171,58 @@
   padding: 0 24px;
 }
 
+/* 件数と「元素を探す」 */
+.pt-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 24px;
+  margin-bottom: 12px;
+}
+
 .pt-count {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 0.9rem;
   color: var(--light-secondary);
+}
+
+.pt-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pt-search-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--light-secondary);
+  white-space: nowrap;
+}
+
+.pt-search-input {
+  width: 220px;
+  padding: 7px 14px;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-pill);
+  background: var(--light-surface);
+  color: var(--light-text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+.pt-search-input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.pt-search-msg {
+  font-size: 0.78rem;
+  color: var(--accent-warm);
+}
+
+.pt-search-msg:empty {
+  display: none;
 }
 
 .pt-count strong {
@@ -165,8 +269,20 @@
   outline-offset: 2px;
 }
 
+/* 凡例はすべての色分けを同じ場所に重ね、いちばん高いものに合わせる。
+   切り替えても表の位置が動かないように、隠すときも場所は残す */
 .pt-legends {
+  display: grid;
   margin-bottom: 6px;
+}
+
+.pt-legend-box {
+  grid-area: 1 / 1;
+}
+
+.pt-legend-box[hidden] {
+  display: block;
+  visibility: hidden;
 }
 
 .pt-legend {
@@ -748,6 +864,16 @@
     padding: 0 16px;
   }
 
+  .pt-search {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .pt-search-input {
+    flex: 1;
+    min-width: 0;
+  }
+
   /* 切り替えボタンは折り返さず横に流す */
   .pt-views {
     flex-wrap: nowrap;
@@ -795,7 +921,7 @@
       <nav class="header-nav" id="header-nav">
         <a href="/" class="nav-link">ホーム</a>
         <a href="/start/" class="nav-link">はじめての方へ</a>
-        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
         <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
         <a href="/goods/" class="nav-link">グッズ</a>
         <a href="/#about" class="nav-link">番組について</a>
@@ -809,17 +935,28 @@
 
   <main class="article-main" id="main-content">
     <div class="pt-container">
+      <nav class="article-breadcrumb fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/episodes/">エピソード</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">周期表から探す</span></nav>
+      <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link">テーマ・キーワード</a><a href="/elements/" class="fx-browse-link" aria-current="page">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link">ノーベル化学賞</a></span></nav>
       <header class="feature-hero pt-hero">
         <p class="feature-eyebrow">プラントライフの特集</p>
         <h1 class="feature-title">周期表から探す</h1>
-        <p class="feature-lead">番組で取り上げた元素に色を付けた周期表です。マスにカーソルを合わせる（スマホはタップする）と、基本データと、その元素を取り上げた回が表示されます。ボタンで、常温での状態や金属・非金属などの色分けにも切り替えられます。元素の回を聴きながら、位置を確かめるのにも使えます。</p>
+        <p class="feature-lead">番組で取り上げた元素に色を付けた周期表です。マスを選ぶと、基本データとその元素を取り上げた回が出ます。ボタンで、常温での状態や金属・非金属などの色分けにも切り替えられます。</p>
       </header>
 
-      <p class="pt-count">番組で取り上げた元素 <strong>18</strong><span>／118</span></p>
+      <div class="pt-toolbar">
+        <p class="pt-count">番組で取り上げた元素 <strong>18</strong><span>／118</span></p>
+        <div class="pt-search" role="search">
+          <label class="pt-search-label" for="pt-search">元素を探す</label>
+          <input type="search" id="pt-search" class="pt-search-input" list="pt-names" placeholder="例：ニッケル、Ni、28" autocomplete="off" enterkeyhint="search">
+          <datalist id="pt-names"><option value="水素">H・1</option><option value="ヘリウム">He・2</option><option value="リチウム">Li・3</option><option value="ベリリウム">Be・4</option><option value="ホウ素">B・5</option><option value="炭素">C・6</option><option value="窒素">N・7</option><option value="酸素">O・8</option><option value="フッ素">F・9</option><option value="ネオン">Ne・10</option><option value="ナトリウム">Na・11</option><option value="マグネシウム">Mg・12</option><option value="アルミニウム">Al・13</option><option value="ケイ素">Si・14</option><option value="リン">P・15</option><option value="硫黄">S・16</option><option value="塩素">Cl・17</option><option value="アルゴン">Ar・18</option><option value="カリウム">K・19</option><option value="カルシウム">Ca・20</option><option value="スカンジウム">Sc・21</option><option value="チタン">Ti・22</option><option value="バナジウム">V・23</option><option value="クロム">Cr・24</option><option value="マンガン">Mn・25</option><option value="鉄">Fe・26</option><option value="コバルト">Co・27</option><option value="ニッケル">Ni・28</option><option value="銅">Cu・29</option><option value="亜鉛">Zn・30</option><option value="ガリウム">Ga・31</option><option value="ゲルマニウム">Ge・32</option><option value="ヒ素">As・33</option><option value="セレン">Se・34</option><option value="臭素">Br・35</option><option value="クリプトン">Kr・36</option><option value="ルビジウム">Rb・37</option><option value="ストロンチウム">Sr・38</option><option value="イットリウム">Y・39</option><option value="ジルコニウム">Zr・40</option><option value="ニオブ">Nb・41</option><option value="モリブデン">Mo・42</option><option value="テクネチウム">Tc・43</option><option value="ルテニウム">Ru・44</option><option value="ロジウム">Rh・45</option><option value="パラジウム">Pd・46</option><option value="銀">Ag・47</option><option value="カドミウム">Cd・48</option><option value="インジウム">In・49</option><option value="スズ">Sn・50</option><option value="アンチモン">Sb・51</option><option value="テルル">Te・52</option><option value="ヨウ素">I・53</option><option value="キセノン">Xe・54</option><option value="セシウム">Cs・55</option><option value="バリウム">Ba・56</option><option value="ランタン">La・57</option><option value="セリウム">Ce・58</option><option value="プラセオジム">Pr・59</option><option value="ネオジム">Nd・60</option><option value="プロメチウム">Pm・61</option><option value="サマリウム">Sm・62</option><option value="ユウロピウム">Eu・63</option><option value="ガドリニウム">Gd・64</option><option value="テルビウム">Tb・65</option><option value="ジスプロシウム">Dy・66</option><option value="ホルミウム">Ho・67</option><option value="エルビウム">Er・68</option><option value="ツリウム">Tm・69</option><option value="イッテルビウム">Yb・70</option><option value="ルテチウム">Lu・71</option><option value="ハフニウム">Hf・72</option><option value="タンタル">Ta・73</option><option value="タングステン">W・74</option><option value="レニウム">Re・75</option><option value="オスミウム">Os・76</option><option value="イリジウム">Ir・77</option><option value="白金">Pt・78</option><option value="金">Au・79</option><option value="水銀">Hg・80</option><option value="タリウム">Tl・81</option><option value="鉛">Pb・82</option><option value="ビスマス">Bi・83</option><option value="ポロニウム">Po・84</option><option value="アスタチン">At・85</option><option value="ラドン">Rn・86</option><option value="フランシウム">Fr・87</option><option value="ラジウム">Ra・88</option><option value="アクチニウム">Ac・89</option><option value="トリウム">Th・90</option><option value="プロトアクチニウム">Pa・91</option><option value="ウラン">U・92</option><option value="ネプツニウム">Np・93</option><option value="プルトニウム">Pu・94</option><option value="アメリシウム">Am・95</option><option value="キュリウム">Cm・96</option><option value="バークリウム">Bk・97</option><option value="カリホルニウム">Cf・98</option><option value="アインスタイニウム">Es・99</option><option value="フェルミウム">Fm・100</option><option value="メンデレビウム">Md・101</option><option value="ノーベリウム">No・102</option><option value="ローレンシウム">Lr・103</option><option value="ラザホージウム">Rf・104</option><option value="ドブニウム">Db・105</option><option value="シーボーギウム">Sg・106</option><option value="ボーリウム">Bh・107</option><option value="ハッシウム">Hs・108</option><option value="マイトネリウム">Mt・109</option><option value="ダームスタチウム">Ds・110</option><option value="レントゲニウム">Rg・111</option><option value="コペルニシウム">Cn・112</option><option value="ニホニウム">Nh・113</option><option value="フレロビウム">Fl・114</option><option value="モスコビウム">Mc・115</option><option value="リバモリウム">Lv・116</option><option value="テネシン">Ts・117</option><option value="オガネソン">Og・118</option></datalist>
+          <span class="pt-search-msg" id="pt-search-msg" aria-live="polite"></span>
+        </div>
+      </div>
       <div class="pt-views" role="group" aria-label="色分けの切り替え"><button type="button" class="pt-view-btn" data-view="episodes" aria-pressed="true">番組で取り上げた元素</button><button type="button" class="pt-view-btn" data-view="state" aria-pressed="false">常温での状態</button><button type="button" class="pt-view-btn" data-view="metal" aria-pressed="false">金属・非金属</button><button type="button" class="pt-view-btn" data-view="kind" aria-pressed="false">典型・遷移</button><button type="button" class="pt-view-btn" data-view="family" aria-pressed="false">元素のグループ</button></div>
       <div class="pt-legends">
         <div class="pt-legend-box" data-view-panel="episodes">
           <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--main"></span>中心に取り上げた回がある（4）</li><li><span class="pt-key pt-key--related"></span>関連する回がある（14）</li><li><span class="pt-key pt-key--none"></span>まだ取り上げていない（100）</li></ul>
+          <p class="pt-view-note">中心の回は、その元素そのものを扱った回です。関連する回は、回の中でその元素を説明している回です。</p>
         </div>
         <div class="pt-legend-box" data-view-panel="state" hidden>
           <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--gas"></span>気体（11）</li><li><span class="pt-key pt-key--liquid"></span>液体（2）</li><li><span class="pt-key pt-key--solid"></span>固体（85）</li><li><span class="pt-key pt-key--unknown"></span>不明（20）</li><li class="pt-legend-ep"><span class="pt-key-dot"></span>番組で取り上げた元素</li></ul>
@@ -872,124 +1009,124 @@
           <div class="pt-ph" style="grid-column:4;grid-row:8" data-g="3" data-p="7"><span class="pt-ph-z">89–103</span><span class="pt-ph-name">アクチノイド</span></div>
           <div class="pt-flabel" style="grid-column:1 / 4;grid-row:10">ランタノイド</div>
           <div class="pt-flabel" style="grid-column:1 / 4;grid-row:11">アクチノイド</div>
-          <button type="button" class="pt-cell is-main" style="grid-column:2;grid-row:2" data-s="H" data-g="1" data-p="1" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="1 水素 H、中心の回あり"><span class="pt-z">1</span><span class="pt-sym">H</span><span class="pt-name">水素</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:2" data-s="He" data-g="18" data-p="1" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="2 ヘリウム He"><span class="pt-z">2</span><span class="pt-sym">He</span><span class="pt-name">ヘリウム</span></button>
-          <button type="button" class="pt-cell is-main" style="grid-column:2;grid-row:3" data-s="Li" data-g="1" data-p="2" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="3 リチウム Li、中心の回あり"><span class="pt-z">3</span><span class="pt-sym">Li</span><span class="pt-name">リチウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:3;grid-row:3" data-s="Be" data-g="2" data-p="2" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="4 ベリリウム Be"><span class="pt-z">4</span><span class="pt-sym">Be</span><span class="pt-name">ベリリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:3" data-s="B" data-g="13" data-p="2" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="5 ホウ素 B"><span class="pt-z">5</span><span class="pt-sym">B</span><span class="pt-name">ホウ素</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:15;grid-row:3" data-s="C" data-g="14" data-p="2" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="6 炭素 C、関連する回あり"><span class="pt-z">6</span><span class="pt-sym">C</span><span class="pt-name">炭素</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:16;grid-row:3" data-s="N" data-g="15" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="7 窒素 N、関連する回あり"><span class="pt-z">7</span><span class="pt-sym">N</span><span class="pt-name">窒素</span></button>
-          <button type="button" class="pt-cell is-main" style="grid-column:17;grid-row:3" data-s="O" data-g="16" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="8 酸素 O、中心の回あり"><span class="pt-z">8</span><span class="pt-sym">O</span><span class="pt-name">酸素</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:18;grid-row:3" data-s="F" data-g="17" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="9 フッ素 F、関連する回あり"><span class="pt-z">9</span><span class="pt-sym">F</span><span class="pt-name">フッ素</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:3" data-s="Ne" data-g="18" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="10 ネオン Ne"><span class="pt-z">10</span><span class="pt-sym">Ne</span><span class="pt-name">ネオン</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:2;grid-row:4" data-s="Na" data-g="1" data-p="3" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="11 ナトリウム Na、関連する回あり"><span class="pt-z">11</span><span class="pt-sym">Na</span><span class="pt-name">ナトリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:3;grid-row:4" data-s="Mg" data-g="2" data-p="3" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="12 マグネシウム Mg"><span class="pt-z">12</span><span class="pt-sym">Mg</span><span class="pt-name">マグネシウム</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:14;grid-row:4" data-s="Al" data-g="13" data-p="3" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="13 アルミニウム Al、関連する回あり"><span class="pt-z">13</span><span class="pt-sym">Al</span><span class="pt-name">アルミニウム</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:15;grid-row:4" data-s="Si" data-g="14" data-p="3" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="14 ケイ素 Si、関連する回あり"><span class="pt-z">14</span><span class="pt-sym">Si</span><span class="pt-name">ケイ素</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:16;grid-row:4" data-s="P" data-g="15" data-p="3" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="15 リン P、関連する回あり"><span class="pt-z">15</span><span class="pt-sym">P</span><span class="pt-name">リン</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:17;grid-row:4" data-s="S" data-g="16" data-p="3" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="16 硫黄 S、関連する回あり"><span class="pt-z">16</span><span class="pt-sym">S</span><span class="pt-name">硫黄</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:18;grid-row:4" data-s="Cl" data-g="17" data-p="3" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="17 塩素 Cl、関連する回あり"><span class="pt-z">17</span><span class="pt-sym">Cl</span><span class="pt-name">塩素</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:4" data-s="Ar" data-g="18" data-p="3" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="18 アルゴン Ar"><span class="pt-z">18</span><span class="pt-sym">Ar</span><span class="pt-name">アルゴン</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:2;grid-row:5" data-s="K" data-g="1" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="19 カリウム K、関連する回あり"><span class="pt-z">19</span><span class="pt-sym">K</span><span class="pt-name">カリウム</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:3;grid-row:5" data-s="Ca" data-g="2" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="20 カルシウム Ca、関連する回あり"><span class="pt-z">20</span><span class="pt-sym">Ca</span><span class="pt-name">カルシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:4;grid-row:5" data-s="Sc" data-g="3" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="21 スカンジウム Sc"><span class="pt-z">21</span><span class="pt-sym">Sc</span><span class="pt-name">スカンジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:5;grid-row:5" data-s="Ti" data-g="4" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="22 チタン Ti"><span class="pt-z">22</span><span class="pt-sym">Ti</span><span class="pt-name">チタン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:6;grid-row:5" data-s="V" data-g="5" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="23 バナジウム V"><span class="pt-z">23</span><span class="pt-sym">V</span><span class="pt-name">バナジウム</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:7;grid-row:5" data-s="Cr" data-g="6" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="24 クロム Cr、関連する回あり"><span class="pt-z">24</span><span class="pt-sym">Cr</span><span class="pt-name">クロム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:8;grid-row:5" data-s="Mn" data-g="7" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="25 マンガン Mn"><span class="pt-z">25</span><span class="pt-sym">Mn</span><span class="pt-name">マンガン</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:9;grid-row:5" data-s="Fe" data-g="8" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="26 鉄 Fe、関連する回あり"><span class="pt-z">26</span><span class="pt-sym">Fe</span><span class="pt-name">鉄</span></button>
-          <button type="button" class="pt-cell" style="grid-column:10;grid-row:5" data-s="Co" data-g="9" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="27 コバルト Co"><span class="pt-z">27</span><span class="pt-sym">Co</span><span class="pt-name">コバルト</span></button>
-          <button type="button" class="pt-cell is-main" style="grid-column:11;grid-row:5" data-s="Ni" data-g="10" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="28 ニッケル Ni、中心の回あり"><span class="pt-z">28</span><span class="pt-sym">Ni</span><span class="pt-name">ニッケル</span></button>
-          <button type="button" class="pt-cell is-related" style="grid-column:12;grid-row:5" data-s="Cu" data-g="11" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="29 銅 Cu、関連する回あり"><span class="pt-z">29</span><span class="pt-sym">Cu</span><span class="pt-name">銅</span></button>
-          <button type="button" class="pt-cell" style="grid-column:13;grid-row:5" data-s="Zn" data-g="12" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="30 亜鉛 Zn"><span class="pt-z">30</span><span class="pt-sym">Zn</span><span class="pt-name">亜鉛</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:5" data-s="Ga" data-g="13" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="31 ガリウム Ga"><span class="pt-z">31</span><span class="pt-sym">Ga</span><span class="pt-name">ガリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:15;grid-row:5" data-s="Ge" data-g="14" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="32 ゲルマニウム Ge"><span class="pt-z">32</span><span class="pt-sym">Ge</span><span class="pt-name">ゲルマニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:16;grid-row:5" data-s="As" data-g="15" data-p="4" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="33 ヒ素 As"><span class="pt-z">33</span><span class="pt-sym">As</span><span class="pt-name">ヒ素</span></button>
-          <button type="button" class="pt-cell" style="grid-column:17;grid-row:5" data-s="Se" data-g="16" data-p="4" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="34 セレン Se"><span class="pt-z">34</span><span class="pt-sym">Se</span><span class="pt-name">セレン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:18;grid-row:5" data-s="Br" data-g="17" data-p="4" data-f="" data-state="liquid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="35 臭素 Br"><span class="pt-z">35</span><span class="pt-sym">Br</span><span class="pt-name">臭素</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:5" data-s="Kr" data-g="18" data-p="4" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="36 クリプトン Kr"><span class="pt-z">36</span><span class="pt-sym">Kr</span><span class="pt-name">クリプトン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:2;grid-row:6" data-s="Rb" data-g="1" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="37 ルビジウム Rb"><span class="pt-z">37</span><span class="pt-sym">Rb</span><span class="pt-name">ルビジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:3;grid-row:6" data-s="Sr" data-g="2" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="38 ストロンチウム Sr"><span class="pt-z">38</span><span class="pt-sym">Sr</span><span class="pt-name">ストロンチウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:4;grid-row:6" data-s="Y" data-g="3" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="39 イットリウム Y"><span class="pt-z">39</span><span class="pt-sym">Y</span><span class="pt-name">イットリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:5;grid-row:6" data-s="Zr" data-g="4" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="40 ジルコニウム Zr"><span class="pt-z">40</span><span class="pt-sym">Zr</span><span class="pt-name">ジルコニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:6;grid-row:6" data-s="Nb" data-g="5" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="41 ニオブ Nb"><span class="pt-z">41</span><span class="pt-sym">Nb</span><span class="pt-name">ニオブ</span></button>
-          <button type="button" class="pt-cell" style="grid-column:7;grid-row:6" data-s="Mo" data-g="6" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="42 モリブデン Mo"><span class="pt-z">42</span><span class="pt-sym">Mo</span><span class="pt-name">モリブデン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:8;grid-row:6" data-s="Tc" data-g="7" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="43 テクネチウム Tc"><span class="pt-z">43</span><span class="pt-sym">Tc</span><span class="pt-name">テクネチウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:9;grid-row:6" data-s="Ru" data-g="8" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="44 ルテニウム Ru"><span class="pt-z">44</span><span class="pt-sym">Ru</span><span class="pt-name">ルテニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:10;grid-row:6" data-s="Rh" data-g="9" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="45 ロジウム Rh"><span class="pt-z">45</span><span class="pt-sym">Rh</span><span class="pt-name">ロジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:11;grid-row:6" data-s="Pd" data-g="10" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="46 パラジウム Pd"><span class="pt-z">46</span><span class="pt-sym">Pd</span><span class="pt-name">パラジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:12;grid-row:6" data-s="Ag" data-g="11" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="47 銀 Ag"><span class="pt-z">47</span><span class="pt-sym">Ag</span><span class="pt-name">銀</span></button>
-          <button type="button" class="pt-cell" style="grid-column:13;grid-row:6" data-s="Cd" data-g="12" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="48 カドミウム Cd"><span class="pt-z">48</span><span class="pt-sym">Cd</span><span class="pt-name">カドミウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:6" data-s="In" data-g="13" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="49 インジウム In"><span class="pt-z">49</span><span class="pt-sym">In</span><span class="pt-name">インジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:15;grid-row:6" data-s="Sn" data-g="14" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="50 スズ Sn"><span class="pt-z">50</span><span class="pt-sym">Sn</span><span class="pt-name">スズ</span></button>
-          <button type="button" class="pt-cell" style="grid-column:16;grid-row:6" data-s="Sb" data-g="15" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="51 アンチモン Sb"><span class="pt-z">51</span><span class="pt-sym">Sb</span><span class="pt-name">アンチモン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:17;grid-row:6" data-s="Te" data-g="16" data-p="5" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="52 テルル Te"><span class="pt-z">52</span><span class="pt-sym">Te</span><span class="pt-name">テルル</span></button>
-          <button type="button" class="pt-cell" style="grid-column:18;grid-row:6" data-s="I" data-g="17" data-p="5" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="53 ヨウ素 I"><span class="pt-z">53</span><span class="pt-sym">I</span><span class="pt-name">ヨウ素</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:6" data-s="Xe" data-g="18" data-p="5" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="54 キセノン Xe"><span class="pt-z">54</span><span class="pt-sym">Xe</span><span class="pt-name">キセノン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:2;grid-row:7" data-s="Cs" data-g="1" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="55 セシウム Cs"><span class="pt-z">55</span><span class="pt-sym">Cs</span><span class="pt-name">セシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:3;grid-row:7" data-s="Ba" data-g="2" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="56 バリウム Ba"><span class="pt-z">56</span><span class="pt-sym">Ba</span><span class="pt-name">バリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:4;grid-row:10" data-s="La" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="57 ランタン La"><span class="pt-z">57</span><span class="pt-sym">La</span><span class="pt-name">ランタン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:5;grid-row:10" data-s="Ce" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="58 セリウム Ce"><span class="pt-z">58</span><span class="pt-sym">Ce</span><span class="pt-name">セリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:6;grid-row:10" data-s="Pr" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="59 プラセオジム Pr"><span class="pt-z">59</span><span class="pt-sym">Pr</span><span class="pt-name">プラセオジム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:7;grid-row:10" data-s="Nd" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="60 ネオジム Nd"><span class="pt-z">60</span><span class="pt-sym">Nd</span><span class="pt-name">ネオジム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:8;grid-row:10" data-s="Pm" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="61 プロメチウム Pm"><span class="pt-z">61</span><span class="pt-sym">Pm</span><span class="pt-name">プロメチウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:9;grid-row:10" data-s="Sm" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="62 サマリウム Sm"><span class="pt-z">62</span><span class="pt-sym">Sm</span><span class="pt-name">サマリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:10;grid-row:10" data-s="Eu" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="63 ユウロピウム Eu"><span class="pt-z">63</span><span class="pt-sym">Eu</span><span class="pt-name">ユウロピウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:11;grid-row:10" data-s="Gd" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="64 ガドリニウム Gd"><span class="pt-z">64</span><span class="pt-sym">Gd</span><span class="pt-name">ガドリニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:12;grid-row:10" data-s="Tb" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="65 テルビウム Tb"><span class="pt-z">65</span><span class="pt-sym">Tb</span><span class="pt-name">テルビウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:13;grid-row:10" data-s="Dy" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="66 ジスプロシウム Dy"><span class="pt-z">66</span><span class="pt-sym">Dy</span><span class="pt-name">ジスプロシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:10" data-s="Ho" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="67 ホルミウム Ho"><span class="pt-z">67</span><span class="pt-sym">Ho</span><span class="pt-name">ホルミウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:15;grid-row:10" data-s="Er" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="68 エルビウム Er"><span class="pt-z">68</span><span class="pt-sym">Er</span><span class="pt-name">エルビウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:16;grid-row:10" data-s="Tm" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="69 ツリウム Tm"><span class="pt-z">69</span><span class="pt-sym">Tm</span><span class="pt-name">ツリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:17;grid-row:10" data-s="Yb" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="70 イッテルビウム Yb"><span class="pt-z">70</span><span class="pt-sym">Yb</span><span class="pt-name">イッテルビウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:18;grid-row:10" data-s="Lu" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="71 ルテチウム Lu"><span class="pt-z">71</span><span class="pt-sym">Lu</span><span class="pt-name">ルテチウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:5;grid-row:7" data-s="Hf" data-g="4" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="72 ハフニウム Hf"><span class="pt-z">72</span><span class="pt-sym">Hf</span><span class="pt-name">ハフニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:6;grid-row:7" data-s="Ta" data-g="5" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="73 タンタル Ta"><span class="pt-z">73</span><span class="pt-sym">Ta</span><span class="pt-name">タンタル</span></button>
-          <button type="button" class="pt-cell" style="grid-column:7;grid-row:7" data-s="W" data-g="6" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="74 タングステン W"><span class="pt-z">74</span><span class="pt-sym">W</span><span class="pt-name">タングステン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:8;grid-row:7" data-s="Re" data-g="7" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="75 レニウム Re"><span class="pt-z">75</span><span class="pt-sym">Re</span><span class="pt-name">レニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:9;grid-row:7" data-s="Os" data-g="8" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="76 オスミウム Os"><span class="pt-z">76</span><span class="pt-sym">Os</span><span class="pt-name">オスミウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:10;grid-row:7" data-s="Ir" data-g="9" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="77 イリジウム Ir"><span class="pt-z">77</span><span class="pt-sym">Ir</span><span class="pt-name">イリジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:11;grid-row:7" data-s="Pt" data-g="10" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="78 白金 Pt"><span class="pt-z">78</span><span class="pt-sym">Pt</span><span class="pt-name">白金</span></button>
-          <button type="button" class="pt-cell" style="grid-column:12;grid-row:7" data-s="Au" data-g="11" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="79 金 Au"><span class="pt-z">79</span><span class="pt-sym">Au</span><span class="pt-name">金</span></button>
-          <button type="button" class="pt-cell" style="grid-column:13;grid-row:7" data-s="Hg" data-g="12" data-p="6" data-f="" data-state="liquid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="80 水銀 Hg"><span class="pt-z">80</span><span class="pt-sym">Hg</span><span class="pt-name">水銀</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:7" data-s="Tl" data-g="13" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="81 タリウム Tl"><span class="pt-z">81</span><span class="pt-sym">Tl</span><span class="pt-name">タリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:15;grid-row:7" data-s="Pb" data-g="14" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="82 鉛 Pb"><span class="pt-z">82</span><span class="pt-sym">Pb</span><span class="pt-name">鉛</span></button>
-          <button type="button" class="pt-cell" style="grid-column:16;grid-row:7" data-s="Bi" data-g="15" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="83 ビスマス Bi"><span class="pt-z">83</span><span class="pt-sym">Bi</span><span class="pt-name">ビスマス</span></button>
-          <button type="button" class="pt-cell" style="grid-column:17;grid-row:7" data-s="Po" data-g="16" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="84 ポロニウム Po"><span class="pt-z">84</span><span class="pt-sym">Po</span><span class="pt-name">ポロニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:18;grid-row:7" data-s="At" data-g="17" data-p="6" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="85 アスタチン At"><span class="pt-z">85</span><span class="pt-sym">At</span><span class="pt-name">アスタチン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:7" data-s="Rn" data-g="18" data-p="6" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="86 ラドン Rn"><span class="pt-z">86</span><span class="pt-sym">Rn</span><span class="pt-name">ラドン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:2;grid-row:8" data-s="Fr" data-g="1" data-p="7" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="87 フランシウム Fr"><span class="pt-z">87</span><span class="pt-sym">Fr</span><span class="pt-name">フランシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:3;grid-row:8" data-s="Ra" data-g="2" data-p="7" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="88 ラジウム Ra"><span class="pt-z">88</span><span class="pt-sym">Ra</span><span class="pt-name">ラジウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:4;grid-row:11" data-s="Ac" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="89 アクチニウム Ac"><span class="pt-z">89</span><span class="pt-sym">Ac</span><span class="pt-name">アクチニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:5;grid-row:11" data-s="Th" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="90 トリウム Th"><span class="pt-z">90</span><span class="pt-sym">Th</span><span class="pt-name">トリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:6;grid-row:11" data-s="Pa" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="91 プロトアクチニウム Pa"><span class="pt-z">91</span><span class="pt-sym">Pa</span><span class="pt-name">プロトアクチニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:7;grid-row:11" data-s="U" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="92 ウラン U"><span class="pt-z">92</span><span class="pt-sym">U</span><span class="pt-name">ウラン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:8;grid-row:11" data-s="Np" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="93 ネプツニウム Np"><span class="pt-z">93</span><span class="pt-sym">Np</span><span class="pt-name">ネプツニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:9;grid-row:11" data-s="Pu" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="94 プルトニウム Pu"><span class="pt-z">94</span><span class="pt-sym">Pu</span><span class="pt-name">プルトニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:10;grid-row:11" data-s="Am" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="95 アメリシウム Am"><span class="pt-z">95</span><span class="pt-sym">Am</span><span class="pt-name">アメリシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:11;grid-row:11" data-s="Cm" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="96 キュリウム Cm"><span class="pt-z">96</span><span class="pt-sym">Cm</span><span class="pt-name">キュリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:12;grid-row:11" data-s="Bk" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="97 バークリウム Bk"><span class="pt-z">97</span><span class="pt-sym">Bk</span><span class="pt-name">バークリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:13;grid-row:11" data-s="Cf" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="98 カリホルニウム Cf"><span class="pt-z">98</span><span class="pt-sym">Cf</span><span class="pt-name">カリホルニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:11" data-s="Es" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="99 アインスタイニウム Es"><span class="pt-z">99</span><span class="pt-sym">Es</span><span class="pt-name">アインスタイニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:15;grid-row:11" data-s="Fm" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="100 フェルミウム Fm"><span class="pt-z">100</span><span class="pt-sym">Fm</span><span class="pt-name">フェルミウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:16;grid-row:11" data-s="Md" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="101 メンデレビウム Md"><span class="pt-z">101</span><span class="pt-sym">Md</span><span class="pt-name">メンデレビウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:17;grid-row:11" data-s="No" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="102 ノーベリウム No"><span class="pt-z">102</span><span class="pt-sym">No</span><span class="pt-name">ノーベリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:18;grid-row:11" data-s="Lr" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="103 ローレンシウム Lr"><span class="pt-z">103</span><span class="pt-sym">Lr</span><span class="pt-name">ローレンシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:5;grid-row:8" data-s="Rf" data-g="4" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="104 ラザホージウム Rf"><span class="pt-z">104</span><span class="pt-sym">Rf</span><span class="pt-name">ラザホージウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:6;grid-row:8" data-s="Db" data-g="5" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="105 ドブニウム Db"><span class="pt-z">105</span><span class="pt-sym">Db</span><span class="pt-name">ドブニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:7;grid-row:8" data-s="Sg" data-g="6" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="106 シーボーギウム Sg"><span class="pt-z">106</span><span class="pt-sym">Sg</span><span class="pt-name">シーボーギウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:8;grid-row:8" data-s="Bh" data-g="7" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="107 ボーリウム Bh"><span class="pt-z">107</span><span class="pt-sym">Bh</span><span class="pt-name">ボーリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:9;grid-row:8" data-s="Hs" data-g="8" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="108 ハッシウム Hs"><span class="pt-z">108</span><span class="pt-sym">Hs</span><span class="pt-name">ハッシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:10;grid-row:8" data-s="Mt" data-g="9" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="109 マイトネリウム Mt"><span class="pt-z">109</span><span class="pt-sym">Mt</span><span class="pt-name">マイトネリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:11;grid-row:8" data-s="Ds" data-g="10" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="110 ダームスタチウム Ds"><span class="pt-z">110</span><span class="pt-sym">Ds</span><span class="pt-name">ダームスタチウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:12;grid-row:8" data-s="Rg" data-g="11" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="111 レントゲニウム Rg"><span class="pt-z">111</span><span class="pt-sym">Rg</span><span class="pt-name">レントゲニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:13;grid-row:8" data-s="Cn" data-g="12" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="112 コペルニシウム Cn"><span class="pt-z">112</span><span class="pt-sym">Cn</span><span class="pt-name">コペルニシウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:14;grid-row:8" data-s="Nh" data-g="13" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="113 ニホニウム Nh"><span class="pt-z">113</span><span class="pt-sym">Nh</span><span class="pt-name">ニホニウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:15;grid-row:8" data-s="Fl" data-g="14" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="114 フレロビウム Fl"><span class="pt-z">114</span><span class="pt-sym">Fl</span><span class="pt-name">フレロビウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:16;grid-row:8" data-s="Mc" data-g="15" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="115 モスコビウム Mc"><span class="pt-z">115</span><span class="pt-sym">Mc</span><span class="pt-name">モスコビウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:17;grid-row:8" data-s="Lv" data-g="16" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="116 リバモリウム Lv"><span class="pt-z">116</span><span class="pt-sym">Lv</span><span class="pt-name">リバモリウム</span></button>
-          <button type="button" class="pt-cell" style="grid-column:18;grid-row:8" data-s="Ts" data-g="17" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="117 テネシン Ts"><span class="pt-z">117</span><span class="pt-sym">Ts</span><span class="pt-name">テネシン</span></button>
-          <button type="button" class="pt-cell" style="grid-column:19;grid-row:8" data-s="Og" data-g="18" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="118 オガネソン Og"><span class="pt-z">118</span><span class="pt-sym">Og</span><span class="pt-name">オガネソン</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:2;grid-row:2" data-s="H" data-g="1" data-p="1" data-f="" data-x="2" data-y="2" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="1 水素 H、中心の回あり"><span class="pt-z">1</span><span class="pt-sym">H</span><span class="pt-name">水素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:2" data-s="He" data-g="18" data-p="1" data-f="" data-x="19" data-y="2" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="2 ヘリウム He"><span class="pt-z">2</span><span class="pt-sym">He</span><span class="pt-name">ヘリウム</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:2;grid-row:3" data-s="Li" data-g="1" data-p="2" data-f="" data-x="2" data-y="3" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="3 リチウム Li、中心の回あり"><span class="pt-z">3</span><span class="pt-sym">Li</span><span class="pt-name">リチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:3" data-s="Be" data-g="2" data-p="2" data-f="" data-x="3" data-y="3" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="4 ベリリウム Be"><span class="pt-z">4</span><span class="pt-sym">Be</span><span class="pt-name">ベリリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:3" data-s="B" data-g="13" data-p="2" data-f="" data-x="14" data-y="3" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="5 ホウ素 B"><span class="pt-z">5</span><span class="pt-sym">B</span><span class="pt-name">ホウ素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:15;grid-row:3" data-s="C" data-g="14" data-p="2" data-f="" data-x="15" data-y="3" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="6 炭素 C、関連する回あり"><span class="pt-z">6</span><span class="pt-sym">C</span><span class="pt-name">炭素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:16;grid-row:3" data-s="N" data-g="15" data-p="2" data-f="" data-x="16" data-y="3" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="7 窒素 N、関連する回あり"><span class="pt-z">7</span><span class="pt-sym">N</span><span class="pt-name">窒素</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:17;grid-row:3" data-s="O" data-g="16" data-p="2" data-f="" data-x="17" data-y="3" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="8 酸素 O、中心の回あり"><span class="pt-z">8</span><span class="pt-sym">O</span><span class="pt-name">酸素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:18;grid-row:3" data-s="F" data-g="17" data-p="2" data-f="" data-x="18" data-y="3" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="9 フッ素 F、関連する回あり"><span class="pt-z">9</span><span class="pt-sym">F</span><span class="pt-name">フッ素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:3" data-s="Ne" data-g="18" data-p="2" data-f="" data-x="19" data-y="3" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="10 ネオン Ne"><span class="pt-z">10</span><span class="pt-sym">Ne</span><span class="pt-name">ネオン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:2;grid-row:4" data-s="Na" data-g="1" data-p="3" data-f="" data-x="2" data-y="4" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="11 ナトリウム Na、関連する回あり"><span class="pt-z">11</span><span class="pt-sym">Na</span><span class="pt-name">ナトリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:4" data-s="Mg" data-g="2" data-p="3" data-f="" data-x="3" data-y="4" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="12 マグネシウム Mg"><span class="pt-z">12</span><span class="pt-sym">Mg</span><span class="pt-name">マグネシウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:14;grid-row:4" data-s="Al" data-g="13" data-p="3" data-f="" data-x="14" data-y="4" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="13 アルミニウム Al、関連する回あり"><span class="pt-z">13</span><span class="pt-sym">Al</span><span class="pt-name">アルミニウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:15;grid-row:4" data-s="Si" data-g="14" data-p="3" data-f="" data-x="15" data-y="4" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="14 ケイ素 Si、関連する回あり"><span class="pt-z">14</span><span class="pt-sym">Si</span><span class="pt-name">ケイ素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:16;grid-row:4" data-s="P" data-g="15" data-p="3" data-f="" data-x="16" data-y="4" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="15 リン P、関連する回あり"><span class="pt-z">15</span><span class="pt-sym">P</span><span class="pt-name">リン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:17;grid-row:4" data-s="S" data-g="16" data-p="3" data-f="" data-x="17" data-y="4" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="16 硫黄 S、関連する回あり"><span class="pt-z">16</span><span class="pt-sym">S</span><span class="pt-name">硫黄</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:18;grid-row:4" data-s="Cl" data-g="17" data-p="3" data-f="" data-x="18" data-y="4" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="17 塩素 Cl、関連する回あり"><span class="pt-z">17</span><span class="pt-sym">Cl</span><span class="pt-name">塩素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:4" data-s="Ar" data-g="18" data-p="3" data-f="" data-x="19" data-y="4" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="18 アルゴン Ar"><span class="pt-z">18</span><span class="pt-sym">Ar</span><span class="pt-name">アルゴン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:2;grid-row:5" data-s="K" data-g="1" data-p="4" data-f="" data-x="2" data-y="5" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="19 カリウム K、関連する回あり"><span class="pt-z">19</span><span class="pt-sym">K</span><span class="pt-name">カリウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:3;grid-row:5" data-s="Ca" data-g="2" data-p="4" data-f="" data-x="3" data-y="5" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="20 カルシウム Ca、関連する回あり"><span class="pt-z">20</span><span class="pt-sym">Ca</span><span class="pt-name">カルシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:5" data-s="Sc" data-g="3" data-p="4" data-f="" data-x="4" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="21 スカンジウム Sc"><span class="pt-z">21</span><span class="pt-sym">Sc</span><span class="pt-name">スカンジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:5" data-s="Ti" data-g="4" data-p="4" data-f="" data-x="5" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="22 チタン Ti"><span class="pt-z">22</span><span class="pt-sym">Ti</span><span class="pt-name">チタン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:5" data-s="V" data-g="5" data-p="4" data-f="" data-x="6" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="23 バナジウム V"><span class="pt-z">23</span><span class="pt-sym">V</span><span class="pt-name">バナジウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:7;grid-row:5" data-s="Cr" data-g="6" data-p="4" data-f="" data-x="7" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="24 クロム Cr、関連する回あり"><span class="pt-z">24</span><span class="pt-sym">Cr</span><span class="pt-name">クロム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:5" data-s="Mn" data-g="7" data-p="4" data-f="" data-x="8" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="25 マンガン Mn"><span class="pt-z">25</span><span class="pt-sym">Mn</span><span class="pt-name">マンガン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:9;grid-row:5" data-s="Fe" data-g="8" data-p="4" data-f="" data-x="9" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="26 鉄 Fe、関連する回あり"><span class="pt-z">26</span><span class="pt-sym">Fe</span><span class="pt-name">鉄</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:5" data-s="Co" data-g="9" data-p="4" data-f="" data-x="10" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="27 コバルト Co"><span class="pt-z">27</span><span class="pt-sym">Co</span><span class="pt-name">コバルト</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:11;grid-row:5" data-s="Ni" data-g="10" data-p="4" data-f="" data-x="11" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="28 ニッケル Ni、中心の回あり"><span class="pt-z">28</span><span class="pt-sym">Ni</span><span class="pt-name">ニッケル</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:12;grid-row:5" data-s="Cu" data-g="11" data-p="4" data-f="" data-x="12" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="29 銅 Cu、関連する回あり"><span class="pt-z">29</span><span class="pt-sym">Cu</span><span class="pt-name">銅</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:5" data-s="Zn" data-g="12" data-p="4" data-f="" data-x="13" data-y="5" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="30 亜鉛 Zn"><span class="pt-z">30</span><span class="pt-sym">Zn</span><span class="pt-name">亜鉛</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:5" data-s="Ga" data-g="13" data-p="4" data-f="" data-x="14" data-y="5" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="31 ガリウム Ga"><span class="pt-z">31</span><span class="pt-sym">Ga</span><span class="pt-name">ガリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:5" data-s="Ge" data-g="14" data-p="4" data-f="" data-x="15" data-y="5" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="32 ゲルマニウム Ge"><span class="pt-z">32</span><span class="pt-sym">Ge</span><span class="pt-name">ゲルマニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:5" data-s="As" data-g="15" data-p="4" data-f="" data-x="16" data-y="5" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="33 ヒ素 As"><span class="pt-z">33</span><span class="pt-sym">As</span><span class="pt-name">ヒ素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:5" data-s="Se" data-g="16" data-p="4" data-f="" data-x="17" data-y="5" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="34 セレン Se"><span class="pt-z">34</span><span class="pt-sym">Se</span><span class="pt-name">セレン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:5" data-s="Br" data-g="17" data-p="4" data-f="" data-x="18" data-y="5" data-state="liquid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="35 臭素 Br"><span class="pt-z">35</span><span class="pt-sym">Br</span><span class="pt-name">臭素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:5" data-s="Kr" data-g="18" data-p="4" data-f="" data-x="19" data-y="5" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="36 クリプトン Kr"><span class="pt-z">36</span><span class="pt-sym">Kr</span><span class="pt-name">クリプトン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:2;grid-row:6" data-s="Rb" data-g="1" data-p="5" data-f="" data-x="2" data-y="6" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="37 ルビジウム Rb"><span class="pt-z">37</span><span class="pt-sym">Rb</span><span class="pt-name">ルビジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:6" data-s="Sr" data-g="2" data-p="5" data-f="" data-x="3" data-y="6" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="38 ストロンチウム Sr"><span class="pt-z">38</span><span class="pt-sym">Sr</span><span class="pt-name">ストロンチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:6" data-s="Y" data-g="3" data-p="5" data-f="" data-x="4" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="39 イットリウム Y"><span class="pt-z">39</span><span class="pt-sym">Y</span><span class="pt-name">イットリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:6" data-s="Zr" data-g="4" data-p="5" data-f="" data-x="5" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="40 ジルコニウム Zr"><span class="pt-z">40</span><span class="pt-sym">Zr</span><span class="pt-name">ジルコニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:6" data-s="Nb" data-g="5" data-p="5" data-f="" data-x="6" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="41 ニオブ Nb"><span class="pt-z">41</span><span class="pt-sym">Nb</span><span class="pt-name">ニオブ</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:6" data-s="Mo" data-g="6" data-p="5" data-f="" data-x="7" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="42 モリブデン Mo"><span class="pt-z">42</span><span class="pt-sym">Mo</span><span class="pt-name">モリブデン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:6" data-s="Tc" data-g="7" data-p="5" data-f="" data-x="8" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="43 テクネチウム Tc"><span class="pt-z">43</span><span class="pt-sym">Tc</span><span class="pt-name">テクネチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:6" data-s="Ru" data-g="8" data-p="5" data-f="" data-x="9" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="44 ルテニウム Ru"><span class="pt-z">44</span><span class="pt-sym">Ru</span><span class="pt-name">ルテニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:6" data-s="Rh" data-g="9" data-p="5" data-f="" data-x="10" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="45 ロジウム Rh"><span class="pt-z">45</span><span class="pt-sym">Rh</span><span class="pt-name">ロジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:6" data-s="Pd" data-g="10" data-p="5" data-f="" data-x="11" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="46 パラジウム Pd"><span class="pt-z">46</span><span class="pt-sym">Pd</span><span class="pt-name">パラジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:6" data-s="Ag" data-g="11" data-p="5" data-f="" data-x="12" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="47 銀 Ag"><span class="pt-z">47</span><span class="pt-sym">Ag</span><span class="pt-name">銀</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:6" data-s="Cd" data-g="12" data-p="5" data-f="" data-x="13" data-y="6" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="48 カドミウム Cd"><span class="pt-z">48</span><span class="pt-sym">Cd</span><span class="pt-name">カドミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:6" data-s="In" data-g="13" data-p="5" data-f="" data-x="14" data-y="6" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="49 インジウム In"><span class="pt-z">49</span><span class="pt-sym">In</span><span class="pt-name">インジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:6" data-s="Sn" data-g="14" data-p="5" data-f="" data-x="15" data-y="6" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="50 スズ Sn"><span class="pt-z">50</span><span class="pt-sym">Sn</span><span class="pt-name">スズ</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:6" data-s="Sb" data-g="15" data-p="5" data-f="" data-x="16" data-y="6" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="51 アンチモン Sb"><span class="pt-z">51</span><span class="pt-sym">Sb</span><span class="pt-name">アンチモン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:6" data-s="Te" data-g="16" data-p="5" data-f="" data-x="17" data-y="6" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="52 テルル Te"><span class="pt-z">52</span><span class="pt-sym">Te</span><span class="pt-name">テルル</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:6" data-s="I" data-g="17" data-p="5" data-f="" data-x="18" data-y="6" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="53 ヨウ素 I"><span class="pt-z">53</span><span class="pt-sym">I</span><span class="pt-name">ヨウ素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:6" data-s="Xe" data-g="18" data-p="5" data-f="" data-x="19" data-y="6" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="54 キセノン Xe"><span class="pt-z">54</span><span class="pt-sym">Xe</span><span class="pt-name">キセノン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:2;grid-row:7" data-s="Cs" data-g="1" data-p="6" data-f="" data-x="2" data-y="7" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="55 セシウム Cs"><span class="pt-z">55</span><span class="pt-sym">Cs</span><span class="pt-name">セシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:7" data-s="Ba" data-g="2" data-p="6" data-f="" data-x="3" data-y="7" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="56 バリウム Ba"><span class="pt-z">56</span><span class="pt-sym">Ba</span><span class="pt-name">バリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:10" data-s="La" data-g="3" data-p="6" data-f="lanthanoid" data-x="4" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="57 ランタン La"><span class="pt-z">57</span><span class="pt-sym">La</span><span class="pt-name">ランタン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:10" data-s="Ce" data-g="3" data-p="6" data-f="lanthanoid" data-x="5" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="58 セリウム Ce"><span class="pt-z">58</span><span class="pt-sym">Ce</span><span class="pt-name">セリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:10" data-s="Pr" data-g="3" data-p="6" data-f="lanthanoid" data-x="6" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="59 プラセオジム Pr"><span class="pt-z">59</span><span class="pt-sym">Pr</span><span class="pt-name">プラセオジム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:10" data-s="Nd" data-g="3" data-p="6" data-f="lanthanoid" data-x="7" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="60 ネオジム Nd"><span class="pt-z">60</span><span class="pt-sym">Nd</span><span class="pt-name">ネオジム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:10" data-s="Pm" data-g="3" data-p="6" data-f="lanthanoid" data-x="8" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="61 プロメチウム Pm"><span class="pt-z">61</span><span class="pt-sym">Pm</span><span class="pt-name">プロメチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:10" data-s="Sm" data-g="3" data-p="6" data-f="lanthanoid" data-x="9" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="62 サマリウム Sm"><span class="pt-z">62</span><span class="pt-sym">Sm</span><span class="pt-name">サマリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:10" data-s="Eu" data-g="3" data-p="6" data-f="lanthanoid" data-x="10" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="63 ユウロピウム Eu"><span class="pt-z">63</span><span class="pt-sym">Eu</span><span class="pt-name">ユウロピウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:10" data-s="Gd" data-g="3" data-p="6" data-f="lanthanoid" data-x="11" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="64 ガドリニウム Gd"><span class="pt-z">64</span><span class="pt-sym">Gd</span><span class="pt-name">ガドリニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:10" data-s="Tb" data-g="3" data-p="6" data-f="lanthanoid" data-x="12" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="65 テルビウム Tb"><span class="pt-z">65</span><span class="pt-sym">Tb</span><span class="pt-name">テルビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:10" data-s="Dy" data-g="3" data-p="6" data-f="lanthanoid" data-x="13" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="66 ジスプロシウム Dy"><span class="pt-z">66</span><span class="pt-sym">Dy</span><span class="pt-name">ジスプロシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:10" data-s="Ho" data-g="3" data-p="6" data-f="lanthanoid" data-x="14" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="67 ホルミウム Ho"><span class="pt-z">67</span><span class="pt-sym">Ho</span><span class="pt-name">ホルミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:10" data-s="Er" data-g="3" data-p="6" data-f="lanthanoid" data-x="15" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="68 エルビウム Er"><span class="pt-z">68</span><span class="pt-sym">Er</span><span class="pt-name">エルビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:10" data-s="Tm" data-g="3" data-p="6" data-f="lanthanoid" data-x="16" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="69 ツリウム Tm"><span class="pt-z">69</span><span class="pt-sym">Tm</span><span class="pt-name">ツリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:10" data-s="Yb" data-g="3" data-p="6" data-f="lanthanoid" data-x="17" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="70 イッテルビウム Yb"><span class="pt-z">70</span><span class="pt-sym">Yb</span><span class="pt-name">イッテルビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:10" data-s="Lu" data-g="3" data-p="6" data-f="lanthanoid" data-x="18" data-y="10" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="71 ルテチウム Lu"><span class="pt-z">71</span><span class="pt-sym">Lu</span><span class="pt-name">ルテチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:7" data-s="Hf" data-g="4" data-p="6" data-f="" data-x="5" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="72 ハフニウム Hf"><span class="pt-z">72</span><span class="pt-sym">Hf</span><span class="pt-name">ハフニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:7" data-s="Ta" data-g="5" data-p="6" data-f="" data-x="6" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="73 タンタル Ta"><span class="pt-z">73</span><span class="pt-sym">Ta</span><span class="pt-name">タンタル</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:7" data-s="W" data-g="6" data-p="6" data-f="" data-x="7" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="74 タングステン W"><span class="pt-z">74</span><span class="pt-sym">W</span><span class="pt-name">タングステン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:7" data-s="Re" data-g="7" data-p="6" data-f="" data-x="8" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="75 レニウム Re"><span class="pt-z">75</span><span class="pt-sym">Re</span><span class="pt-name">レニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:7" data-s="Os" data-g="8" data-p="6" data-f="" data-x="9" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="76 オスミウム Os"><span class="pt-z">76</span><span class="pt-sym">Os</span><span class="pt-name">オスミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:7" data-s="Ir" data-g="9" data-p="6" data-f="" data-x="10" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="77 イリジウム Ir"><span class="pt-z">77</span><span class="pt-sym">Ir</span><span class="pt-name">イリジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:7" data-s="Pt" data-g="10" data-p="6" data-f="" data-x="11" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="78 白金 Pt"><span class="pt-z">78</span><span class="pt-sym">Pt</span><span class="pt-name">白金</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:7" data-s="Au" data-g="11" data-p="6" data-f="" data-x="12" data-y="7" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="79 金 Au"><span class="pt-z">79</span><span class="pt-sym">Au</span><span class="pt-name">金</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:7" data-s="Hg" data-g="12" data-p="6" data-f="" data-x="13" data-y="7" data-state="liquid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="80 水銀 Hg"><span class="pt-z">80</span><span class="pt-sym">Hg</span><span class="pt-name">水銀</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:7" data-s="Tl" data-g="13" data-p="6" data-f="" data-x="14" data-y="7" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="81 タリウム Tl"><span class="pt-z">81</span><span class="pt-sym">Tl</span><span class="pt-name">タリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:7" data-s="Pb" data-g="14" data-p="6" data-f="" data-x="15" data-y="7" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="82 鉛 Pb"><span class="pt-z">82</span><span class="pt-sym">Pb</span><span class="pt-name">鉛</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:7" data-s="Bi" data-g="15" data-p="6" data-f="" data-x="16" data-y="7" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="83 ビスマス Bi"><span class="pt-z">83</span><span class="pt-sym">Bi</span><span class="pt-name">ビスマス</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:7" data-s="Po" data-g="16" data-p="6" data-f="" data-x="17" data-y="7" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="84 ポロニウム Po"><span class="pt-z">84</span><span class="pt-sym">Po</span><span class="pt-name">ポロニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:7" data-s="At" data-g="17" data-p="6" data-f="" data-x="18" data-y="7" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="85 アスタチン At"><span class="pt-z">85</span><span class="pt-sym">At</span><span class="pt-name">アスタチン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:7" data-s="Rn" data-g="18" data-p="6" data-f="" data-x="19" data-y="7" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="86 ラドン Rn"><span class="pt-z">86</span><span class="pt-sym">Rn</span><span class="pt-name">ラドン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:2;grid-row:8" data-s="Fr" data-g="1" data-p="7" data-f="" data-x="2" data-y="8" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="87 フランシウム Fr"><span class="pt-z">87</span><span class="pt-sym">Fr</span><span class="pt-name">フランシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:8" data-s="Ra" data-g="2" data-p="7" data-f="" data-x="3" data-y="8" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="88 ラジウム Ra"><span class="pt-z">88</span><span class="pt-sym">Ra</span><span class="pt-name">ラジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:11" data-s="Ac" data-g="3" data-p="7" data-f="actinoid" data-x="4" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="89 アクチニウム Ac"><span class="pt-z">89</span><span class="pt-sym">Ac</span><span class="pt-name">アクチニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:11" data-s="Th" data-g="3" data-p="7" data-f="actinoid" data-x="5" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="90 トリウム Th"><span class="pt-z">90</span><span class="pt-sym">Th</span><span class="pt-name">トリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:11" data-s="Pa" data-g="3" data-p="7" data-f="actinoid" data-x="6" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="91 プロトアクチニウム Pa"><span class="pt-z">91</span><span class="pt-sym">Pa</span><span class="pt-name">プロトアクチニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:11" data-s="U" data-g="3" data-p="7" data-f="actinoid" data-x="7" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="92 ウラン U"><span class="pt-z">92</span><span class="pt-sym">U</span><span class="pt-name">ウラン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:11" data-s="Np" data-g="3" data-p="7" data-f="actinoid" data-x="8" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="93 ネプツニウム Np"><span class="pt-z">93</span><span class="pt-sym">Np</span><span class="pt-name">ネプツニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:11" data-s="Pu" data-g="3" data-p="7" data-f="actinoid" data-x="9" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="94 プルトニウム Pu"><span class="pt-z">94</span><span class="pt-sym">Pu</span><span class="pt-name">プルトニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:11" data-s="Am" data-g="3" data-p="7" data-f="actinoid" data-x="10" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="95 アメリシウム Am"><span class="pt-z">95</span><span class="pt-sym">Am</span><span class="pt-name">アメリシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:11" data-s="Cm" data-g="3" data-p="7" data-f="actinoid" data-x="11" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="96 キュリウム Cm"><span class="pt-z">96</span><span class="pt-sym">Cm</span><span class="pt-name">キュリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:11" data-s="Bk" data-g="3" data-p="7" data-f="actinoid" data-x="12" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="97 バークリウム Bk"><span class="pt-z">97</span><span class="pt-sym">Bk</span><span class="pt-name">バークリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:11" data-s="Cf" data-g="3" data-p="7" data-f="actinoid" data-x="13" data-y="11" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="98 カリホルニウム Cf"><span class="pt-z">98</span><span class="pt-sym">Cf</span><span class="pt-name">カリホルニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:11" data-s="Es" data-g="3" data-p="7" data-f="actinoid" data-x="14" data-y="11" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="99 アインスタイニウム Es"><span class="pt-z">99</span><span class="pt-sym">Es</span><span class="pt-name">アインスタイニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:11" data-s="Fm" data-g="3" data-p="7" data-f="actinoid" data-x="15" data-y="11" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="100 フェルミウム Fm"><span class="pt-z">100</span><span class="pt-sym">Fm</span><span class="pt-name">フェルミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:11" data-s="Md" data-g="3" data-p="7" data-f="actinoid" data-x="16" data-y="11" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="101 メンデレビウム Md"><span class="pt-z">101</span><span class="pt-sym">Md</span><span class="pt-name">メンデレビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:11" data-s="No" data-g="3" data-p="7" data-f="actinoid" data-x="17" data-y="11" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="102 ノーベリウム No"><span class="pt-z">102</span><span class="pt-sym">No</span><span class="pt-name">ノーベリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:11" data-s="Lr" data-g="3" data-p="7" data-f="actinoid" data-x="18" data-y="11" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="103 ローレンシウム Lr"><span class="pt-z">103</span><span class="pt-sym">Lr</span><span class="pt-name">ローレンシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:8" data-s="Rf" data-g="4" data-p="7" data-f="" data-x="5" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="104 ラザホージウム Rf"><span class="pt-z">104</span><span class="pt-sym">Rf</span><span class="pt-name">ラザホージウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:8" data-s="Db" data-g="5" data-p="7" data-f="" data-x="6" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="105 ドブニウム Db"><span class="pt-z">105</span><span class="pt-sym">Db</span><span class="pt-name">ドブニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:8" data-s="Sg" data-g="6" data-p="7" data-f="" data-x="7" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="106 シーボーギウム Sg"><span class="pt-z">106</span><span class="pt-sym">Sg</span><span class="pt-name">シーボーギウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:8" data-s="Bh" data-g="7" data-p="7" data-f="" data-x="8" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="107 ボーリウム Bh"><span class="pt-z">107</span><span class="pt-sym">Bh</span><span class="pt-name">ボーリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:8" data-s="Hs" data-g="8" data-p="7" data-f="" data-x="9" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="108 ハッシウム Hs"><span class="pt-z">108</span><span class="pt-sym">Hs</span><span class="pt-name">ハッシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:8" data-s="Mt" data-g="9" data-p="7" data-f="" data-x="10" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="109 マイトネリウム Mt"><span class="pt-z">109</span><span class="pt-sym">Mt</span><span class="pt-name">マイトネリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:8" data-s="Ds" data-g="10" data-p="7" data-f="" data-x="11" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="110 ダームスタチウム Ds"><span class="pt-z">110</span><span class="pt-sym">Ds</span><span class="pt-name">ダームスタチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:8" data-s="Rg" data-g="11" data-p="7" data-f="" data-x="12" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="111 レントゲニウム Rg"><span class="pt-z">111</span><span class="pt-sym">Rg</span><span class="pt-name">レントゲニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:8" data-s="Cn" data-g="12" data-p="7" data-f="" data-x="13" data-y="8" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="112 コペルニシウム Cn"><span class="pt-z">112</span><span class="pt-sym">Cn</span><span class="pt-name">コペルニシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:8" data-s="Nh" data-g="13" data-p="7" data-f="" data-x="14" data-y="8" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="113 ニホニウム Nh"><span class="pt-z">113</span><span class="pt-sym">Nh</span><span class="pt-name">ニホニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:8" data-s="Fl" data-g="14" data-p="7" data-f="" data-x="15" data-y="8" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="114 フレロビウム Fl"><span class="pt-z">114</span><span class="pt-sym">Fl</span><span class="pt-name">フレロビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:8" data-s="Mc" data-g="15" data-p="7" data-f="" data-x="16" data-y="8" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="115 モスコビウム Mc"><span class="pt-z">115</span><span class="pt-sym">Mc</span><span class="pt-name">モスコビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:8" data-s="Lv" data-g="16" data-p="7" data-f="" data-x="17" data-y="8" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="116 リバモリウム Lv"><span class="pt-z">116</span><span class="pt-sym">Lv</span><span class="pt-name">リバモリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:8" data-s="Ts" data-g="17" data-p="7" data-f="" data-x="18" data-y="8" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="117 テネシン Ts"><span class="pt-z">117</span><span class="pt-sym">Ts</span><span class="pt-name">テネシン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:8" data-s="Og" data-g="18" data-p="7" data-f="" data-x="19" data-y="8" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="118 オガネソン Og"><span class="pt-z">118</span><span class="pt-sym">Og</span><span class="pt-name">オガネソン</span></button>
           <div class="pt-panel" id="pt-panel" aria-live="polite">
             <p class="pt-panel-hint">元素のマスにカーソルを合わせると（スマホはタップ）、ここに基本データと、その元素を取り上げた回が出ます。</p>
           </div>
@@ -1347,6 +1484,13 @@
           <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
         </div>
         <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
           <h4>つながる</h4>
           <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
           <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
@@ -1589,6 +1733,102 @@
   } catch (err) {
     setView('episodes', false);
   }
+
+  // 元素を探す（名前・記号・原子番号。ひらがなでもカタカナでもよい）
+  var READING = {
+    '水素': 'すいそ', 'ホウ素': 'ほうそ', '炭素': 'たんそ', '窒素': 'ちっそ', '酸素': 'さんそ', 'フッ素': 'ふっそ',
+    'ケイ素': 'けいそ', '硫黄': 'いおう', '塩素': 'えんそ', '鉄': 'てつ', '銅': 'どう', '亜鉛': 'あえん',
+    'ヒ素': 'ひそ', '臭素': 'しゅうそ', '銀': 'ぎん', 'ヨウ素': 'ようそ', '白金': 'はっきん', '金': 'きん',
+    '水銀': 'すいぎん', '鉛': 'なまり'
+  };
+
+  function key(s) {
+    return String(s).normalize('NFKC').toLowerCase()
+      .replace(/[ァ-ヶ]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0x60); })
+      .replace(/[\s・=＝.,、。]/g, '');
+  }
+
+  var searchIndex = data.map(function (e) {
+    var names = [key(e.n)];
+    if (READING[e.n]) names.push(READING[e.n]);
+    return { e: e, exact: [key(e.s), String(e.z)].concat(names), names: names };
+  });
+
+  // 当てはまる元素の一覧（名前・記号・番号がぴったり合えばその1つ、なければ名前の書き出しが合うもの）
+  function candidates(q) {
+    q = key(q);
+    if (!q) return [];
+    var hit = searchIndex.filter(function (it) { return it.exact.indexOf(q) >= 0; });
+    if (!hit.length) {
+      hit = searchIndex.filter(function (it) {
+        return it.names.some(function (n) { return n.indexOf(q) === 0; });
+      });
+    } else {
+      hit = hit.slice(0, 1);
+    }
+    return hit.map(function (it) { return it.e; });
+  }
+
+  function findElement(q) {
+    var list = candidates(q);
+    return list.length === 1 ? list[0] : null;
+  }
+
+  var searchInput = document.getElementById('pt-search');
+  var searchMsg = document.getElementById('pt-search-msg');
+
+  function revealForSearch(sym) {
+    var cell = grid.querySelector('.pt-cell[data-s="' + sym + '"]');
+    if (cell) {
+      scroller.scrollLeft = cell.offsetLeft - (scroller.clientWidth - cell.offsetWidth) / 2;
+    }
+    if (!wide.matches) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  if (searchInput) {
+    // 打っている途中でも、名前・記号・番号がぴったり合えばその元素を出す（ページは動かさない）
+    searchInput.addEventListener('input', function () {
+      var e = findElement(searchInput.value);
+      searchMsg.textContent = '';
+      if (e) select(e.s, { hash: true });
+    });
+    // 確定（Enter・候補の選択）で、表の中のその元素まで送る
+    var commit = function () {
+      var list = candidates(searchInput.value);
+      var e = list.length === 1 ? list[0] : null;
+      if (!searchInput.value.trim()) { searchMsg.textContent = ''; return; }
+      if (list.length > 1) { searchMsg.textContent = list.length + '件あります。もう少し入力してください'; return; }
+      if (!e) { searchMsg.textContent = '見つかりませんでした'; return; }
+      searchMsg.textContent = '';
+      select(e.s, { hash: true });
+      revealForSearch(e.s);
+    };
+    searchInput.addEventListener('change', commit);
+    searchInput.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Enter') {
+        ev.preventDefault();
+        commit();
+        if (!wide.matches) searchInput.blur();
+      }
+    });
+  }
+
+  // 矢印キーでマスを移る（空きマスは飛ばす）
+  var cellAt = {};
+  cells.forEach(function (c) { cellAt[c.dataset.x + ',' + c.dataset.y] = c; });
+  grid.addEventListener('keydown', function (ev) {
+    var c = ev.target.closest('.pt-cell');
+    if (!c) return;
+    var d = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[ev.key];
+    if (!d) return;
+    ev.preventDefault();
+    var x = +c.dataset.x;
+    var y = +c.dataset.y;
+    for (var i = 1; i <= 18; i++) {
+      var next = cellAt[(x + d[0] * i) + ',' + (y + d[1] * i)];
+      if (next) { next.focus(); return; }
+    }
+  });
 
   // 一覧の「周期表で位置を見る」。同じ元素を選んだままだと hashchange が起きないので、ここで直接選ぶ
   document.addEventListener('click', function (ev) {

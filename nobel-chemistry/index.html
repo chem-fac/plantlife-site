@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="/article.css">
   <link rel="icon" href="/images/favicon.png" type="image/png">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "ノーベル化学賞から探す | プラントライフ", "description": "1901年から2025年までのノーベル化学賞（117件）の受賞内容と受賞者の一覧です。番組で取り上げた受賞には、関連する回へのリンクを付けています。", "url": "https://plantlife.chem-fac.com/nobel-chemistry/", "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "ノーベル化学賞から探す", "item": "https://plantlife.chem-fac.com/nobel-chemistry/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "ノーベル化学賞から探す", "item": "https://plantlife.chem-fac.com/nobel-chemistry/"}]}</script>
   <style>
 /* 特集ページ共通：回へのリンク一覧（周期表・ノーベル化学賞） */
 .fx-eps {
@@ -93,6 +93,62 @@
 .feature-hero.pt-hero,
 .feature-hero.nb-hero {
   margin-bottom: 28px;
+}
+
+/* パンくずと、エピソードの探し方（エピソード一覧の上部にも同じものを置いている） */
+.fx-breadcrumb {
+  margin-bottom: 14px;
+}
+
+.fx-browse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 28px;
+}
+
+.fx-browse-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--light-muted);
+}
+
+.fx-browse-tabs {
+  display: inline-flex;
+  gap: 4px;
+  max-width: 100%;
+  padding: 4px;
+  overflow-x: auto;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-10);
+  border-radius: var(--radius-pill);
+  scrollbar-width: none;
+}
+
+.fx-browse-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.fx-browse-link {
+  flex: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--light-secondary);
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.fx-browse-link:hover {
+  background: var(--light-surface);
+  color: var(--brand);
+}
+
+.fx-browse-link[aria-current="page"] {
+  background: var(--brand);
+  color: #fff;
 }
 /* ノーベル化学賞から探す */
 .nb-controls {
@@ -266,14 +322,50 @@
   margin-top: 8px;
 }
 
-/* 「番組で取り上げた受賞だけ」 */
-body.nb-only-eps .nb-year:not(.has-eps),
-body.nb-only-eps .nb-decade:not(.has-eps),
-body.nb-only-eps .nb-nav-link:not(.has-eps) {
-  display: none;
+/* 絞り込み（受賞内容・受賞者／番組で取り上げた受賞だけ） */
+.nb-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+}
+
+.nb-search {
+  width: 300px;
+  max-width: 100%;
+  padding: 8px 14px;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-pill);
+  background: var(--light-bg);
+  color: var(--light-text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+.nb-search:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: var(--light-surface);
+}
+
+.nb-result {
+  margin: -4px 0 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.nb-nav-link.is-empty {
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
+  .nb-filters,
+  .nb-search {
+    width: 100%;
+  }
+
   .nb-year {
     grid-template-columns: 52px 1fr;
     gap: 12px;
@@ -296,7 +388,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
       <nav class="header-nav" id="header-nav">
         <a href="/" class="nav-link">ホーム</a>
         <a href="/start/" class="nav-link">はじめての方へ</a>
-        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
         <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
         <a href="/goods/" class="nav-link">グッズ</a>
         <a href="/#about" class="nav-link">番組について</a>
@@ -310,6 +402,8 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
 
   <main class="article-main" id="main-content">
     <div class="feature-container nb-container">
+      <nav class="article-breadcrumb fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/episodes/">エピソード</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">ノーベル化学賞から探す</span></nav>
+      <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link">テーマ・キーワード</a><a href="/elements/" class="fx-browse-link">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link" aria-current="page">ノーベル化学賞</a></span></nav>
       <header class="feature-hero nb-hero">
         <p class="feature-eyebrow">プラントライフの特集</p>
         <h1 class="feature-title">ノーベル化学賞から探す</h1>
@@ -318,13 +412,17 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
 
       <div class="nb-controls">
         <p class="nb-count">番組で取り上げた受賞 <strong>7</strong><span>／117</span></p>
-        <label class="nb-toggle"><input type="checkbox" id="nb-only"> 番組で取り上げた受賞だけ表示</label>
+        <div class="nb-filters">
+          <input type="search" id="nb-search" class="nb-search" placeholder="受賞内容・受賞者で絞り込む（例：触媒、野依）" aria-label="受賞内容・受賞者で絞り込む" autocomplete="off" enterkeyhint="search">
+          <label class="nb-toggle"><input type="checkbox" id="nb-only"> 番組で取り上げた受賞だけ</label>
+        </div>
       </div>
+      <p class="nb-result" id="nb-result" aria-live="polite" hidden></p>
       <nav class="nb-nav" aria-label="年代へ移動"><a href="#d2020" class="nb-nav-link has-eps">2020年代</a><a href="#d2010" class="nb-nav-link has-eps">2010年代</a><a href="#d2000" class="nb-nav-link has-eps">2000年代</a><a href="#d1990" class="nb-nav-link">1990年代</a><a href="#d1980" class="nb-nav-link">1980年代</a><a href="#d1970" class="nb-nav-link">1970年代</a><a href="#d1960" class="nb-nav-link has-eps">1960年代</a><a href="#d1950" class="nb-nav-link">1950年代</a><a href="#d1940" class="nb-nav-link">1940年代</a><a href="#d1930" class="nb-nav-link has-eps">1930年代</a><a href="#d1920" class="nb-nav-link">1920年代</a><a href="#d1910" class="nb-nav-link has-eps">1910年代</a><a href="#d1900" class="nb-nav-link">1900年代</a></nav>
 
         <section class="nb-decade has-eps" id="d2020" aria-labelledby="d2020-h">
           <h2 class="nb-decade-heading" id="d2020-h">2020年代</h2>
-          <article class="nb-year has-eps" id="y2025">
+          <article class="nb-year has-eps" id="y2025" data-q="2025金属有機構造体(mof)の開発北川進susumukitagawaりちゃーどろぶそんrichardrobsonおまーやぎーomarmyaghi">
             <div class="nb-year-num">2025</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -339,7 +437,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2025/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2024">
+          <article class="nb-year" id="y2024" data-q="2024計算によるたんぱく質設計でいゔぃっどべいかーdavidbakerたんぱく質の構造予測でみすはさびすdemishassabisじょんmじゃんぱーjohnjumper">
             <div class="nb-year-num">2024</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -353,7 +451,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2024/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2023">
+          <article class="nb-year" id="y2023" data-q="2023量子どっとの発見と合成むんじばうぇんでぃmoungibawendiるいぶらすlouisbrusあれくせいえきもふalekseyyekimov">
             <div class="nb-year-num">2023</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -363,7 +461,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2023/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2022">
+          <article class="nb-year" id="y2022" data-q="2022くりっくけみすとりーと生体直交化学の開発きゃろらいんべるとっつぃcarolynbertozziもーてんpめるだるmortenmeldalばりーしゃーぷれすkbarrysharpless">
             <div class="nb-year-num">2022</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -373,7 +471,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2022/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2021">
+          <article class="nb-year" id="y2021" data-q="2021不斉有機触媒の開発べんじゃみんりすとbenjaminlistでいゔぃっどまくみらんdavidwcmacmillan">
             <div class="nb-year-num">2021</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -383,7 +481,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2021/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2020">
+          <article class="nb-year" id="y2020" data-q="2020げのむ編集手法の開発えまにゅえるしゃるぱんてぃえemmanuellecharpentierじぇにふぁーだうどなjenniferadoudna">
             <div class="nb-year-num">2020</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -396,7 +494,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade has-eps" id="d2010" aria-labelledby="d2010-h">
           <h2 class="nb-decade-heading" id="d2010-h">2010年代</h2>
-          <article class="nb-year" id="y2019">
+          <article class="nb-year" id="y2019" data-q="2019りちうむいおん電池の開発じょんぐっどいなふjohnbgoodenoughすたんりーうぃってぃんがむmstanleywhittingham吉野彰akirayoshino">
             <div class="nb-year-num">2019</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -406,7 +504,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2019/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2018">
+          <article class="nb-year" id="y2018" data-q="2018酵素の指向性進化ふらんしすあーのるどfrancesharnoldぺぷちどと抗体のふぁーじでぃすぷれいじょーじpすみすgeorgepsmithぐれごりーうぃんたーsirgregorypwinter">
             <div class="nb-year-num">2018</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -420,7 +518,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2018/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2017">
+          <article class="nb-year" id="y2017" data-q="2017溶液中の生体分子の高分解能構造決定のためのくらいお電子顕微鏡法の開発じゃっくどぅぼしぇjacquesdubochetよあひむふらんくjoachimfrankりちゃーどへんだーそんrichardhenderson">
             <div class="nb-year-num">2017</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -430,7 +528,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2017/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2016">
+          <article class="nb-year" id="y2016" data-q="2016分子ましんの設計と合成じゃんぴえーるそゔぁーじゅjean-pierresauvageふれいざーすとっだーとsirjfraserstoddartべるなるとlふぇりんはbernardlferinga">
             <div class="nb-year-num">2016</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -440,7 +538,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2016/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2015">
+          <article class="nb-year" id="y2015" data-q="2015dna修復の機構に関する研究とますりんだーるtomaslindahlぽーるもどりっちpaulmodrichあじずさんじゃるazizsancar">
             <div class="nb-year-num">2015</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -450,7 +548,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2015/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2014">
+          <article class="nb-year" id="y2014" data-q="2014超解像蛍光顕微鏡法の開発えりっくべつぃぐericbetzigしゅてふぁんへるstefanwhellうぃりあむもーなーwilliamemoerner">
             <div class="nb-year-num">2014</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -460,7 +558,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2014/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2013">
+          <article class="nb-year" id="y2013" data-q="2013複雑な化学系のためのまるちすけーるもでるの開発まーてぃんかーぷらすmartinkarplusまいけるれゔぃっとmichaellevittありーうぉーしぇるariehwarshel">
             <div class="nb-year-num">2013</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -470,7 +568,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2013/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2012">
+          <article class="nb-year" id="y2012" data-q="2012gたんぱく質共役受容体の研究ろばーとれふこうぃっつrobertjlefkowitzぶらいあんこびるかbriankobilka">
             <div class="nb-year-num">2012</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -480,7 +578,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2012/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2011">
+          <article class="nb-year" id="y2011" data-q="2011準結晶の発見だにえるしぇひとまんdanshechtman">
             <div class="nb-year-num">2011</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -490,7 +588,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2011/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year has-eps" id="y2010">
+          <article class="nb-year has-eps" id="y2010" data-q="2010有機合成におけるぱらじうむ触媒くろすかっぷりんぐりちゃーどへっくrichardfheck根岸英一ei-ichinegishi鈴木章akirasuzuki">
             <div class="nb-year-num">2010</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -511,7 +609,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade has-eps" id="d2000" aria-labelledby="d2000-h">
           <h2 class="nb-decade-heading" id="d2000-h">2000年代</h2>
-          <article class="nb-year" id="y2009">
+          <article class="nb-year" id="y2009" data-q="2009りぼそーむの構造と機能に関する研究ゔぇんかとらまんらまくりしゅなんvenkatramanramakrishnanとますaすたいつthomasasteitzあだよなすadaeyonath">
             <div class="nb-year-num">2009</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -521,7 +619,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2009/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2008">
+          <article class="nb-year" id="y2008" data-q="2008緑色蛍光たんぱく質(gfp)の発見と開発下村脩osamushimomuraまーてぃんちゃるふぃーmartinchalfieろじゃーyちえんrogerytsien">
             <div class="nb-year-num">2008</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -531,7 +629,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2008/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2007">
+          <article class="nb-year" id="y2007" data-q="2007固体表面における化学過程の研究げるはるとえるとるgerhardertl">
             <div class="nb-year-num">2007</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -541,7 +639,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2007/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2006">
+          <article class="nb-year" id="y2006" data-q="2006真核生物の転写の分子基盤に関する研究ろじゃーこーんばーぐrogerdkornberg">
             <div class="nb-year-num">2006</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -551,7 +649,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2006/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2005">
+          <article class="nb-year" id="y2005" data-q="2005有機合成におけるめたせしす法の開発いゔしょーゔぁんyveschauvinろばーとぐらぶすroberthgrubbsりちゃーどしゅろっくrichardrschrock">
             <div class="nb-year-num">2005</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -561,7 +659,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2005/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2004">
+          <article class="nb-year" id="y2004" data-q="2004ゆびきちんを介したたんぱく質分解の発見あーろんちかのーばーaaronciechanoverあぶらむはーしゅこavramhershkoあーうぃんろーずirwinrose">
             <div class="nb-year-num">2004</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -571,7 +669,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2004/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2003">
+          <article class="nb-year" id="y2003" data-q="2003水ちゃねるの発見ぴーたーあぐれpeteragreいおんちゃねるの構造と機構に関する研究ろでりっくまきのんroderickmackinnon">
             <div class="nb-year-num">2003</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -585,7 +683,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2003/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y2002">
+          <article class="nb-year" id="y2002" data-q="2002生体高分子の質量分析のためのそふと脱離いおん化法の開発じょんふぇんjohnbfenn田中耕一koichitanaka溶液中の生体高分子の三次元構造決定のための核磁気共鳴分光法の開発くるとゔゅーとりっひkurtwüthrich">
             <div class="nb-year-num">2002</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -599,7 +697,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2002/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year has-eps" id="y2001">
+          <article class="nb-year has-eps" id="y2001" data-q="2001不斉触媒による水素化反応の研究うぃりあむのーるずwilliamknowles野依良治ryojinoyori不斉触媒による酸化反応の研究ばりーしゃーぷれすkbarrysharpless">
             <div class="nb-year-num">2001</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -618,7 +716,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/2001/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year has-eps" id="y2000">
+          <article class="nb-year has-eps" id="y2000" data-q="2000導電性高分子の発見と開発あらんひーがーalanheegerあらんまくだいあみっどalanmacdiarmid白川英樹hidekishirakawa">
             <div class="nb-year-num">2000</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -636,7 +734,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1990" aria-labelledby="d1990-h">
           <h2 class="nb-decade-heading" id="d1990-h">1990年代</h2>
-          <article class="nb-year" id="y1999">
+          <article class="nb-year" id="y1999" data-q="1999ふぇむと秒分光法を用いた化学反応の遷移状態の研究あはめっどずうぇいるahmedzewail">
             <div class="nb-year-num">1999</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -646,7 +744,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1999/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1998">
+          <article class="nb-year" id="y1998" data-q="1998密度汎関数理論の開発うぉるたーこーんwalterkohn量子化学における計算手法の開発じょんぽーぷるjohnpople">
             <div class="nb-year-num">1998</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -660,7 +758,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1998/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1997">
+          <article class="nb-year" id="y1997" data-q="1997あでのしん三りん酸(atp)合成の基礎となる酵素機構の解明ぽーるぼいやーpauldboyerじょんeうぉーかーjohnewalkerいおん輸送酵素na+k+-atpあーぜの初の発見いぇんすすこうjenscskou">
             <div class="nb-year-num">1997</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -674,7 +772,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1997/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1996">
+          <article class="nb-year" id="y1996" data-q="1996ふらーれんの発見ろばーとかーるrobertfcurljrはろるどくろとーsirharoldkrotoりちゃーどすもーりーrichardesmalley">
             <div class="nb-year-num">1996</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -684,7 +782,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1996/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1995">
+          <article class="nb-year" id="y1995" data-q="1995大気化学特におぞんの生成と分解に関する研究ぱうるくるっつぇんpauljcrutzenまりおもりーなmariojmolinaふらんくしゃーうっどろーらんどfsherwoodrowland">
             <div class="nb-year-num">1995</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -694,7 +792,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1995/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1994">
+          <article class="nb-year" id="y1994" data-q="1994かるぼかちおん化学への貢献じょーじおらーgeorgeaolah">
             <div class="nb-year-num">1994</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -704,7 +802,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1994/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1993">
+          <article class="nb-year" id="y1993" data-q="1993ぽりめらーぜ連鎖反応(pcr)法の発明きゃりーまりすkarybmullisおりごぬくれおちどを用いた部位特異的変異導入法の確立とたんぱく質研究への発展に対する基礎的貢献まいけるすみすmichaelsmith">
             <div class="nb-year-num">1993</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -718,7 +816,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1993/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1992">
+          <article class="nb-year" id="y1992" data-q="1992化学系における電子移動反応の理論への貢献るどるふまーかすrudolphamarcus">
             <div class="nb-year-num">1992</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -728,7 +826,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1992/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1991">
+          <article class="nb-year" id="y1991" data-q="1991高分解能核磁気共鳴(nmr)分光法の方法論の開発への貢献りひゃるとrえるんすとrichardrernst">
             <div class="nb-year-num">1991</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -738,7 +836,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1991/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1990">
+          <article class="nb-year" id="y1990" data-q="1990有機合成の理論と方法論の開発いらいあすこーりーeliasjamescorey">
             <div class="nb-year-num">1990</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -751,7 +849,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1980" aria-labelledby="d1980-h">
           <h2 class="nb-decade-heading" id="d1980-h">1980年代</h2>
-          <article class="nb-year" id="y1989">
+          <article class="nb-year" id="y1989" data-q="1989rnaの触媒機能の発見しどにーあるとまんsidneyaltmanとーますちぇっくthomasrcech">
             <div class="nb-year-num">1989</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -761,7 +859,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1989/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1988">
+          <article class="nb-year" id="y1988" data-q="1988光合成反応中心の三次元構造の決定よはんだいぜんほーふぁーjohanndeisenhoferろべるとふーばーroberthuberはるとむーとみひぇるhartmutmichel">
             <div class="nb-year-num">1988</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -771,7 +869,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1988/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1987">
+          <article class="nb-year" id="y1987" data-q="1987高い選択性をもつ構造特異的な相互作用を示す分子の開発と利用どなるどくらむdonaldjcramじゃんまりーれーんjean-marielehnちゃーるずぺだーせんcharlesjpedersen">
             <div class="nb-year-num">1987</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -781,7 +879,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1987/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1986">
+          <article class="nb-year" id="y1986" data-q="1986化学反応素過程の動力学に関する貢献だどりーはーしゅばっくdudleyrherschbach李遠哲yuantleeじょんぽらにーjohncpolanyi">
             <div class="nb-year-num">1986</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -791,7 +889,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1986/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1985">
+          <article class="nb-year" id="y1985" data-q="1985結晶構造決定のための直接法の開発における卓越した業績はーばーとはうぷとまんherbertahauptmanじぇろーむかーるjeromekarle">
             <div class="nb-year-num">1985</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -801,7 +899,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1985/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1984">
+          <article class="nb-year" id="y1984" data-q="1984固相担体上での化学合成法の開発ろばーとめりふぃーるどbrucemerrifield">
             <div class="nb-year-num">1984</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -811,7 +909,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1984/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1983">
+          <article class="nb-year" id="y1983" data-q="1983特に金属錯体における電子移動反応の機構に関する研究へんりーたうべhenrytaube">
             <div class="nb-year-num">1983</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -821,7 +919,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1983/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1982">
+          <article class="nb-year" id="y1982" data-q="1982結晶学的電子顕微鏡法の開発と生物学的に重要な核酸たんぱく質複合体の構造解明あーろんくるーぐaaronklug">
             <div class="nb-year-num">1982</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -831,7 +929,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1982/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1981">
+          <article class="nb-year" id="y1981" data-q="1981化学反応の進行過程に関するそれぞれ独立に展開した理論福井謙一kenichifukuiろあるどほふまんroaldhoffmann">
             <div class="nb-year-num">1981</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -841,7 +939,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1981/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1980">
+          <article class="nb-year" id="y1980" data-q="1980核酸の生化学特に組換えdnaに関する基礎的研究ぽーるばーぐpaulberg核酸の塩基配列決定に関する貢献うぉるたーぎるばーとwaltergilbertふれでりっくさんがーfredericksanger">
             <div class="nb-year-num">1980</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -858,7 +956,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1970" aria-labelledby="d1970-h">
           <h2 class="nb-decade-heading" id="d1970-h">1970年代</h2>
-          <article class="nb-year" id="y1979">
+          <article class="nb-year" id="y1979" data-q="1979ほう素化合物とりん化合物をそれぞれ有機合成の重要な試薬として利用する方法の開発はーばーとぶらうんherbertcbrownげおるくうぃってぃひgeorgwittig">
             <div class="nb-year-num">1979</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -868,7 +966,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1979/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1978">
+          <article class="nb-year" id="y1978" data-q="1978化学浸透説の提唱による生体えねるぎー伝達の理解への貢献ぴーたーみっちぇるpetermitchell">
             <div class="nb-year-num">1978</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -878,7 +976,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1978/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1977">
+          <article class="nb-year" id="y1977" data-q="1977非平衡熱力学特に散逸構造の理論への貢献いりやぷりごじんilyaprigogine">
             <div class="nb-year-num">1977</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -888,7 +986,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1977/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1976">
+          <article class="nb-year" id="y1976" data-q="1976化学結合の問題に光を当てたぼらんの構造に関する研究うぃりあむりぷすこむwilliamlipscomb">
             <div class="nb-year-num">1976</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -898,7 +996,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1976/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1975">
+          <article class="nb-year" id="y1975" data-q="1975酵素触媒反応の立体化学に関する研究じょんこーんふぉーすjohncornforth有機分子と有機反応の立体化学に関する研究うらじみーるぷれろーぐvladimirprelog">
             <div class="nb-year-num">1975</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -912,7 +1010,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1975/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1974">
+          <article class="nb-year" id="y1974" data-q="1974高分子物理化学における理論実験両面での基礎的業績ぽーるふろーりーpauljflory">
             <div class="nb-year-num">1974</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -922,7 +1020,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1974/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1973">
+          <article class="nb-year" id="y1973" data-q="1973有機金属化合物いわゆるさんどいっち化合物の化学に関するそれぞれ独立に行った先駆的研究えるんすとおっとーふぃっしゃーernstottofischerじぇふりーうぃるきんそんgeoffreywilkinson">
             <div class="nb-year-num">1973</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -932,7 +1030,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1973/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1972">
+          <article class="nb-year" id="y1972" data-q="1972りぼぬくれあーぜの研究特にあみの酸配列と生物活性をもつ立体構造との関係くりすちゃんあんふぃんせんchristiananfinsenりぼぬくれあーぜ分子の活性中心における化学構造と触媒活性の関係の理解への貢献すたんふぉーどむーあstanfordmooreうぃりあむすたいんwilliamhstein">
             <div class="nb-year-num">1972</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -946,7 +1044,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1972/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1971">
+          <article class="nb-year" id="y1971" data-q="1971分子特にふりーらじかるの電子構造と幾何構造に関する知見への貢献げるはるとへるつべるくgerhardherzberg">
             <div class="nb-year-num">1971</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -956,7 +1054,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1971/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1970">
+          <article class="nb-year" id="y1970" data-q="1970糖ぬくれおちどと炭水化物の生合成におけるその役割の発見るいるろわーるluisleloir">
             <div class="nb-year-num">1970</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -969,7 +1067,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade has-eps" id="d1960" aria-labelledby="d1960-h">
           <h2 class="nb-decade-heading" id="d1960-h">1960年代</h2>
-          <article class="nb-year" id="y1969">
+          <article class="nb-year" id="y1969" data-q="1969立体配座の概念の発展とその化学への応用に対する貢献でれっくばーとんderekbartonおっどはっせるoddhassel">
             <div class="nb-year-num">1969</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -979,7 +1077,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1969/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1968">
+          <article class="nb-year" id="y1968" data-q="1968不可逆過程の熱力学の基礎となるおんさーがーの相反関係の発見らるすおんさーがーlarsonsager">
             <div class="nb-year-num">1968</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -989,7 +1087,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1968/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1967">
+          <article class="nb-year" id="y1967" data-q="1967ごく短いえねるぎーぱるすで平衡を乱すことによる極めて速い化学反応の研究まんふれーとあいげんmanfredeigenろなるどのーりっしゅronaldgwnorrishじょーじぽーたーgeorgeporter">
             <div class="nb-year-num">1967</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -999,7 +1097,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1967/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1966">
+          <article class="nb-year" id="y1966" data-q="1966分子軌道法による化学結合と分子の電子構造に関する基礎的研究ろばーとまりけんrobertsmulliken">
             <div class="nb-year-num">1966</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1009,7 +1107,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1966/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1965">
+          <article class="nb-year" id="y1965" data-q="1965有機合成の技法における卓越した業績ろばーとばーんずうっどわーどrobertbwoodward">
             <div class="nb-year-num">1965</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1019,7 +1117,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1965/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1964">
+          <article class="nb-year" id="y1964" data-q="1964x線解析による重要な生化学物質の構造決定どろしーほじきんdorothycrowfoothodgkin">
             <div class="nb-year-num">1964</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1029,7 +1127,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1964/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year has-eps" id="y1963">
+          <article class="nb-year has-eps" id="y1963" data-q="1963高分子の化学と技術の分野における発見かーるつぃーぐらーkarlzieglerじゅりおなったgiulionatta">
             <div class="nb-year-num">1963</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1044,7 +1142,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1963/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1962">
+          <article class="nb-year" id="y1962" data-q="1962球状たんぱく質の構造に関する研究まっくすぺるーつmaxfperutzじょんけんどりゅーjohnckendrew">
             <div class="nb-year-num">1962</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1054,7 +1152,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1962/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1961">
+          <article class="nb-year" id="y1961" data-q="1961植物における二酸化炭素同化の研究めるゔぃんかるゔぃんmelvincalvin">
             <div class="nb-year-num">1961</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1064,7 +1162,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1961/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1960">
+          <article class="nb-year" id="y1960" data-q="1960考古学地質学地球物理学などの諸分野における炭素14による年代測定法うぃらーどりびーwillardflibby">
             <div class="nb-year-num">1960</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1077,7 +1175,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1950" aria-labelledby="d1950-h">
           <h2 class="nb-decade-heading" id="d1950-h">1950年代</h2>
-          <article class="nb-year" id="y1959">
+          <article class="nb-year" id="y1959" data-q="1959ぽーらろぐらふ分析法の発見と開発やろすらふへいろふすきーjaroslavheyrovsky">
             <div class="nb-year-num">1959</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1087,7 +1185,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1959/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1958">
+          <article class="nb-year" id="y1958" data-q="1958たんぱく質特にいんすりんの構造に関する研究ふれでりっくさんがーfredericksanger">
             <div class="nb-year-num">1958</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1097,7 +1195,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1958/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1957">
+          <article class="nb-year" id="y1957" data-q="1957ぬくれおちどとぬくれおちど補酵素に関する研究あれくさんだーとっどlordtodd">
             <div class="nb-year-num">1957</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1107,7 +1205,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1957/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1956">
+          <article class="nb-year" id="y1956" data-q="1956化学反応の機構に関する研究しりるひんしぇるうっどsircyrilhinshelwoodにこらいせみょーのふnikolaysemenov">
             <div class="nb-year-num">1956</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1117,7 +1215,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1956/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1955">
+          <article class="nb-year" id="y1955" data-q="1955生化学的に重要な硫黄化合物の研究特にぽりぺぷちどほるもんの初の合成ゔぃんせんとでゅゔぃにょーvincentduvigneaud">
             <div class="nb-year-num">1955</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1127,7 +1225,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1955/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1954">
+          <article class="nb-year" id="y1954" data-q="1954化学結合の本性に関する研究と複雑な物質の構造解明へのその応用らいなすぽーりんぐlinuspauling">
             <div class="nb-year-num">1954</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1137,7 +1235,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1954/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1953">
+          <article class="nb-year" id="y1953" data-q="1953高分子化学の分野における発見へるまんしゅたうでぃんがーhermannstaudinger">
             <div class="nb-year-num">1953</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1147,7 +1245,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1953/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1952">
+          <article class="nb-year" id="y1952" data-q="1952分配くろまとぐらふぃーの発明あーちゃーまーてぃんarcherjpmartinりちゃーどしんぐrichardlmsynge">
             <div class="nb-year-num">1952</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1157,7 +1255,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1952/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1951">
+          <article class="nb-year" id="y1951" data-q="1951超うらん元素の化学における発見えどうぃんまくみらんedwinmmcmillanぐれんしーぼーぐglenntseaborg">
             <div class="nb-year-num">1951</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1167,7 +1265,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1951/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1950">
+          <article class="nb-year" id="y1950" data-q="1950じえん合成の発見と開発おっとーでぃーるすottodielsくるとあるだーkurtalder">
             <div class="nb-year-num">1950</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1180,7 +1278,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1940" aria-labelledby="d1940-h">
           <h2 class="nb-decade-heading" id="d1940-h">1940年代</h2>
-          <article class="nb-year" id="y1949">
+          <article class="nb-year" id="y1949" data-q="1949化学熱力学の分野特に極低温における物質の挙動に関する貢献ういりあむじおーくwilliamfgiauque">
             <div class="nb-year-num">1949</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1190,7 +1288,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1949/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1948">
+          <article class="nb-year" id="y1948" data-q="1948電気泳動と吸着分析の研究特に血清たんぱく質の複合的な性質に関する発見うぃるへるむてぃせりうすarnetiselius">
             <div class="nb-year-num">1948</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1200,7 +1298,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1948/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1947">
+          <article class="nb-year" id="y1947" data-q="1947生物学的に重要な植物成分特にあるかろいどの研究ろばーとろびんそんsirrobertrobinson">
             <div class="nb-year-num">1947</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1210,7 +1308,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1947/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1946">
+          <article class="nb-year" id="y1946" data-q="1946酵素が結晶化できることの発見じぇーむずさむなーjamesbsumner酵素とういるすたんぱく質の純粋な状態での調製じょんのーすろっぷjohnhnorthropうぇんでるすたんりーwendellmstanley">
             <div class="nb-year-num">1946</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1224,7 +1322,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1946/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1945">
+          <article class="nb-year" id="y1945" data-q="1945農芸化学と栄養化学における研究と発明特に飼料保存法あるとぅーりゔぃるたねんartturivirtanen">
             <div class="nb-year-num">1945</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1234,7 +1332,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1945/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1944">
+          <article class="nb-year" id="y1944" data-q="1944重い原子核の分裂の発見おっとーはーんottohahn">
             <div class="nb-year-num">1944</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1244,7 +1342,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1944/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1943">
+          <article class="nb-year" id="y1943" data-q="1943化学過程の研究におけるとれーさーとしての同位体の利用げおるくどへゔぇしーgeorgedehevesy">
             <div class="nb-year-num">1943</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1269,7 +1367,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade has-eps" id="d1930" aria-labelledby="d1930-h">
           <h2 class="nb-decade-heading" id="d1930-h">1930年代</h2>
-          <article class="nb-year" id="y1939">
+          <article class="nb-year" id="y1939" data-q="1939性ほるもんに関する研究あどるふぶーてなんとadolfbutenandtぽりめちれん類と高級てるぺんに関する研究れおぽるとるじちかleopoldruzicka">
             <div class="nb-year-num">1939</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1283,7 +1381,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1939/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1938">
+          <article class="nb-year" id="y1938" data-q="1938かろてのいどとびたみんに関する研究りひゃるとくーんrichardkuhn">
             <div class="nb-year-num">1938</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1293,7 +1391,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1938/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1937">
+          <article class="nb-year" id="y1937" data-q="1937炭水化物とびたみんcに関する研究うぉるたーはーすnormanhaworthかろてのいどふらびんびたみんaおよびb2に関する研究ぱうるからーpaulkarrer">
             <div class="nb-year-num">1937</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1307,7 +1405,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1937/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1936">
+          <article class="nb-year" id="y1936" data-q="1936双極子もーめんとと気体中のx線電子線回折の研究を通じた分子構造に関する知見への貢献ぴーたーでばいpeterdebye">
             <div class="nb-year-num">1936</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1317,7 +1415,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1936/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1935">
+          <article class="nb-year" id="y1935" data-q="1935新しい放射性元素の合成ふれでりっくじょりおきゅりーfrédéricjoliotいれーぬじょりおきゅりーirènejoliot-curie">
             <div class="nb-year-num">1935</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1327,7 +1425,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1935/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1934">
+          <article class="nb-year" id="y1934" data-q="1934重水素の発見はろるどゆーりーharoldcurey">
             <div class="nb-year-num">1934</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1341,7 +1439,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
             <div class="nb-year-num">1933</div>
             <div class="nb-year-body"><p class="nb-none">授賞なし</p></div>
           </article>
-          <article class="nb-year" id="y1932">
+          <article class="nb-year" id="y1932" data-q="1932表面化学における発見と研究あーゔぃんぐらんぐみゅあirvinglangmuir">
             <div class="nb-year-num">1932</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1351,7 +1449,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1932/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year has-eps" id="y1931">
+          <article class="nb-year has-eps" id="y1931" data-q="1931化学的高圧法の発明と開発への貢献かーるぼっしゅcarlboschふりーどりっひべるぎうすfriedrichbergius">
             <div class="nb-year-num">1931</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1366,7 +1464,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1931/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1930">
+          <article class="nb-year" id="y1930" data-q="1930へみんとくろろふぃるの構造の研究特にへみんの合成はんすふぃっしゃーhansfischer">
             <div class="nb-year-num">1930</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1379,7 +1477,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1920" aria-labelledby="d1920-h">
           <h2 class="nb-decade-heading" id="d1920-h">1920年代</h2>
-          <article class="nb-year" id="y1929">
+          <article class="nb-year" id="y1929" data-q="1929糖の発酵と発酵酵素に関する研究あーさーはーでんarthurhardenはんすふぉんおいらーけるぴんhansvoneuler-chelpin">
             <div class="nb-year-num">1929</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1389,7 +1487,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1929/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1928">
+          <article class="nb-year" id="y1928" data-q="1928すてろーる類の構造とびたみんとの関連に関する研究あどるふゔぃんだうすadolfwindaus">
             <div class="nb-year-num">1928</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1399,7 +1497,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1928/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1927">
+          <article class="nb-year" id="y1927" data-q="1927胆汁酸とその関連物質の構造に関する研究はいんりっひゔぃーらんとheinrichwieland">
             <div class="nb-year-num">1927</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1409,7 +1507,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1927/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1926">
+          <article class="nb-year" id="y1926" data-q="1926分散系に関する研究ておどーるすゔぇどべりthesvedberg">
             <div class="nb-year-num">1926</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1419,7 +1517,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1926/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1925">
+          <article class="nb-year" id="y1925" data-q="1925ころいど溶液の不均一性の証明と現代ころいど化学の基礎となった研究手法りひゃるとじぐもんでぃrichardzsigmondy">
             <div class="nb-year-num">1925</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1433,7 +1531,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
             <div class="nb-year-num">1924</div>
             <div class="nb-year-body"><p class="nb-none">授賞なし</p></div>
           </article>
-          <article class="nb-year" id="y1923">
+          <article class="nb-year" id="y1923" data-q="1923有機物質の微量分析法の発明ふりっつぷれーぐるfritzpregl">
             <div class="nb-year-num">1923</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1443,7 +1541,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1923/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1922">
+          <article class="nb-year" id="y1922" data-q="1922質量分析器を用いた多数の非放射性元素における同位体の発見と整数則の提唱ふらんしすあすとんfranciswaston">
             <div class="nb-year-num">1922</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1453,7 +1551,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1922/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1921">
+          <article class="nb-year" id="y1921" data-q="1921放射性物質の化学に関する知見への貢献と同位体の起源と性質の研究ふれでりっくそでぃfredericksoddy">
             <div class="nb-year-num">1921</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1463,7 +1561,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1921/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1920">
+          <article class="nb-year" id="y1920" data-q="1920熱化学に関する研究ゔぁるたーねるんすとwalthernernst">
             <div class="nb-year-num">1920</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1480,7 +1578,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
             <div class="nb-year-num">1919</div>
             <div class="nb-year-body"><p class="nb-none">授賞なし</p></div>
           </article>
-          <article class="nb-year has-eps" id="y1918">
+          <article class="nb-year has-eps" id="y1918" data-q="1918元素からのあんもにあの合成ふりっつはーばーfritzhaber">
             <div class="nb-year-num">1918</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1506,7 +1604,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
             <div class="nb-year-num">1916</div>
             <div class="nb-year-body"><p class="nb-none">授賞なし</p></div>
           </article>
-          <article class="nb-year" id="y1915">
+          <article class="nb-year" id="y1915" data-q="1915植物色素特にくろろふぃるの研究りひゃるとゔぃるしゅてったーrichardwillstätter">
             <div class="nb-year-num">1915</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1516,7 +1614,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1915/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1914">
+          <article class="nb-year" id="y1914" data-q="1914多数の化学元素の原子量の精密な決定せおどありちゃーずtheodorewrichards">
             <div class="nb-year-num">1914</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1526,7 +1624,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1914/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1913">
+          <article class="nb-year" id="y1913" data-q="1913分子内の原子の結合に関する研究と特に無機化学における新研究分野の開拓あるふれーとゔぇるなーalfredwerner">
             <div class="nb-year-num">1913</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1536,7 +1634,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1913/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1912">
+          <article class="nb-year" id="y1912" data-q="1912ぐりにゃーる試薬の発見ゔぃくとるぐりにゃーるvictorgrignard微粉状の金属の存在下で有機化合物を水素化する方法ぽーるさばてぃえpaulsabatier">
             <div class="nb-year-num">1912</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1550,7 +1648,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1912/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1911">
+          <article class="nb-year" id="y1911" data-q="1911らじうむとぽろにうむの発見らじうむの単離およびその性質と化合物の研究まりきゅりーmariecurie">
             <div class="nb-year-num">1911</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1560,7 +1658,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1911/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1910">
+          <article class="nb-year" id="y1910" data-q="1910脂環式化合物の分野における先駆的研究による有機化学と化学工業への貢献おっとーゔぁらっはottowallach">
             <div class="nb-year-num">1910</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1573,7 +1671,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
         </section>
         <section class="nb-decade" id="d1900" aria-labelledby="d1900-h">
           <h2 class="nb-decade-heading" id="d1900-h">1900年代</h2>
-          <article class="nb-year" id="y1909">
+          <article class="nb-year" id="y1909" data-q="1909触媒作用に関する研究と化学平衡および反応速度を支配する基本原理の研究ゔぃるへるむおすとゔぁるとwilhelmostwald">
             <div class="nb-year-num">1909</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1583,7 +1681,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1909/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1908">
+          <article class="nb-year" id="y1908" data-q="1908元素の崩壊と放射性物質の化学に関する研究あーねすとらざふぉーどernestrutherford">
             <div class="nb-year-num">1908</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1593,7 +1691,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1908/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1907">
+          <article class="nb-year" id="y1907" data-q="1907生化学的研究と無細胞発酵の発見えどぅあるとぶふなーeduardbuchner">
             <div class="nb-year-num">1907</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1603,7 +1701,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1907/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1906">
+          <article class="nb-year" id="y1906" data-q="1906ふっ素の研究と単離およびもあっさん電気炉の科学研究への導入あんりもあっさんhenrimoissan">
             <div class="nb-year-num">1906</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1613,7 +1711,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1906/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1905">
+          <article class="nb-year" id="y1905" data-q="1905有機染料とひどろ芳香族化合物の研究による有機化学と化学工業の発展への貢献あどるふふぉんばいやーadolfvonbaeyer">
             <div class="nb-year-num">1905</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1623,7 +1721,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1905/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1904">
+          <article class="nb-year" id="y1904" data-q="1904空気中の不活性気体元素の発見と周期表におけるその位置の決定うぃりあむらむぜーsirwilliamramsay">
             <div class="nb-year-num">1904</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1633,7 +1731,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1904/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1903">
+          <article class="nb-year" id="y1903" data-q="1903電離説による化学の発展への貢献すゔぁんてあれにうすsvantearrhenius">
             <div class="nb-year-num">1903</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1643,7 +1741,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1903/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1902">
+          <article class="nb-year" id="y1902" data-q="1902糖類とぷりん類の合成に関する研究えみーるふぃっしゃーemilfischer">
             <div class="nb-year-num">1902</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1653,7 +1751,7 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
               <a href="https://www.nobelprize.org/prizes/chemistry/1902/summary/" class="nb-official" target="_blank" rel="noopener">公式発表（英語）</a>
             </div>
           </article>
-          <article class="nb-year" id="y1901">
+          <article class="nb-year" id="y1901" data-q="1901化学動力学と溶液の浸透圧に関する法則の発見やこぶすへんりくすふぁんとほっふjacobushvan&#x27;thoff">
             <div class="nb-year-num">1901</div>
             <div class="nb-year-body">
               <div class="nb-group">
@@ -1677,6 +1775,13 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
       <div class="footer-top">
         <div class="footer-brand">
           <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
         </div>
         <div class="footer-nav-group">
           <h4>つながる</h4>
@@ -1725,14 +1830,52 @@ body.nb-only-eps .nb-nav-link:not(.has-eps) {
   if (target) target.classList.add('is-target');
 
   var toggle = document.getElementById('nb-only');
-  if (!toggle) return;
+  var search = document.getElementById('nb-search');
+  var result = document.getElementById('nb-result');
+  if (!toggle || !search) return;
+
+  var years = Array.prototype.slice.call(document.querySelectorAll('.nb-year'));
+  var decades = Array.prototype.slice.call(document.querySelectorAll('.nb-decade'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nb-nav-link'));
+
+  // build_features.py の search_key と同じ規則で表記ゆれをそろえる
+  function key(s) {
+    return String(s).normalize('NFKC').toLowerCase()
+      .replace(/[ァ-ヶ]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0x60); })
+      .replace(/[\s・=＝.,、。]/g, '');
+  }
 
   function apply() {
-    document.body.classList.toggle('nb-only-eps', toggle.checked);
+    var q = key(search.value);
+    var only = toggle.checked;
+    var shown = 0;
+    years.forEach(function (y) {
+      var awarded = !y.classList.contains('is-none');
+      var ok = (!q && !only) ||
+        (awarded && (!q || (y.dataset.q || '').indexOf(q) >= 0) &&
+         (!only || y.classList.contains('has-eps')));
+      y.hidden = !ok;
+      if (ok && awarded) shown++;
+    });
+    decades.forEach(function (d) {
+      var any = d.querySelector('.nb-year:not([hidden])');
+      d.hidden = !any;
+      navLinks.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + d.id) a.classList.toggle('is-empty', !any);
+      });
+    });
+    if (q || only) {
+      result.hidden = false;
+      result.textContent = shown ? shown + '件の受賞が見つかりました' : '当てはまる受賞はありません';
+    } else {
+      result.hidden = true;
+      result.textContent = '';
+    }
   }
 
   toggle.addEventListener('change', apply);
-  apply(); // 戻るボタンで戻ったときにチェック状態が残っていても表示を合わせる
+  search.addEventListener('input', apply);
+  apply(); // 戻るボタンで戻ったときに入力やチェックが残っていても表示を合わせる
 })();
 
   </script>
