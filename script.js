@@ -146,6 +146,9 @@ function initLatestEpisodes() {
   const grid = document.getElementById('ep-latest-grid');
   const statCount = document.getElementById('stat-ep-count');
   if (!grid && !statCount) return;
+  // ビルド時（build_episodes.py）にカードと話数が書き込まれていれば、それをそのまま使う。
+  // 読み込み後に並べると、カードが出た瞬間に下の段が押し下げられるため。以下は書き込みが無いときの予備
+  if (grid && grid.querySelector('.ep-latest-card')) return;
 
   fetch('episodes.json')
     .then(r => r.json())
