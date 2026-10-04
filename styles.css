@@ -2174,6 +2174,12 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+/* 特集ページ（周期表・ノーベル化学賞）への入口 */
+.theme-chip--feature {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
 /* ══════════════════════════════════════
    ACCESSIBILITY — フォーカス表示・スキップリンク・動きの抑制
    ══════════════════════════════════════ */

@@ -98,6 +98,48 @@
             border-color: var(--brand);
         }
 
+        /* 特集ページへの入口（周期表・ノーベル化学賞） */
+        .ep-browse {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .ep-browse-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 16px 6px 6px;
+            background: var(--light-surface);
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-pill);
+            color: var(--light-text);
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+        }
+
+        .ep-browse-link:hover {
+            border-color: var(--brand);
+            color: var(--brand);
+        }
+
+        .ep-browse-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 30px;
+            height: 30px;
+            padding: 0 6px;
+            border-radius: var(--radius-pill);
+            background: var(--brand);
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
         /* Tag filter bar */
         .ep-filter-bar {
             display: flex;
@@ -286,6 +328,11 @@
         <div class="container">
             <div class="section-label">ALL EPISODES</div>
             <h1 class="section-heading">全エピソード一覧</h1>
+
+            <nav class="ep-browse" aria-label="特集ページから探す">
+                <a href="/elements/" class="ep-browse-link"><span class="ep-browse-badge">Ni</span>周期表から探す</a>
+                <a href="/nobel-chemistry/" class="ep-browse-link"><span class="ep-browse-badge">賞</span>ノーベル化学賞から探す</a>
+            </nav>
 
             <div class="ep-search-wrap">
                 <input type="search" id="ep-search" class="ep-search"

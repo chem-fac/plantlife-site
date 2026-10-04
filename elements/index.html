@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>周期表から探す | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/elements/" />
+  <meta name="description" content="番組で取り上げた元素に色を付けた周期表です。マスを選ぶと、原子番号・原子量・分類と、その元素を取り上げた回が表示されます。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="周期表から探す | プラントライフ">
+  <meta property="og:description" content="番組で取り上げた元素に色を付けた周期表です。マスを選ぶと、原子番号・原子量・分類と、その元素を取り上げた回が表示されます。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/elements/">
+  <meta property="og:image" content="https://plantlife.chem-fac.com/images/ogp-default.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://image.listen.style">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/article.css">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "周期表から探す | プラントライフ", "description": "番組で取り上げた元素に色を付けた周期表です。マスを選ぶと、原子番号・原子量・分類と、その元素を取り上げた回が表示されます。", "url": "https://plantlife.chem-fac.com/elements/", "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "周期表から探す", "item": "https://plantlife.chem-fac.com/elements/"}]}</script>
+  <style>
+/* 特集ページ共通：回へのリンク一覧（周期表・ノーベル化学賞） */
+.fx-eps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fx-ep-link {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fx-ep-link img {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.fx-ep-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fx-ep-role {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--brand);
+}
+
+.fx-ep-title {
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--light-text);
+}
+
+.fx-ep-link:hover .fx-ep-title {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.fx-ep-note {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--light-secondary);
+}
+
+.feature-hero.pt-hero,
+.feature-hero.nb-hero {
+  margin-bottom: 28px;
+}
+/* 周期表から探す */
+.pt-container {
+  /* 色分けの色。隣り合う区分どうしは色覚の違いがあっても見分けられる組み合わせにしてある */
+  --pt-gas: #86b6ef;
+  --pt-liquid: #1c5cab;
+  --pt-solid: #e6dfd3;
+  --pt-metal: #c9d4e0;
+  --pt-nonmetal: #f2c14e;
+  --pt-typical: #86b6ef;
+  --pt-transition: #f5b16f;
+  --pt-alkali: #f5a07a;
+  --pt-alkaline: #86b6ef;
+  --pt-halogen: #6fd3a9;
+  --pt-noble: #b0a7ea;
+  --pt-lanthanoid: #f2a9c4;
+  --pt-actinoid: #f5cc66;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pt-count {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  color: var(--light-secondary);
+}
+
+.pt-count strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--brand);
+  margin: 0 2px 0 6px;
+}
+
+/* 色分けの切り替えボタン */
+.pt-views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pt-view-btn {
+  padding: 7px 16px;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-pill);
+  background: var(--light-surface);
+  color: var(--light-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.pt-view-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.pt-view-btn[aria-pressed="true"] {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.pt-view-btn:focus-visible {
+  outline: 3px solid var(--accent-warm);
+  outline-offset: 2px;
+}
+
+.pt-legends {
+  margin-bottom: 6px;
+}
+
+.pt-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.82rem;
+  color: var(--light-secondary);
+}
+
+.pt-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pt-view-note {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--light-muted);
+}
+
+.pt-key {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--light-border);
+  background: var(--light-surface);
+}
+
+.pt-key--main { background: var(--brand); border-color: var(--brand); }
+.pt-key--related { background: var(--brand-light); border-color: #a8cfb9; }
+.pt-key--gas { background: var(--pt-gas); border-color: var(--pt-gas); }
+.pt-key--liquid { background: var(--pt-liquid); border-color: var(--pt-liquid); }
+.pt-key--solid { background: var(--pt-solid); border-color: #d3c9b8; }
+.pt-key--metal { background: var(--pt-metal); border-color: #b3c0cf; }
+.pt-key--nonmetal { background: var(--pt-nonmetal); border-color: var(--pt-nonmetal); }
+.pt-key--typical { background: var(--pt-typical); border-color: var(--pt-typical); }
+.pt-key--transition { background: var(--pt-transition); border-color: var(--pt-transition); }
+.pt-key--alkali { background: var(--pt-alkali); border-color: var(--pt-alkali); }
+.pt-key--alkaline { background: var(--pt-alkaline); border-color: var(--pt-alkaline); }
+.pt-key--halogen { background: var(--pt-halogen); border-color: var(--pt-halogen); }
+.pt-key--noble { background: var(--pt-noble); border-color: var(--pt-noble); }
+.pt-key--lanthanoid { background: var(--pt-lanthanoid); border-color: var(--pt-lanthanoid); }
+.pt-key--actinoid { background: var(--pt-actinoid); border-color: var(--pt-actinoid); }
+.pt-key--unknown { border-style: dashed; border-color: #b9c7be; }
+
+.pt-key-dot {
+  width: 9px;
+  height: 9px;
+  margin: 0 3px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+.pt-axis-note {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  color: var(--light-muted);
+}
+
+.pt-scroll-hint {
+  display: none;
+}
+
+/* 表本体：1列目＝周期の番号、1行目＝族の番号、9行目＝すき間、10・11行目＝ランタノイド・アクチノイド */
+.pt-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -24px;
+  padding: 4px 24px 12px;
+}
+
+.pt-grid {
+  --cell-h: 64px;
+  display: grid;
+  grid-template-columns: 22px repeat(18, minmax(0, 1fr));
+  grid-template-rows: 22px repeat(7, var(--cell-h)) 14px repeat(2, var(--cell-h));
+  gap: 3px;
+  min-width: 860px;
+}
+
+.pt-glabel,
+.pt-plabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--light-muted);
+}
+
+.pt-glabel.is-axis,
+.pt-plabel.is-axis {
+  color: var(--accent-warm);
+  font-weight: 700;
+}
+
+.pt-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: 0;
+  padding: 10px 2px 3px;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-sm);
+  background: var(--light-surface);
+  color: var(--light-muted);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.pt-z {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.pt-sym {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--light-secondary);
+}
+
+.pt-name {
+  max-width: 100%;
+  margin-top: 2px;
+  font-size: 0.56rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pt-cell:hover {
+  border-color: var(--brand);
+}
+
+.pt-cell:focus-visible {
+  outline: 3px solid var(--accent-warm);
+  outline-offset: 1px;
+}
+
+/* 色分け：番組で取り上げた元素（初期表示） */
+.view-episodes .pt-cell.is-main {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.view-episodes .pt-cell.is-main .pt-sym {
+  color: #fff;
+}
+
+.view-episodes .pt-cell.is-related {
+  background: var(--brand-light);
+  border-color: #a8cfb9;
+  color: var(--brand-dark);
+}
+
+.view-episodes .pt-cell.is-related .pt-sym {
+  color: var(--brand-dark);
+}
+
+/* ほかの色分けでは、文字を濃くし、番組で取り上げた元素に点を付ける */
+.pt-grid:not(.view-episodes) .pt-cell {
+  color: #3b4a42;
+}
+
+.pt-grid:not(.view-episodes) .pt-sym {
+  color: #1f2a24;
+}
+
+.pt-grid:not(.view-episodes) .pt-cell.is-main::after,
+.pt-grid:not(.view-episodes) .pt-cell.is-related::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 0 1.5px #fff;
+}
+
+/* 色分け：常温での状態 */
+.view-state .pt-cell[data-state="gas"] { background: var(--pt-gas); border-color: var(--pt-gas); }
+.view-state .pt-cell[data-state="liquid"] { background: var(--pt-liquid); border-color: var(--pt-liquid); color: rgba(255, 255, 255, 0.88); }
+.view-state .pt-cell[data-state="liquid"] .pt-sym { color: #fff; }
+.view-state .pt-cell[data-state="solid"] { background: var(--pt-solid); border-color: #d3c9b8; }
+
+/* 色分け：金属・非金属 */
+.view-metal .pt-cell[data-metal="metal"] { background: var(--pt-metal); border-color: #b3c0cf; }
+.view-metal .pt-cell[data-metal="nonmetal"] { background: var(--pt-nonmetal); border-color: var(--pt-nonmetal); }
+
+/* 色分け：典型・遷移 */
+.view-kind .pt-cell[data-kind="typical"] { background: var(--pt-typical); border-color: var(--pt-typical); }
+.view-kind .pt-cell[data-kind="transition"] { background: var(--pt-transition); border-color: var(--pt-transition); }
+
+/* 色分け：元素のグループ（名前の付いたグループだけ） */
+.view-family .pt-cell[data-family="alkali"] { background: var(--pt-alkali); border-color: var(--pt-alkali); }
+.view-family .pt-cell[data-family="alkaline"] { background: var(--pt-alkaline); border-color: var(--pt-alkaline); }
+.view-family .pt-cell[data-family="halogen"] { background: var(--pt-halogen); border-color: var(--pt-halogen); }
+.view-family .pt-cell[data-family="noble"] { background: var(--pt-noble); border-color: var(--pt-noble); }
+.view-family .pt-cell[data-family="lanthanoid"] { background: var(--pt-lanthanoid); border-color: var(--pt-lanthanoid); }
+.view-family .pt-cell[data-family="actinoid"] { background: var(--pt-actinoid); border-color: var(--pt-actinoid); }
+
+/* 区分が「不明」「区別なし」の元素は点線の枠 */
+.view-state .pt-cell[data-state="unknown"],
+.view-metal .pt-cell[data-metal="unknown"] {
+  border-style: dashed;
+  border-color: #b9c7be;
+}
+
+/* 選んだ元素と同じ周期（横）・同じ族（縦） */
+.view-episodes .pt-cell.is-axis:not(.is-main):not(.is-related),
+.pt-ph.is-axis {
+  background: #fff3e8;
+}
+
+.pt-grid:not(.view-episodes) .pt-cell.is-axis {
+  box-shadow: inset 0 0 0 2px rgba(230, 81, 0, 0.5);
+}
+
+.pt-grid:not(.view-episodes) .pt-cell.is-current {
+  box-shadow: 0 0 0 3px var(--accent-warm);
+}
+
+.pt-cell.is-current {
+  z-index: 1;
+  box-shadow: 0 0 0 3px var(--accent-warm);
+}
+
+.pt-ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px dashed #c9d6cd;
+  border-radius: var(--radius-sm);
+  font-size: 0.56rem;
+  line-height: 1.2;
+  color: var(--light-muted);
+  text-align: center;
+}
+
+.pt-ph-z {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+}
+
+.pt-flabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 0.7rem;
+  color: var(--light-muted);
+}
+
+/* 説明欄：広い画面は表の上のすき間（3〜12族×第1〜3周期）、狭い画面は表の下 */
+.pt-panel {
+  grid-column: 4 / 14;
+  grid-row: 2 / 5;
+  overflow: auto;
+  margin: 0 8px 8px;
+  padding: 8px 16px;
+  background: var(--light-surface);
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.pt-panel.is-below {
+  margin: 14px 0 0;
+}
+
+.pt-panel-hint {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  margin: 0;
+  color: var(--light-muted);
+}
+
+.pt-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.pt-panel-sym,
+.pt-card-sym {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--light-border);
+  background: var(--light-surface);
+  color: var(--light-secondary);
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.pt-panel-sym {
+  width: 48px;
+  height: 48px;
+  padding-top: 6px;
+  font-size: 1.3rem;
+}
+
+.pt-panel-sym.is-main,
+.pt-card-sym.is-main {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.pt-panel-sym.is-related,
+.pt-card-sym.is-related {
+  background: var(--brand-light);
+  border-color: #a8cfb9;
+  color: var(--brand-dark);
+}
+
+.pt-panel-z,
+.pt-card-z {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.pt-panel-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--light-text);
+}
+
+.pt-panel-zw {
+  margin-left: 10px;
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--light-secondary);
+}
+
+.pt-panel-meta {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: var(--light-secondary);
+}
+
+.pt-panel-note {
+  margin: 2px 0 6px;
+  color: var(--light-text);
+}
+
+.pt-panel-empty {
+  margin: 4px 0 0;
+  color: var(--light-muted);
+}
+
+.pt-panel .fx-eps {
+  gap: 6px;
+}
+
+.pt-panel .fx-ep-note {
+  font-size: 0.76rem;
+}
+
+.pt-panel-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 表の中のすき間に置くときは、説明を2行・回を1行ずつに詰める（全文は下の一覧） */
+.pt-grid .pt-panel-note {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pt-grid .pt-panel .fx-ep-text {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.pt-grid .pt-panel .fx-ep-role {
+  flex: none;
+}
+
+.pt-grid .pt-panel .fx-ep-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pt-grid .pt-panel .fx-ep-note {
+  display: none;
+}
+
+.pt-grid .pt-panel-more {
+  margin-top: 2px;
+}
+
+.pt-grid .pt-panel .fx-ep:nth-child(n+3),
+.pt-grid .pt-more-below,
+.pt-panel.is-below .pt-more-gap {
+  display: none;
+}
+
+.pt-panel.is-below .pt-more-below {
+  display: inline;
+}
+
+/* 番組で取り上げた元素（静的な一覧） */
+.pt-list {
+  margin-top: 56px;
+}
+
+.pt-list-heading {
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--light-text);
+}
+
+.pt-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.pt-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  background: var(--light-surface);
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
+.pt-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pt-card-sym {
+  width: 56px;
+  height: 56px;
+  padding-top: 6px;
+  font-size: 1.45rem;
+}
+
+.pt-card-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--light-text);
+}
+
+.pt-card-meta {
+  margin: 2px 0 0;
+  font-size: 0.78rem;
+  color: var(--light-secondary);
+}
+
+.pt-card-note {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--light-text);
+}
+
+.pt-card-locate {
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pt-more {
+  margin-top: 56px;
+}
+
+.pt-more p + p {
+  margin-top: 8px;
+}
+
+@media (max-width: 899px) {
+  .pt-grid {
+    --cell-h: 46px;
+    min-width: 660px;
+    grid-template-columns: 18px repeat(18, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .pt-name {
+    display: none;
+  }
+
+  .pt-cell {
+    padding: 8px 1px 2px;
+  }
+
+  .pt-sym {
+    font-size: 0.86rem;
+  }
+
+  .pt-z {
+    top: 2px;
+    left: 3px;
+    font-size: 0.5rem;
+  }
+
+  .pt-ph-name {
+    display: none;
+  }
+
+  .pt-ph-z {
+    font-size: 0.48rem;
+  }
+
+  .pt-flabel {
+    font-size: 0.6rem;
+    padding-right: 4px;
+  }
+
+  .pt-scroll-hint {
+    display: block;
+    margin: 0 0 6px;
+    font-size: 0.75rem;
+    color: var(--light-muted);
+  }
+}
+
+@media (max-width: 768px) {
+  .pt-container {
+    padding: 0 16px;
+  }
+
+  /* 切り替えボタンは折り返さず横に流す */
+  .pt-views {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -16px 12px;
+    padding: 0 16px 4px;
+    scrollbar-width: none;
+  }
+
+  .pt-views::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pt-view-btn {
+    flex: none;
+    padding: 6px 13px;
+    font-size: 0.8rem;
+  }
+
+  .pt-scroll {
+    margin: 0 -16px;
+    padding: 4px 16px 10px;
+  }
+
+  .pt-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pt-cell {
+    transition: none;
+  }
+}
+
+  </style>
+</head>
+<body class="article-page pt-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="article-main" id="main-content">
+    <div class="pt-container">
+      <header class="feature-hero pt-hero">
+        <p class="feature-eyebrow">プラントライフの特集</p>
+        <h1 class="feature-title">周期表から探す</h1>
+        <p class="feature-lead">番組で取り上げた元素に色を付けた周期表です。マスにカーソルを合わせる（スマホはタップする）と、基本データと、その元素を取り上げた回が表示されます。ボタンで、常温での状態や金属・非金属などの色分けにも切り替えられます。元素の回を聴きながら、位置を確かめるのにも使えます。</p>
+      </header>
+
+      <p class="pt-count">番組で取り上げた元素 <strong>18</strong><span>／118</span></p>
+      <div class="pt-views" role="group" aria-label="色分けの切り替え"><button type="button" class="pt-view-btn" data-view="episodes" aria-pressed="true">番組で取り上げた元素</button><button type="button" class="pt-view-btn" data-view="state" aria-pressed="false">常温での状態</button><button type="button" class="pt-view-btn" data-view="metal" aria-pressed="false">金属・非金属</button><button type="button" class="pt-view-btn" data-view="kind" aria-pressed="false">典型・遷移</button><button type="button" class="pt-view-btn" data-view="family" aria-pressed="false">元素のグループ</button></div>
+      <div class="pt-legends">
+        <div class="pt-legend-box" data-view-panel="episodes">
+          <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--main"></span>中心に取り上げた回がある（4）</li><li><span class="pt-key pt-key--related"></span>関連する回がある（14）</li><li><span class="pt-key pt-key--none"></span>まだ取り上げていない（100）</li></ul>
+        </div>
+        <div class="pt-legend-box" data-view-panel="state" hidden>
+          <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--gas"></span>気体（11）</li><li><span class="pt-key pt-key--liquid"></span>液体（2）</li><li><span class="pt-key pt-key--solid"></span>固体（85）</li><li><span class="pt-key pt-key--unknown"></span>不明（20）</li><li class="pt-legend-ep"><span class="pt-key-dot"></span>番組で取り上げた元素</li></ul>
+          <p class="pt-view-note">単体が常温・常圧（25℃、1.013×10⁵ Pa）でどの状態かを示しています。99番以降は性質がよく分かっていないため「不明」にしています。</p>
+        </div>
+        <div class="pt-legend-box" data-view-panel="metal" hidden>
+          <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--metal"></span>金属元素（76）</li><li><span class="pt-key pt-key--nonmetal"></span>非金属元素（22）</li><li><span class="pt-key pt-key--unknown"></span>区別なし（20）</li><li class="pt-legend-ep"><span class="pt-key-dot"></span>番組で取り上げた元素</li></ul>
+          <p class="pt-view-note">高校の教科書と同じく、金属元素と非金属元素の2つに分けています（半金属という区分は使っていません）。99番以降は性質がよく分かっていないため区別していません。</p>
+        </div>
+        <div class="pt-legend-box" data-view-panel="kind" hidden>
+          <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--typical"></span>典型元素（50）</li><li><span class="pt-key pt-key--transition"></span>遷移元素（68）</li><li class="pt-legend-ep"><span class="pt-key-dot"></span>番組で取り上げた元素</li></ul>
+          <p class="pt-view-note">3〜12族を遷移元素、それ以外を典型元素としています（12族を遷移元素に含めない考え方もあります）。</p>
+        </div>
+        <div class="pt-legend-box" data-view-panel="family" hidden>
+          <ul class="pt-legend" aria-label="色の意味"><li><span class="pt-key pt-key--alkali"></span>アルカリ金属（6）</li><li><span class="pt-key pt-key--alkaline"></span>アルカリ土類金属（6）</li><li><span class="pt-key pt-key--halogen"></span>ハロゲン（5）</li><li><span class="pt-key pt-key--noble"></span>貴ガス（6）</li><li><span class="pt-key pt-key--lanthanoid"></span>ランタノイド（15）</li><li><span class="pt-key pt-key--actinoid"></span>アクチノイド（15）</li><li class="pt-legend-ep"><span class="pt-key-dot"></span>番組で取り上げた元素</li></ul>
+          <p class="pt-view-note">名前の付いたグループだけに色を付けています。</p>
+        </div>
+      </div>
+      <p class="pt-axis-note">上の数字は族（縦の列）、左の数字は周期（横の行）です。</p>
+      <p class="pt-scroll-hint">表は横にスクロールできます。</p>
+
+      <div class="pt-scroll" id="pt-scroll">
+        <div class="pt-grid view-episodes" id="pt-grid">
+          <div class="pt-glabel" style="grid-column:2;grid-row:1" data-g="1">1</div>
+          <div class="pt-glabel" style="grid-column:3;grid-row:1" data-g="2">2</div>
+          <div class="pt-glabel" style="grid-column:4;grid-row:1" data-g="3">3</div>
+          <div class="pt-glabel" style="grid-column:5;grid-row:1" data-g="4">4</div>
+          <div class="pt-glabel" style="grid-column:6;grid-row:1" data-g="5">5</div>
+          <div class="pt-glabel" style="grid-column:7;grid-row:1" data-g="6">6</div>
+          <div class="pt-glabel" style="grid-column:8;grid-row:1" data-g="7">7</div>
+          <div class="pt-glabel" style="grid-column:9;grid-row:1" data-g="8">8</div>
+          <div class="pt-glabel" style="grid-column:10;grid-row:1" data-g="9">9</div>
+          <div class="pt-glabel" style="grid-column:11;grid-row:1" data-g="10">10</div>
+          <div class="pt-glabel" style="grid-column:12;grid-row:1" data-g="11">11</div>
+          <div class="pt-glabel" style="grid-column:13;grid-row:1" data-g="12">12</div>
+          <div class="pt-glabel" style="grid-column:14;grid-row:1" data-g="13">13</div>
+          <div class="pt-glabel" style="grid-column:15;grid-row:1" data-g="14">14</div>
+          <div class="pt-glabel" style="grid-column:16;grid-row:1" data-g="15">15</div>
+          <div class="pt-glabel" style="grid-column:17;grid-row:1" data-g="16">16</div>
+          <div class="pt-glabel" style="grid-column:18;grid-row:1" data-g="17">17</div>
+          <div class="pt-glabel" style="grid-column:19;grid-row:1" data-g="18">18</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:2" data-p="1">1</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:3" data-p="2">2</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:4" data-p="3">3</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:5" data-p="4">4</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:6" data-p="5">5</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:7" data-p="6">6</div>
+          <div class="pt-plabel" style="grid-column:1;grid-row:8" data-p="7">7</div>
+          <div class="pt-ph" style="grid-column:4;grid-row:7" data-g="3" data-p="6"><span class="pt-ph-z">57–71</span><span class="pt-ph-name">ランタノイド</span></div>
+          <div class="pt-ph" style="grid-column:4;grid-row:8" data-g="3" data-p="7"><span class="pt-ph-z">89–103</span><span class="pt-ph-name">アクチノイド</span></div>
+          <div class="pt-flabel" style="grid-column:1 / 4;grid-row:10">ランタノイド</div>
+          <div class="pt-flabel" style="grid-column:1 / 4;grid-row:11">アクチノイド</div>
+          <button type="button" class="pt-cell is-main" style="grid-column:2;grid-row:2" data-s="H" data-g="1" data-p="1" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="1 水素 H、中心の回あり"><span class="pt-z">1</span><span class="pt-sym">H</span><span class="pt-name">水素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:2" data-s="He" data-g="18" data-p="1" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="2 ヘリウム He"><span class="pt-z">2</span><span class="pt-sym">He</span><span class="pt-name">ヘリウム</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:2;grid-row:3" data-s="Li" data-g="1" data-p="2" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="3 リチウム Li、中心の回あり"><span class="pt-z">3</span><span class="pt-sym">Li</span><span class="pt-name">リチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:3" data-s="Be" data-g="2" data-p="2" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="4 ベリリウム Be"><span class="pt-z">4</span><span class="pt-sym">Be</span><span class="pt-name">ベリリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:3" data-s="B" data-g="13" data-p="2" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="5 ホウ素 B"><span class="pt-z">5</span><span class="pt-sym">B</span><span class="pt-name">ホウ素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:15;grid-row:3" data-s="C" data-g="14" data-p="2" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="6 炭素 C、関連する回あり"><span class="pt-z">6</span><span class="pt-sym">C</span><span class="pt-name">炭素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:16;grid-row:3" data-s="N" data-g="15" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="7 窒素 N、関連する回あり"><span class="pt-z">7</span><span class="pt-sym">N</span><span class="pt-name">窒素</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:17;grid-row:3" data-s="O" data-g="16" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="8 酸素 O、中心の回あり"><span class="pt-z">8</span><span class="pt-sym">O</span><span class="pt-name">酸素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:18;grid-row:3" data-s="F" data-g="17" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="9 フッ素 F、関連する回あり"><span class="pt-z">9</span><span class="pt-sym">F</span><span class="pt-name">フッ素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:3" data-s="Ne" data-g="18" data-p="2" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="10 ネオン Ne"><span class="pt-z">10</span><span class="pt-sym">Ne</span><span class="pt-name">ネオン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:2;grid-row:4" data-s="Na" data-g="1" data-p="3" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="11 ナトリウム Na、関連する回あり"><span class="pt-z">11</span><span class="pt-sym">Na</span><span class="pt-name">ナトリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:4" data-s="Mg" data-g="2" data-p="3" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="12 マグネシウム Mg"><span class="pt-z">12</span><span class="pt-sym">Mg</span><span class="pt-name">マグネシウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:14;grid-row:4" data-s="Al" data-g="13" data-p="3" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="13 アルミニウム Al、関連する回あり"><span class="pt-z">13</span><span class="pt-sym">Al</span><span class="pt-name">アルミニウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:15;grid-row:4" data-s="Si" data-g="14" data-p="3" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="14 ケイ素 Si、関連する回あり"><span class="pt-z">14</span><span class="pt-sym">Si</span><span class="pt-name">ケイ素</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:16;grid-row:4" data-s="P" data-g="15" data-p="3" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="15 リン P、関連する回あり"><span class="pt-z">15</span><span class="pt-sym">P</span><span class="pt-name">リン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:17;grid-row:4" data-s="S" data-g="16" data-p="3" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="16 硫黄 S、関連する回あり"><span class="pt-z">16</span><span class="pt-sym">S</span><span class="pt-name">硫黄</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:18;grid-row:4" data-s="Cl" data-g="17" data-p="3" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="17 塩素 Cl、関連する回あり"><span class="pt-z">17</span><span class="pt-sym">Cl</span><span class="pt-name">塩素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:4" data-s="Ar" data-g="18" data-p="3" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="18 アルゴン Ar"><span class="pt-z">18</span><span class="pt-sym">Ar</span><span class="pt-name">アルゴン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:2;grid-row:5" data-s="K" data-g="1" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="19 カリウム K、関連する回あり"><span class="pt-z">19</span><span class="pt-sym">K</span><span class="pt-name">カリウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:3;grid-row:5" data-s="Ca" data-g="2" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="20 カルシウム Ca、関連する回あり"><span class="pt-z">20</span><span class="pt-sym">Ca</span><span class="pt-name">カルシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:5" data-s="Sc" data-g="3" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="21 スカンジウム Sc"><span class="pt-z">21</span><span class="pt-sym">Sc</span><span class="pt-name">スカンジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:5" data-s="Ti" data-g="4" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="22 チタン Ti"><span class="pt-z">22</span><span class="pt-sym">Ti</span><span class="pt-name">チタン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:5" data-s="V" data-g="5" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="23 バナジウム V"><span class="pt-z">23</span><span class="pt-sym">V</span><span class="pt-name">バナジウム</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:7;grid-row:5" data-s="Cr" data-g="6" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="24 クロム Cr、関連する回あり"><span class="pt-z">24</span><span class="pt-sym">Cr</span><span class="pt-name">クロム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:5" data-s="Mn" data-g="7" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="25 マンガン Mn"><span class="pt-z">25</span><span class="pt-sym">Mn</span><span class="pt-name">マンガン</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:9;grid-row:5" data-s="Fe" data-g="8" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="26 鉄 Fe、関連する回あり"><span class="pt-z">26</span><span class="pt-sym">Fe</span><span class="pt-name">鉄</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:5" data-s="Co" data-g="9" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="27 コバルト Co"><span class="pt-z">27</span><span class="pt-sym">Co</span><span class="pt-name">コバルト</span></button>
+          <button type="button" class="pt-cell is-main" style="grid-column:11;grid-row:5" data-s="Ni" data-g="10" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="28 ニッケル Ni、中心の回あり"><span class="pt-z">28</span><span class="pt-sym">Ni</span><span class="pt-name">ニッケル</span></button>
+          <button type="button" class="pt-cell is-related" style="grid-column:12;grid-row:5" data-s="Cu" data-g="11" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="29 銅 Cu、関連する回あり"><span class="pt-z">29</span><span class="pt-sym">Cu</span><span class="pt-name">銅</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:5" data-s="Zn" data-g="12" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="30 亜鉛 Zn"><span class="pt-z">30</span><span class="pt-sym">Zn</span><span class="pt-name">亜鉛</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:5" data-s="Ga" data-g="13" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="31 ガリウム Ga"><span class="pt-z">31</span><span class="pt-sym">Ga</span><span class="pt-name">ガリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:5" data-s="Ge" data-g="14" data-p="4" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="32 ゲルマニウム Ge"><span class="pt-z">32</span><span class="pt-sym">Ge</span><span class="pt-name">ゲルマニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:5" data-s="As" data-g="15" data-p="4" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="33 ヒ素 As"><span class="pt-z">33</span><span class="pt-sym">As</span><span class="pt-name">ヒ素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:5" data-s="Se" data-g="16" data-p="4" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="34 セレン Se"><span class="pt-z">34</span><span class="pt-sym">Se</span><span class="pt-name">セレン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:5" data-s="Br" data-g="17" data-p="4" data-f="" data-state="liquid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="35 臭素 Br"><span class="pt-z">35</span><span class="pt-sym">Br</span><span class="pt-name">臭素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:5" data-s="Kr" data-g="18" data-p="4" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="36 クリプトン Kr"><span class="pt-z">36</span><span class="pt-sym">Kr</span><span class="pt-name">クリプトン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:2;grid-row:6" data-s="Rb" data-g="1" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="37 ルビジウム Rb"><span class="pt-z">37</span><span class="pt-sym">Rb</span><span class="pt-name">ルビジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:6" data-s="Sr" data-g="2" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="38 ストロンチウム Sr"><span class="pt-z">38</span><span class="pt-sym">Sr</span><span class="pt-name">ストロンチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:6" data-s="Y" data-g="3" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="39 イットリウム Y"><span class="pt-z">39</span><span class="pt-sym">Y</span><span class="pt-name">イットリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:6" data-s="Zr" data-g="4" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="40 ジルコニウム Zr"><span class="pt-z">40</span><span class="pt-sym">Zr</span><span class="pt-name">ジルコニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:6" data-s="Nb" data-g="5" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="41 ニオブ Nb"><span class="pt-z">41</span><span class="pt-sym">Nb</span><span class="pt-name">ニオブ</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:6" data-s="Mo" data-g="6" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="42 モリブデン Mo"><span class="pt-z">42</span><span class="pt-sym">Mo</span><span class="pt-name">モリブデン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:6" data-s="Tc" data-g="7" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="43 テクネチウム Tc"><span class="pt-z">43</span><span class="pt-sym">Tc</span><span class="pt-name">テクネチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:6" data-s="Ru" data-g="8" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="44 ルテニウム Ru"><span class="pt-z">44</span><span class="pt-sym">Ru</span><span class="pt-name">ルテニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:6" data-s="Rh" data-g="9" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="45 ロジウム Rh"><span class="pt-z">45</span><span class="pt-sym">Rh</span><span class="pt-name">ロジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:6" data-s="Pd" data-g="10" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="46 パラジウム Pd"><span class="pt-z">46</span><span class="pt-sym">Pd</span><span class="pt-name">パラジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:6" data-s="Ag" data-g="11" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="47 銀 Ag"><span class="pt-z">47</span><span class="pt-sym">Ag</span><span class="pt-name">銀</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:6" data-s="Cd" data-g="12" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="48 カドミウム Cd"><span class="pt-z">48</span><span class="pt-sym">Cd</span><span class="pt-name">カドミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:6" data-s="In" data-g="13" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="49 インジウム In"><span class="pt-z">49</span><span class="pt-sym">In</span><span class="pt-name">インジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:6" data-s="Sn" data-g="14" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="50 スズ Sn"><span class="pt-z">50</span><span class="pt-sym">Sn</span><span class="pt-name">スズ</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:6" data-s="Sb" data-g="15" data-p="5" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="51 アンチモン Sb"><span class="pt-z">51</span><span class="pt-sym">Sb</span><span class="pt-name">アンチモン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:6" data-s="Te" data-g="16" data-p="5" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="" aria-pressed="false" aria-label="52 テルル Te"><span class="pt-z">52</span><span class="pt-sym">Te</span><span class="pt-name">テルル</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:6" data-s="I" data-g="17" data-p="5" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="53 ヨウ素 I"><span class="pt-z">53</span><span class="pt-sym">I</span><span class="pt-name">ヨウ素</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:6" data-s="Xe" data-g="18" data-p="5" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="54 キセノン Xe"><span class="pt-z">54</span><span class="pt-sym">Xe</span><span class="pt-name">キセノン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:2;grid-row:7" data-s="Cs" data-g="1" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="55 セシウム Cs"><span class="pt-z">55</span><span class="pt-sym">Cs</span><span class="pt-name">セシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:7" data-s="Ba" data-g="2" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="56 バリウム Ba"><span class="pt-z">56</span><span class="pt-sym">Ba</span><span class="pt-name">バリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:10" data-s="La" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="57 ランタン La"><span class="pt-z">57</span><span class="pt-sym">La</span><span class="pt-name">ランタン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:10" data-s="Ce" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="58 セリウム Ce"><span class="pt-z">58</span><span class="pt-sym">Ce</span><span class="pt-name">セリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:10" data-s="Pr" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="59 プラセオジム Pr"><span class="pt-z">59</span><span class="pt-sym">Pr</span><span class="pt-name">プラセオジム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:10" data-s="Nd" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="60 ネオジム Nd"><span class="pt-z">60</span><span class="pt-sym">Nd</span><span class="pt-name">ネオジム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:10" data-s="Pm" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="61 プロメチウム Pm"><span class="pt-z">61</span><span class="pt-sym">Pm</span><span class="pt-name">プロメチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:10" data-s="Sm" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="62 サマリウム Sm"><span class="pt-z">62</span><span class="pt-sym">Sm</span><span class="pt-name">サマリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:10" data-s="Eu" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="63 ユウロピウム Eu"><span class="pt-z">63</span><span class="pt-sym">Eu</span><span class="pt-name">ユウロピウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:10" data-s="Gd" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="64 ガドリニウム Gd"><span class="pt-z">64</span><span class="pt-sym">Gd</span><span class="pt-name">ガドリニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:10" data-s="Tb" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="65 テルビウム Tb"><span class="pt-z">65</span><span class="pt-sym">Tb</span><span class="pt-name">テルビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:10" data-s="Dy" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="66 ジスプロシウム Dy"><span class="pt-z">66</span><span class="pt-sym">Dy</span><span class="pt-name">ジスプロシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:10" data-s="Ho" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="67 ホルミウム Ho"><span class="pt-z">67</span><span class="pt-sym">Ho</span><span class="pt-name">ホルミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:10" data-s="Er" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="68 エルビウム Er"><span class="pt-z">68</span><span class="pt-sym">Er</span><span class="pt-name">エルビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:10" data-s="Tm" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="69 ツリウム Tm"><span class="pt-z">69</span><span class="pt-sym">Tm</span><span class="pt-name">ツリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:10" data-s="Yb" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="70 イッテルビウム Yb"><span class="pt-z">70</span><span class="pt-sym">Yb</span><span class="pt-name">イッテルビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:10" data-s="Lu" data-g="3" data-p="6" data-f="lanthanoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="lanthanoid" aria-pressed="false" aria-label="71 ルテチウム Lu"><span class="pt-z">71</span><span class="pt-sym">Lu</span><span class="pt-name">ルテチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:7" data-s="Hf" data-g="4" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="72 ハフニウム Hf"><span class="pt-z">72</span><span class="pt-sym">Hf</span><span class="pt-name">ハフニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:7" data-s="Ta" data-g="5" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="73 タンタル Ta"><span class="pt-z">73</span><span class="pt-sym">Ta</span><span class="pt-name">タンタル</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:7" data-s="W" data-g="6" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="74 タングステン W"><span class="pt-z">74</span><span class="pt-sym">W</span><span class="pt-name">タングステン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:7" data-s="Re" data-g="7" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="75 レニウム Re"><span class="pt-z">75</span><span class="pt-sym">Re</span><span class="pt-name">レニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:7" data-s="Os" data-g="8" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="76 オスミウム Os"><span class="pt-z">76</span><span class="pt-sym">Os</span><span class="pt-name">オスミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:7" data-s="Ir" data-g="9" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="77 イリジウム Ir"><span class="pt-z">77</span><span class="pt-sym">Ir</span><span class="pt-name">イリジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:7" data-s="Pt" data-g="10" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="78 白金 Pt"><span class="pt-z">78</span><span class="pt-sym">Pt</span><span class="pt-name">白金</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:7" data-s="Au" data-g="11" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="79 金 Au"><span class="pt-z">79</span><span class="pt-sym">Au</span><span class="pt-name">金</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:7" data-s="Hg" data-g="12" data-p="6" data-f="" data-state="liquid" data-metal="metal" data-kind="transition" data-family="" aria-pressed="false" aria-label="80 水銀 Hg"><span class="pt-z">80</span><span class="pt-sym">Hg</span><span class="pt-name">水銀</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:7" data-s="Tl" data-g="13" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="81 タリウム Tl"><span class="pt-z">81</span><span class="pt-sym">Tl</span><span class="pt-name">タリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:7" data-s="Pb" data-g="14" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="82 鉛 Pb"><span class="pt-z">82</span><span class="pt-sym">Pb</span><span class="pt-name">鉛</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:7" data-s="Bi" data-g="15" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="83 ビスマス Bi"><span class="pt-z">83</span><span class="pt-sym">Bi</span><span class="pt-name">ビスマス</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:7" data-s="Po" data-g="16" data-p="6" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="" aria-pressed="false" aria-label="84 ポロニウム Po"><span class="pt-z">84</span><span class="pt-sym">Po</span><span class="pt-name">ポロニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:7" data-s="At" data-g="17" data-p="6" data-f="" data-state="solid" data-metal="nonmetal" data-kind="typical" data-family="halogen" aria-pressed="false" aria-label="85 アスタチン At"><span class="pt-z">85</span><span class="pt-sym">At</span><span class="pt-name">アスタチン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:7" data-s="Rn" data-g="18" data-p="6" data-f="" data-state="gas" data-metal="nonmetal" data-kind="typical" data-family="noble" aria-pressed="false" aria-label="86 ラドン Rn"><span class="pt-z">86</span><span class="pt-sym">Rn</span><span class="pt-name">ラドン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:2;grid-row:8" data-s="Fr" data-g="1" data-p="7" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkali" aria-pressed="false" aria-label="87 フランシウム Fr"><span class="pt-z">87</span><span class="pt-sym">Fr</span><span class="pt-name">フランシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:3;grid-row:8" data-s="Ra" data-g="2" data-p="7" data-f="" data-state="solid" data-metal="metal" data-kind="typical" data-family="alkaline" aria-pressed="false" aria-label="88 ラジウム Ra"><span class="pt-z">88</span><span class="pt-sym">Ra</span><span class="pt-name">ラジウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:4;grid-row:11" data-s="Ac" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="89 アクチニウム Ac"><span class="pt-z">89</span><span class="pt-sym">Ac</span><span class="pt-name">アクチニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:11" data-s="Th" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="90 トリウム Th"><span class="pt-z">90</span><span class="pt-sym">Th</span><span class="pt-name">トリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:11" data-s="Pa" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="91 プロトアクチニウム Pa"><span class="pt-z">91</span><span class="pt-sym">Pa</span><span class="pt-name">プロトアクチニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:11" data-s="U" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="92 ウラン U"><span class="pt-z">92</span><span class="pt-sym">U</span><span class="pt-name">ウラン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:11" data-s="Np" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="93 ネプツニウム Np"><span class="pt-z">93</span><span class="pt-sym">Np</span><span class="pt-name">ネプツニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:11" data-s="Pu" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="94 プルトニウム Pu"><span class="pt-z">94</span><span class="pt-sym">Pu</span><span class="pt-name">プルトニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:11" data-s="Am" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="95 アメリシウム Am"><span class="pt-z">95</span><span class="pt-sym">Am</span><span class="pt-name">アメリシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:11" data-s="Cm" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="96 キュリウム Cm"><span class="pt-z">96</span><span class="pt-sym">Cm</span><span class="pt-name">キュリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:11" data-s="Bk" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="97 バークリウム Bk"><span class="pt-z">97</span><span class="pt-sym">Bk</span><span class="pt-name">バークリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:11" data-s="Cf" data-g="3" data-p="7" data-f="actinoid" data-state="solid" data-metal="metal" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="98 カリホルニウム Cf"><span class="pt-z">98</span><span class="pt-sym">Cf</span><span class="pt-name">カリホルニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:11" data-s="Es" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="99 アインスタイニウム Es"><span class="pt-z">99</span><span class="pt-sym">Es</span><span class="pt-name">アインスタイニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:11" data-s="Fm" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="100 フェルミウム Fm"><span class="pt-z">100</span><span class="pt-sym">Fm</span><span class="pt-name">フェルミウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:11" data-s="Md" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="101 メンデレビウム Md"><span class="pt-z">101</span><span class="pt-sym">Md</span><span class="pt-name">メンデレビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:11" data-s="No" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="102 ノーベリウム No"><span class="pt-z">102</span><span class="pt-sym">No</span><span class="pt-name">ノーベリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:11" data-s="Lr" data-g="3" data-p="7" data-f="actinoid" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="actinoid" aria-pressed="false" aria-label="103 ローレンシウム Lr"><span class="pt-z">103</span><span class="pt-sym">Lr</span><span class="pt-name">ローレンシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:5;grid-row:8" data-s="Rf" data-g="4" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="104 ラザホージウム Rf"><span class="pt-z">104</span><span class="pt-sym">Rf</span><span class="pt-name">ラザホージウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:6;grid-row:8" data-s="Db" data-g="5" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="105 ドブニウム Db"><span class="pt-z">105</span><span class="pt-sym">Db</span><span class="pt-name">ドブニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:7;grid-row:8" data-s="Sg" data-g="6" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="106 シーボーギウム Sg"><span class="pt-z">106</span><span class="pt-sym">Sg</span><span class="pt-name">シーボーギウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:8;grid-row:8" data-s="Bh" data-g="7" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="107 ボーリウム Bh"><span class="pt-z">107</span><span class="pt-sym">Bh</span><span class="pt-name">ボーリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:9;grid-row:8" data-s="Hs" data-g="8" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="108 ハッシウム Hs"><span class="pt-z">108</span><span class="pt-sym">Hs</span><span class="pt-name">ハッシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:10;grid-row:8" data-s="Mt" data-g="9" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="109 マイトネリウム Mt"><span class="pt-z">109</span><span class="pt-sym">Mt</span><span class="pt-name">マイトネリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:11;grid-row:8" data-s="Ds" data-g="10" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="110 ダームスタチウム Ds"><span class="pt-z">110</span><span class="pt-sym">Ds</span><span class="pt-name">ダームスタチウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:12;grid-row:8" data-s="Rg" data-g="11" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="111 レントゲニウム Rg"><span class="pt-z">111</span><span class="pt-sym">Rg</span><span class="pt-name">レントゲニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:13;grid-row:8" data-s="Cn" data-g="12" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="transition" data-family="" aria-pressed="false" aria-label="112 コペルニシウム Cn"><span class="pt-z">112</span><span class="pt-sym">Cn</span><span class="pt-name">コペルニシウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:14;grid-row:8" data-s="Nh" data-g="13" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="113 ニホニウム Nh"><span class="pt-z">113</span><span class="pt-sym">Nh</span><span class="pt-name">ニホニウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:15;grid-row:8" data-s="Fl" data-g="14" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="114 フレロビウム Fl"><span class="pt-z">114</span><span class="pt-sym">Fl</span><span class="pt-name">フレロビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:16;grid-row:8" data-s="Mc" data-g="15" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="115 モスコビウム Mc"><span class="pt-z">115</span><span class="pt-sym">Mc</span><span class="pt-name">モスコビウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:17;grid-row:8" data-s="Lv" data-g="16" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="116 リバモリウム Lv"><span class="pt-z">116</span><span class="pt-sym">Lv</span><span class="pt-name">リバモリウム</span></button>
+          <button type="button" class="pt-cell" style="grid-column:18;grid-row:8" data-s="Ts" data-g="17" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="117 テネシン Ts"><span class="pt-z">117</span><span class="pt-sym">Ts</span><span class="pt-name">テネシン</span></button>
+          <button type="button" class="pt-cell" style="grid-column:19;grid-row:8" data-s="Og" data-g="18" data-p="7" data-f="" data-state="unknown" data-metal="unknown" data-kind="typical" data-family="" aria-pressed="false" aria-label="118 オガネソン Og"><span class="pt-z">118</span><span class="pt-sym">Og</span><span class="pt-name">オガネソン</span></button>
+          <div class="pt-panel" id="pt-panel" aria-live="polite">
+            <p class="pt-panel-hint">元素のマスにカーソルを合わせると（スマホはタップ）、ここに基本データと、その元素を取り上げた回が出ます。</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="pt-list" aria-labelledby="pt-list-heading">
+        <h2 class="pt-list-heading" id="pt-list-heading">番組で取り上げた元素</h2>
+        <div class="pt-list-grid">
+        <article class="pt-card" id="card-H">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-main"><span class="pt-card-z">1</span>H</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">水素</h3>
+              <p class="pt-card-meta">原子量 1.008・第1周期・1族・典型元素</p>
+            </div>
+          </header>
+          <p class="pt-card-note">燃やしてもCO2を出さないエネルギーとして注目される水素を、作り方で色分けする呼び方で紹介しています。基本のグレー・ブルー・グリーンから天然のホワイト水素まで、13色を話しています。</p>
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/24/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dX6CqCqCckA1hDrWLKz5GsvmPvqtQ1eGTcH9ZHjr_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">中心の回</span><span class="fx-ep-title">#24 水素って13色あんねん</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/22/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dh5uAc14JRBPScNXo7X7E4LqQiHOUFsuxAjGfWDJ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#22 ハーバー・ボッシュ法：食糧危機を救った化学の大逆転</span><span class="fx-ep-note">アンモニアの原料の水素と、金属を脆くする水素脆化</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/31/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/bywNQHK7wp2DK63hI8QTjBu4sb6vTx3GNxPALGHJ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#31 「脱炭素」はちょっと違う――“無くす”より“回す”という発想</span><span class="fx-ep-note">CO2を減らす燃料や、製鉄の還元剤としての水素</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/65/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#65 実生活とつながる視点｜大学入学共通テスト「化学」2026</span><span class="fx-ep-note">水素吸蔵合金や液体への変換など、水素をためて運ぶ方法</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/109/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#109 肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか</span><span class="fx-ep-note">アンモニアの原料の水素を天然ガスから作る話</span></span></a>
+            </li>
+          </ul>
+          <a href="#H" class="pt-card-locate" data-s="H">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Li">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-main"><span class="pt-card-z">3</span>Li</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">リチウム</h3>
+              <p class="pt-card-meta">原子量 6.94・第2周期・1族・典型元素・アルカリ金属</p>
+            </div>
+          </header>
+          <p class="pt-card-note">原子番号3のリチウムのイオンが正極と負極の間を行き来して充電・放電する仕組み、燃えやすい理由、電池の作り方を話しています。周期表でリチウムの下にあるナトリウムを使う電池にも触れています。</p>
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/66/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">中心の回</span><span class="fx-ep-title">#66 教養として知りたいリチウムイオン電池の基礎知識</span></span></a>
+            </li>
+          </ul>
+          <a href="#Li" class="pt-card-locate" data-s="Li">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-C">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">6</span>C</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">炭素</h3>
+              <p class="pt-card-meta">原子量 12.01・第2周期・14族・典型元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/31/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/bywNQHK7wp2DK63hI8QTjBu4sb6vTx3GNxPALGHJ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#31 「脱炭素」はちょっと違う――“無くす”より“回す”という発想</span><span class="fx-ep-note">「脱炭素」を入り口に、炭素が欠かせない元素であることと炭素循環の考え方</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/66/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#66 教養として知りたいリチウムイオン電池の基礎知識</span><span class="fx-ep-note">電池の負極に使う黒鉛（グラファイト）とハードカーボン</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/110/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/iuql7T1LmItlTO6p8gpbwFgbVY9XPTh6TGfBFp0F.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#110 タイヤはなぜ黒い？丈夫さとリサイクルをめぐる化学</span><span class="fx-ep-note">タイヤを黒くし、ゴムを補強する炭素の粉（カーボンブラック）</span></span></a>
+            </li>
+          </ul>
+          <a href="#C" class="pt-card-locate" data-s="C">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-N">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">7</span>N</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">窒素</h3>
+              <p class="pt-card-meta">原子量 14.01・第2周期・15族・典型元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/22/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dh5uAc14JRBPScNXo7X7E4LqQiHOUFsuxAjGfWDJ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#22 ハーバー・ボッシュ法：食糧危機を救った化学の大逆転</span><span class="fx-ep-note">アンモニアの原料になる、空気中の安定な窒素</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/48/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/xqczoq9I7f7IJnCpZKrfN1Y6MBZxMMCtu5TBo1ox.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#48 知って身を守る！ 酸素欠乏の基礎知識</span><span class="fx-ep-note">液体窒素や、窒素で満たしたタンクで起きる酸欠</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/53/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/SCmPDn4Dq1yUkfnujwwbE6hNrnyOcEPTSKsJijyQ_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#53 注目の化学ニュース2025～新規化学物質から業界再編まで～</span><span class="fx-ep-note">窒素原子6個がつながった新物質ヘキサニトロゲン（N6）</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/109/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#109 肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか</span><span class="fx-ep-note">肥料の三大要素のうち、主役として話す窒素肥料の作り方</span></span></a>
+            </li>
+          </ul>
+          <a href="#N" class="pt-card-locate" data-s="N">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-O">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-main"><span class="pt-card-z">8</span>O</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">酸素</h3>
+              <p class="pt-card-meta">原子量 16.00・第2周期・16族・典型元素</p>
+            </div>
+          </header>
+          <p class="pt-card-note">空気中の酸素は約21%で、18%未満が「酸欠」と定義されること、濃度が下がると体に何が起きるか、ドライアイスや液体窒素で酸欠が起きる仕組みと身を守る方法を話しています。</p>
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/48/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/xqczoq9I7f7IJnCpZKrfN1Y6MBZxMMCtu5TBo1ox.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">中心の回</span><span class="fx-ep-title">#48 知って身を守る！ 酸素欠乏の基礎知識</span></span></a>
+            </li>
+          </ul>
+          <a href="#O" class="pt-card-locate" data-s="O">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-F">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">9</span>F</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">フッ素</h3>
+              <p class="pt-card-meta">原子量 19.00・第2周期・17族・典型元素・ハロゲン</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/18/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EbyUknP50TekYhBfhHBqLRukdn6WCepsGYOCVA4I_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#18 話題のPFASを少し詳しく学んでみませんか？</span><span class="fx-ep-note">有機フッ素化合物PFASと、虫歯予防に使うフッ素の違い</span></span></a>
+            </li>
+          </ul>
+          <a href="#F" class="pt-card-locate" data-s="F">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Na">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">11</span>Na</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">ナトリウム</h3>
+              <p class="pt-card-meta">原子量 22.99・第3周期・1族・典型元素・アルカリ金属</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/13/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/Pg37GHtdUE27q2ghZrVYcqqfgkfc7mjyv4S4FYuz_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#13 早速、大阪万博に行ってきた！見つけた化学の話と詳細解説</span><span class="fx-ep-note">万博で見たナトリウムイオン電池と、海の塩からとれるナトリウム</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/66/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#66 教養として知りたいリチウムイオン電池の基礎知識</span><span class="fx-ep-note">周期表でリチウムの真下にあるナトリウムを使う、ナトリウムイオン電池</span></span></a>
+            </li>
+          </ul>
+          <a href="#Na" class="pt-card-locate" data-s="Na">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Al">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">13</span>Al</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">アルミニウム</h3>
+              <p class="pt-card-meta">原子量 26.98・第3周期・13族・典型元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/130/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/erBbyWMo3S2g45dQx32uY7wC4mTRLP346EqgiQB2.jpg" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#130 ぺらぺらフィルムに多層バリア！お菓子の袋の秘密（ポッドキャスト配信リレー2026音源）</span><span class="fx-ep-note">お菓子の袋で酸素や水蒸気を防ぐアルミ蒸着</span></span></a>
+            </li>
+          </ul>
+          <a href="#Al" class="pt-card-locate" data-s="Al">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Si">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">14</span>Si</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">ケイ素</h3>
+              <p class="pt-card-meta">原子量 28.09・第3周期・14族・典型元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/65/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#65 実生活とつながる視点｜大学入学共通テスト「化学」2026</span><span class="fx-ep-note">半導体やガラスに使われる、炭素の一つ下の元素ケイ素</span></span></a>
+            </li>
+          </ul>
+          <a href="#Si" class="pt-card-locate" data-s="Si">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-P">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">15</span>P</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">リン</h3>
+              <p class="pt-card-meta">原子量 30.97・第3周期・15族・典型元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/65/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#65 実生活とつながる視点｜大学入学共通テスト「化学」2026</span><span class="fx-ep-note">マッチの赤リンやDNA、半導体に使われるリン</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/109/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#109 肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか</span><span class="fx-ep-note">肥料の三大要素のリンと、原料になるリン鉱石</span></span></a>
+            </li>
+          </ul>
+          <a href="#P" class="pt-card-locate" data-s="P">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-S">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">16</span>S</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">硫黄</h3>
+              <p class="pt-card-meta">原子量 32.07・第3周期・16族・典型元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/110/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/iuql7T1LmItlTO6p8gpbwFgbVY9XPTh6TGfBFp0F.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#110 タイヤはなぜ黒い？丈夫さとリサイクルをめぐる化学</span><span class="fx-ep-note">ゴムの分子を硫黄でつなぐ加硫と、リサイクルの難しさ</span></span></a>
+            </li>
+          </ul>
+          <a href="#S" class="pt-card-locate" data-s="S">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Cl">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">17</span>Cl</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">塩素</h3>
+              <p class="pt-card-meta">原子量 35.45・第3周期・17族・典型元素・ハロゲン</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/113/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/xhYSiARGZG1ujSUyTDY2d7aB4uPJSqKgpR8OH7z1.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#113 消しゴムから配管まで、凄いぞ塩ビ！</span><span class="fx-ep-note">塩ビの性質を左右する塩素と、食塩の電気分解による製造</span></span></a>
+            </li>
+          </ul>
+          <a href="#Cl" class="pt-card-locate" data-s="Cl">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-K">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">19</span>K</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">カリウム</h3>
+              <p class="pt-card-meta">原子量 39.10・第4周期・1族・典型元素・アルカリ金属</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/66/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#66 教養として知りたいリチウムイオン電池の基礎知識</span><span class="fx-ep-note">周期表でナトリウムの下にあるカリウムを使う電池</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/109/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#109 肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか</span><span class="fx-ep-note">肥料の三大要素のカリウムと、原料のカリ鉱石</span></span></a>
+            </li>
+          </ul>
+          <a href="#K" class="pt-card-locate" data-s="K">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Ca">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">20</span>Ca</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">カルシウム</h3>
+              <p class="pt-card-meta">原子量 40.08・第4周期・2族・典型元素・アルカリ土類金属</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/71/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/5VKsLBrkHqpFVcdyd4YBGViMJQ6LmTYsBdV09Rj9.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#71 知育菓子「おえかきグミランド」で遊ぼう！原材料から想像する原理</span><span class="fx-ep-note">カルシウムイオンがアルギン酸をつないでグミが固まる仕組み</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/89/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/autHryCuzizlOnVLs325srMqkPxlY4XigBYJ7uTE_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#89 クエン酸とか重曹って便利だよね！～掃除の化学～</span><span class="fx-ep-note">水道水のカルシウムが固まった水垢と、クエン酸で落とす仕組み</span></span></a>
+            </li>
+          </ul>
+          <a href="#Ca" class="pt-card-locate" data-s="Ca">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Cr">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">24</span>Cr</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">クロム</h3>
+              <p class="pt-card-meta">原子量 52.00・第4周期・6族・遷移元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/65/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#65 実生活とつながる視点｜大学入学共通テスト「化学」2026</span><span class="fx-ep-note">ステンレスやクロムめっきで錆を防ぐクロムと、六価クロムの害</span></span></a>
+            </li>
+          </ul>
+          <a href="#Cr" class="pt-card-locate" data-s="Cr">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Fe">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">26</span>Fe</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">鉄</h3>
+              <p class="pt-card-meta">原子量 55.85・第4周期・8族・遷移元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/64/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/TdDD9pwqlCu9MLoLPhoZDeb5ufJ7aHSyPOdFLQBC.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#64 プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策</span><span class="fx-ep-note">鉄が水と酸素で錆びる（赤錆ができる）仕組み</span></span></a>
+            </li>
+            <li class="fx-ep">
+              <a href="/episodes/70/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/SM0A2boCFLV484lRE4wTDuhToMar3Z8IlQRSyBam_resized.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#70 硬くする？軟らかくする？鉄の運命を決める「熱処理」の話</span><span class="fx-ep-note">炭素を含む鉄＝鋼の硬さや粘りを変える、焼き入れなどの熱処理</span></span></a>
+            </li>
+          </ul>
+          <a href="#Fe" class="pt-card-locate" data-s="Fe">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Ni">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-main"><span class="pt-card-z">28</span>Ni</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">ニッケル</h3>
+              <p class="pt-card-meta">原子量 58.69・第4周期・10族・遷移元素</p>
+            </div>
+          </header>
+          <p class="pt-card-note">「悪魔の銅」を意味する名前の由来、周期表で銅の隣（原子番号28）にあること、100円玉やステンレス、ニクロムなどの合金、電池、水素を使う反応の触媒としての使われ方を話しています。</p>
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/124/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/PqOdn0Gfo9ptURAfDH0G4Jh2yYS8ASTG3B1ZUQZ1.jpg" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">中心の回</span><span class="fx-ep-title">#124 「悪魔の銅」と呼ばれた金属｜ニッケルの世界</span></span></a>
+            </li>
+          </ul>
+          <a href="#Ni" class="pt-card-locate" data-s="Ni">周期表で位置を見る</a>
+        </article>
+        <article class="pt-card" id="card-Cu">
+          <header class="pt-card-head">
+            <span class="pt-card-sym is-related"><span class="pt-card-z">29</span>Cu</span>
+            <div class="pt-card-titles">
+              <h3 class="pt-card-name">銅</h3>
+              <p class="pt-card-meta">原子量 63.55・第4周期・11族・遷移元素</p>
+            </div>
+          </header>
+          
+          <ul class="fx-eps">
+            <li class="fx-ep">
+              <a href="/episodes/88/" class="fx-ep-link"><img src="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/OmPw1VPMKjDENEMcXctwbtSHbxfugNrgbOIkeT6n.png" alt="" loading="lazy" width="48" height="48"><span class="fx-ep-text"><span class="fx-ep-role">関連する回</span><span class="fx-ep-title">#88 火花が出ない！？防爆工具って知ってる？</span><span class="fx-ep-note">火花が出にくい、銅をベースにした防爆工具</span></span></a>
+            </li>
+          </ul>
+          <a href="#Cu" class="pt-card-locate" data-s="Cu">周期表で位置を見る</a>
+        </article>
+        </div>
+      </section>
+
+      <aside class="feature-more pt-more">
+        <p>原子量は<a href="https://www.chemistry.or.jp/know/doc/atom_2026.pdf" target="_blank" rel="noopener">日本化学会 原子量専門委員会「4桁の原子量表（2026）」（『原子量表（2026）』所収）</a>の値です。安定同位体がない元素は原子量がないため、この表と同じく質量数の一例を示しています。分類は高等学校の「化学」（2022年度からの学習指導要領）に合わせ、3〜12族を遷移元素としています（12族を遷移元素に含めない考え方もあります）。常温での状態と金属・非金属の区分も、高等学校の教科書の扱いに合わせています。</p>
+        <p>ノーベル化学賞の受賞から探すなら <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>、すべての回は <a href="/episodes/">エピソード一覧</a> からどうぞ。</p>
+      </aside>
+    </div>
+    <script type="application/json" id="pt-data">[{"z":1,"s":"H","n":"水素","w":"原子量 1.008","pg":"第1周期・1族","c":"典型元素","sm":"非金属元素・常温で気体","m":[{"num":24,"title":"水素って13色あんねん","url":"/episodes/24/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dX6CqCqCckA1hDrWLKz5GsvmPvqtQ1eGTcH9ZHjr_resized.png","date":"2025-07-09","note":"燃やしてもCO2を出さないエネルギーとして注目される水素を、作り方で色分けする呼び方で紹介しています。基本のグレー・ブルー・グリーンから天然のホワイト水素まで、13色を話しています。"}],"r":[{"num":22,"title":"ハーバー・ボッシュ法：食糧危機を救った化学の大逆転","url":"/episodes/22/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dh5uAc14JRBPScNXo7X7E4LqQiHOUFsuxAjGfWDJ_resized.png","date":"2025-06-25","note":"アンモニアの原料の水素と、金属を脆くする水素脆化"},{"num":31,"title":"「脱炭素」はちょっと違う――“無くす”より“回す”という発想","url":"/episodes/31/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/bywNQHK7wp2DK63hI8QTjBu4sb6vTx3GNxPALGHJ_resized.png","date":"2025-08-20","note":"CO2を減らす燃料や、製鉄の還元剤としての水素"},{"num":65,"title":"実生活とつながる視点｜大学入学共通テスト「化学」2026","url":"/episodes/65/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png","date":"2026-01-25","note":"水素吸蔵合金や液体への変換など、水素をためて運ぶ方法"},{"num":109,"title":"肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか","url":"/episodes/109/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png","date":"2026-07-08","note":"アンモニアの原料の水素を天然ガスから作る話"}]},{"z":2,"s":"He","n":"ヘリウム","w":"原子量 4.003","pg":"第1周期・18族","c":"典型元素・貴ガス","sm":"非金属元素・常温で気体","m":[],"r":[]},{"z":3,"s":"Li","n":"リチウム","w":"原子量 6.94","pg":"第2周期・1族","c":"典型元素・アルカリ金属","sm":"金属元素・常温で固体","m":[{"num":66,"title":"教養として知りたいリチウムイオン電池の基礎知識","url":"/episodes/66/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png","date":"2026-01-28","note":"原子番号3のリチウムのイオンが正極と負極の間を行き来して充電・放電する仕組み、燃えやすい理由、電池の作り方を話しています。周期表でリチウムの下にあるナトリウムを使う電池にも触れています。"}],"r":[]},{"z":4,"s":"Be","n":"ベリリウム","w":"原子量 9.012","pg":"第2周期・2族","c":"典型元素・アルカリ土類金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":5,"s":"B","n":"ホウ素","w":"原子量 10.81","pg":"第2周期・13族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[]},{"z":6,"s":"C","n":"炭素","w":"原子量 12.01","pg":"第2周期・14族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[{"num":31,"title":"「脱炭素」はちょっと違う――“無くす”より“回す”という発想","url":"/episodes/31/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/bywNQHK7wp2DK63hI8QTjBu4sb6vTx3GNxPALGHJ_resized.png","date":"2025-08-20","note":"「脱炭素」を入り口に、炭素が欠かせない元素であることと炭素循環の考え方"},{"num":66,"title":"教養として知りたいリチウムイオン電池の基礎知識","url":"/episodes/66/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png","date":"2026-01-28","note":"電池の負極に使う黒鉛（グラファイト）とハードカーボン"},{"num":110,"title":"タイヤはなぜ黒い？丈夫さとリサイクルをめぐる化学","url":"/episodes/110/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/iuql7T1LmItlTO6p8gpbwFgbVY9XPTh6TGfBFp0F.png","date":"2026-07-12","note":"タイヤを黒くし、ゴムを補強する炭素の粉（カーボンブラック）"}]},{"z":7,"s":"N","n":"窒素","w":"原子量 14.01","pg":"第2周期・15族","c":"典型元素","sm":"非金属元素・常温で気体","m":[],"r":[{"num":22,"title":"ハーバー・ボッシュ法：食糧危機を救った化学の大逆転","url":"/episodes/22/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/dh5uAc14JRBPScNXo7X7E4LqQiHOUFsuxAjGfWDJ_resized.png","date":"2025-06-25","note":"アンモニアの原料になる、空気中の安定な窒素"},{"num":48,"title":"知って身を守る！ 酸素欠乏の基礎知識","url":"/episodes/48/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/xqczoq9I7f7IJnCpZKrfN1Y6MBZxMMCtu5TBo1ox.png","date":"2025-11-19","note":"液体窒素や、窒素で満たしたタンクで起きる酸欠"},{"num":53,"title":"注目の化学ニュース2025～新規化学物質から業界再編まで～","url":"/episodes/53/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/SCmPDn4Dq1yUkfnujwwbE6hNrnyOcEPTSKsJijyQ_resized.png","date":"2025-12-07","note":"窒素原子6個がつながった新物質ヘキサニトロゲン（N6）"},{"num":109,"title":"肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか","url":"/episodes/109/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png","date":"2026-07-08","note":"肥料の三大要素のうち、主役として話す窒素肥料の作り方"}]},{"z":8,"s":"O","n":"酸素","w":"原子量 16.00","pg":"第2周期・16族","c":"典型元素","sm":"非金属元素・常温で気体","m":[{"num":48,"title":"知って身を守る！ 酸素欠乏の基礎知識","url":"/episodes/48/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/xqczoq9I7f7IJnCpZKrfN1Y6MBZxMMCtu5TBo1ox.png","date":"2025-11-19","note":"空気中の酸素は約21%で、18%未満が「酸欠」と定義されること、濃度が下がると体に何が起きるか、ドライアイスや液体窒素で酸欠が起きる仕組みと身を守る方法を話しています。"}],"r":[]},{"z":9,"s":"F","n":"フッ素","w":"原子量 19.00","pg":"第2周期・17族","c":"典型元素・ハロゲン","sm":"非金属元素・常温で気体","m":[],"r":[{"num":18,"title":"話題のPFASを少し詳しく学んでみませんか？","url":"/episodes/18/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EbyUknP50TekYhBfhHBqLRukdn6WCepsGYOCVA4I_resized.png","date":"2025-05-28","note":"有機フッ素化合物PFASと、虫歯予防に使うフッ素の違い"}]},{"z":10,"s":"Ne","n":"ネオン","w":"原子量 20.18","pg":"第2周期・18族","c":"典型元素・貴ガス","sm":"非金属元素・常温で気体","m":[],"r":[]},{"z":11,"s":"Na","n":"ナトリウム","w":"原子量 22.99","pg":"第3周期・1族","c":"典型元素・アルカリ金属","sm":"金属元素・常温で固体","m":[],"r":[{"num":13,"title":"早速、大阪万博に行ってきた！見つけた化学の話と詳細解説","url":"/episodes/13/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/Pg37GHtdUE27q2ghZrVYcqqfgkfc7mjyv4S4FYuz_resized.png","date":"2025-04-23","note":"万博で見たナトリウムイオン電池と、海の塩からとれるナトリウム"},{"num":66,"title":"教養として知りたいリチウムイオン電池の基礎知識","url":"/episodes/66/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png","date":"2026-01-28","note":"周期表でリチウムの真下にあるナトリウムを使う、ナトリウムイオン電池"}]},{"z":12,"s":"Mg","n":"マグネシウム","w":"原子量 24.31","pg":"第3周期・2族","c":"典型元素・アルカリ土類金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":13,"s":"Al","n":"アルミニウム","w":"原子量 26.98","pg":"第3周期・13族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[{"num":130,"title":"ぺらぺらフィルムに多層バリア！お菓子の袋の秘密（ポッドキャスト配信リレー2026音源）","url":"/episodes/130/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/erBbyWMo3S2g45dQx32uY7wC4mTRLP346EqgiQB2.jpg","date":"2026-09-30","note":"お菓子の袋で酸素や水蒸気を防ぐアルミ蒸着"}]},{"z":14,"s":"Si","n":"ケイ素","w":"原子量 28.09","pg":"第3周期・14族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[{"num":65,"title":"実生活とつながる視点｜大学入学共通テスト「化学」2026","url":"/episodes/65/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png","date":"2026-01-25","note":"半導体やガラスに使われる、炭素の一つ下の元素ケイ素"}]},{"z":15,"s":"P","n":"リン","w":"原子量 30.97","pg":"第3周期・15族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[{"num":65,"title":"実生活とつながる視点｜大学入学共通テスト「化学」2026","url":"/episodes/65/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png","date":"2026-01-25","note":"マッチの赤リンやDNA、半導体に使われるリン"},{"num":109,"title":"肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか","url":"/episodes/109/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png","date":"2026-07-08","note":"肥料の三大要素のリンと、原料になるリン鉱石"}]},{"z":16,"s":"S","n":"硫黄","w":"原子量 32.07","pg":"第3周期・16族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[{"num":110,"title":"タイヤはなぜ黒い？丈夫さとリサイクルをめぐる化学","url":"/episodes/110/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/iuql7T1LmItlTO6p8gpbwFgbVY9XPTh6TGfBFp0F.png","date":"2026-07-12","note":"ゴムの分子を硫黄でつなぐ加硫と、リサイクルの難しさ"}]},{"z":17,"s":"Cl","n":"塩素","w":"原子量 35.45","pg":"第3周期・17族","c":"典型元素・ハロゲン","sm":"非金属元素・常温で気体","m":[],"r":[{"num":113,"title":"消しゴムから配管まで、凄いぞ塩ビ！","url":"/episodes/113/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/xhYSiARGZG1ujSUyTDY2d7aB4uPJSqKgpR8OH7z1.png","date":"2026-07-22","note":"塩ビの性質を左右する塩素と、食塩の電気分解による製造"}]},{"z":18,"s":"Ar","n":"アルゴン","w":"原子量 39.95","pg":"第3周期・18族","c":"典型元素・貴ガス","sm":"非金属元素・常温で気体","m":[],"r":[]},{"z":19,"s":"K","n":"カリウム","w":"原子量 39.10","pg":"第4周期・1族","c":"典型元素・アルカリ金属","sm":"金属元素・常温で固体","m":[],"r":[{"num":66,"title":"教養として知りたいリチウムイオン電池の基礎知識","url":"/episodes/66/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6rQqck7wUTpH75lSrVV4yddAtu2HfOIe8pWjsb43_resized.png","date":"2026-01-28","note":"周期表でナトリウムの下にあるカリウムを使う電池"},{"num":109,"title":"肥料は形を変えた天然ガス！なぜ中東情勢で肥料が値上がりするのか","url":"/episodes/109/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tPowbeeVW4PARinBi5Ln3JEKujLtpeBv3V0IAHiE_resized.png","date":"2026-07-08","note":"肥料の三大要素のカリウムと、原料のカリ鉱石"}]},{"z":20,"s":"Ca","n":"カルシウム","w":"原子量 40.08","pg":"第4周期・2族","c":"典型元素・アルカリ土類金属","sm":"金属元素・常温で固体","m":[],"r":[{"num":71,"title":"知育菓子「おえかきグミランド」で遊ぼう！原材料から想像する原理","url":"/episodes/71/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/5VKsLBrkHqpFVcdyd4YBGViMJQ6LmTYsBdV09Rj9.png","date":"2026-02-15","note":"カルシウムイオンがアルギン酸をつないでグミが固まる仕組み"},{"num":89,"title":"クエン酸とか重曹って便利だよね！～掃除の化学～","url":"/episodes/89/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/autHryCuzizlOnVLs325srMqkPxlY4XigBYJ7uTE_resized.png","date":"2026-05-03","note":"水道水のカルシウムが固まった水垢と、クエン酸で落とす仕組み"}]},{"z":21,"s":"Sc","n":"スカンジウム","w":"原子量 44.96","pg":"第4周期・3族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":22,"s":"Ti","n":"チタン","w":"原子量 47.87","pg":"第4周期・4族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":23,"s":"V","n":"バナジウム","w":"原子量 50.94","pg":"第4周期・5族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":24,"s":"Cr","n":"クロム","w":"原子量 52.00","pg":"第4周期・6族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[{"num":65,"title":"実生活とつながる視点｜大学入学共通テスト「化学」2026","url":"/episodes/65/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/EVfimfyFiBq6vo4yCU05SgiEGZGIE1aeDHPq2I2P_resized.png","date":"2026-01-25","note":"ステンレスやクロムめっきで錆を防ぐクロムと、六価クロムの害"}]},{"z":25,"s":"Mn","n":"マンガン","w":"原子量 54.94","pg":"第4周期・7族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":26,"s":"Fe","n":"鉄","w":"原子量 55.85","pg":"第4周期・8族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[{"num":64,"title":"プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策","url":"/episodes/64/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/TdDD9pwqlCu9MLoLPhoZDeb5ufJ7aHSyPOdFLQBC.png","date":"2026-01-21","note":"鉄が水と酸素で錆びる（赤錆ができる）仕組み"},{"num":70,"title":"硬くする？軟らかくする？鉄の運命を決める「熱処理」の話","url":"/episodes/70/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/SM0A2boCFLV484lRE4wTDuhToMar3Z8IlQRSyBam_resized.png","date":"2026-02-11","note":"炭素を含む鉄＝鋼の硬さや粘りを変える、焼き入れなどの熱処理"}]},{"z":27,"s":"Co","n":"コバルト","w":"原子量 58.93","pg":"第4周期・9族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":28,"s":"Ni","n":"ニッケル","w":"原子量 58.69","pg":"第4周期・10族","c":"遷移元素","sm":"金属元素・常温で固体","m":[{"num":124,"title":"「悪魔の銅」と呼ばれた金属｜ニッケルの世界","url":"/episodes/124/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/PqOdn0Gfo9ptURAfDH0G4Jh2yYS8ASTG3B1ZUQZ1.jpg","date":"2026-09-06","note":"「悪魔の銅」を意味する名前の由来、周期表で銅の隣（原子番号28）にあること、100円玉やステンレス、ニクロムなどの合金、電池、水素を使う反応の触媒としての使われ方を話しています。"}],"r":[]},{"z":29,"s":"Cu","n":"銅","w":"原子量 63.55","pg":"第4周期・11族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[{"num":88,"title":"火花が出ない！？防爆工具って知ってる？","url":"/episodes/88/","thumb":"https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/OmPw1VPMKjDENEMcXctwbtSHbxfugNrgbOIkeT6n.png","date":"2026-04-29","note":"火花が出にくい、銅をベースにした防爆工具"}]},{"z":30,"s":"Zn","n":"亜鉛","w":"原子量 65.38","pg":"第4周期・12族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":31,"s":"Ga","n":"ガリウム","w":"原子量 69.72","pg":"第4周期・13族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":32,"s":"Ge","n":"ゲルマニウム","w":"原子量 72.63","pg":"第4周期・14族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":33,"s":"As","n":"ヒ素","w":"原子量 74.92","pg":"第4周期・15族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[]},{"z":34,"s":"Se","n":"セレン","w":"原子量 78.97","pg":"第4周期・16族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[]},{"z":35,"s":"Br","n":"臭素","w":"原子量 79.90","pg":"第4周期・17族","c":"典型元素・ハロゲン","sm":"非金属元素・常温で液体","m":[],"r":[]},{"z":36,"s":"Kr","n":"クリプトン","w":"原子量 83.80","pg":"第4周期・18族","c":"典型元素・貴ガス","sm":"非金属元素・常温で気体","m":[],"r":[]},{"z":37,"s":"Rb","n":"ルビジウム","w":"原子量 85.47","pg":"第5周期・1族","c":"典型元素・アルカリ金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":38,"s":"Sr","n":"ストロンチウム","w":"原子量 87.62","pg":"第5周期・2族","c":"典型元素・アルカリ土類金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":39,"s":"Y","n":"イットリウム","w":"原子量 88.91","pg":"第5周期・3族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":40,"s":"Zr","n":"ジルコニウム","w":"原子量 91.22","pg":"第5周期・4族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":41,"s":"Nb","n":"ニオブ","w":"原子量 92.91","pg":"第5周期・5族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":42,"s":"Mo","n":"モリブデン","w":"原子量 95.95","pg":"第5周期・6族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":43,"s":"Tc","n":"テクネチウム","w":"安定同位体なし（質量数の一例 99）","pg":"第5周期・7族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":44,"s":"Ru","n":"ルテニウム","w":"原子量 101.1","pg":"第5周期・8族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":45,"s":"Rh","n":"ロジウム","w":"原子量 102.9","pg":"第5周期・9族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":46,"s":"Pd","n":"パラジウム","w":"原子量 106.4","pg":"第5周期・10族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":47,"s":"Ag","n":"銀","w":"原子量 107.9","pg":"第5周期・11族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":48,"s":"Cd","n":"カドミウム","w":"原子量 112.4","pg":"第5周期・12族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":49,"s":"In","n":"インジウム","w":"原子量 114.8","pg":"第5周期・13族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":50,"s":"Sn","n":"スズ","w":"原子量 118.7","pg":"第5周期・14族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":51,"s":"Sb","n":"アンチモン","w":"原子量 121.8","pg":"第5周期・15族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":52,"s":"Te","n":"テルル","w":"原子量 127.6","pg":"第5周期・16族","c":"典型元素","sm":"非金属元素・常温で固体","m":[],"r":[]},{"z":53,"s":"I","n":"ヨウ素","w":"原子量 126.9","pg":"第5周期・17族","c":"典型元素・ハロゲン","sm":"非金属元素・常温で固体","m":[],"r":[]},{"z":54,"s":"Xe","n":"キセノン","w":"原子量 131.3","pg":"第5周期・18族","c":"典型元素・貴ガス","sm":"非金属元素・常温で気体","m":[],"r":[]},{"z":55,"s":"Cs","n":"セシウム","w":"原子量 132.9","pg":"第6周期・1族","c":"典型元素・アルカリ金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":56,"s":"Ba","n":"バリウム","w":"原子量 137.3","pg":"第6周期・2族","c":"典型元素・アルカリ土類金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":57,"s":"La","n":"ランタン","w":"原子量 138.9","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":58,"s":"Ce","n":"セリウム","w":"原子量 140.1","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":59,"s":"Pr","n":"プラセオジム","w":"原子量 140.9","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":60,"s":"Nd","n":"ネオジム","w":"原子量 144.2","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":61,"s":"Pm","n":"プロメチウム","w":"安定同位体なし（質量数の一例 145）","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":62,"s":"Sm","n":"サマリウム","w":"原子量 150.4","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":63,"s":"Eu","n":"ユウロピウム","w":"原子量 152.0","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":64,"s":"Gd","n":"ガドリニウム","w":"原子量 157.2","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":65,"s":"Tb","n":"テルビウム","w":"原子量 158.9","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":66,"s":"Dy","n":"ジスプロシウム","w":"原子量 162.5","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":67,"s":"Ho","n":"ホルミウム","w":"原子量 164.9","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":68,"s":"Er","n":"エルビウム","w":"原子量 167.3","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":69,"s":"Tm","n":"ツリウム","w":"原子量 168.9","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":70,"s":"Yb","n":"イッテルビウム","w":"原子量 173.0","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":71,"s":"Lu","n":"ルテチウム","w":"原子量 175.0","pg":"第6周期・3族","c":"遷移元素・ランタノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":72,"s":"Hf","n":"ハフニウム","w":"原子量 178.5","pg":"第6周期・4族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":73,"s":"Ta","n":"タンタル","w":"原子量 180.9","pg":"第6周期・5族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":74,"s":"W","n":"タングステン","w":"原子量 183.8","pg":"第6周期・6族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":75,"s":"Re","n":"レニウム","w":"原子量 186.2","pg":"第6周期・7族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":76,"s":"Os","n":"オスミウム","w":"原子量 190.2","pg":"第6周期・8族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":77,"s":"Ir","n":"イリジウム","w":"原子量 192.2","pg":"第6周期・9族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":78,"s":"Pt","n":"白金","w":"原子量 195.1","pg":"第6周期・10族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":79,"s":"Au","n":"金","w":"原子量 197.0","pg":"第6周期・11族","c":"遷移元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":80,"s":"Hg","n":"水銀","w":"原子量 200.6","pg":"第6周期・12族","c":"遷移元素","sm":"金属元素・常温で液体","m":[],"r":[]},{"z":81,"s":"Tl","n":"タリウム","w":"原子量 204.4","pg":"第6周期・13族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":82,"s":"Pb","n":"鉛","w":"原子量 207.2","pg":"第6周期・14族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":83,"s":"Bi","n":"ビスマス","w":"原子量 209.0","pg":"第6周期・15族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":84,"s":"Po","n":"ポロニウム","w":"安定同位体なし（質量数の一例 210）","pg":"第6周期・16族","c":"典型元素","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":85,"s":"At","n":"アスタチン","w":"安定同位体なし（質量数の一例 210）","pg":"第6周期・17族","c":"典型元素・ハロゲン","sm":"非金属元素・常温で固体","m":[],"r":[]},{"z":86,"s":"Rn","n":"ラドン","w":"安定同位体なし（質量数の一例 222）","pg":"第6周期・18族","c":"典型元素・貴ガス","sm":"非金属元素・常温で気体","m":[],"r":[]},{"z":87,"s":"Fr","n":"フランシウム","w":"安定同位体なし（質量数の一例 223）","pg":"第7周期・1族","c":"典型元素・アルカリ金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":88,"s":"Ra","n":"ラジウム","w":"安定同位体なし（質量数の一例 226）","pg":"第7周期・2族","c":"典型元素・アルカリ土類金属","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":89,"s":"Ac","n":"アクチニウム","w":"安定同位体なし（質量数の一例 227）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":90,"s":"Th","n":"トリウム","w":"原子量 232.0","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":91,"s":"Pa","n":"プロトアクチニウム","w":"原子量 231.0","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":92,"s":"U","n":"ウラン","w":"原子量 238.0","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":93,"s":"Np","n":"ネプツニウム","w":"安定同位体なし（質量数の一例 237）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":94,"s":"Pu","n":"プルトニウム","w":"安定同位体なし（質量数の一例 239）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":95,"s":"Am","n":"アメリシウム","w":"安定同位体なし（質量数の一例 243）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":96,"s":"Cm","n":"キュリウム","w":"安定同位体なし（質量数の一例 247）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":97,"s":"Bk","n":"バークリウム","w":"安定同位体なし（質量数の一例 247）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":98,"s":"Cf","n":"カリホルニウム","w":"安定同位体なし（質量数の一例 252）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属元素・常温で固体","m":[],"r":[]},{"z":99,"s":"Es","n":"アインスタイニウム","w":"安定同位体なし（質量数の一例 252）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":100,"s":"Fm","n":"フェルミウム","w":"安定同位体なし（質量数の一例 257）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":101,"s":"Md","n":"メンデレビウム","w":"安定同位体なし（質量数の一例 258）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":102,"s":"No","n":"ノーベリウム","w":"安定同位体なし（質量数の一例 259）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":103,"s":"Lr","n":"ローレンシウム","w":"安定同位体なし（質量数の一例 262）","pg":"第7周期・3族","c":"遷移元素・アクチノイド","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":104,"s":"Rf","n":"ラザホージウム","w":"安定同位体なし（質量数の一例 267）","pg":"第7周期・4族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":105,"s":"Db","n":"ドブニウム","w":"安定同位体なし（質量数の一例 268）","pg":"第7周期・5族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":106,"s":"Sg","n":"シーボーギウム","w":"安定同位体なし（質量数の一例 271）","pg":"第7周期・6族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":107,"s":"Bh","n":"ボーリウム","w":"安定同位体なし（質量数の一例 272）","pg":"第7周期・7族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":108,"s":"Hs","n":"ハッシウム","w":"安定同位体なし（質量数の一例 277）","pg":"第7周期・8族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":109,"s":"Mt","n":"マイトネリウム","w":"安定同位体なし（質量数の一例 276）","pg":"第7周期・9族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":110,"s":"Ds","n":"ダームスタチウム","w":"安定同位体なし（質量数の一例 281）","pg":"第7周期・10族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":111,"s":"Rg","n":"レントゲニウム","w":"安定同位体なし（質量数の一例 280）","pg":"第7周期・11族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":112,"s":"Cn","n":"コペルニシウム","w":"安定同位体なし（質量数の一例 285）","pg":"第7周期・12族","c":"遷移元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":113,"s":"Nh","n":"ニホニウム","w":"安定同位体なし（質量数の一例 278）","pg":"第7周期・13族","c":"典型元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":114,"s":"Fl","n":"フレロビウム","w":"安定同位体なし（質量数の一例 289）","pg":"第7周期・14族","c":"典型元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":115,"s":"Mc","n":"モスコビウム","w":"安定同位体なし（質量数の一例 289）","pg":"第7周期・15族","c":"典型元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":116,"s":"Lv","n":"リバモリウム","w":"安定同位体なし（質量数の一例 293）","pg":"第7周期・16族","c":"典型元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":117,"s":"Ts","n":"テネシン","w":"安定同位体なし（質量数の一例 293）","pg":"第7周期・17族","c":"典型元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]},{"z":118,"s":"Og","n":"オガネソン","w":"安定同位体なし（質量数の一例 294）","pg":"第7周期・18族","c":"典型元素","sm":"金属・非金属の区別なし・常温での状態は不明","m":[],"r":[]}]</script>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ケムファク</p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+(function () {
+  'use strict';
+
+  var dataEl = document.getElementById('pt-data');
+  var grid = document.getElementById('pt-grid');
+  var scroller = document.getElementById('pt-scroll');
+  var panel = document.getElementById('pt-panel');
+  if (!dataEl || !grid || !scroller || !panel) return;
+
+  var data = JSON.parse(dataEl.textContent);
+  var bySym = {};
+  data.forEach(function (e) { bySym[e.s] = e; });
+
+  var cells = Array.prototype.slice.call(grid.querySelectorAll('.pt-cell'));
+  var axisTargets = Array.prototype.slice.call(
+    grid.querySelectorAll('.pt-cell, .pt-glabel, .pt-plabel, .pt-ph'));
+  var hint = panel.innerHTML;
+  var wide = window.matchMedia('(min-width: 900px)');
+  var canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  var pinned = null;
+  var current = null;
+  var hoverTimer = null;
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function epItems(list, role, skipFirstNote) {
+    return list.map(function (r, i) {
+      var note = (r.note && !(skipFirstNote && i === 0))
+        ? '<span class="fx-ep-note">' + esc(r.note) + '</span>' : '';
+      return '<li class="fx-ep"><a class="fx-ep-link" href="' + esc(r.url) + '">' +
+        '<span class="fx-ep-text"><span class="fx-ep-role">' + role + '</span>' +
+        '<span class="fx-ep-title">#' + r.num + ' ' + esc(r.title) + '</span>' + note +
+        '</span></a></li>';
+    }).join('');
+  }
+
+  function render(e) {
+    if (!e) {
+      panel.innerHTML = hint;
+      return;
+    }
+    var status = e.m.length ? ' is-main' : (e.r.length ? ' is-related' : '');
+    var html =
+      '<div class="pt-panel-head">' +
+        '<div class="pt-panel-sym' + status + '"><span class="pt-panel-z">' + e.z + '</span>' + esc(e.s) + '</div>' +
+        '<div><p class="pt-panel-name">' + esc(e.n) +
+        '<span class="pt-panel-zw">原子番号 ' + e.z + '・' + esc(e.w) + '</span></p>' +
+        '<p class="pt-panel-meta">' + esc(e.pg) + '・' + esc(e.c) + '・' + esc(e.sm) + '</p></div>' +
+      '</div>';
+    if (e.m.length && e.m[0].note) {
+      html += '<p class="pt-panel-note">' + esc(e.m[0].note) + '</p>';
+    }
+    var total = e.m.length + e.r.length;
+    if (total) {
+      // 表のすき間に出すときは2件まで（CSSで3件目以降を隠す）。残りは下の一覧へ案内する
+      var more = total > 2
+        ? '<span class="pt-more-gap">ほか' + (total - 2) + '件は下の一覧で</span><span class="pt-more-below">下の一覧で詳しく見る</span>'
+        : '下の一覧で詳しく見る';
+      html += '<ul class="fx-eps">' + epItems(e.m, '中心の回', true) +
+        epItems(e.r, '関連する回', false) + '</ul>' +
+        '<a class="pt-panel-more" href="#card-' + esc(e.s) + '">' + more + '</a>';
+    } else {
+      html += '<p class="pt-panel-empty">この元素を取り上げた回はまだありません。</p>';
+    }
+    panel.innerHTML = html;
+  }
+
+  // 選んだ元素のマスと、同じ周期（横）・同じ族（縦）に色を付ける
+  function markAxis(e) {
+    axisTargets.forEach(function (n) { n.classList.remove('is-axis', 'is-current'); });
+    if (!e) return;
+    var cell = grid.querySelector('.pt-cell[data-s="' + e.s + '"]');
+    if (!cell) return;
+    cell.classList.add('is-current');
+    var g = cell.dataset.g;
+    var p = cell.dataset.p;
+    var f = cell.dataset.f;
+    axisTargets.forEach(function (n) {
+      var isCell = n.classList.contains('pt-cell');
+      if (f) {
+        // ランタノイド・アクチノイドは自分の行と、本体での置き場所（3族のマス）
+        if ((isCell && n.dataset.f === f) ||
+            (!isCell && n.dataset.p === p && !n.classList.contains('pt-glabel')) ||
+            (n.classList.contains('pt-glabel') && n.dataset.g === g)) {
+          n.classList.add('is-axis');
+        }
+        return;
+      }
+      if (isCell && n.dataset.f) return;
+      if (n.dataset.p === p || n.dataset.g === g) n.classList.add('is-axis');
+    });
+  }
+
+  function show(e) {
+    if (e === current) return;
+    current = e;
+    render(e);
+    markAxis(e);
+  }
+
+  function select(sym, opts) {
+    var e = bySym[sym];
+    if (!e) return;
+    opts = opts || {};
+    pinned = e;
+    cells.forEach(function (c) {
+      c.setAttribute('aria-pressed', c.dataset.s === sym ? 'true' : 'false');
+    });
+    current = null;
+    show(e);
+    if (opts.hash && window.history && history.replaceState) {
+      history.replaceState(null, '', '#' + sym);
+    }
+    if (opts.reveal) {
+      var cell = grid.querySelector('.pt-cell[data-s="' + sym + '"]');
+      if (cell && cell.scrollIntoView) cell.scrollIntoView({ block: 'center', inline: 'center' });
+    }
+    if (opts.showPanel && !wide.matches) {
+      var r = panel.getBoundingClientRect();
+      if (r.top > window.innerHeight - 120) {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  }
+
+  grid.addEventListener('click', function (ev) {
+    var c = ev.target.closest('.pt-cell');
+    if (c) select(c.dataset.s, { hash: true, showPanel: true });
+  });
+
+  // マウスはマスの上で少し止まったときだけ切り替える（説明欄へ移る途中のマスで変わらないように）
+  grid.addEventListener('mouseover', function (ev) {
+    if (!canHover.matches) return;
+    var c = ev.target.closest('.pt-cell');
+    clearTimeout(hoverTimer);
+    if (!c) return;
+    hoverTimer = setTimeout(function () { show(bySym[c.dataset.s]); }, 110);
+  });
+
+  grid.addEventListener('mouseleave', function () {
+    clearTimeout(hoverTimer);
+    if (pinned) show(pinned);
+  });
+
+  grid.addEventListener('focusin', function (ev) {
+    var c = ev.target.closest('.pt-cell');
+    if (c) show(bySym[c.dataset.s]);
+  });
+
+  function placePanel() {
+    if (wide.matches) {
+      if (panel.parentNode !== grid) grid.appendChild(panel);
+      panel.classList.remove('is-below');
+    } else if (panel.parentNode === grid) {
+      scroller.parentNode.insertBefore(panel, scroller.nextSibling);
+      panel.classList.add('is-below');
+    }
+  }
+
+  function fromHash(reveal) {
+    var sym = '';
+    try { sym = decodeURIComponent(location.hash.replace(/^#/, '')); } catch (err) { sym = ''; }
+    if (bySym[sym]) select(sym, { reveal: reveal });
+  }
+
+  // 色分けの切り替え（?view=state などで開いたときもその色分けにする）
+  var viewButtons = Array.prototype.slice.call(document.querySelectorAll('.pt-view-btn'));
+  var viewPanels = Array.prototype.slice.call(document.querySelectorAll('[data-view-panel]'));
+  var viewNames = viewButtons.map(function (b) { return b.dataset.view; });
+
+  function setView(view, updateUrl) {
+    if (viewNames.indexOf(view) < 0) view = 'episodes';
+    viewNames.forEach(function (v) { grid.classList.toggle('view-' + v, v === view); });
+    viewButtons.forEach(function (b) {
+      b.setAttribute('aria-pressed', b.dataset.view === view ? 'true' : 'false');
+    });
+    viewPanels.forEach(function (p) { p.hidden = p.dataset.viewPanel !== view; });
+    // スマホでボタンが横に流れているときは、選んだボタンが見える位置まで横に送る（ページは動かさない）
+    var bar = viewButtons.length && viewButtons[0].parentNode;
+    var active = viewButtons.filter(function (b) { return b.dataset.view === view; })[0];
+    if (bar && active && bar.scrollWidth > bar.clientWidth) {
+      var left = active.offsetLeft - bar.offsetLeft;
+      if (left < bar.scrollLeft || left + active.offsetWidth > bar.scrollLeft + bar.clientWidth) {
+        bar.scrollLeft = Math.max(0, left - 16);
+      }
+    }
+    if (updateUrl && window.URL && history.replaceState) {
+      var url = new URL(location.href);
+      if (view === 'episodes') url.searchParams.delete('view');
+      else url.searchParams.set('view', view);
+      history.replaceState(null, '', url);
+    }
+  }
+
+  viewButtons.forEach(function (b) {
+    b.addEventListener('click', function () { setView(b.dataset.view, true); });
+  });
+  try {
+    setView(new URLSearchParams(location.search).get('view') || 'episodes', false);
+  } catch (err) {
+    setView('episodes', false);
+  }
+
+  // 一覧の「周期表で位置を見る」。同じ元素を選んだままだと hashchange が起きないので、ここで直接選ぶ
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest('a.pt-card-locate');
+    if (!a || !bySym[a.dataset.s]) return;
+    ev.preventDefault();
+    select(a.dataset.s, { hash: true, reveal: true });
+  });
+
+  placePanel();
+  if (wide.addEventListener) wide.addEventListener('change', placePanel);
+  else if (wide.addListener) wide.addListener(placePanel);
+  window.addEventListener('hashchange', function () { fromHash(true); });
+  fromHash(true);
+})();
+
+  </script>
+</body>
+</html>
