@@ -45,11 +45,18 @@
 }
 
 /* ── 記事ヘッダー ── */
+/* タグは2種類（2026-10-09）。身近な要素（灰）と化学工学の分類（緑）を、まとまりごとに並べる */
 .article-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 8px 14px;
     margin-bottom: 16px;
+}
+
+.article-tag-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .article-tag {
@@ -62,7 +69,7 @@
     padding: 3px 12px;
 }
 
-.article-tag--scene {
+.article-tag--chemeng {
     color: var(--brand);
     background: var(--brand-50);
     border-color: rgba(0, 105, 56, 0.25);
@@ -453,6 +460,23 @@
     /* 単語の途中で改行しない（対応ブラウザでは文節単位で折り返す） */
     word-break: auto-phrase;
     line-break: strict;
+}
+
+/* タグの2種類の見本（文中にタグの形をそのまま置く） */
+.feature-tag-legend {
+    max-width: 640px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--light-muted);
+    line-height: 2.1;
+    word-break: auto-phrase;
+    line-break: strict;
+}
+
+.feature-tag-legend .article-tag {
+    display: inline-block;
+    margin: 0 4px;
+    line-height: 1.6;
 }
 
 .feature-grid {
