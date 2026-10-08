@@ -86,11 +86,11 @@
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/elements/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/nobel-chemistry/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/1/</loc>
@@ -615,5 +615,9 @@
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/131/</loc>
     <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://plantlife.chem-fac.com/episodes/132/</loc>
+    <lastmod>2026-10-09</lastmod>
   </url>
 </urlset>
