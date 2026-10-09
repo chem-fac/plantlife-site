@@ -181,6 +181,12 @@
     border-radius: var(--radius-sm);
 }
 
+/* 幅指定の無い図は、ビルドが読み込み後と同じ表示幅（--fig-w）を渡す。読み込む前から場所を取り、
+   表示された瞬間に下の段落が動かないようにする（変数が無いときは従来どおり auto） */
+.article-body .article-figure:not(.article-figure--sized) img {
+    width: var(--fig-w, auto);
+}
+
 /* 原稿で {width=NN%} を指定した図は、本文幅に対する割合で表示する */
 .article-body .article-figure--sized {
     width: 100%;
