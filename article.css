@@ -530,6 +530,16 @@
     margin: 8px 0 6px;
 }
 
+/* 記事の題の折り返しをそろえる（スマホのカードで「96度な／の？」のように最後の数文字だけが
+   次の行に落ちないように）。balance は行の長さをそろえ、auto-phrase は対応ブラウザで文節の切れ目で折り返す */
+.article-title,
+.feature-card-title,
+.article-related-title,
+.article-linkcard-title {
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
 .feature-card-desc {
     font-size: 0.88rem;
     color: var(--light-secondary);
