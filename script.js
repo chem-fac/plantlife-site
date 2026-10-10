@@ -251,6 +251,15 @@ function initShareButtons() {
   if (document.body.hasAttribute('data-no-share')) return;
   const pageUrl = encodeURIComponent(window.location.href);
   const pageTitle = encodeURIComponent(document.title);
+  // セクション配下の新しいページにも同じハッシュタグを付ける。
+  const sectionHashtag = new Map([
+    ['nobel-chemistry', 'ノーベル化学賞'],
+    ['elements', '周期表'],
+    ['everyday-chemical-engineering', '身近な化学工学'],
+  ]).get(window.location.pathname.split('/')[1]);
+  const hashtags = encodeURIComponent(
+    ['プラントライフ', sectionHashtag].filter(Boolean).join(',')
+  );
 
   const shareContainer = document.createElement('div');
   shareContainer.className = 'share-buttons';
@@ -258,7 +267,7 @@ function initShareButtons() {
 
   shareContainer.innerHTML = `
     <span class="share-buttons__label">Share</span>
-    <a href="https://x.com/intent/tweet?url=${pageUrl}&text=${pageTitle}&hashtags=プラントライフ&via=chem_fac"
+    <a href="https://x.com/intent/tweet?url=${pageUrl}&text=${pageTitle}&hashtags=${hashtags}&via=chem_fac"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-btn--x" data-tooltip="Xでシェア" aria-label="Xでシェア">
       <img src="/images/x_logo.png" alt="X">
