@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ガスの元栓と蛇口は、何が違うの？ | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/everyday-chemical-engineering/faucet-vs-gas-valve/" />
+  <meta name="description" content="蛇口は流れを絞って水の量を調節し、ガスの元栓は全開か全閉で使います。バルブで流れる量が変わるしくみを説明し、工場で流量を測りながら調節弁を動かすフィードバック制御につなげます。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="ガスの元栓と蛇口は、何が違うの？ | プラントライフ">
+  <meta property="og:description" content="蛇口は流れを絞って水の量を調節し、ガスの元栓は全開か全閉で使います。バルブで流れる量が変わるしくみを説明し、工場で流量を測りながら調節弁を動かすフィードバック制御につなげます。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/everyday-chemical-engineering/faucet-vs-gas-valve/">
+  <meta property="og:image" content="https://plantlife.chem-fac.com/images/articles/faucet-vs-gas-valve.jpg?v=29e6a624">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/article.css">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ガスの元栓と蛇口は、何が違うの？", "description": "蛇口は流れを絞って水の量を調節し、ガスの元栓は全開か全閉で使います。バルブで流れる量が変わるしくみを説明し、工場で流量を測りながら調節弁を動かすフィードバック制御につなげます。", "image": "https://plantlife.chem-fac.com/images/articles/faucet-vs-gas-valve.jpg?v=29e6a624", "keywords": "台所, 流動, プロセス制御", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "url": "https://plantlife.chem-fac.com/everyday-chemical-engineering/faucet-vs-gas-valve/", "author": {"@type": "Person", "name": "かねまる", "sameAs": ["https://x.com/chem_fac", "https://note.com/chem_fac"]}, "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "身近な化学工学", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/"}, {"@type": "ListItem", "position": 3, "name": "ガスの元栓と蛇口は、何が違うの？", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/faucet-vs-gas-valve/"}]}</script>
+</head>
+<body class="article-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link active">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="article-main" id="main-content">
+    <div class="article-container">
+      <nav class="article-breadcrumb" aria-label="パンくず">
+        <a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/everyday-chemical-engineering/">身近な化学工学</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">ガスの元栓と蛇口は、何が違うの？</span>
+      </nav>
+
+      <article class="article-detail">
+        <header class="article-header">
+          <div class="article-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><a href="/everyday-chemical-engineering/?tag=%E5%8F%B0%E6%89%80" class="article-tag article-tag--everyday">台所</a></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><a href="/everyday-chemical-engineering/?tag=%E6%B5%81%E5%8B%95" class="article-tag article-tag--chemeng">流動</a><a href="/everyday-chemical-engineering/?tag=%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" class="article-tag article-tag--chemeng">プロセス制御</a></span></div>
+          <h1 class="article-title">ガスの元栓と蛇口は、何が違うの？</h1>
+          <div class="article-meta">
+            <time datetime="2026-10-10">2026-10-10</time>
+            <span class="article-meta-sep">・</span>
+            <span>放送回 #82 から</span>
+          </div>
+        </header>
+
+        <div class="article-body">
+        <p>台所の蛇口は、ハンドルやレバーを動かす量で、水の勢いを細くも太くもできます。ガスの元栓は、つまみを回して開けるか閉めるかで使い、火の強さはコンロのつまみで変えます。どちらも流れを止めたり通したりする「バルブ」ですが、何が違うのでしょうか？</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/faucet-gas-compare.webp?v=85375e26" alt="ガスの元栓は0%か100%の開け閉めだけ、水道の蛇口は開ける量を0%から100%の間で調節することを、左右に並べて比べた図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>ガス栓は、使うときにつまみを全開にする（<a href="https://www.jgka.or.jp/gasusekiyu_riyou/anzen/gasu_gassen/index.html" target="_blank" rel="noopener">日本ガス石油機器工業会「ガス栓・ガス接続具の安全な使い方」</a>）</figcaption></figure>
+        <p>蛇口は、開き具合を加減して、流れる水の量を変えるバルブです。ガスの元栓は、全開か全閉にして使うバルブで、途中まで開けて量を加減するものではありません。</p>
+        <p><strong>蛇口は流れを絞って量を調節し、ガスの元栓は開け閉めだけをします。</strong></p>
+        <h2>通り道を絞ると、流れにくくなる</h2>
+        <p>水道の水は、水圧に押されて蛇口まで来ています。ハンドルを回すタイプの蛇口では、開く向きに回すと、中のコマという部品が上がって水の通り道ができます。少しだけ回したときは通り道が狭く、水が通りにくいので、流れる量は少しです。</p>
+        <p>流れが狭い所を通り抜けるとき、押す力（圧力）の一部が失われます。化学工学では、これを圧力損失と呼びます。バルブは、開き具合で圧力損失を増やしたり減らしたりして、流れる量を変える道具です。</p>
+        <p>ハンドルを回すタイプの蛇口は、作りの上では玉形弁（たまがたべん）というバルブの仲間で、流れを絞って量を調節するのに向いています。</p>
+        <p>一方、ガスの元栓（ガス栓）は、コックと呼ばれる作りで、つまみを90度回して開け閉めします。使うときは全開にし、火の強さはコンロのつまみで加減するのが正しい使い方です。</p>
+        <p>元栓のつまみを中途半端に開けて使うと、安全装置が正しく働かないことがあります。新しいガス栓には、途中まで開けてもガスが出ない作りのものもあります。</p>
+        <h2>化学工学では、測りながら調節弁を動かす</h2>
+        <p>化学工場の配管にも、開け閉めに使うバルブと、流れを絞って量を調節するバルブがあります。流れる量を自動で加減するバルブが、調節弁です。</p>
+        <p>蛇口を使うときは、出てくる水を見て、多すぎれば少し閉め、少なければ少し開けます。工場では、同じことを機械が自動で続けています。流量計で流れの量を測り、目標の値と比べて、ずれを小さくする向きに調節弁の開き具合を変えるしくみです。</p>
+        <p>測った結果を、弁の動かし方を決めるのに戻して使うので、このやり方をフィードバック制御と呼びます。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/faucet-gas-feedback.webp?v=e5ccc695" alt="測る、比べる、動かすの3つを矢印でつないだ輪と、状態を見ながら調節するフィードバック制御は蛇口を少し閉めるのと同じ、と書いた図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>化学工学便覧（改訂六版 24・2）は、測る所を検出部、比べる所を比較部、動かし方を決める所を調節部と呼ぶ</figcaption></figure>
+        <p>人は制御室で目標の流量を決めるだけです。あとは制御システム（DCS）が、流量計の値を読みながら、調節弁に開き具合を指示します。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/faucet-gas-flow-control.webp?v=6265014a" alt="人が値を決めると、DCSが流量計の値を読み、調節弁に開き具合を指示する流れを示した模式図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>調節弁は、空気の力などで弁を動かして開き具合を変える（<a href="https://kotobank.jp/word/%E3%83%90%E3%83%AB%E3%83%96-3164431" target="_blank" rel="noopener">改訂新版 世界大百科事典「バルブ」</a>）</figcaption></figure>
+        <h2>まとめ</h2>
+        <p>蛇口は通り道の広さを変えて流れる量を調節し、ガスの元栓は全開か全閉で、流れを通すか止めるかを決めます。工場では、流量を測りながら調節弁の開き具合を自動で変え、流れを目標の量に保っています。</p>
+        </div>
+
+        <aside class="article-episode-cta">
+          <p class="article-episode-cta-label">この話を声で聴く</p>
+          <a href="/episodes/82/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;faucet-vs-gas-valve&#x27;,&#x27;episode_number&#x27;:82})">
+            <div class="article-episode-thumb"><img src="/images/episodes/82-9af151172b-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#82　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:19:25</span>
+              <span class="article-episode-title">社会を支え続けるバルブの話</span>
+              <span class="article-episode-hint">エピソードページで聴く →</span>
+            </div>
+          </a>
+        </aside>
+
+      <div class="article-related">
+        <h2 class="article-related-heading">あわせて読む</h2>
+        <div class="article-related-grid">
+          <a href="/everyday-chemical-engineering/water-boils-when-cooled/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/water-boils-when-cooled.jpg?v=9ffd2526" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">蒸気圧・蒸留</span>
+              <span class="article-related-title">水をかけると沸騰するのはなぜ？</span>
+            </div>
+          </a>
+          <a href="/everyday-chemical-engineering/big-pot-scale-up/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/big-pot-scale-up.jpg?v=2f2b645e" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">伝熱・撹拌</span>
+              <span class="article-related-title">大きな鍋だとなぜ火が通りにくいの？</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </article>
+
+      <div class="article-backlink">
+        <a href="/everyday-chemical-engineering/">← 身近な化学工学 の一覧へ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
