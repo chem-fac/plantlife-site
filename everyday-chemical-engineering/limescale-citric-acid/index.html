@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水垢はなぜできて、なぜクエン酸で落ちるの？ | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/everyday-chemical-engineering/limescale-citric-acid/" />
+  <meta name="description" content="水垢は、水に溶けきれなくなったカルシウムなどが結晶になったものです。できるしくみとクエン酸で落ちる理由を溶解度と晶析で説明し、工場の伝熱面につくスケールの防ぎ方につなげます。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="水垢はなぜできて、なぜクエン酸で落ちるの？ | プラントライフ">
+  <meta property="og:description" content="水垢は、水に溶けきれなくなったカルシウムなどが結晶になったものです。できるしくみとクエン酸で落ちる理由を溶解度と晶析で説明し、工場の伝熱面につくスケールの防ぎ方につなげます。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/everyday-chemical-engineering/limescale-citric-acid/">
+  <meta property="og:image" content="https://plantlife.chem-fac.com/images/articles/limescale-citric-acid.jpg?v=dc0bcd1a">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/article.css">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "水垢はなぜできて、なぜクエン酸で落ちるの？", "description": "水垢は、水に溶けきれなくなったカルシウムなどが結晶になったものです。できるしくみとクエン酸で落ちる理由を溶解度と晶析で説明し、工場の伝熱面につくスケールの防ぎ方につなげます。", "image": "https://plantlife.chem-fac.com/images/articles/limescale-citric-acid.jpg?v=dc0bcd1a", "keywords": "掃除, 台所, 化学平衡, 伝熱, 蒸発, 晶析", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "url": "https://plantlife.chem-fac.com/everyday-chemical-engineering/limescale-citric-acid/", "author": {"@type": "Person", "name": "かねまる", "sameAs": ["https://x.com/chem_fac", "https://note.com/chem_fac"]}, "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "身近な化学工学", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/"}, {"@type": "ListItem", "position": 3, "name": "水垢はなぜできて、なぜクエン酸で落ちるの？", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/limescale-citric-acid/"}]}</script>
+</head>
+<body class="article-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link active">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="article-main" id="main-content">
+    <div class="article-container">
+      <nav class="article-breadcrumb" aria-label="パンくず">
+        <a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/everyday-chemical-engineering/">身近な化学工学</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">水垢はなぜできて、なぜクエン酸で落ちるの？</span>
+      </nav>
+
+      <article class="article-detail">
+        <header class="article-header">
+          <div class="article-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">掃除</span><span class="article-tag article-tag--everyday">台所</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">化学平衡</span><span class="article-tag article-tag--chemeng">伝熱</span><span class="article-tag article-tag--chemeng">蒸発</span><span class="article-tag article-tag--chemeng">晶析</span></span></div>
+          <h1 class="article-title">水垢はなぜできて、なぜクエン酸で落ちるの？</h1>
+          <div class="article-meta">
+            <time datetime="2026-10-10">2026-10-10</time>
+            <span class="article-meta-sep">・</span>
+            <span>放送回 #89・#68 から</span>
+          </div>
+        </header>
+
+        <div class="article-body">
+        <p>電気ポットややかんの内側、蛇口のまわりには、白い汚れがつきます。水垢と呼ばれる汚れで、落とすのにはクエン酸がよく使われます。水垢はなぜできて、なぜクエン酸で落ちるのでしょうか？</p>
+        <p>水道水には、カルシウムなどのミネラルがわずかに溶けています。水が蒸発したり温まったりすると、溶けていられる量を超えた分が、白い結晶になって残るのです。</p>
+        <p><strong>水垢は、水に溶けきれなくなったカルシウムなどが結晶になったもので、クエン酸はそれを水に溶かして戻します。</strong></p>
+        <h2>できるのも落ちるのも、溶解度で決まる</h2>
+        <p>水に溶けていられる量には限りがあり、この限りを溶解度と言います。水道水に溶けているのは、カルシウムやマグネシウムのイオンと、二酸化炭素が水に溶けてできる炭酸水素イオンなどです。</p>
+        <p>水が蒸発しても、イオンは水と一緒には出ていかず、後に残ります。残りの水に溶けきれなくなった分は、炭酸カルシウムなどの結晶になって出てくるのです。蛇口のまわりのように、水がついては乾く所に水垢ができるのは、このためです。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/limescale-evaporation.webp?v=bea32217" alt="カルシウムイオンとマグネシウムイオンが溶けた水道水のコップから水が蒸発すると、底に炭酸カルシウムと炭酸マグネシウムの白い固まりが残る様子を示す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>水の蒸発と乾燥が繰り返される所に、白い固形物になってつく（参考：<a href="https://www.city.fukuoka.lg.jp/mizu/suishitu/machi/009.html" target="_blank" rel="noopener">福岡市水道局</a>）</figcaption></figure>
+        <p>水を温めたときにも、同じように結晶ができます。温まると炭酸水素イオンが分解して二酸化炭素が抜け、炭酸カルシウムができる向きに平衡が移るからです。</p>
+        <p>溶けているものを、溶解度を超えさせて結晶として取り出すことを、化学工学では晶析と言います。冷やす、蒸発させる、反応させるなどの方法があり、水垢は蒸発や加熱で意図せず起きた晶析です。</p>
+        <p>クエン酸は、この結晶を水に溶かして戻します。クエン酸の水に多い水素イオンが、水垢の炭酸イオンと結びつき、炭酸水素イオンや炭酸に変えるからです。炭酸の一部は二酸化炭素になって抜け、結晶の相手を失ったカルシウムが、イオンとして水に溶け出します。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/limescale-citric-dissolve.webp?v=62c9fb37" alt="水垢の粒が、クエン酸のフラスコの絵の所でイオンに戻り、波の絵の洗い流せる状態になる流れを示す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>参考：<a href="https://www.detergent.jp/kouza01/clean01.pdf" target="_blank" rel="noopener">大矢勝「掃除・洗濯の知識講座（1）」日本石鹸洗剤工業会</a></figcaption></figure>
+        <p>「アルカリ性の水垢を酸で中和して落とす」という説明は、化学では正確ではありません。決め手は酸の強さではなく、酸とカルシウムがつくる塩が水に溶けたままでいられるかです。強い酸の硫酸では、溶けにくい硫酸カルシウムができて、水垢は落ちません。</p>
+        <p>クエン酸とカルシウムがつくるクエン酸カルシウムも、水に溶けにくい塩です。ただ、結晶ができるまでに時間がかかるので、水垢を溶かしてしばらくは、水に溶けたままでいられます。溶かしたまま置いておくと、時間がたって、また結晶になってしまうのです。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/limescale-citrate-crystals.webp?v=07af9bbd" alt="クエン酸で水垢を溶かした直後は、液の中にカルシウムイオンとクエン酸のイオンが散らばっているが、時間がたつと白い結晶ができる様子を示す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>炭酸カルシウムをクエン酸の水に溶かした実験では、沈殿が約半日かけて増えた（<a href="https://www.jstage.jst.go.jp/article/jhej/70/10/70_643/_pdf/-char/ja" target="_blank" rel="noopener">日本家政学会誌 70(10)</a>）</figcaption></figure>
+        <p>クエン酸で水垢を落としたら、すぐに水で洗い流します。クエン酸は、塩素系の洗剤と混ざると有害な塩素ガスが出るので、一緒に使ってはいけません。</p>
+        <h2>化学工学では、伝熱面のスケールを防ぐ</h2>
+        <p>工場でも、水や液を温めたり蒸発させたりする装置では、同じ晶析が起きます。熱交換器やボイラー、液を煮詰めて濃くする蒸発缶では、熱を伝える面（伝熱面）に、炭酸カルシウムなどが結晶になってつくのです。この汚れがスケールです。</p>
+        <p>スケールは熱を伝えにくいので、伝熱面につくと、装置の熱の伝わりが悪くなります。そこで、ボイラーにはカルシウムなどを取り除いた水を使い、スケールがつかないように水質を管理しています。</p>
+        <p>蒸発缶で炭酸カルシウムのスケールを防ぐのに最も広く使われているのは、処理する水に酸を加えてpHを下げ、炭酸水素イオンを二酸化炭素にして追い出す方法です。クエン酸が水垢を溶かすのと同じ向きに、平衡を動かしているのです。</p>
+        <p>それでもついたスケールは、装置を止めて、塩酸などの酸で洗い落とします。</p>
+        <h2>まとめ</h2>
+        <p>水垢は、水に溶けていたカルシウムが溶けきれなくなって結晶になったもので、クエン酸はそれを水に溶かして戻します。台所の水垢も、工場の伝熱面につくスケールも、溶解度で説明できる同じ晶析です。</p>
+        </div>
+
+        <aside class="article-episode-cta">
+          <p class="article-episode-cta-label">この話を声で聴く</p>
+          <a href="/episodes/89/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;limescale-citric-acid&#x27;,&#x27;episode_number&#x27;:89})">
+            <div class="article-episode-thumb"><img src="/images/episodes/89-726969a933-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#89　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:13:23</span>
+              <span class="article-episode-title">クエン酸とか重曹って便利だよね！～掃除の化学～</span>
+              <span class="article-episode-hint">エピソードページで聴く →</span>
+            </div>
+          </a>
+          <a href="/episodes/68/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;limescale-citric-acid&#x27;,&#x27;episode_number&#x27;:68})">
+            <div class="article-episode-thumb"><img src="/images/episodes/68-d332545674-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#68　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:16:53</span>
+              <span class="article-episode-title">温泉の「あたたか～～い」を支える設備の話</span>
+              <span class="article-episode-hint">エピソードページで聴く →</span>
+            </div>
+          </a>
+        </aside>
+
+      <div class="article-related">
+        <h2 class="article-related-heading">あわせて読む</h2>
+        <div class="article-related-grid">
+          <a href="/everyday-chemical-engineering/big-pot-scale-up/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/big-pot-scale-up.jpg?v=2f2b645e" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">伝熱・撹拌</span>
+              <span class="article-related-title">大きな鍋だとなぜ火が通りにくいの？</span>
+            </div>
+          </a>
+          <a href="/everyday-chemical-engineering/does-vinegar-freeze/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/does-vinegar-freeze.jpg?v=3b4870f9" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">相平衡・伝熱</span>
+              <span class="article-related-title">お酢は凍るの？　酢酸は冬に凍るって本当？</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </article>
+
+      <div class="article-backlink">
+        <a href="/everyday-chemical-engineering/">← 身近な化学工学 の一覧へ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
