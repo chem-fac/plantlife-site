@@ -65,184 +65,95 @@
         <p class="feature-eyebrow">プラントライフの読みもの</p>
         <h1 class="feature-title">身近な化学工学</h1>
         <p class="feature-lead">身近な「なぜ？」を、化学プラントの技術者が化学工学の視点で説明する読みものです。各記事はポッドキャストの放送回とつながっています。</p>
+        <p class="feature-tag-legend">タグは2種類です。<span class="article-tag article-tag--everyday">身近な要素</span>は話の入口になる身近なもの、<span class="article-tag article-tag--chemeng">化学工学の分類</span>はその現象を扱う化学工学の分野（化学工学便覧の章立て）を表します。</p>
       </header>
 
-      <div class="feature-filter" id="feature-filter" role="group" aria-label="タグで絞り込む">
-        <div class="feature-filter-row">
-          <button type="button" class="feature-filter-chip" data-tag="" aria-pressed="true">すべて<span class="feature-filter-count">11</span></button>
-        </div>
-        <div class="feature-filter-group" role="group" aria-labelledby="feature-filter-everyday">
-          <p class="feature-filter-label" id="feature-filter-everyday">身近な要素</p>
-          <div class="feature-filter-row">
-          <button type="button" class="feature-filter-chip" data-tag="台所" aria-pressed="false">台所<span class="feature-filter-count">4</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="食べもの" aria-pressed="false">食べもの<span class="feature-filter-count">3</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="飲みもの" aria-pressed="false">飲みもの<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="天気" aria-pressed="false">天気<span class="feature-filter-count">2</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="からだ" aria-pressed="false">からだ<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="掃除" aria-pressed="false">掃除<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="日用品" aria-pressed="false">日用品<span class="feature-filter-count">3</span></button>
-          <button type="button" class="feature-filter-chip" data-tag="素材" aria-pressed="false">素材<span class="feature-filter-count">1</span></button>
-          </div>
-        </div>
-        <div class="feature-filter-group feature-filter-group--chemeng" role="group" aria-labelledby="feature-filter-chemeng">
-          <p class="feature-filter-label" id="feature-filter-chemeng">化学工学の分野</p>
-          <div class="feature-filter-row">
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="蒸気圧" aria-pressed="false">蒸気圧<span class="feature-filter-count">2</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="相平衡" aria-pressed="false">相平衡<span class="feature-filter-count">3</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="化学平衡" aria-pressed="false">化学平衡<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="物質移動" aria-pressed="false">物質移動<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="反応" aria-pressed="false">反応<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="伝熱" aria-pressed="false">伝熱<span class="feature-filter-count">4</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="蒸発" aria-pressed="false">蒸発<span class="feature-filter-count">2</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="撹拌" aria-pressed="false">撹拌<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="晶析" aria-pressed="false">晶析<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="蒸留" aria-pressed="false">蒸留<span class="feature-filter-count">2</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="吸着" aria-pressed="false">吸着<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="イオン交換" aria-pressed="false">イオン交換<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="調湿" aria-pressed="false">調湿<span class="feature-filter-count">2</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="水冷却" aria-pressed="false">水冷却<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="乾燥" aria-pressed="false">乾燥<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="膜分離" aria-pressed="false">膜分離<span class="feature-filter-count">2</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="燃焼" aria-pressed="false">燃焼<span class="feature-filter-count">1</span></button>
-          <button type="button" class="feature-filter-chip feature-filter-chip--chemeng" data-tag="プロセス設計" aria-pressed="false">プロセス設計<span class="feature-filter-count">1</span></button>
-          </div>
-        </div>
-      </div>
-      <script>
-        // タグで絞り込む。押した状態は ?tag= に残すので、記事ページのタグからも絞り込んだ一覧を開ける。
-        // 一覧より前で動かし、?tag= 付きで開いたときに全部の記事が一瞬見えてから消えることがないようにする
-        (() => {
-          const bar = document.getElementById('feature-filter');
-          const chips = [...bar.querySelectorAll('.feature-filter-chip')];
-          const known = new Set(chips.map(c => c.dataset.tag));
-          const rule = document.head.appendChild(document.createElement('style'));
-          let current = '';
-          const apply = (tag, syncUrl) => {
-            current = known.has(tag) ? tag : '';
-            chips.forEach(c => c.setAttribute('aria-pressed', String(c.dataset.tag === current)));
-            // タグの名前に空白は無い（台帳で決めている）ので、data-tags を ~= で1語ずつ照らし合わせる
-            rule.textContent = current
-              ? `.feature-grid > .feature-card:not([data-tags~="${CSS.escape(current)}"]) { display: none; }`
-              : '';
-            if (syncUrl) {
-              history.replaceState(null, '', current ? `?tag=${encodeURIComponent(current)}` : location.pathname);
-            }
-          };
-          apply(new URLSearchParams(location.search).get('tag') || '', false);
-          // 押してあるタグをもう一度押すと、絞り込みをやめる
-          bar.addEventListener('click', e => {
-            const chip = e.target.closest('.feature-filter-chip');
-            if (chip) apply(chip.dataset.tag === current ? '' : chip.dataset.tag, true);
-          });
-          // カードの中のタグは、記事を開かずにその場で絞り込む（エピソード一覧のカードと同じ）
-          document.addEventListener('click', e => {
-            const tag = e.target.closest('.feature-card .article-tag');
-            if (!tag) return;
-            e.preventDefault();
-            apply(tag.textContent.trim(), true);
-            if (bar.getBoundingClientRect().top < 0) {
-              const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-              bar.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-            }
-          });
-        })();
-      </script>
-
       <div class="feature-grid">
-        <a href="/everyday-chemical-engineering/why-paper-is-white/" class="feature-card" data-tags="日用品 素材 反応 蒸発 燃焼">
+        <a href="/everyday-chemical-engineering/why-paper-is-white/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/why-paper-is-white.jpg?v=64e3e54f" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">日用品</span><span class="article-tag article-tag--everyday">素材</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">反応</span><span class="article-tag article-tag--chemeng">蒸発</span><span class="article-tag article-tag--chemeng">燃焼</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">日用品</span><span class="article-tag article-tag--everyday">素材</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">反応</span><span class="article-tag article-tag--chemeng">蒸発</span><span class="article-tag article-tag--chemeng">燃焼</span></span></div>
             <h2 class="feature-card-title">木は茶色いのに、紙はなぜ白いの？</h2>
             <p class="feature-card-desc">紙が白いのは、色のもとになるリグニンを木から取り除いているからです。リグニンを薬品で溶かし出す蒸解と漂白を説明し、黒液から熱と薬品を取り戻す工場のしくみにつなげます。</p>
             <span class="feature-card-meta">#95 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/spiritus-96-percent/" class="feature-card" data-tags="飲みもの 相平衡 蒸留 吸着">
+        <a href="/everyday-chemical-engineering/spiritus-96-percent/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/spiritus-96-percent.jpg?v=172827bb" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">飲みもの</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">相平衡</span><span class="article-tag article-tag--chemeng">蒸留</span><span class="article-tag article-tag--chemeng">吸着</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">飲みもの</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">相平衡</span><span class="article-tag article-tag--chemeng">蒸留</span><span class="article-tag article-tag--chemeng">吸着</span></span></div>
             <h2 class="feature-card-title">スピリタスはなぜ96度なの？</h2>
             <p class="feature-card-desc">スピリタスの96度は、蒸留で濃くできる限界のすぐ手前です。限界を決める共沸を説明し、共沸点を越える工場の吸着（モレキュラーシーブ）につなげます。</p>
             <span class="feature-card-meta">#115 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/snack-bag-silver-inside/" class="feature-card" data-tags="食べもの 日用品 物質移動 膜分離">
+        <a href="/everyday-chemical-engineering/snack-bag-silver-inside/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/snack-bag-silver-inside.jpg?v=fa677b1c" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">食べもの</span><span class="article-tag article-tag--everyday">日用品</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">物質移動</span><span class="article-tag article-tag--chemeng">膜分離</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">食べもの</span><span class="article-tag article-tag--everyday">日用品</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">物質移動</span><span class="article-tag article-tag--chemeng">膜分離</span></span></div>
             <h2 class="feature-card-title">お菓子の袋の内側は、なぜ銀色なの？</h2>
             <p class="feature-card-desc">お菓子の袋の内側の銀色は、酸素や水蒸気を通しにくいアルミの膜です。フィルムを通り抜ける気体を拡散で説明し、重ねた層の通りにくさを抵抗の足し算で考えます。</p>
             <span class="feature-card-meta">#130 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/purified-water-vs-tap-water/" class="feature-card" data-tags="日用品 イオン交換 膜分離">
+        <a href="/everyday-chemical-engineering/purified-water-vs-tap-water/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/purified-water-vs-tap-water.jpg?v=c0dcaa29" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">日用品</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">イオン交換</span><span class="article-tag article-tag--chemeng">膜分離</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">日用品</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">イオン交換</span><span class="article-tag article-tag--chemeng">膜分離</span></span></div>
             <h2 class="feature-card-title">精製水は、水道水と何が違うの？</h2>
             <p class="feature-card-desc">精製水は、水道水に溶けているカルシウムなどのイオンを取り除いた水です。イオン交換と逆浸透膜のしくみを説明し、工場の純水装置につなげます。</p>
             <span class="feature-card-meta">#117 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/limescale-citric-acid/" class="feature-card" data-tags="掃除 台所 化学平衡 伝熱 蒸発 晶析">
-          <div class="feature-card-thumb"><img src="/images/articles/limescale-citric-acid.jpg?v=dc0bcd1a" alt="" loading="lazy"></div>
-          <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">掃除</span><span class="article-tag article-tag--everyday">台所</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">化学平衡</span><span class="article-tag article-tag--chemeng">伝熱</span><span class="article-tag article-tag--chemeng">蒸発</span><span class="article-tag article-tag--chemeng">晶析</span></span></div>
-            <h2 class="feature-card-title">水垢はなぜできて、なぜクエン酸で落ちるの？</h2>
-            <p class="feature-card-desc">水垢は、水に溶けきれなくなったカルシウムなどが結晶になったものです。できるしくみとクエン酸で落ちる理由を溶解度と晶析で説明し、工場の伝熱面につくスケールの防ぎ方につなげます。</p>
-            <span class="feature-card-meta">#89・#68 の放送回から・2026-10-10</span>
-          </div>
-        </a>
-        <a href="/everyday-chemical-engineering/freeze-dried-soup/" class="feature-card" data-tags="食べもの 相平衡 乾燥">
+        <a href="/everyday-chemical-engineering/freeze-dried-soup/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/freeze-dried-soup.jpg?v=f37a6650" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">食べもの</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">相平衡</span><span class="article-tag article-tag--chemeng">乾燥</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">食べもの</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">相平衡</span><span class="article-tag article-tag--chemeng">乾燥</span></span></div>
             <h2 class="feature-card-title">フリーズドライのスープは、なぜお湯ですぐ戻るの？</h2>
             <p class="feature-card-desc">フリーズドライのスープがお湯ですぐ戻るのは、氷が抜けた跡のすき間にお湯が入るからです。氷を溶かさずに水蒸気にする昇華を説明し、工場の凍結乾燥機につなげます。</p>
             <span class="feature-card-meta">#118・#2 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/does-vinegar-freeze/" class="feature-card" data-tags="台所 食べもの 相平衡 伝熱">
+        <a href="/everyday-chemical-engineering/does-vinegar-freeze/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/does-vinegar-freeze.jpg?v=3b4870f9" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">台所</span><span class="article-tag article-tag--everyday">食べもの</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">相平衡</span><span class="article-tag article-tag--chemeng">伝熱</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">台所</span><span class="article-tag article-tag--everyday">食べもの</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">相平衡</span><span class="article-tag article-tag--chemeng">伝熱</span></span></div>
             <h2 class="feature-card-title">お酢は凍るの？　酢酸は冬に凍るって本当？</h2>
             <p class="feature-card-desc">酢酸だけなら16.7℃で凍りますが、9割ほどが水のお酢は0℃より少し低くなるまで凍りません。混ざると凍る温度が下がる固液平衡を説明し、工場で冬の配管を蒸気で温める工夫につなげます。</p>
             <span class="feature-card-meta">#112 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/big-pot-scale-up/" class="feature-card" data-tags="台所 伝熱 撹拌 プロセス設計">
+        <a href="/everyday-chemical-engineering/big-pot-scale-up/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/big-pot-scale-up.jpg?v=2f2b645e" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">台所</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">伝熱</span><span class="article-tag article-tag--chemeng">撹拌</span><span class="article-tag article-tag--chemeng">プロセス設計</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">台所</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">伝熱</span><span class="article-tag article-tag--chemeng">撹拌</span><span class="article-tag article-tag--chemeng">プロセス設計</span></span></div>
             <h2 class="feature-card-title">大きな鍋だとなぜ火が通りにくいの？</h2>
             <p class="feature-card-desc">大きな鍋は、中身の量のわりに熱が出入りする面が小さく、温まりにくく冷めにくくなります。体積と表面積の関係を説明し、工場で装置を段階的に大きくするスケールアップにつなげます。</p>
             <span class="feature-card-meta">#101 の放送回から・2026-10-10</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/water-boils-when-cooled/" class="feature-card" data-tags="台所 蒸気圧 蒸留">
+        <a href="/everyday-chemical-engineering/water-boils-when-cooled/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/water-boils-when-cooled.jpg?v=9ffd2526" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">台所</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">蒸気圧</span><span class="article-tag article-tag--chemeng">蒸留</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">台所</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">蒸気圧</span><span class="article-tag article-tag--chemeng">蒸留</span></span></div>
             <h2 class="feature-card-title">水をかけると沸騰するのはなぜ？</h2>
             <p class="feature-card-desc">冷やしたのに沸騰するのは、沸点が周りの圧力で決まるからです。フラスコの実験を蒸気圧で説明し、工場の減圧蒸留につなげます。</p>
             <span class="feature-card-meta">#118・#2 の放送回から・2026-10-09</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/why-sweat-cools/" class="feature-card" data-tags="からだ 天気 伝熱 調湿 水冷却">
+        <a href="/everyday-chemical-engineering/why-sweat-cools/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/why-sweat-cools.jpg?v=62b64e2f" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">からだ</span><span class="article-tag article-tag--everyday">天気</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">伝熱</span><span class="article-tag article-tag--chemeng">調湿</span><span class="article-tag article-tag--chemeng">水冷却</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">からだ</span><span class="article-tag article-tag--everyday">天気</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">伝熱</span><span class="article-tag article-tag--chemeng">調湿</span><span class="article-tag article-tag--chemeng">水冷却</span></span></div>
             <h2 class="feature-card-title">汗をかくとなぜ体が冷えるの？</h2>
             <p class="feature-card-desc">汗そのものが冷たいのではなく、蒸発するときに体から熱を奪います。気化熱のしくみを、湿度との関係や工場のクーリングタワーまでつなげて説明します。</p>
             <span class="feature-card-meta">#32 の放送回から・2026-07-26</span>
           </div>
         </a>
-        <a href="/everyday-chemical-engineering/humidity-100-percent/" class="feature-card" data-tags="天気 蒸気圧 調湿">
+        <a href="/everyday-chemical-engineering/humidity-100-percent/" class="feature-card">
           <div class="feature-card-thumb"><img src="/images/articles/humidity-100-percent.jpg?v=d3c1211b" alt="" loading="lazy"></div>
           <div class="feature-card-body">
-            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">天気</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><span class="article-tag article-tag--chemeng">蒸気圧</span><span class="article-tag article-tag--chemeng">調湿</span></span></div>
+            <div class="feature-card-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><span class="article-tag article-tag--everyday">天気</span></span><span class="article-tag-group" role="group" aria-label="化学工学の分類"><span class="article-tag article-tag--chemeng">蒸気圧</span><span class="article-tag article-tag--chemeng">調湿</span></span></div>
             <h2 class="feature-card-title">湿度100%って、何が100%？</h2>
             <p class="feature-card-desc">湿度100%は空気が水になった状態ではありません。空気が取り込める水蒸気の限界に対する割合というしくみを、霧・季節・露点から説明し、乾燥や調湿の装置の計算につなげます。</p>
             <span class="feature-card-meta">#86 の放送回から・2026-07-18</span>
