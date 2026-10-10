@@ -439,7 +439,7 @@
 
 .feature-hero {
     max-width: 760px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
 }
 
 .feature-eyebrow {
@@ -483,6 +483,79 @@
     display: inline-block;
     margin: 0 4px;
     line-height: 1.6;
+}
+
+/* タグで絞り込む（2026-10-10 本人「単純にそれぞれのタグでフィルターできる要素に」）。
+   上の段に「すべて」と身近な要素、下の段に化学工学の分類。押した状態は色だけを変え、
+   文字の太さや枠の幅は変えない（押してもボタンの大きさと並びが動かないように） */
+.feature-filter {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.feature-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.feature-filter-chip {
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--light-secondary);
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-pill);
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: color 0.2s var(--ease), background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.feature-filter-chip--chemeng {
+    color: var(--brand);
+    background: var(--brand-50);
+    border-color: rgba(0, 105, 56, 0.25);
+}
+
+.feature-filter-count {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--light-muted);
+    margin-left: 4px;
+}
+
+/* スマホでは押したあとに hover の色が残るので、マウスのときだけ付ける */
+@media (hover: hover) {
+    .feature-filter-chip:hover,
+    .feature-card .article-tag:hover,
+    a.article-tag:hover {
+        color: var(--brand);
+        border-color: var(--brand);
+    }
+}
+
+.feature-filter-chip[aria-pressed="true"] {
+    color: #fff;
+    background: var(--brand);
+    border-color: var(--brand);
+}
+
+.feature-filter-chip[aria-pressed="true"] .feature-filter-count {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* カードの中のタグも押すと絞り込める。記事ページのタグは、絞り込んだ一覧へのリンク */
+.feature-card .article-tag {
+    cursor: pointer;
+}
+
+.feature-card .article-tag,
+a.article-tag {
+    text-decoration: none;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 
 .feature-grid {
@@ -627,12 +700,30 @@
         width: 88px;
         height: 88px;
     }
+
+    /* スマホではボタンを少し小さくして行を減らし、記事の一覧を上に寄せる */
+    .feature-filter {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .feature-filter-row {
+        gap: 6px;
+    }
+
+    .feature-filter-chip {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .article-episode-card,
     .article-related-card,
-    .feature-card {
+    .feature-card,
+    .feature-filter-chip,
+    .feature-card .article-tag,
+    a.article-tag {
         transition: none;
     }
 }
