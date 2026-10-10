@@ -536,12 +536,13 @@
     margin: 8px 0 6px;
 }
 
-/* 記事の題の折り返しをそろえる（スマホのカードで「96度な／の？」のように最後の数文字だけが
+/* 記事の題と本文の見出しの折り返しをそろえる（スマホで「96度な／の？」「越え／る」のように最後の数文字だけが
    次の行に落ちないように）。balance は行の長さをそろえ、auto-phrase は対応ブラウザで文節の切れ目で折り返す */
 .article-title,
 .feature-card-title,
 .article-related-title,
-.article-linkcard-title {
+.article-linkcard-title,
+.article-body h2 {
     text-wrap: balance;
     word-break: auto-phrase;
 }
