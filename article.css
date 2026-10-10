@@ -469,7 +469,7 @@
 }
 
 /* タグで絞り込む（2026-10-10 本人「単純にそれぞれのタグでフィルターできる要素に」）。
-   上の段に「すべて」と身近な要素、下の段に化学工学の分類。押した状態は色だけを変え、
+   いちばん上に「すべて」、その下に身近な要素と化学工学の分野。押した状態は色だけを変え、
    文字の太さや枠の幅は変えない（押してもボタンの大きさと並びが動かないように） */
 .feature-filter {
     display: grid;
@@ -481,6 +481,27 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+/* 身近な要素と化学工学の分野は、見出しを付けて分ける（2026-10-10 本人「混在しているように見えます」）。
+   見出しの色は、カードのタグにそろえる（身近な要素＝灰、化学工学の分野＝緑） */
+.feature-filter-group {
+    display: grid;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.feature-filter-label {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: var(--light-secondary);
+}
+
+.feature-filter-group--chemeng .feature-filter-label {
+    color: var(--brand);
 }
 
 .feature-filter-chip {
