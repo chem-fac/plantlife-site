@@ -468,23 +468,6 @@
     line-break: strict;
 }
 
-/* タグの2種類の見本（文中にタグの形をそのまま置く） */
-.feature-tag-legend {
-    max-width: 640px;
-    margin-top: 14px;
-    font-size: 0.85rem;
-    color: var(--light-muted);
-    line-height: 2.1;
-    word-break: auto-phrase;
-    line-break: strict;
-}
-
-.feature-tag-legend .article-tag {
-    display: inline-block;
-    margin: 0 4px;
-    line-height: 1.6;
-}
-
 /* タグで絞り込む（2026-10-10 本人「単純にそれぞれのタグでフィルターできる要素に」）。
    上の段に「すべて」と身近な要素、下の段に化学工学の分類。押した状態は色だけを変え、
    文字の太さや枠の幅は変えない（押してもボタンの大きさと並びが動かないように） */
