@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水道メーターは、どうやって数えるの？ | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/everyday-chemical-engineering/how-water-meter-counts/" />
+  <meta name="description" content="水道メーターは、水の流れで羽根車を回し、回った数から使った水の量を出します。流量を測るしくみを説明し、工場で測った値を4〜20mAの電気の信号で制御室へ送る計装につなげます。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="水道メーターは、どうやって数えるの？ | プラントライフ">
+  <meta property="og:description" content="水道メーターは、水の流れで羽根車を回し、回った数から使った水の量を出します。流量を測るしくみを説明し、工場で測った値を4〜20mAの電気の信号で制御室へ送る計装につなげます。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/everyday-chemical-engineering/how-water-meter-counts/">
+  <meta property="og:image" content="https://plantlife.chem-fac.com/images/articles/how-water-meter-counts.jpg?v=6340a424">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/article.css">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "水道メーターは、どうやって数えるの？", "description": "水道メーターは、水の流れで羽根車を回し、回った数から使った水の量を出します。流量を測るしくみを説明し、工場で測った値を4〜20mAの電気の信号で制御室へ送る計装につなげます。", "image": "https://plantlife.chem-fac.com/images/articles/how-water-meter-counts.jpg?v=6340a424", "keywords": "街, 流動, プロセス制御", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "url": "https://plantlife.chem-fac.com/everyday-chemical-engineering/how-water-meter-counts/", "author": {"@type": "Person", "name": "かねまる", "sameAs": ["https://x.com/chem_fac", "https://note.com/chem_fac"]}, "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "身近な化学工学", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/"}, {"@type": "ListItem", "position": 3, "name": "水道メーターは、どうやって数えるの？", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/how-water-meter-counts/"}]}</script>
+</head>
+<body class="article-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link active">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="article-main" id="main-content">
+    <div class="article-container">
+      <nav class="article-breadcrumb" aria-label="パンくず">
+        <a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/everyday-chemical-engineering/">身近な化学工学</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">水道メーターは、どうやって数えるの？</span>
+      </nav>
+
+      <article class="article-detail">
+        <header class="article-header">
+          <div class="article-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><a href="/everyday-chemical-engineering/?tag=%E8%A1%97" class="article-tag article-tag--everyday">街</a></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><a href="/everyday-chemical-engineering/?tag=%E6%B5%81%E5%8B%95" class="article-tag article-tag--chemeng">流動</a><a href="/everyday-chemical-engineering/?tag=%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" class="article-tag article-tag--chemeng">プロセス制御</a></span></div>
+          <h1 class="article-title">水道メーターは、どうやって数えるの？</h1>
+          <div class="article-meta">
+            <time datetime="2026-10-10">2026-10-10</time>
+            <span class="article-meta-sep">・</span>
+            <span>放送回 #102 から</span>
+          </div>
+        </header>
+
+        <div class="article-body">
+        <p>家の水道メーターは、使った水の量を数字で表示しています。水道料金も、この量をもとに計算されます。管の中を流れていく水の量を、メーターはどうやって数えているのでしょうか？</p>
+        <p>家の水道メーターの多くは、中に羽根車があり、流れてきた水がこれを回します。羽根車の回る数は、通った水の量に比例します。そのため、回った数を数えれば、使った水の量が分かるのです。</p>
+        <p><strong>水道メーターは、水で回る羽根車の回転の数から、使った水の量を数えています。</strong></p>
+        <h2>回った数で、流れた量が分かる</h2>
+        <p>水道メーターの中では、流れてきた水が羽根車に当たって、羽根車を回します。川の流れで水車が回るのと同じです。メーターは、羽根車が回った数を足し合わせて、通った水の量として表示します。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-meter-impeller.webp?v=7934c02c" alt="管の中の羽根車が水の流れで回り、回った量から流れた量を出すことを示した模式図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>家の水道メーターの多くは、ノズルから噴き出した水を羽根車に当てる接線流羽根車式（<a href="https://www.city.tamano.lg.jp/uploaded/attachment/2353.pdf" target="_blank" rel="noopener">玉野市「給水装置工事設計施工指針」第9章</a>）</figcaption></figure>
+        <p>流れの量（流量）を、回転の数のような測りやすい量に置きかえて測るのが、流量計の基本の考え方です。</p>
+        <p>化学工学便覧には、羽根車（翼車）の回転のほか、流れを絞った前後の圧力の差、流れにできる渦、磁場の中を流れるときに生じる電圧などを使う流量計が並んでいます。工場では、流す物や場所に合わせて、これらを使い分けます。</p>
+        <h2>化学工学では、信号で制御室へ送る</h2>
+        <p>化学工場でとくによく測るのは、温度・圧力・流量・液面の4つです。配管やタンクに計器を取り付けて測り、その値を電気の信号にして、離れた制御室へ送ります。このように、計器で測って信号で送り、運転に役立てるしくみが計装です。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-meter-signal.webp?v=549a7cf5" alt="センサーの値を電気信号にして制御室へ送る流れを、センサー、電気信号、制御室の3つの絵と矢印で示し、この一連の技術が計装だと書いた図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>計装は、自動化や計測管理のために計測・制御装置を取り付けて運用すること（<a href="https://kotobank.jp/word/%E8%A8%88%E8%A3%85-488945" target="_blank" rel="noopener">日本大百科全書「計装」</a>）</figcaption></figure>
+        <p>信号には、4〜20mA（ミリアンペア）の電流がよく使われます。国際電気標準会議（IEC）が定めた、世界共通の計装の信号です。</p>
+        <p>計器ごとに測る範囲を決めておき、範囲のいちばん下（0%）なら4mA、いちばん上（100%）なら20mAの電流を流します。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-meter-4-20ma.webp?v=d2d21fb9" alt="0〜100kPaの圧力計の例で、0kPaは0%で4mA、50kPaは50%で12mA、100kPaは100%で20mAになることを示した表" width="1600" height="900" loading="lazy" decoding="async"><figcaption>IEC 60381-1 で定められた計装の統一信号（<a href="https://www.mgco.jp/mstoday1/MSTback/data/2003/09/4_20mA_T.htm" target="_blank" rel="noopener">エム・システム技研「4～20mA物語」</a>）</figcaption></figure>
+        <p>温度でも圧力でも流量でも同じ4〜20mAで送るので、制御室は同じ形の信号として受け取れます。0mAでなく4mAから始めるのは、測った値が0のときと、電線が切れて電流が流れないときを見分けるためです。</p>
+        <p>制御室では、こうして届いた流量の値をもとに、調節弁の開き具合を自動で変えています。</p>
+        <a class="article-linkcard" href="/everyday-chemical-engineering/faucet-vs-gas-valve/"><span class="article-linkcard-thumb"><img src="/images/articles/faucet-vs-gas-valve.jpg?v=29e6a624" alt="" loading="lazy"></span><span class="article-linkcard-body"><span class="article-linkcard-eyebrow">身近な化学工学</span><span class="article-linkcard-title">ガスの元栓と蛇口は、何が違うの？</span><span class="article-linkcard-desc">蛇口は流れを絞って水の量を調節し、ガスの元栓は全開か全閉で使います。バルブで流れる量が変わるしくみを説明し、工場で流量を測りながら調節弁を動かすフィードバック制御につなげます。</span></span></a>
+        <h2>まとめ</h2>
+        <p>水道メーターは、水で回る羽根車の回転の数を足し合わせて、使った水の量を出しています。工場でも、温度・圧力・流量・液面をそれぞれに合った方法で測り、4〜20mAの電気の信号にそろえて制御室へ送っています。</p>
+        </div>
+
+        <aside class="article-episode-cta">
+          <p class="article-episode-cta-label">この話を声で聴く</p>
+          <a href="/episodes/102/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;how-water-meter-counts&#x27;,&#x27;episode_number&#x27;:102})">
+            <div class="article-episode-thumb"><img src="/images/episodes/102-ce851a9ee0-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#102　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:18:15</span>
+              <span class="article-episode-title">化学プラントの神経系！状態を伝える「計装」の世界</span>
+              <span class="article-episode-hint">エピソードページで聴く →</span>
+            </div>
+          </a>
+        </aside>
+
+      <div class="article-related">
+        <h2 class="article-related-heading">あわせて読む</h2>
+        <div class="article-related-grid">
+          <a href="/everyday-chemical-engineering/faucet-vs-gas-valve/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/faucet-vs-gas-valve.jpg?v=29e6a624" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">流動・プロセス制御</span>
+              <span class="article-related-title">ガスの元栓と蛇口は、何が違うの？</span>
+            </div>
+          </a>
+          <a href="/everyday-chemical-engineering/humidity-100-percent/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/humidity-100-percent.jpg?v=d3c1211b" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">蒸気圧・調湿</span>
+              <span class="article-related-title">湿度100%って、何が100%？</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </article>
+
+      <div class="article-backlink">
+        <a href="/everyday-chemical-engineering/">← 身近な化学工学 の一覧へ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
