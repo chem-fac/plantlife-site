@@ -705,6 +705,8 @@
 .article-promo-title {
     font-size: 1.02rem;
     line-height: 1.6;
+    text-wrap: balance;
+    word-break: auto-phrase;
     color: var(--light-text);
 }
 
