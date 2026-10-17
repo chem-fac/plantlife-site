@@ -6614,5 +6614,66 @@
     ],
     "thumb_s": "/images/episodes/133-2550761d20-400.webp",
     "thumb_l": "/images/episodes/133-2550761d20-800.webp"
+  },
+  {
+    "number": "134",
+    "title": "#134 お知らせ！ビデオポッドキャスト化に書籍出版",
+    "pub_date": "2026-10-18",
+    "description": "このプラントライフ、ビデオポッドキャストになりました！そして技術士第一次試験（化学部門）の解説書をKindleで出版したので、作るときにこだわったところと一緒に紹介しています。書籍はこちら！Kindle Unlimitedでも読めます https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-221月のモルマーケットに出展するか悩み中です。プラントライフのグッズで欲しいものがあれば、ぜひ教えてください！（訂正）16:41ごろ、技術士で受験者の多い部門を「建築」と言ってしまっています。正確には「建設部門」です。こちらで訂正いたします。📚参考資料『技...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/Dpy3XEANqFR6witWH95FYNw74GG0OZ6fJg3fkVdL.jpg",
+    "duration": "00:27:01",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/AA8rcGxPTtOWaeNRW5xRl7W640oIlkDevpzaPEPD.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/announcement-video-podcast-book-publishing",
+      "spotify": "https://open.spotify.com/episode/3jhBHghKpeURdIPJHvqNje",
+      "apple": "https://podcasts.apple.com/jp/podcast/134-%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B-%E3%83%93%E3%83%87%E3%82%AA%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E5%8C%96%E3%81%AB%E6%9B%B8%E7%B1%8D%E5%87%BA%E7%89%88/id1789911793?i=1000796840094&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/bb8bafee-08e6-4b5c-8f92-7068c97c358d/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-134-%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%EF%BC%81%E3%83%93%E3%83%87%E3%82%AA%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E5%8C%96%E3%81%AB%E6%9B%B8%E7%B1%8D%E5%87%BA%E7%89%88",
+      "youtube": "https://www.youtube.com/watch?v=E9k9aS3OlSQ"
+    },
+    "references": [
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-22",
+        "title": "書籍はこちら！Kindle Unlimitedでも読めます"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HN1D8NYJ?tag=podcast00-22",
+        "title": "『技術士第一次試験 化学部門 専門科目 テーマ別完全攻略』ペーパーバック版｜Amazon"
+      },
+      {
+        "url": "https://www.mext.go.jp/a_menu/jinzai/gijutsushi/index.htm",
+        "title": "技術士について｜文部科学省"
+      },
+      {
+        "url": "https://www.chemicaldaily.co.jp/molmarket",
+        "title": "モルマーケット｜化学工業日報社"
+      },
+      {
+        "url": "https://github.com/openai/whisper",
+        "title": "Whisper｜OpenAI"
+      }
+    ],
+    "tags": [
+      "番組・コラボ企画",
+      "仕事・キャリア",
+      "計測・制御・DX"
+    ],
+    "keywords": [
+      "スライド",
+      "パワーポイント",
+      "Whisper",
+      "タイムスタンプ",
+      "フィードバック",
+      "過去問",
+      "出題傾向",
+      "39テーマ",
+      "ペーパーバック",
+      "構造式",
+      "同人誌",
+      "コミケ",
+      "化学工業日報",
+      "Vlog"
+    ],
+    "thumb_s": "/images/episodes/134-016c10a4eb-400.webp",
+    "thumb_l": "/images/episodes/134-016c10a4eb-800.webp"
   }
 ]
