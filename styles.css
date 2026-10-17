@@ -676,19 +676,6 @@ img {
   justify-content: center;
 }
 
-/* 6個が1列に収まらない幅では3個ずつ2段にそろえる（1個だけ2段目に落ちないように） */
-@media (min-width: 769px) and (max-width: 1120px) {
-  .platforms-row {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  /* 2段の高さをそろえる（1列のときはいちばん高いYouTubeの枠＝70pxに伸びてそろう） */
-  .platform-pill {
-    min-height: 70px;
-  }
-}
-
 .platform-pill {
   display: inline-flex;
   align-items: center;
@@ -722,6 +709,45 @@ img {
 
 .platform-pill:hover img {
   transform: scale(1.05);
+}
+
+/* 6個が1列に収まらない幅では、同じ大きさの枠で3列×2段に並べる。
+   枠の幅をロゴに合わせると、段ごとの個数と端がそろわない（スマホで2・1・1・2個に崩れていた） */
+@media (max-width: 1120px) {
+  .platforms-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .platform-pill {
+    justify-content: center;
+    height: 64px;
+    padding: 0 14px;
+  }
+
+  .platform-pill img {
+    min-width: 0;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+/* スマホは2列×3段。ロゴは枠の丸い端に近づかないよう少し小さく */
+@media (max-width: 600px) {
+  .platforms-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .platform-pill {
+    height: 56px;
+  }
+
+  .platform-pill img {
+    height: calc(var(--logo-height, 24px) * 0.88);
+  }
 }
 
 /* Note Promotion Card */
@@ -778,6 +804,14 @@ img {
   font-size: 0.95rem;
   color: var(--light-secondary);
   line-height: 1.6;
+}
+
+/* 狭い画面では語の切れ目（<wbr>）でだけ折り返す（「note／で読む」「読めま／す。」と切れていた）。
+   語が1行に収まらないほど狭いときだけ、語の途中でも折り返す */
+.note-promo-content h3,
+.note-promo-content p {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 /* Responsive adjustment for note card */
@@ -920,8 +954,27 @@ img {
 
 .about-split {
   display: flex;
+  align-items: center;
   gap: 32px;
   margin-bottom: 48px;
+}
+
+.about-visual {
+  flex: 1;
+  max-width: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.about-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.about-text-panel {
+  flex: 2;
 }
 
 .about-text-panel p {
@@ -1062,18 +1115,26 @@ img {
   font-size: 0.9rem;
   color: var(--light-secondary);
   line-height: 1.6;
-  padding-left: 14px;
+  /* 2行目以降は項目名の右にそろえる（スマホで項目名の下にもぐり込まないように） */
+  padding-left: calc(14px + 6.5em);
+  text-indent: -6.5em;
   border-left: 3px solid var(--brand);
+  /* 折り返しは読点・中黒・空白の後ろだけ（「おとも／に」と1文字だけ落ちていた） */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .about-facts strong {
   display: inline-block;
   min-width: 6.5em;
+  text-indent: 0;
   color: var(--light-text);
   font-weight: 700;
 }
 
 .about-facts a {
+  /* ハッシュタグは「#」と語を分けない */
+  white-space: nowrap;
   color: var(--brand);
   font-weight: 600;
 }
@@ -1083,6 +1144,11 @@ img {
     flex-direction: column;
     text-align: center;
     padding: 24px;
+  }
+
+  /* 中央ぞろえのカードの中で、リンクだけ左に寄っていた */
+  .personality-links {
+    justify-content: center;
   }
 }
 
@@ -1370,10 +1436,6 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-split {
-    grid-template-columns: 1fr;
-  }
-
   .links-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1465,13 +1527,21 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .platforms-row {
-    gap: 8px;
+  /* 「番組について」は絵と文章を縦に積む（横並びのままだと、文章が画面の半分ほどの幅に押し込まれていた） */
+  .about-split {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
   }
 
-  .platform-pill {
-    padding: 10px 18px;
-    font-size: 0.8rem;
+  .about-visual {
+    flex: none;
+    width: 200px;
+    align-self: center;
+  }
+
+  .about-text-panel {
+    flex: none;
   }
 
   .links-grid {
