@@ -676,11 +676,25 @@ img {
   justify-content: center;
 }
 
+/* 6個が1列に収まらない幅では3個ずつ2段にそろえる（1個だけ2段目に落ちないように） */
+@media (min-width: 769px) and (max-width: 1120px) {
+  .platforms-row {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* 2段の高さをそろえる（1列のときはいちばん高いYouTubeの枠＝70pxに伸びてそろう） */
+  .platform-pill {
+    min-height: 70px;
+  }
+}
+
 .platform-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 24px;
+  /* 左右は18px。24pxだと6個（stand.fmを含む）が幅1120pxの枠に収まらず、1個だけ2段目に落ちる */
+  padding: 12px 18px;
   border-radius: var(--radius-pill);
   background: var(--light-surface);
   border: 1px solid var(--light-border);

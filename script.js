@@ -416,6 +416,7 @@ function initAnalyticsEvents() {
     if (/music\.amazon/.test(href)) return 'amazon';
     if (/youtube\.com|youtu\.be/.test(href)) return 'youtube';
     if (/listen\.style/.test(href)) return 'listen';
+    if (/stand\.fm/.test(href)) return 'standfm';
     return '';
   };
 
