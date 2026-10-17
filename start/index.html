@@ -173,6 +173,9 @@
             font-weight: 800;
             color: var(--light-text);
             margin-bottom: 8px;
+            /* 狭い画面では語の切れ目（<wbr>）でだけ折り返し、行の長さをそろえる */
+            word-break: keep-all;
+            text-wrap: balance;
         }
 
         .start-listen p {
@@ -181,21 +184,21 @@
             margin-bottom: 22px;
         }
 
+        /* 配信先は同じ大きさの枠で3列×2段に並べる（枠の幅をロゴに合わせると段の端がそろわない） */
         .start-platforms {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 12px;
-            /* 6個を3個ずつ2段に（1列には収まらず、1個だけ2段目に落ちるため） */
-            max-width: 600px;
+            max-width: 640px;
             margin: 0 auto;
         }
 
         .start-platforms a {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            height: 56px;
-            padding: 0 22px;
+            justify-content: center;
+            height: 64px;
+            padding: 0 12px;
             background: #fff;
             border: 1px solid var(--light-border);
             border-radius: var(--radius-md);
@@ -211,11 +214,29 @@
         .start-platforms img {
             height: var(--logo-height, 26px);
             width: auto;
+            max-width: 100%;
+            object-fit: contain;
         }
 
         @media (max-width: 900px) {
             .start-cards {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* スマホは2列×3段 */
+        @media (max-width: 600px) {
+            .start-listen {
+                padding: 28px 18px;
+            }
+
+            .start-platforms {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .start-platforms a {
+                height: 56px;
             }
         }
     </style>
@@ -376,10 +397,10 @@
             </div>
 
             <div class="start-listen">
-                <h2>お好きなプラットフォームで聴く</h2>
+                <h2>お好きな<wbr>プラットフォームで<wbr>聴く</h2>
                 <p>各エピソードのページでは、サイト上でそのまま再生もできます。フォローすると新着を見逃しません。</p>
                 <div class="start-platforms">
-                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener" style="--logo-height:24px;">
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener" style="--logo-height:26px;">
                         <img src="../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
                     </a>
                     <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener"
@@ -392,7 +413,7 @@
                             alt="Apple Podcastsで聴く" loading="lazy">
                     </a>
                     <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
-                        rel="noopener" style="--logo-height:28px;">
+                        rel="noopener" style="--logo-height:25px;">
                         <img src="../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg"
                             alt="Amazon Musicで聴く" loading="lazy">
                     </a>
