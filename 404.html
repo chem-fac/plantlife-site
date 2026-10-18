@@ -19,9 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261005">
+    <link rel="stylesheet" href="/styles.css?v=20261018d">
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -37,45 +37,46 @@
 
         .nf-lead {
             max-width: 640px;
-            margin: -16px 0 32px;
-            color: var(--light-secondary);
+            margin: -8px 0 28px;
+            color: var(--ink);
             line-height: 1.9;
         }
 
+        /* 行き先の一覧は、枠の箱でなく罫線で区切った文字のリンク（2026-10-18） */
         .nf-links {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0 32px;
             max-width: 920px;
             margin-top: 8px;
+            border-top: 1px solid var(--rule);
         }
 
         .nf-link {
             display: flex;
             flex-direction: column;
             gap: 2px;
-            padding: 16px 18px;
-            background: var(--light-surface);
-            border: 1px solid var(--light-border);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
-        }
-
-        .nf-link:hover {
-            border-color: var(--brand);
-            box-shadow: var(--shadow-md);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--rule);
         }
 
         .nf-link strong {
-            font-size: 0.98rem;
-            color: var(--light-text);
+            font-size: 1rem;
+            color: var(--brand);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+        }
+
+        .nf-link:hover strong {
+            color: var(--brand-dark);
+            text-decoration-thickness: 2px;
         }
 
         .nf-link span {
-            font-size: 0.8rem;
+            font-size: 0.875rem;
             line-height: 1.6;
-            color: var(--light-secondary);
+            color: var(--ink-2);
         }
     </style>
   <!-- Google tag (gtag.js) -->
@@ -114,7 +115,6 @@
 
     <main class="nf-main" id="nf-main">
         <div class="container">
-            <div class="section-label">404 NOT FOUND</div>
             <h1 class="section-heading">ページが見つかりません</h1>
             <p class="nf-lead">お探しのページは、移動したか、なくなった可能性があります。聴きたい回は、キーワードやテーマから探せます。</p>
 
@@ -204,7 +204,7 @@
         </div>
     </footer>
 
-    <script src="/script.js?v=20261005"></script>
+    <script src="/script.js?v=20261018d"></script>
 </body>
 
 </html>

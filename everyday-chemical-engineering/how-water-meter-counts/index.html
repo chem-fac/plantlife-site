@@ -25,9 +25,9 @@
   <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/article.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261018d">
+  <link rel="stylesheet" href="/article.css?v=20261018d">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -93,7 +93,7 @@
         <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-meter-4-20ma.webp?v=d2d21fb9" alt="0〜100kPaの圧力計の例で、0kPaは0%で4mA、50kPaは50%で12mA、100kPaは100%で20mAになることを示した表" width="1600" height="900" loading="lazy" decoding="async"><figcaption>IEC 60381-1 で定められた計装の統一信号（<a href="https://www.mgco.jp/mstoday1/MSTback/data/2003/09/4_20mA_T.htm" target="_blank" rel="noopener">エム・システム技研「4～20mA物語」</a>）</figcaption></figure>
         <p>温度でも圧力でも流量でも同じ4〜20mAで送るので、制御室は同じ形の信号として受け取れます。0mAでなく4mAから始めるのは、測った値が0のときと、電線が切れて電流が流れないときを見分けるためです。</p>
         <p>制御室では、こうして届いた流量の値をもとに、調節弁の開き具合を自動で変えています。</p>
-        <a class="article-linkcard" href="/everyday-chemical-engineering/faucet-vs-gas-valve/"><span class="article-linkcard-thumb"><img src="/images/articles/faucet-vs-gas-valve.jpg?v=29e6a624" alt="" loading="lazy"></span><span class="article-linkcard-body"><span class="article-linkcard-eyebrow">身近な化学工学</span><span class="article-linkcard-title">ガスの元栓と蛇口は、何が違うの？</span><span class="article-linkcard-desc">蛇口は流れを絞って水の量を調節し、ガスの元栓は全開か全閉で使います。バルブで流れる量が変わるしくみを説明し、工場で流量を測りながら調節弁を動かすフィードバック制御につなげます。</span></span></a>
+        <a class="article-linkcard" href="/everyday-chemical-engineering/faucet-vs-gas-valve/"><span class="article-linkcard-thumb"><img src="/images/articles/faucet-vs-gas-valve.jpg?v=29e6a624" alt="" loading="lazy"></span><span class="article-linkcard-body"><span class="article-linkcard-kind">身近な化学工学</span><span class="article-linkcard-title">ガスの元栓と蛇口は、何が違うの？</span><span class="article-linkcard-desc">蛇口は流れを絞って水の量を調節し、ガスの元栓は全開か全閉で使います。バルブで流れる量が変わるしくみを説明し、工場で流量を測りながら調節弁を動かすフィードバック制御につなげます。</span></span></a>
         <h2>まとめ</h2>
         <p>水道メーターは、水で回る羽根車の回転の数を足し合わせて、使った水の量を出しています。工場でも、温度・圧力・流量・液面をそれぞれに合った方法で測り、4〜20mAの電気の信号にそろえて制御室へ送っています。</p>
         </div>
@@ -105,7 +105,7 @@
             <div class="article-episode-body">
               <span class="article-episode-num">#102　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:18:15</span>
               <span class="article-episode-title">化学プラントの神経系！状態を伝える「計装」の世界</span>
-              <span class="article-episode-hint">エピソードページで聴く →</span>
+              <span class="article-episode-hint">エピソードページで聴く</span>
             </div>
           </a>
         </aside>
@@ -132,7 +132,7 @@
       </article>
 
       <div class="article-backlink">
-        <a href="/everyday-chemical-engineering/">← 身近な化学工学 の一覧へ</a>
+        <a href="/everyday-chemical-engineering/">「身近な化学工学」の記事一覧へ戻る</a>
       </div>
     </div>
   </main>
@@ -187,6 +187,6 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js?v=20261018d"></script>
 </body>
 </html>

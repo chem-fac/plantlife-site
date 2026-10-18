@@ -23,9 +23,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://image.listen.style">
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=20260711">
+    <link rel="stylesheet" href="../styles.css?v=20261018d">
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -33,6 +33,7 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <style>
+        /* はじめての方へ。おすすめの回を先に、罫線で区切った一覧で見せる（2026-10-18） */
         .start-main {
             padding-top: calc(var(--header-h) + 40px);
             padding-bottom: 80px;
@@ -41,156 +42,151 @@
 
         .start-intro {
             max-width: 940px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        /* 長い文が途中で折れないよう、各文は1行に収める（狭い画面では自然に折り返す） */
         .start-intro p {
+            font-size: 1rem;
+            color: var(--ink);
+            line-height: 1.9;
             line-break: strict;
         }
 
-        .start-intro p {
-            font-size: 0.98rem;
-            color: var(--light-secondary);
-            line-height: 1.9;
-        }
-
-        .start-hero-visual {
-            margin-top: 24px;
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--light-border);
-        }
-
-        .start-hero-visual img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
         .start-group {
-            margin-top: 48px;
+            margin-top: 40px;
         }
 
         .start-group-head {
             display: flex;
             align-items: baseline;
-            gap: 12px;
-            margin-bottom: 6px;
+            gap: 4px 16px;
             flex-wrap: wrap;
+            padding-top: 12px;
+            border-top: 2px solid var(--ink);
+            margin-bottom: 4px;
         }
 
         .start-group-head h2 {
-            font-family: var(--font-display);
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--light-text);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--ink);
         }
 
         .start-group-sub {
-            font-size: 0.85rem;
-            color: var(--light-muted);
+            font-size: 0.9375rem;
+            color: var(--ink-2);
         }
 
+        /* 番組表のように1行に1回：左に番号、中央に題と選んだ理由、右に再生時間 */
         .start-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         .start-card {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            background: var(--light-surface);
-            border: 1px solid var(--light-border);
-            border-radius: var(--radius-lg);
-            padding: 20px 22px;
-            transition: all 0.3s var(--ease);
-        }
-
-        .start-card:hover {
-            border-color: var(--brand);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
+            display: grid;
+            grid-template-columns: 9.5em minmax(0, 1fr) 9em;
+            grid-template-areas:
+                "num title dur"
+                "num why dur";
+            column-gap: 20px;
+            row-gap: 2px;
+            align-items: baseline;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--rule);
         }
 
         .start-card-num {
-            font-family: var(--font-mono);
-            font-size: 0.72rem;
-            font-weight: 700;
-            color: var(--brand);
+            grid-area: num;
         }
 
         .start-card-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--light-text);
-            line-height: 1.5;
+            grid-area: title;
         }
 
         .start-card-why {
-            font-size: 0.85rem;
-            color: var(--light-secondary);
-            line-height: 1.7;
+            grid-area: why;
         }
 
         .start-card-duration {
-            margin-top: auto;
-            padding-top: 4px;
-            font-size: 0.78rem;
-            color: var(--light-secondary);
+            grid-area: dur;
+            text-align: right;
         }
 
-        .start-card-duration time {
-            font-family: var(--font-mono);
+        .start-card-num {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--brand);
             font-variant-numeric: tabular-nums;
         }
 
-        .start-card-badge {
-            align-self: flex-start;
-            font-size: 0.68rem;
+        .start-card-note {
+            display: block;
+        }
+
+        .start-card-title {
+            font-size: 1.05rem;
             font-weight: 700;
-            color: #fff;
-            background: var(--accent-warm);
-            padding: 2px 10px;
-            border-radius: var(--radius-pill);
+            color: var(--ink);
+            line-height: 1.55;
+            text-underline-offset: 3px;
+            transition: color var(--t);
+        }
+
+        .start-card:hover .start-card-title {
+            color: var(--brand);
+            text-decoration: underline;
+        }
+
+        .start-card-why {
+            font-size: 0.9375rem;
+            color: var(--ink-2);
+            line-height: 1.8;
+        }
+
+        .start-card-duration {
+            font-size: 0.875rem;
+            color: var(--ink-2);
+        }
+
+        .start-card-duration time {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* 受賞などの補足は、塗りのバッジでなく文字で */
+        .start-card-note {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--ink-2);
         }
 
         .start-listen {
-            margin-top: 64px;
-            padding: 36px;
-            background: var(--brand-light);
-            border-radius: var(--radius-xl);
-            text-align: center;
+            margin-top: 56px;
+        }
+
+        .start-listen-head {
+            padding-top: 12px;
+            border-top: 2px solid var(--ink);
+            margin-bottom: 6px;
         }
 
         .start-listen h2 {
-            font-family: var(--font-display);
             font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--light-text);
-            margin-bottom: 8px;
-            /* 狭い画面では語の切れ目（<wbr>）でだけ折り返し、行の長さをそろえる */
-            word-break: keep-all;
-            text-wrap: balance;
+            font-weight: 700;
+            color: var(--ink);
         }
 
         .start-listen p {
-            font-size: 0.9rem;
-            color: var(--light-secondary);
-            margin-bottom: 22px;
+            font-size: 0.9375rem;
+            color: var(--ink-2);
+            margin-bottom: 18px;
         }
 
-        /* 配信先は同じ大きさの枠で3列×2段に並べる（枠の幅をロゴに合わせると段の端がそろわない） */
+        /* 配信先は同じ大きさの枠で並べる（ロゴ画像は加工しない） */
         .start-platforms {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 12px;
-            max-width: 640px;
-            margin: 0 auto;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 10px;
         }
 
         .start-platforms a {
@@ -199,16 +195,14 @@
             justify-content: center;
             height: 64px;
             padding: 0 12px;
-            background: #fff;
-            border: 1px solid var(--light-border);
-            border-radius: var(--radius-md);
-            transition: all 0.3s var(--ease);
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-box);
+            transition: border-color var(--t);
         }
 
         .start-platforms a:hover {
             border-color: var(--brand);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
         }
 
         .start-platforms img {
@@ -218,26 +212,32 @@
             object-fit: contain;
         }
 
-        /* 「テーマから選ぶ」は4枚なので2列×2段（狭い画面では下の1列が効く） */
-        .start-cards--two {
-            grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 1120px) {
+            .start-platforms {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                max-width: 640px;
+            }
         }
 
-        @media (max-width: 900px) {
-            .start-cards {
-                grid-template-columns: 1fr;
+        /* 狭い画面では番号と再生時間を題の上に並べる */
+        @media (max-width: 700px) {
+            .start-card {
+                grid-template-columns: auto 1fr;
+                grid-template-areas:
+                    "num dur"
+                    "title title"
+                    "why why";
+            }
+
+            .start-card-duration {
+                text-align: left;
             }
         }
 
         /* スマホは2列×3段 */
         @media (max-width: 600px) {
-            .start-listen {
-                padding: 28px 18px;
-            }
-
             .start-platforms {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 10px;
             }
 
             .start-platforms a {
@@ -279,7 +279,6 @@
 
     <main class="start-main">
         <div class="container">
-            <div class="section-label">START HERE</div>
             <h1 class="section-heading">はじめての方へ</h1>
             <div class="start-intro">
                 <p>
@@ -287,10 +286,6 @@
                     エピソードは100本以上。どこから聴こうか迷ったら、あなたに近いところから選んでみてください。<br>
                     毎週 水曜・日曜に更新しています。
                 </p>
-            </div>
-
-            <div class="start-hero-visual">
-                <img src="../images/start_hero.jpg" alt="プラントライフへようこそ" width="1200" height="600" loading="lazy">
             </div>
 
             <div id="start-groups">
@@ -361,8 +356,7 @@
                             <span class="start-card-duration">再生時間 <time datetime="PT22M8S">22:08</time></span>
                         </a>
                         <a href="/episodes/23/" class="start-card">
-                            <span class="start-card-badge">真夏の科ポキアワード大賞</span>
-                            <span class="start-card-num">#23</span>
+                            <span class="start-card-num">#23 <span class="start-card-note">真夏の科ポキアワード大賞</span></span>
                             <span class="start-card-title">とろとろストレスと戦え！粘度のおはなし</span>
                             <span class="start-card-why">科学系ポッドキャストのアワードで大賞を受賞した回。番組の魅力が詰まっています。</span>
                             <span class="start-card-duration">再生時間 <time datetime="PT18M39S">18:39</time></span>
@@ -407,7 +401,9 @@
             </div>
 
             <div class="start-listen">
-                <h2>お好きな<wbr>プラットフォームで<wbr>聴く</h2>
+                <div class="start-listen-head">
+                    <h2>お好きな<wbr>プラットフォームで<wbr>聴く</h2>
+                </div>
                 <p>各エピソードのページでは、サイト上でそのまま再生もできます。フォローすると新着を見逃しません。</p>
                 <div class="start-platforms">
                     <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener" style="--logo-height:26px;">
@@ -491,7 +487,7 @@
         </div>
     </footer>
 
-    <script src="../script.js?v=20260711"></script>
+    <script src="../script.js?v=20261018d"></script>
 </body>
 
 </html>

@@ -33,9 +33,9 @@
   <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/article.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261018d">
+  <link rel="stylesheet" href="/article.css?v=20261018d">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -67,7 +67,7 @@
   flex: none;
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-box);
   object-fit: cover;
 }
 
@@ -78,10 +78,9 @@
 }
 
 .fx-ep-role {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--brand);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .fx-ep-title {
@@ -102,8 +101,8 @@
   color: var(--light-secondary);
 }
 
-.feature-hero.pt-hero,
-.feature-hero.nb-hero {
+.feature-head.pt-head,
+.feature-head.nb-head {
   margin-bottom: 28px;
 }
 
@@ -143,8 +142,8 @@
 }
 
 .nb-count strong {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-variant-numeric: tabular-nums;
   color: var(--brand);
   margin: 0 2px 0 6px;
 }
@@ -172,13 +171,15 @@
 }
 
 .nb-nav-link {
-  padding: 5px 11px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-pill);
-  background: var(--light-surface);
-  font-size: 0.78rem;
-  color: var(--light-secondary);
+  padding: 5px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
+  font-size: 0.875rem;
+  color: var(--ink-2);
   text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  transition: color var(--t), border-color var(--t);
 }
 
 .nb-nav-link.has-eps {
@@ -188,7 +189,8 @@
 }
 
 .nb-nav-link:hover {
-  background: var(--brand-light);
+  border-color: var(--brand);
+  color: var(--brand);
 }
 
 .nb-decade {
@@ -198,11 +200,12 @@
 
 .nb-decade-heading {
   margin-bottom: 4px;
+  padding-top: 10px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--light-border);
-  font-family: var(--font-display);
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--light-text);
 }
 
@@ -225,9 +228,9 @@
 }
 
 .nb-year-num {
-  font-family: var(--font-display);
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
   line-height: 1.35;
   color: var(--light-text);
 }
@@ -260,15 +263,14 @@
 
 .nb-eps {
   margin-top: 12px;
-  padding: 12px 14px;
-  background: var(--brand-50);
-  border-radius: var(--radius-md);
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
 }
 
 .nb-official {
   display: inline-block;
   margin-top: 8px;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: var(--light-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -305,19 +307,18 @@
 .nb-search {
   width: 300px;
   max-width: 100%;
-  padding: 8px 14px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-pill);
-  background: var(--light-bg);
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--ink-2);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
   color: var(--light-text);
   font-family: var(--font-body);
   font-size: 0.85rem;
 }
 
 .nb-search:focus {
-  outline: none;
   border-color: var(--brand);
-  background: var(--light-surface);
 }
 
 .nb-result {
@@ -376,8 +377,7 @@
     <div class="feature-container nb-container">
       <nav class="fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><a href="/episodes/">エピソード</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><span aria-current="page">ノーベル化学賞から探す</span></nav>
       <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link">テーマ<span class="fx-browse-long">・キーワード</span></a><a href="/elements/" class="fx-browse-link">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link" aria-current="page">ノーベル化学賞</a><a href="/companies/" class="fx-browse-link">企業</a></span></nav>
-      <header class="feature-hero nb-hero">
-        <p class="feature-eyebrow">プラントライフの特集</p>
+      <header class="feature-head nb-head">
         <h1 class="feature-title">ノーベル化学賞から探す</h1>
         <p class="feature-lead">1901年から2026年までのノーベル化学賞（118件）を新しい順に並べました。番組で取り上げた受賞には、その回へのリンクを付けています。</p>
       </header>
@@ -1815,7 +1815,7 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js?v=20261018d"></script>
   <script>
 (function () {
   'use strict';

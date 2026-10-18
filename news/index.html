@@ -20,9 +20,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=202604111">
+    <link rel="stylesheet" href="../styles.css?v=20261018d">
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -30,32 +30,26 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <style>
+        /* 左揃えの見出しと、罫線で区切った一覧（2026-10-18） */
         .news-page-main {
-            padding-top: calc(var(--header-h) + 60px);
+            padding-top: calc(var(--header-h) + 40px);
             padding-bottom: 80px;
             min-height: 80vh;
         }
 
         .news-page-header {
-            margin-bottom: 40px;
-            text-align: center;
+            margin-bottom: 24px;
         }
 
         .news-page-title {
-            font-family: var(--font-display);
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--dark-text);
-            margin-bottom: 16px;
+            color: var(--ink);
+            margin-bottom: 8px;
         }
 
         .news-list-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--light-surface);
-            border: 1px solid var(--light-border);
-            border-radius: var(--radius-lg);
-            padding: 24px;
+            max-width: 860px;
         }
     </style>
   <!-- Google tag (gtag.js) -->
@@ -95,80 +89,80 @@
         <div class="container">
             <div class="news-page-header">
                 <h1 class="news-page-title">お知らせ一覧</h1>
-                <p style="color: var(--light-secondary);">番組に関する最新情報やイベント情報をお届けします。</p>
+                <p style="color: var(--ink-2);">番組に関する最新情報やイベント情報をお届けします。</p>
             </div>
 
             <div class="news-list-container">
                 <div class="news-list">
                     <a href="20261004-video-podcast/" class="news-item">
                         <time class="news-date">2026.10.04</time>
-                        <span class="news-badge">新企画</span>
+                        <span class="news-kind">新企画</span>
                         <span class="news-title">ビデオポッドキャストを本格的に始めました｜解説図を見ながら聴けるように</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20261004-elements-nobel/" class="news-item">
                         <time class="news-date">2026.10.04</time>
-                        <span class="news-badge">新企画</span>
+                        <span class="news-kind">新企画</span>
                         <span class="news-title">特集「周期表から探す」「ノーベル化学賞から探す」を公開しました</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="../goods/" class="news-item">
                         <time class="news-date">2026.09.08</time>
-                        <span class="news-badge">グッズ</span>
+                        <span class="news-kind">グッズ</span>
                         <span class="news-title">番組ステッカーを作りました｜イベント会場で配布します</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260719-everyday-chemical-engineering/" class="news-item">
                         <time class="news-date">2026.07.19</time>
-                        <span class="news-badge">新企画</span>
+                        <span class="news-kind">新企画</span>
                         <span class="news-title">読みもの特集「身近な化学工学」を始めました</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260711-site-renewal/" class="news-item">
                         <time class="news-date">2026.07.11</time>
-                        <span class="news-badge">更新</span>
+                        <span class="news-kind">更新</span>
                         <span class="news-title">サイトを更新しました｜サイト内でエピソードが聴けるように</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260628-transcripts/" class="news-item">
                         <time class="news-date">2026.06.28</time>
-                        <span class="news-badge">更新</span>
+                        <span class="news-kind">更新</span>
                         <span class="news-title">全エピソードに文字起こしを追加しました！</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260604-listen-hls-video-podcast/" class="news-item">
                         <time class="news-date">2026.06.04</time>
-                        <span class="news-badge">掲載</span>
+                        <span class="news-kind">掲載</span>
                         <span class="news-title">Apple Podcastのビデオポッドキャスト化に対応しました！</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260411-share-button/" class="news-item">
                         <time class="news-date">2026.04.11</time>
-                        <span class="news-badge">更新</span>
+                        <span class="news-kind">更新</span>
                         <span class="news-title">サイトにSNSシェアボタンを追加しました！</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260318-pfn-book-reading/" class="news-item">
                         <time class="news-date">2026.03.18</time>
-                        <span class="news-badge">掲載</span>
+                        <span class="news-kind">掲載</span>
                         <span class="news-title">PFN読書会で取り上げられました！</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260308-listen-pickup/" class="news-item">
                         <time class="news-date">2026.03.08</time>
-                        <span class="news-badge">掲載</span>
+                        <span class="news-kind">掲載</span>
                         <span class="news-title">LISTENのお知らせ欄に表示されました！</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260307-podcastmixer/" class="news-item">
                         <time class="news-date">2026.03.07</time>
-                        <span class="news-badge">イベント</span>
+                        <span class="news-kind">イベント</span>
                         <span class="news-title">「PODCASTMIXER 2.0」に参加します！</span>
                         <span class="news-arrow">→</span>
                     </a>
                     <a href="20260307-official-site/" class="news-item">
                         <time class="news-date">2026.03.07</time>
-                        <span class="news-badge">更新</span>
+                        <span class="news-kind">更新</span>
                         <span class="news-title">プラントライフ公式ホームページを開設しました！</span>
                         <span class="news-arrow">→</span>
                     </a>
@@ -226,7 +220,7 @@
         </div>
     </footer>
 
-    <script src="../script.js?v=202604111"></script>
+    <script src="../script.js?v=20261018d"></script>
 </body>
 
 </html>

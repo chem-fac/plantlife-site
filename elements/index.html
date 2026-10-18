@@ -33,9 +33,9 @@
   <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/article.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261018d">
+  <link rel="stylesheet" href="/article.css?v=20261018d">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -67,7 +67,7 @@
   flex: none;
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-box);
   object-fit: cover;
 }
 
@@ -78,10 +78,9 @@
 }
 
 .fx-ep-role {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--brand);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .fx-ep-title {
@@ -102,8 +101,8 @@
   color: var(--light-secondary);
 }
 
-.feature-hero.pt-hero,
-.feature-hero.nb-hero {
+.feature-head.pt-head,
+.feature-head.nb-head {
   margin-bottom: 28px;
 }
 
@@ -160,9 +159,10 @@
 
 .pt-search-input {
   width: 220px;
-  padding: 7px 14px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-pill);
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid var(--ink-2);
+  border-radius: var(--radius-tag);
   background: var(--light-surface);
   color: var(--light-text);
   font-family: var(--font-body);
@@ -170,7 +170,6 @@
 }
 
 .pt-search-input:focus {
-  outline: none;
   border-color: var(--brand);
 }
 
@@ -184,8 +183,8 @@
 }
 
 .pt-count strong {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-variant-numeric: tabular-nums;
   color: var(--brand);
   margin: 0 2px 0 6px;
 }
@@ -199,16 +198,17 @@
 }
 
 .pt-view-btn {
-  padding: 7px 16px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-pill);
-  background: var(--light-surface);
-  color: var(--light-secondary);
+  min-height: 36px;
+  padding: 5px 14px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  transition: color var(--t), border-color var(--t), box-shadow var(--t);
 }
 
 .pt-view-btn:hover {
@@ -216,10 +216,12 @@
   color: var(--brand);
 }
 
+/* 選んでいる色分けは、緑の文字＋緑の枠（白地のまま） */
 .pt-view-btn[aria-pressed="true"] {
-  background: var(--brand);
   border-color: var(--brand);
-  color: #fff;
+  box-shadow: inset 0 0 0 1px var(--brand);
+  color: var(--brand);
+  font-weight: 700;
 }
 
 .pt-view-btn:focus-visible {
@@ -332,7 +334,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.68rem;
   color: var(--light-muted);
 }
@@ -365,7 +367,7 @@
   position: absolute;
   top: 3px;
   left: 5px;
-  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.6rem;
   line-height: 1;
 }
@@ -503,7 +505,7 @@
 }
 
 .pt-ph-z {
-  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.6rem;
 }
 
@@ -526,7 +528,6 @@
   background: var(--light-surface);
   border: 1px solid var(--light-border);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
   font-size: 0.82rem;
   line-height: 1.6;
 }
@@ -557,7 +558,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: var(--radius-box);
   border: 1px solid var(--light-border);
   background: var(--light-surface);
   color: var(--light-secondary);
@@ -591,7 +592,7 @@
   position: absolute;
   top: 4px;
   left: 6px;
-  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.6rem;
   font-weight: 500;
   line-height: 1;
@@ -715,7 +716,6 @@
   background: var(--light-surface);
   border: 1px solid var(--light-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
   scroll-margin-top: calc(var(--header-h) + 20px);
 }
 
@@ -884,8 +884,7 @@
     <div class="pt-container">
       <nav class="fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><a href="/episodes/">エピソード</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><span aria-current="page">周期表から探す</span></nav>
       <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link">テーマ<span class="fx-browse-long">・キーワード</span></a><a href="/elements/" class="fx-browse-link" aria-current="page">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link">ノーベル化学賞</a><a href="/companies/" class="fx-browse-link">企業</a></span></nav>
-      <header class="feature-hero pt-hero">
-        <p class="feature-eyebrow">プラントライフの特集</p>
+      <header class="feature-head pt-head">
         <h1 class="feature-title">周期表から探す</h1>
         <p class="feature-lead">番組で取り上げた元素に色を付けた周期表です。マスを選ぶと、基本データとその元素を取り上げた回が出ます。ボタンで、常温での状態や金属・非金属などの色分けにも切り替えられます。</p>
       </header>
@@ -1512,7 +1511,7 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js?v=20261018d"></script>
   <script>
 (function () {
   'use strict';

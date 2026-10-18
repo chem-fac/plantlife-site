@@ -33,9 +33,9 @@
   <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/article.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261018d">
+  <link rel="stylesheet" href="/article.css?v=20261018d">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -67,7 +67,7 @@
   flex: none;
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-box);
   object-fit: cover;
 }
 
@@ -78,10 +78,9 @@
 }
 
 .fx-ep-role {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--brand);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .fx-ep-title {
@@ -102,21 +101,25 @@
   color: var(--light-secondary);
 }
 
-.feature-hero.pt-hero,
-.feature-hero.nb-hero {
+.feature-head.pt-head,
+.feature-head.nb-head {
   margin-bottom: 28px;
 }
 
 /* パンくずと「エピソードを探す」の切り替えは styles.css（エピソード一覧と同じ定義を共有する） */
-/* 企業から探す */
+/* 企業から探す
+   2026-10-18 デザインの決まり（発信運営/サイトデザイン/デザインの決まり.md）に合わせて書き直し：
+   濃い緑の塗りの箱・淡い緑の面・丸いピル・英字の小見出し・ホバーで動く矢印をやめ、
+   白い紙に墨の文字と罫線、緑は番号・リンク・選んでいる物だけにした。
+   「化学の流れ」の図（原料→暮らしの製品）はこのページの見せ場なので、線画のアイコンと矢印の線で残す。 */
 
 /* 入れ物はエピソード一覧・周期表・ノーベル化学賞と同じ幅（切り替えの位置をそろえる） */
 .feature-container.co-container {
   max-width: var(--max-w);
 }
 
-.co-hero {
-  margin-bottom: 44px;
+.co-head {
+  margin-bottom: 32px;
 }
 
 .co-ico {
@@ -131,8 +134,11 @@
   stroke-linejoin: round;
 }
 
+/* 節の始まりは本文幅いっぱいの墨の罫線（2px）＋左揃えの日本語の見出し */
 .co-sec {
-  margin-bottom: 72px;
+  margin-bottom: 64px;
+  padding-top: 14px;
+  border-top: 2px solid var(--ink);
 }
 
 .co-sec-head {
@@ -141,84 +147,75 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 12px 24px;
-  margin-bottom: 22px;
-}
-
-.co-kicker {
-  margin-bottom: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--brand);
+  margin-bottom: 20px;
 }
 
 .co-h2 {
-  font-size: 1.55rem;
-  font-weight: 800;
-  line-height: 1.35;
-  color: var(--light-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--ink);
+  font-feature-settings: "palt";
 }
 
 .co-sub {
-  margin-top: 6px;
-  font-size: 0.9rem;
+  margin-top: 4px;
+  font-size: 0.9375rem;
   line-height: 1.8;
-  color: var(--light-secondary);
+  color: var(--ink-2);
 }
 
 .co-count {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
   color: var(--brand);
 }
 
-/* ── 企業研究 ── */
+/* ── 企業研究：最新の回を大きく（文字が主役）、画像は右に小さく ── */
 .co-series {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
 }
 
 .co-feature {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 32px;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 40px;
   align-items: start;
-  padding: 34px 34px 30px;
-  border-radius: var(--radius-xl);
-  background: var(--brand-dark);
-  color: #fff;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .co-no {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: #8fd9b3;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--brand);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-feature-name {
-  margin: 6px 0;
-  font-size: 2.3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #fff;
+  margin: 2px 0 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  font-feature-settings: "palt";
 }
 
 .co-feature-desc {
-  font-size: 0.92rem;
-  line-height: 1.85;
-  color: rgba(255, 255, 255, 0.82);
+  max-width: 40em;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--ink);
 }
 
+/* 系譜の図（前身の会社の線が合流して今の社名へ）。色は build_features.py の lineage_svg が墨・緑で描く */
 .co-lineage {
   display: block;
   width: 100%;
   max-width: 360px;
   height: auto;
-  margin: 22px 0 24px;
+  margin: 20px 0 20px;
 }
 
 .co-lineage text {
@@ -226,370 +223,327 @@
 }
 
 .co-lineage .co-lineage-year {
-  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-feature-ep {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  color: #fff;
-  text-decoration: none;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
 }
 
 .co-feature-ep-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
   min-width: 0;
 }
 
 .co-feature-ep-meta {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-feature-ep-title {
-  font-size: 0.95rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   line-height: 1.6;
+  text-underline-offset: 3px;
+  transition: color var(--t);
 }
 
+.co-feature-ep:hover .co-feature-ep-title {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+/* 「聴く」は文字のリンク（動かさない） */
 .co-play {
   display: inline-flex;
-  flex: none;
   align-items: center;
   gap: 6px;
-  margin-left: auto;
-  padding: 10px 18px;
-  border-radius: var(--radius-pill);
-  background: #fff;
-  font-size: 0.85rem;
+  font-size: 0.9375rem;
   font-weight: 700;
-  color: var(--brand-dark);
-  transition: transform 0.15s;
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.co-feature-ep:hover .co-play {
-  transform: translateX(2px);
+.co-play .co-ico {
+  width: 0.8em;
+  height: 0.8em;
+  fill: currentColor;
 }
 
 .co-feature-art {
-  width: 220px;
-  height: 220px;
-  border-radius: var(--radius-lg);
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-box);
   object-fit: cover;
 }
 
+/* 次の1社：箱や大きな番号を使わず、罫線で区切った1行 */
 .co-next {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
   justify-content: space-between;
-  gap: 20px;
-  padding: 30px 28px;
-  border-radius: var(--radius-xl);
-  background: var(--brand-light);
+  gap: 4px 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
 }
 
 .co-next-no {
-  font-family: var(--font-display);
-  font-size: 4.6rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--brand);
+  display: none;
 }
 
 .co-next-title {
-  margin-top: 18px;
-  font-size: 1.12rem;
-  font-weight: 800;
-  color: var(--light-text);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .co-next-text {
-  margin-top: 6px;
-  font-size: 0.88rem;
-  line-height: 1.85;
-  color: var(--light-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--ink-2);
 }
 
 .co-btn-outline {
   display: inline-flex;
-  align-self: flex-start;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border: 1.5px solid var(--brand);
-  border-radius: var(--radius-pill);
-  background: #fff;
-  font-size: 0.85rem;
+  gap: 6px;
+  font-size: 0.9375rem;
   font-weight: 700;
   color: var(--brand);
-  transition: background-color 0.15s, color 0.15s;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color var(--t);
 }
 
 .co-btn-outline:hover {
-  background: var(--brand);
-  color: #fff;
+  color: var(--brand-dark);
 }
 
 .co-past-h {
-  margin: 28px 0 12px;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--light-text);
+  margin: 28px 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .co-past {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 12px;
+  border-top: 1px solid var(--rule);
 }
 
 .co-past-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
   align-items: center;
-  gap: 14px;
-  padding: 12px 16px 12px 12px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-lg);
-  background: #fff;
-  color: inherit;
-  text-decoration: none;
-  transition: border-color 0.15s;
-}
-
-.co-past-card:hover {
-  border-color: var(--brand);
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
 }
 
 .co-past-card img {
-  flex: none;
   width: 56px;
   height: 56px;
-  border-radius: 10px;
+  border-radius: var(--radius-box);
   object-fit: cover;
 }
 
 .co-past-text {
   display: flex;
   flex-direction: column;
-  min-width: 0;
 }
 
 .co-past-no {
-  font-family: var(--font-display);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-size: 0.875rem;
+  font-weight: 700;
   color: var(--brand);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-past-name {
-  font-size: 0.98rem;
-  font-weight: 800;
-  color: var(--light-text);
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .co-past-title {
-  font-size: 0.76rem;
-  line-height: 1.55;
-  color: var(--light-muted);
+  font-size: 0.875rem;
+  color: var(--ink-2);
 }
 
 .co-origin {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-  font-size: 0.86rem;
-  line-height: 1.8;
-  color: var(--light-secondary);
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
 }
 
 .co-origin .co-ico {
-  font-size: 1.15rem;
-  color: var(--brand);
+  display: none;
 }
 
-/* ── 化学の流れで見る ── */
+/* ── 化学の流れで見る（このページの見せ場。工程の流れ図のように左から右へ） ── */
 .co-legend {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 18px;
-  font-size: 0.8rem;
-  color: var(--light-secondary);
+  font-size: 0.875rem;
+  color: var(--ink-2);
 }
 
 .co-legend > span {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
 
 .co-key {
-  width: 12px;
-  height: 12px;
-  border: 1.5px solid #9fbfae;
-  border-radius: 4px;
-  background: #fff;
+  width: 14px;
+  height: 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
 }
 
 .co-key--main {
-  border-color: var(--brand);
-  background: var(--brand);
+  border: 2px solid var(--brand);
 }
 
 .co-map {
-  padding: 40px 32px 30px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-xl);
-  background: var(--light-surface);
+  padding: 24px 0 8px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .co-flow {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  gap: 24px;
 }
 
 .co-stage {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
-/* 段と段をつなぐ線と矢印 */
+/* 段と段をつなぐ線と矢印（墨の細線） */
 .co-stage:not(:last-child)::before {
   content: '';
   position: absolute;
-  top: 29px;
-  left: calc(50% + 34px);
-  width: calc(100% - 50px);
-  height: 2px;
-  background: #c9e4d4;
+  top: 15px;
+  left: 44px;
+  right: -16px;
+  height: 1px;
+  background: var(--ink-2);
 }
 
 .co-stage:not(:last-child)::after {
   content: '';
   position: absolute;
-  top: 25px;
-  left: calc(100% + 4px);
-  width: 9px;
-  height: 9px;
-  border-top: 2px solid var(--brand);
-  border-right: 2px solid var(--brand);
+  top: 11px;
+  right: -17px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid var(--ink-2);
+  border-right: 1px solid var(--ink-2);
   transform: rotate(45deg);
 }
 
 .co-stage-icon {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--brand-light);
-  font-size: 1.7rem;
+  justify-content: flex-start;
+  width: 32px;
+  height: 32px;
+  font-size: 1.75rem;
   color: var(--brand);
 }
 
 .co-stage-num {
-  margin-top: 14px;
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: var(--light-muted);
+  margin-top: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--brand);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-stage-name {
-  margin-top: 2px;
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--light-text);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .co-stage-cap {
-  margin-top: 2px;
-  font-size: 0.75rem;
-  color: var(--light-muted);
+  font-size: 0.8125rem;
+  color: var(--ink-2);
 }
 
 .co-chips {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
+/* 会社名：角丸2px・1pxの枠。企業研究の会社は緑の文字＋緑の枠（塗らない） */
 .co-chip {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
   min-height: 40px;
-  padding: 8px 12px;
-  border: 1px solid var(--light-border);
-  border-radius: 12px;
-  background: #fff;
-  font-size: 0.86rem;
+  justify-content: center;
+  padding: 6px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.4;
-  color: var(--light-text);
-  text-align: center;
-  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+  color: var(--ink);
+  transition: border-color var(--t), color var(--t);
 }
 
 .co-chip:hover {
   border-color: var(--brand);
-  background: var(--brand-50);
   color: var(--brand);
 }
 
 .co-chip.is-main {
-  flex-direction: column;
-  gap: 1px;
-  border-color: var(--brand);
-  background: var(--brand);
-  color: #fff;
-}
-
-.co-chip.is-main:hover {
-  background: var(--brand-dark);
-  color: #fff;
+  border: 2px solid var(--brand);
+  color: var(--brand);
 }
 
 .co-chip-tag {
-  font-family: var(--font-display);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #b8ecd0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-chip.is-empty {
   border-style: dashed;
-  background: transparent;
   font-weight: 500;
-  color: var(--light-muted);
+  color: var(--ink-2);
 }
 
 .co-rows {
   display: grid;
-  gap: 14px;
-  margin-top: 34px;
-  padding-top: 26px;
-  border-top: 1px dashed var(--light-border);
+  gap: 0;
+  margin-top: 28px;
+  border-top: 1px solid var(--rule);
 }
 
 .co-row {
@@ -597,6 +551,11 @@
   grid-template-columns: 230px minmax(0, 1fr);
   align-items: center;
   gap: 18px;
+  padding: 14px 0;
+}
+
+.co-row + .co-row {
+  border-top: 1px solid var(--rule);
 }
 
 .co-row-label {
@@ -615,23 +574,21 @@
   flex: none;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--brand-50);
-  font-size: 1.3rem;
+  width: 28px;
+  height: 28px;
+  font-size: 1.4rem;
   color: var(--brand);
 }
 
 .co-row-name {
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: var(--light-text);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .co-row-cap {
-  font-size: 0.74rem;
-  color: var(--light-muted);
+  font-size: 0.8125rem;
+  color: var(--ink-2);
 }
 
 .co-row .co-chips {
@@ -640,114 +597,103 @@
   margin-top: 0;
 }
 
-.co-row .co-chip {
-  padding: 8px 16px;
-}
-
-/* ── 企業の一覧 ── */
+/* ── 企業の一覧（2列の罫線リスト。箱で囲まない） ── */
 .co-tools {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 16px;
-  margin-bottom: 14px;
+  gap: 12px 20px;
+  margin-bottom: 8px;
 }
 
-.co-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.co-pill {
+.co-filters {
   display: inline-flex;
-  align-items: center;
   gap: 6px;
-  padding: 7px 14px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-pill);
-  background: #fff;
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--light-text);
+}
+
+/* 絞り込み：角丸2px・1pxの枠。選んでいる方は緑の文字＋緑の枠（白地のまま） */
+.co-filter {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-height: 40px;
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
   cursor: pointer;
+  transition: color var(--t), border-color var(--t);
 }
 
-.co-pill b {
-  font-family: var(--font-display);
+.co-filter b {
+  font-weight: 500;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.co-filter:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.co-filter[aria-pressed="true"] {
+  border-color: var(--brand);
+  box-shadow: inset 0 0 0 1px var(--brand);
+  color: var(--brand);
   font-weight: 700;
-  color: var(--light-muted);
-}
-
-.co-pill:hover {
-  border-color: var(--brand);
-}
-
-.co-pill[aria-pressed="true"] {
-  border-color: var(--brand);
-  background: var(--brand);
-  color: #fff;
-}
-
-.co-pill[aria-pressed="true"] b {
-  color: #cdeedd;
 }
 
 .co-search {
-  width: 280px;
+  width: 320px;
   max-width: 100%;
+  min-height: 44px;
   margin-left: auto;
-  padding: 10px 18px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-pill);
-  background: #fff;
-  font: inherit;
-  font-size: 0.85rem;
-  color: var(--light-text);
+  padding: 10px 14px;
+  border: 1px solid var(--ink-2);
+  border-radius: var(--radius-tag);
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  transition: border-color var(--t);
 }
 
 .co-search:focus {
-  outline: none;
   border-color: var(--brand);
 }
 
 .co-result {
   min-height: 1.6em;
-  margin-bottom: 14px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--brand);
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  color: var(--ink-2);
 }
 
 .co-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  column-gap: 40px;
+  border-top: 1px solid var(--rule);
 }
 
 .co-card {
-  display: flex;
-  flex-direction: column;
-  padding: 24px 26px;
-  border: 1px solid var(--light-border);
-  border-radius: var(--radius-lg);
-  background: #fff;
+  padding: 18px 0 20px;
+  border-bottom: 1px solid var(--rule);
   scroll-margin-top: calc(var(--header-h) + 24px);
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .co-card[hidden] {
   display: none;
 }
 
-.co-card.is-main {
-  border-color: var(--brand);
-}
-
+/* エピソードページの「企業の一覧で見る」から来た会社は、緑の枠で示す */
 .co-card.is-target {
-  border-color: var(--brand);
-  box-shadow: 0 0 0 4px var(--brand-10);
+  outline: 2px solid var(--brand);
+  outline-offset: 6px;
 }
 
 .co-card-top {
@@ -755,86 +701,78 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 6px 12px;
+  margin-bottom: 4px;
 }
 
 .co-card-stage {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--light-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .co-card-stage .co-ico {
-  font-size: 1rem;
   color: var(--brand);
 }
 
 .co-card-stage b {
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--brand);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-tag {
-  padding: 3px 11px;
-  border-radius: var(--radius-pill);
-  background: var(--brand);
-  font-size: 0.72rem;
+  padding: 0 6px;
+  border: 1px solid var(--brand);
+  border-radius: var(--radius-tag);
+  font-size: 0.8125rem;
   font-weight: 700;
-  color: #fff;
+  line-height: 1.7;
+  color: var(--brand);
+  font-variant-numeric: tabular-nums;
 }
 
 .co-card-name {
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 700;
   line-height: 1.4;
-  color: var(--light-text);
+  color: var(--ink);
 }
 
 .co-card-old {
-  margin-top: 2px;
-  font-size: 0.78rem;
-  color: var(--light-muted);
+  font-size: 0.8125rem;
+  color: var(--ink-2);
 }
 
 .co-card-desc {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  line-height: 1.85;
-  color: var(--light-secondary);
+  margin-top: 6px;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--ink);
 }
 
 .co-card-eps {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: auto 0 0;
-  padding: 16px 0 0;
-  border-top: 1px solid var(--light-border);
   list-style: none;
-}
-
-.co-card-desc + .co-card-eps {
-  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .co-ep {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: start;
   gap: 12px;
-  color: inherit;
-  text-decoration: none;
+  color: var(--ink);
 }
 
 .co-ep img {
-  flex: none;
-  width: 46px;
-  height: 46px;
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-box);
   object-fit: cover;
 }
 
@@ -845,38 +783,28 @@
 }
 
 .co-ep-role {
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
   color: var(--brand);
 }
 
 .co-ep-title {
-  font-size: 0.86rem;
+  font-size: 0.9375rem;
   font-weight: 700;
-  line-height: 1.55;
-  color: var(--light-text);
+  line-height: 1.6;
+  text-underline-offset: 3px;
+  transition: color var(--t);
 }
 
 .co-ep-note {
-  font-size: 0.78rem;
-  line-height: 1.6;
-  color: var(--light-muted);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: var(--ink-2);
 }
 
 .co-ep:hover .co-ep-title {
   color: var(--brand);
   text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.co-card-site {
-  align-self: flex-start;
-  margin-top: 14px;
-  font-size: 0.75rem;
-  color: var(--light-muted);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .co-more p + p {
@@ -884,78 +812,70 @@
 }
 
 @media (max-width: 1000px) {
-  .co-series {
-    grid-template-columns: 1fr;
+  .co-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .co-next {
-    flex-direction: row;
-    align-items: flex-end;
+  .co-stage:nth-child(3)::before,
+  .co-stage:nth-child(3)::after {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .co-sec {
-    margin-bottom: 56px;
+    margin-bottom: 48px;
   }
 
   .co-h2 {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
   }
 
   .co-feature {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding: 24px 22px 22px;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 0 16px;
   }
 
   .co-feature-art {
-    order: -1;
-    width: 96px;
-    height: 96px;
-    margin-bottom: 18px;
-    border-radius: 12px;
+    grid-column: 1;
+    grid-row: 1;
+    width: 88px;
+    height: 88px;
   }
 
-  .co-feature-name {
-    font-size: 1.9rem;
+  .co-feature-body {
+    display: contents;
+  }
+
+  .co-feature-body > .co-no,
+  .co-feature-body > .co-feature-name {
+    grid-column: 2;
+  }
+
+  .co-feature-body > .co-no {
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .co-feature-body > .co-feature-name {
+    grid-row: 1;
+    align-self: end;
+    font-size: 1.5rem;
+  }
+
+  .co-feature-body > :not(.co-no):not(.co-feature-name) {
+    grid-column: 1 / -1;
+  }
+
+  .co-feature-desc {
+    margin-top: 12px;
   }
 
   .co-lineage {
     max-width: none;
   }
 
-  .co-feature-ep {
-    flex-wrap: wrap;
-  }
-
-  .co-play {
-    margin-left: 0;
-  }
-
-  .co-next {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 24px 22px;
-  }
-
-  .co-next-no {
-    font-size: 3.6rem;
-  }
-
-  .co-origin {
-    align-items: flex-start;
-  }
-
-  .co-origin .co-ico {
-    margin-top: 4px;
-  }
-
-  .co-map {
-    padding: 26px 18px 22px;
-  }
-
-  /* スマホでは流れを縦に */
+  /* スマホでは流れを縦に（線と矢印は左の縦線） */
   .co-flow {
     grid-template-columns: 1fr;
     gap: 0;
@@ -963,11 +883,10 @@
 
   .co-stage {
     display: grid;
-    grid-template-columns: 52px minmax(0, 1fr);
-    column-gap: 16px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 12px;
     align-items: start;
-    padding-bottom: 26px;
-    text-align: left;
+    padding-bottom: 24px;
   }
 
   .co-stage:last-child {
@@ -980,44 +899,46 @@
 
   .co-stage-icon {
     grid-row: 1 / span 4;
-    width: 52px;
-    height: 52px;
-    font-size: 1.45rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
   }
 
   .co-stage-num {
-    margin-top: 2px;
+    margin-top: 0;
+  }
+
+  .co-stage:nth-child(3)::before,
+  .co-stage:nth-child(3)::after {
+    display: block;
   }
 
   .co-stage:not(:last-child)::before {
-    top: 58px;
+    top: 40px;
     bottom: 6px;
-    left: 25px;
-    width: 2px;
+    left: 14px;
+    right: auto;
+    width: 1px;
     height: auto;
   }
 
   .co-stage:not(:last-child)::after {
     top: auto;
     bottom: 4px;
-    left: 21px;
+    left: 10px;
+    right: auto;
     transform: rotate(135deg);
   }
 
   .co-chips {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 12px;
-  }
-
-  .co-chip {
-    min-height: 0;
-    padding: 8px 14px;
+    margin-top: 10px;
   }
 
   .co-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .co-search {
@@ -1027,10 +948,6 @@
 
   .co-grid {
     grid-template-columns: 1fr;
-  }
-
-  .co-card {
-    padding: 20px;
   }
 }
 
@@ -1062,8 +979,7 @@
     <div class="feature-container co-container">
       <nav class="fx-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><a href="/episodes/">エピソード</a><span class="fx-breadcrumb-sep" aria-hidden="true">›</span><span aria-current="page">企業から探す</span></nav>
       <nav class="fx-browse" aria-label="エピソードの探し方"><span class="fx-browse-label">エピソードを探す</span><span class="fx-browse-tabs"><a href="/episodes/" class="fx-browse-link">テーマ<span class="fx-browse-long">・キーワード</span></a><a href="/elements/" class="fx-browse-link">周期表</a><a href="/nobel-chemistry/" class="fx-browse-link">ノーベル化学賞</a><a href="/companies/" class="fx-browse-link" aria-current="page">企業</a></span></nav>
-      <header class="feature-hero co-hero">
-        <p class="feature-eyebrow">プラントライフの特集</p>
+      <header class="feature-head co-head">
         <h1 class="feature-title">企業から探す</h1>
         <p class="feature-lead">番組に出てきた会社を、原料から暮らしの製品までの流れに並べました。会社を選ぶと、その会社が出てくる回へ進めます。</p>
       </header>
@@ -1071,7 +987,6 @@
       <section class="co-sec" aria-labelledby="co-series-h">
         <div class="co-sec-head">
           <div>
-            <p class="co-kicker">SERIES</p>
             <h2 class="co-h2" id="co-series-h">企業研究</h2>
             <p class="co-sub">1社を、1つの製品・素材から読み解くシリーズです。</p>
           </div>
@@ -1083,18 +998,18 @@
               <h3 class="co-feature-name">レゾナック</h3>
               <p class="co-feature-desc">昭和電工が日立化成を買収し、2023年にレゾナックへ社名を変えた経緯と、石油化学を切り離して機能性化学品で戦う狙いを話しています。</p>
               <svg class="co-lineage" viewBox="0 0 320 96" role="img" aria-label="昭和電工・日立化成の流れ：2020年 日立化成を傘下に、2023年 レゾナックへ">
-            <path d="M0 20 H104 C140 20 136 45 172 45" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-            <text x="0" y="11" fill="rgba(255,255,255,.92)" font-size="13" font-weight="700">昭和電工</text>
-            <path d="M0 70 H104 C140 70 136 45 172 45" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-            <text x="0" y="89" fill="rgba(255,255,255,.92)" font-size="13" font-weight="700">日立化成</text>
-            <path d="M172 45 H308" fill="none" stroke="#fff" stroke-width="3"/>
-            <path d="M302 39 L312 45 L302 51" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="172" cy="45" r="6" fill="#8fd9b3"/>
-            <text class="co-lineage-year" x="172" y="68" fill="#8fd9b3" font-size="12" font-weight="700" text-anchor="middle">2020</text>
-            <text x="172" y="85" fill="rgba(255,255,255,.75)" font-size="11" text-anchor="middle">日立化成を傘下に</text>
-            <circle cx="262" cy="45" r="6" fill="#8fd9b3"/>
-            <text class="co-lineage-year" x="262" y="68" fill="#8fd9b3" font-size="12" font-weight="700" text-anchor="middle">2023</text>
-            <text x="262" y="85" fill="rgba(255,255,255,.75)" font-size="11" text-anchor="middle">レゾナックへ</text>
+            <path d="M0 20 H104 C140 20 136 45 172 45" fill="none" stroke="#555f59" stroke-width="1.5"/>
+            <text x="0" y="11" fill="#1c2320" font-size="13" font-weight="700">昭和電工</text>
+            <path d="M0 70 H104 C140 70 136 45 172 45" fill="none" stroke="#555f59" stroke-width="1.5"/>
+            <text x="0" y="89" fill="#1c2320" font-size="13" font-weight="700">日立化成</text>
+            <path d="M172 45 H308" fill="none" stroke="#1c2320" stroke-width="2"/>
+            <path d="M302 39 L312 45 L302 51" fill="none" stroke="#1c2320" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="172" cy="45" r="5" fill="#006938"/>
+            <text class="co-lineage-year" x="172" y="68" fill="#006938" font-size="12" font-weight="700" text-anchor="middle">2020</text>
+            <text x="172" y="85" fill="#555f59" font-size="11" text-anchor="middle">日立化成を傘下に</text>
+            <circle cx="262" cy="45" r="5" fill="#006938"/>
+            <text class="co-lineage-year" x="262" y="68" fill="#006938" font-size="12" font-weight="700" text-anchor="middle">2023</text>
+            <text x="262" y="85" fill="#555f59" font-size="11" text-anchor="middle">レゾナックへ</text>
           </svg>
               <a class="co-feature-ep" href="/episodes/51/">
                 <span class="co-feature-ep-text">
@@ -1108,20 +1023,18 @@
           </article>
           <article class="co-next">
             <div>
-              <p class="co-next-no" aria-hidden="true">02</p>
               <p class="co-next-title">次の1社を準備中です</p>
               <p class="co-next-text">取り上げてほしい会社や製品があれば、お便りで教えてください。</p>
             </div>
-            <a class="co-btn-outline" href="https://docs.google.com/forms/d/e/1FAIpQLSckO0skaY1Nm-0ekGs3jOiuRt-bIq6RxynOGdK9uZ2_bxj8fA/viewform" target="_blank" rel="noopener"><svg class="co-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg>お便りを送る</a>
+            <a class="co-btn-outline" href="https://docs.google.com/forms/d/e/1FAIpQLSckO0skaY1Nm-0ekGs3jOiuRt-bIq6RxynOGdK9uZ2_bxj8fA/viewform" target="_blank" rel="noopener">お便りを送る</a>
           </article>
         </div>
-        <p class="co-origin"><svg class="co-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"/><path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"/></svg>このシリーズは、リスナーのひろひろしさんからのお便りがきっかけで始まりました。</p>
+        <p class="co-origin">このシリーズは、リスナーのひろひろしさんからのお便りがきっかけで始まりました。</p>
       </section>
 
       <section class="co-sec" aria-labelledby="co-map-h">
         <div class="co-sec-head">
           <div>
-            <p class="co-kicker">MAP</p>
             <h2 class="co-h2" id="co-map-h">化学の流れで見る</h2>
             <p class="co-sub">原料に近い会社から、暮らしに近い会社へ。会社名を押すと、その会社の回へ移動します。</p>
           </div>
@@ -1186,15 +1099,14 @@
       <section class="co-sec" aria-labelledby="co-list-h">
         <div class="co-sec-head">
           <div>
-            <p class="co-kicker">INDEX</p>
             <h2 class="co-h2" id="co-list-h">企業の一覧</h2>
             <p class="co-sub">番組に出てきた会社 <strong class="co-count">26</strong> 社。旧社名でも探せます。</p>
           </div>
         </div>
         <div class="co-tools">
-          <div class="co-pills" role="group" aria-label="絞り込み">
-            <button type="button" class="co-pill" data-f="all" aria-pressed="true">すべて<b>26</b></button>
-            <button type="button" class="co-pill" data-f="main" aria-pressed="false">企業研究<b>1</b></button>
+          <div class="co-filters" role="group" aria-label="絞り込み">
+            <button type="button" class="co-filter" data-f="all" aria-pressed="true">すべて<b>26</b></button>
+            <button type="button" class="co-filter" data-f="main" aria-pressed="false">企業研究<b>1</b></button>
           </div>
           <input type="search" class="co-search" id="co-search" placeholder="会社名・旧社名で探す" aria-label="会社名・旧社名で探す" autocomplete="off" enterkeyhint="search">
         </div>
@@ -1500,13 +1412,13 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js?v=20261018d"></script>
   <script>
 (function () {
   'use strict';
 
   var cards = Array.prototype.slice.call(document.querySelectorAll('.co-card'));
-  var pills = Array.prototype.slice.call(document.querySelectorAll('.co-pill'));
+  var pills = Array.prototype.slice.call(document.querySelectorAll('.co-filter'));
   var search = document.getElementById('co-search');
   var result = document.getElementById('co-result');
   var filter = 'all';
