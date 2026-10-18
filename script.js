@@ -256,6 +256,7 @@ function initShareButtons() {
     ['nobel-chemistry', 'ノーベル化学賞'],
     ['elements', '周期表'],
     ['everyday-chemical-engineering', '身近な化学工学'],
+    ['companies', '企業研究'],
   ]).get(window.location.pathname.split('/')[1]);
   const hashtags = encodeURIComponent(
     ['プラントライフ', sectionHashtag].filter(Boolean).join(',')
