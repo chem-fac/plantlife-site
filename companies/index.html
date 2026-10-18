@@ -209,7 +209,8 @@
   color: var(--ink);
 }
 
-/* 系譜の図（前身の会社の線が合流して今の社名へ）。色は build_features.py の lineage_svg が墨・緑で描く */
+/* 系譜の図（前身の会社の線が合流して今の社名へ）。色は build_features.py の lineage_svg が墨・緑で描く。
+   補助の図なので、どの画面幅でも360pxを上限にする（768pxで本文より大きくならないように） */
 .co-lineage {
   display: block;
   width: 100%;
@@ -869,10 +870,6 @@
 
   .co-feature-desc {
     margin-top: 12px;
-  }
-
-  .co-lineage {
-    max-width: none;
   }
 
   /* スマホでは流れを縦に（線と矢印は左の縦線） */

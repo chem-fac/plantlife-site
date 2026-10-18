@@ -338,18 +338,46 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* 回の画像は題字入りなので、スマホでは小さくして回番号・日付・長さの横に添える。
+       題は本文の見出しだけを大きく出す（デザインの決まり §2「回別の画像を主役にしない」） */
     .ep-detail-head {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 104px minmax(0, 1fr);
+        gap: 0 16px;
     }
 
     .ep-detail-artwork {
         position: static;
-        max-width: 240px;
+        grid-column: 1;
+        grid-row: 1;
+        width: 104px;
+    }
+
+    .ep-detail-info {
+        display: contents;
+    }
+
+    .ep-detail-info > .ep-detail-meta {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin-bottom: 0;
+    }
+
+    .ep-detail-info > :not(.ep-detail-meta) {
+        grid-column: 1 / -1;
+    }
+
+    /* 格子の中でも再生ボタンは横いっぱいに伸ばさず、これまでの幅のまま */
+    .ep-detail-info > .ep-play-btn {
+        justify-self: start;
     }
 
     .ep-detail-title {
         font-size: 1.4rem;
+        margin-top: 16px;
     }
 
     .ep-detail-nav {
