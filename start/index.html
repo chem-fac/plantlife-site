@@ -218,6 +218,11 @@
             object-fit: contain;
         }
 
+        /* 「テーマから選ぶ」は4枚なので2列×2段（狭い画面では下の1列が効く） */
+        .start-cards--two {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         @media (max-width: 900px) {
             .start-cards {
                 grid-template-columns: 1fr;
@@ -376,7 +381,7 @@
                         <h2>テーマから選ぶ</h2>
                         <span class="start-group-sub">聴きたい話題が決まっている方へ</span>
                     </div>
-                    <div class="start-cards">
+                    <div class="start-cards start-cards--two">
                         <a href="/episodes/" class="start-card">
                             <span class="start-card-num">テーマ・キーワード</span>
                             <span class="start-card-title">エピソード一覧</span>
@@ -391,6 +396,11 @@
                             <span class="start-card-num">ノーベル化学賞</span>
                             <span class="start-card-title">ノーベル化学賞から探す</span>
                             <span class="start-card-why">1901年からの受賞を年ごとに並べ、番組で取り上げた受賞には関連する回を付けています。</span>
+                        </a>
+                        <a href="/companies/" class="start-card">
+                            <span class="start-card-num">企業</span>
+                            <span class="start-card-title">企業から探す</span>
+                            <span class="start-card-why">番組に出てきた会社を、原料から暮らしの製品までの流れに並べました。1社を読み解く「企業研究」シリーズもここから。</span>
                         </a>
                     </div>
                 </div>
@@ -442,6 +452,7 @@
                     <a href="/episodes/">エピソード一覧</a>
                     <a href="/elements/">周期表から探す</a>
                     <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+                    <a href="/companies/">企業から探す</a>
                     <a href="/everyday-chemical-engineering/">身近な化学工学</a>
                 </div>
                 <div class="footer-nav-group">

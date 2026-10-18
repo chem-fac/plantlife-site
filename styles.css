@@ -2607,4 +2607,9 @@ img {
     padding: 6px 11px;
     font-size: 0.78rem;
   }
+
+  /* 4つを1行に収めるため「テーマ・キーワード」を「テーマ」に縮める */
+  .fx-browse-long {
+    display: none;
+  }
 }
