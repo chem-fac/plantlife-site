@@ -189,8 +189,8 @@
             color: var(--brand);
         }
 
-        /* 一覧：ふだんは番組表のような1行1回の罫線の表（番号・配信日・長さ・題とテーマ）。
-           回ごとの画像は「画像つき」に切り替えたときだけ出す（デザインの決まり §2「回別の画像を主役にしない」） */
+        /* 一覧：ふだんは回の画像つきで並べる（本人「画像付きが主の方が良いかも」2026-10-18）。
+           「一覧」に切り替えると番組表のような1行1回の罫線の表（番号・配信日・長さ・題とテーマ）になる */
         .all-ep-grid {
             border-top: 1px solid var(--rule);
         }
@@ -458,8 +458,8 @@
                     <button type="button" class="ep-sort-btn" data-order="asc" aria-pressed="false">古い順（#1から）</button>
                 </div>
                 <div class="ep-view" role="group" aria-label="表示">
-                    <button type="button" class="ep-sort-btn ep-view-btn active" data-view="list" aria-pressed="true">一覧</button>
-                    <button type="button" class="ep-sort-btn ep-view-btn" data-view="cards" aria-pressed="false">画像つき</button>
+                    <button type="button" class="ep-sort-btn ep-view-btn active" data-view="cards" aria-pressed="true">画像つき</button>
+                    <button type="button" class="ep-sort-btn ep-view-btn" data-view="list" aria-pressed="false">一覧</button>
                 </div>
             </div>
 
@@ -544,8 +544,8 @@
             let allEpisodes = [];
             let activeTag = '';
             let sortOrder = 'desc';
-            // 表示：ふだんは一覧（番組表）。「画像つき」を選ぶと回の画像を並べる（?view=cards・この端末に記憶）
-            let viewMode = 'list';
+            // 表示：ふだんは画像つき。「一覧」を選ぶと番組表の形にする（?view=list・この端末に記憶）
+            let viewMode = 'cards';
             const filterBox = document.getElementById('ep-filter');
             const filterCurrent = document.getElementById('ep-filter-current');
 
@@ -585,8 +585,9 @@
             activeTag = params.get('tag') || '';
             if (params.get('q')) search.value = params.get('q');
             try {
-                if (localStorage.getItem('plantlife-ep-view') === 'cards') viewMode = 'cards';
-            } catch (e) { /* 保存できない環境では一覧のまま */ }
+                const savedView = localStorage.getItem('plantlife-ep-view');
+                if (savedView === 'cards' || savedView === 'list') viewMode = savedView;
+            } catch (e) { /* 保存できない環境では画像つきのまま */ }
             if (params.get('view') === 'cards' || params.get('view') === 'list') viewMode = params.get('view');
 
             // テーマの絞り込みは、スマホでも最初から開いておく（本人の好み：選択肢は常に見えるボタンで、狭い画面では折り返す）
@@ -720,7 +721,7 @@
                 const p = new URLSearchParams();
                 if (activeTag) p.set('tag', activeTag);
                 if (q) p.set('q', q);
-                if (viewMode === 'cards') p.set('view', 'cards');
+                if (viewMode === 'list') p.set('view', 'list');
                 const qs = p.toString();
                 history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
             }
