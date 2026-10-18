@@ -388,17 +388,21 @@
             font-variant-numeric: tabular-nums;
         }
 
-        @media (max-width: 1024px) {
+        /* 中幅は3列にして、画像が題・回番号より前に出すぎないようにする（スマホは2列） */
+        @media (max-width: 880px) {
             .all-ep-grid.is-cards {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .all-ep-grid.is-cards {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 24px 14px;
             }
+        }
+
+        @media (max-width: 768px) {
 
             /* スマホの一覧：1段目に番号・日付・長さ、2段目に題とテーマ */
             .all-ep-row {
