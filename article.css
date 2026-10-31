@@ -1,0 +1,724 @@
+/* ══════════════════════════════════════
+   特集「身近な化学工学」記事・特集トップ
+   （本文幅720〜760px・一段組み・スマホ16px以上・
+     行間1.8前後・緑はアクセント・派手なモーションなし）
+   ══════════════════════════════════════ */
+
+.article-page {
+    background: var(--paper);
+}
+
+.article-main {
+    padding-top: calc(var(--header-h) + 40px);
+    padding-bottom: 80px;
+    min-height: 80vh;
+}
+
+.article-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ── パンくず ── */
+.article-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--light-muted);
+    margin-bottom: 36px;
+}
+
+.article-breadcrumb a {
+    color: var(--ink-2);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--rule);
+}
+
+.article-breadcrumb a:hover {
+    color: var(--brand);
+}
+
+.article-breadcrumb-sep {
+    color: var(--ink-2);
+}
+
+/* ── 記事ヘッダー ── */
+/* タグは2種類（2026-10-09）。身近な要素（灰）と化学工学の分類（緑）を、まとまりごとに並べる。
+   形は角丸2px・1pxの枠。色の意味（灰／緑）は文字と枠の色で保つ（淡い緑の面は敷かない） */
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-bottom: 16px;
+}
+
+.article-tag-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.article-tag {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--ink-2);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-tag);
+    padding: 2px 8px;
+}
+
+.article-tag--chemeng {
+    color: var(--brand);
+    border-color: rgba(0, 105, 56, 0.4);
+}
+
+.article-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--ink);
+    margin-bottom: 14px;
+    font-feature-settings: "palt";
+}
+
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--light-border);
+    margin-bottom: 40px;
+}
+
+.article-meta-sep {
+    margin: 0 2px;
+}
+
+/* ── 本文（一段組み・サイドバーなし） ── */
+.article-body {
+    font-size: 1.02rem;
+    line-height: 1.9;
+    color: var(--light-text);
+}
+
+.article-body p {
+    margin: 0 0 1.6em;
+}
+
+/* 節の始まりは、本文幅いっぱいの墨の罫線（左の太い色線は使わない） */
+.article-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 2.6em 0 1em;
+    padding-top: 12px;
+    border-top: 2px solid var(--ink);
+}
+
+.article-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 2em 0 0.8em;
+}
+
+.article-body ul,
+.article-body ol {
+    margin: 0 0 1.6em;
+    padding-left: 1.5em;
+}
+
+.article-body li {
+    margin: 0.4em 0;
+}
+
+.article-body a {
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-body strong {
+    font-weight: 700;
+}
+
+.article-body blockquote {
+    margin: 0 0 1.6em;
+    padding: 12px 20px;
+    border-left: 2px solid var(--rule);
+    color: var(--ink-2);
+}
+
+.article-body figure {
+    margin: 2.2em 0 2.5em;
+}
+
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+.article-body .article-figure {
+    /* 本文幅いっぱいにせず、読み進めの邪魔にならない大きさに抑える。
+       枠は画像の実寸に沿わせる（正方形の図でも余白が出ない）。影は付けない */
+    width: fit-content;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 12px 8px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-box);
+}
+
+/* 縦にも上限をかける。図の縦横比が違っても見た目の大きさが揃う */
+.article-body .article-figure img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 320px;
+    border-radius: 0;
+}
+
+/* 幅指定の無い図は、ビルドが読み込み後と同じ表示幅（--fig-w）を渡す。読み込む前から場所を取り、
+   表示された瞬間に下の段落が動かないようにする（変数が無いときは従来どおり auto） */
+.article-body .article-figure:not(.article-figure--sized) img {
+    width: var(--fig-w, auto);
+}
+
+/* 原稿で {width=NN%} を指定した図は、本文幅に対する割合で表示する */
+.article-body .article-figure--sized {
+    width: 100%;
+}
+
+.article-body .article-figure--sized img {
+    width: 100%;
+    max-height: none;
+}
+
+.article-body figcaption {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* キャプションの一行分の長さがカード幅を決めてしまわないようにする
+   （幅0で intrinsic sizing から外し、確定後の幅に min-width で合わせる） */
+.article-body .article-figure figcaption {
+    width: 0;
+    min-width: 100%;
+}
+
+/* ── 記事どうしのリンクカード（本文に特集内の記事URLを1行置くと出る） ── */
+.article-body .article-linkcard {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 16px;
+    align-items: center;
+    margin: 2.2em 0;
+    padding: 14px;
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-box);
+    text-decoration: none;
+    transition: border-color var(--t);
+}
+
+.article-body .article-linkcard:hover {
+    border-color: var(--brand);
+}
+
+.article-linkcard-thumb img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    display: block;
+}
+
+.article-linkcard-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+/* どの特集の記事か（情報なので、薄墨の文字で添える） */
+.article-linkcard-kind {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--ink-2);
+}
+
+.article-linkcard-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+.article-linkcard-desc {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--light-secondary);
+}
+
+@media (max-width: 768px) {
+    .article-body .article-linkcard {
+        grid-template-columns: 64px 1fr;
+        gap: 12px;
+    }
+
+    .article-linkcard-thumb img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.article-body code {
+    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.9em;
+    background: var(--surface);
+    border-radius: var(--radius-tag);
+    padding: 1px 6px;
+}
+
+/* ── この話を声で聴く（CTA・1つだけ） ── */
+.article-episode-cta {
+    margin-top: 56px;
+    padding-top: 12px;
+    border-top: 2px solid var(--ink);
+    display: grid;
+    gap: 10px;
+}
+
+.article-episode-cta-label {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+.article-episode-card {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 18px;
+    align-items: center;
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-box);
+    padding: 14px;
+    transition: border-color var(--t);
+}
+
+.article-episode-card:hover {
+    border-color: var(--brand);
+}
+
+.article-episode-thumb img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    display: block;
+}
+
+.article-episode-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.article-episode-num {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+}
+
+/* 再生時間の時計アイコン（ビルダーがインラインSVGで出力。文字のベースラインに合わせる） */
+.icon-clock {
+    vertical-align: -0.12em;
+}
+
+.article-episode-title {
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--light-text);
+}
+
+.article-episode-hint {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── あわせて読む ── */
+.article-related {
+    margin-top: 48px;
+    padding-top: 12px;
+    border-top: 2px solid var(--ink);
+}
+
+.article-related-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--ink);
+}
+
+.article-related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.article-related-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+    align-items: center;
+    background: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-box);
+    padding: 12px;
+    transition: border-color var(--t);
+}
+
+.article-related-card:hover {
+    border-color: var(--brand);
+}
+
+.article-related-thumb img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    display: block;
+}
+
+.article-related-scene {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--ink-2);
+    margin-bottom: 2px;
+}
+
+.article-related-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--light-text);
+}
+
+.article-backlink {
+    margin-top: 48px;
+}
+
+.article-backlink a {
+    font-size: 0.9375rem;
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.article-backlink a:hover {
+    color: var(--brand-dark);
+}
+
+/* ── 特集トップ ── */
+.feature-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.feature-head {
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+
+.feature-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: 14px;
+    font-feature-settings: "palt";
+}
+
+.feature-lead {
+    max-width: 640px;
+    color: var(--light-secondary);
+    line-height: 2;
+    /* 単語の途中で改行しない（対応ブラウザでは文節単位で折り返す） */
+    word-break: auto-phrase;
+    line-break: strict;
+}
+
+/* タグで絞り込む。
+   いちばん上に「すべて」、その下に身近な要素と化学工学の分野。押した状態は色だけを変え、
+   文字の太さや枠の幅は変えない（押してもボタンの大きさと並びが動かないように） */
+.feature-filter {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.feature-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* 身近な要素と化学工学の分野は、見出しを付けて分ける。
+   見出しの色は、カードのタグにそろえる（身近な要素＝灰、化学工学の分野＝緑） */
+.feature-filter-group {
+    display: grid;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.feature-filter-label {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink-2);
+}
+
+.feature-filter-group--chemeng .feature-filter-label {
+    color: var(--brand);
+}
+
+.feature-filter-chip {
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    min-height: 36px;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-tag);
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: color var(--t), border-color var(--t), box-shadow var(--t);
+}
+
+.feature-filter-chip--chemeng {
+    color: var(--brand);
+}
+
+.feature-filter-count {
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+    margin-left: 4px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* スマホでは押したあとに hover の色が残るので、マウスのときだけ付ける */
+@media (hover: hover) {
+    .feature-filter-chip:hover,
+    .feature-card .article-tag:hover,
+    a.article-tag:hover {
+        color: var(--brand);
+        border-color: var(--brand);
+    }
+}
+
+/* 押した状態は、緑の文字＋緑の枠（白地のまま）。枠の太さは影で足し、ボタンの大きさは変えない */
+.feature-filter-chip[aria-pressed="true"] {
+    color: var(--brand);
+    border-color: var(--brand);
+    box-shadow: inset 0 0 0 1px var(--brand);
+}
+
+/* カードの中のタグも押すと絞り込める。記事ページのタグは、絞り込んだ一覧へのリンク */
+.feature-card .article-tag {
+    cursor: pointer;
+}
+
+.feature-card .article-tag,
+a.article-tag {
+    text-decoration: none;
+    transition: color var(--t), border-color var(--t);
+}
+
+/* 記事の一覧は、カードの枠を付けず上の細い罫線で区切る */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 0 40px;
+}
+
+.feature-card {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 18px;
+    align-items: start;
+    padding: 18px 0 22px;
+    border-top: 1px solid var(--rule);
+}
+
+/* カードの画像比率は正方形で統一（v3 §6） */
+.feature-card-thumb img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: var(--radius-box);
+    display: block;
+}
+
+.feature-card-body {
+    min-width: 0;
+}
+
+.feature-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.feature-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 8px 0 6px;
+    text-underline-offset: 3px;
+    transition: color var(--t);
+}
+
+.feature-card:hover .feature-card-title {
+    color: var(--brand);
+    text-decoration: underline;
+}
+
+/* 記事の題と本文の見出しの折り返しをそろえる（スマホで「96度な／の？」「越え／る」のように最後の数文字だけが
+   次の行に落ちないように）。balance は行の長さをそろえ、auto-phrase は対応ブラウザで文節の切れ目で折り返す */
+.article-title,
+.feature-card-title,
+.article-related-title,
+.article-linkcard-title,
+.article-body h2 {
+    text-wrap: balance;
+    word-break: auto-phrase;
+}
+
+.feature-card-desc {
+    font-size: 0.9375rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.feature-card-meta {
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+}
+
+.feature-more {
+    max-width: 760px;
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9375rem;
+    color: var(--ink-2);
+    line-height: 1.9;
+}
+
+.feature-more a {
+    color: var(--brand);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── レスポンシブ（横スクロールなし・スマホ本文16px以上） ── */
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.5rem;
+    }
+
+    .article-body {
+        font-size: 1rem; /* 16px */
+        line-height: 1.85;
+    }
+
+    .article-body .article-figure {
+        margin-left: -8px;
+        margin-right: -8px;
+        padding: 10px 10px 12px;
+    }
+
+    .article-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-episode-card {
+        grid-template-columns: 72px 1fr;
+        gap: 14px;
+    }
+
+    .article-episode-thumb img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .feature-title {
+        font-size: 1.7rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        grid-template-columns: 88px 1fr;
+        gap: 14px;
+    }
+
+    .feature-card-thumb img {
+        width: 88px;
+        height: 88px;
+    }
+
+    /* スマホではボタンを少し小さくして行を減らし、記事の一覧を上に寄せる */
+    .feature-filter {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .feature-filter-row {
+        gap: 6px;
+    }
+
+    .feature-filter-chip {
+        font-size: 0.8125rem;
+        padding: 4px 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .article-episode-card,
+    .article-related-card,
+    .feature-card,
+    .feature-filter-chip,
+    .feature-card .article-tag,
+    a.article-tag {
+        transition: none;
+    }
+}

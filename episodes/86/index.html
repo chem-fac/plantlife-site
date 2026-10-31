@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#86 身近な湿度、説明できる？？ | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/86/" />
+  <meta name="description" content="Xで話題だった湿度100％の話に絡めて、湿度の意味や露点という別の指標も含めて話してみました！">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="#86 身近な湿度、説明できる？？ | プラントライフ">
+  <meta property="og:description" content="Xで話題だった湿度100％の話に絡めて、湿度の意味や露点という別の指標も含めて話してみました！">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/86/">
+  <meta property="og:image" content="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/X4hAzVn7U8ERNbOwtuUO3g2soZWBUQTyJJhRzTmF.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=20261018e">
+  <link rel="stylesheet" href="../../episode.css?v=20261018e">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "url": "https://plantlife.chem-fac.com/episodes/86/", "name": "#86 身近な湿度、説明できる？？", "episodeNumber": 86, "datePublished": "2026-04-22", "description": "Xで話題だった湿度100％の話に絡めて、湿度の意味や露点という別の指標も含めて話してみました！", "image": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/X4hAzVn7U8ERNbOwtuUO3g2soZWBUQTyJJhRzTmF.png", "partOfSeries": {"@type": "PodcastSeries", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}, "timeRequired": "PT13M13S", "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/8s9lrHa4pDflck5cXuaZlOzcJ6WRKbrDAHykLQqH.mp3", "encodingFormat": "audio/mpeg"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード一覧", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "#86", "item": "https://plantlife.chem-fac.com/episodes/86/"}]}</script>
+</head>
+<body class="episode-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="../../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ep-detail-main" id="main-content">
+    <div class="container">
+      <div class="ep-detail-nav"><a href="../85/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #85</span><span class="ep-nav-title">人生史：私を構成する30のコンテンツ</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../87/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#87 →</span><span class="ep-nav-title">素晴らしき機能美！撹拌翼（かくはんよく）の世界</span></a></div>
+
+      <article class="ep-detail-article">
+        <div class="ep-detail-head">
+          <div class="ep-detail-artwork">
+            <img src="/images/episodes/86-e382b83758-800.webp" srcset="/images/episodes/86-e382b83758-400.webp 400w, /images/episodes/86-e382b83758-800.webp 800w" sizes="280px" alt="#86 身近な湿度、説明できる？？" width="400" height="400" fetchpriority="high">
+          </div>
+          <div class="ep-detail-info">
+            <div class="ep-detail-meta">
+              <span class="ep-detail-number">#86</span>
+              <time class="ep-detail-date">2026-04-22</time>
+              <span class='ep-detail-duration'><svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:13:13</span>
+            </div>
+            <h1 class="ep-detail-title">#86 身近な湿度、説明できる？？</h1>
+            <a href="#ep-listen" class="ep-play-btn" data-ep-play><svg class="ep-play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path class="ep-play-icon-play" d="M3 1.6v10.8a.6.6 0 0 0 .9.5l8.6-5.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z" fill="currentColor"/><path class="ep-play-icon-pause" d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor"/></svg><span class="ep-play-label">再生する</span></a>
+            <p class="ep-detail-desc">Xで話題だった湿度100％の話に絡めて、湿度の意味や露点という別の指標も含めて話してみました！</p>
+            <p class="ep-detail-tags"><span class="ep-detail-tags-label">テーマ</span><a href="/episodes/?tag=%E5%8C%96%E5%AD%A6%E5%B7%A5%E5%AD%A6" class="ep-tag-link">化学工学</a><a href="/episodes/?tag=%E7%A7%91%E5%AD%A6%E3%83%BB%E9%9B%91%E5%AD%A6" class="ep-tag-link">科学・雑学</a></p>
+            
+          </div>
+        </div>
+
+        <div class="ep-detail-platforms" id="ep-listen">
+          <h2 class="ep-detail-platforms-heading">この回を聴く</h2>
+          
+          <div class="ep-detail-player">
+            <audio class="ep-audio" controls controlslist="nodownload" preload="none" oncontextmenu="return false">
+              <source src="https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/8s9lrHa4pDflck5cXuaZlOzcJ6WRKbrDAHykLQqH.mp3" type="audio/mpeg">
+              お使いのブラウザは音声プレーヤーに対応していません。下のリンクからお聴きください。
+            </audio>
+          </div>
+          <p class="ep-detail-platforms-sub">アプリで購読する</p>
+          <div class="ep-detail-platforms-grid">
+            
+          <a href="https://listen.style/p/14rlng1w/82wgasrk" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 26px;">
+            <img src="../../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/episode/0ci8u4y7TL5Zmqo23QGh08" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/jp/podcast/86-%E8%BA%AB%E8%BF%91%E3%81%AA%E6%B9%BF%E5%BA%A6-%E8%AA%AC%E6%98%8E%E3%81%A7%E3%81%8D%E3%82%8B/id1789911793?i=1000762966274&amp;uo=4" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 32px;">
+            <img src="../../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg" alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/b93c6ae7-14aa-4076-8fdc-39d5f12ecf0a/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-86-%E8%BA%AB%E8%BF%91%E3%81%AA%E6%B9%BF%E5%BA%A6%E3%80%81%E8%AA%AC%E6%98%8E%E3%81%A7%E3%81%8D%E3%82%8B%EF%BC%9F%EF%BC%9F" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg" alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/watch?v=7Q7GN1DrSNA" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 44px;">
+            <img src="../../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+          <a href="https://stand.fm/episodes/6a8d2fd0d8894e4eb9af8348" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 24px;">
+            <img src="../../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+          </a>
+          </div>
+
+          <div class="ep-detail-note" style="margin-top: 2rem;">
+            <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promo-card-mini">
+              <div class="note-icon-mini"><img src="../../images/note_icon.png" alt="note" loading="lazy"></div>
+              <div class="note-text-mini">
+                <strong>リンク・図解つきのnote版を読む</strong>
+                <span>本文中に参考リンクを添えた読みやすい記事版はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-article-link">
+          <a href="/everyday-chemical-engineering/humidity-100-percent/" class="article-promo-card" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_article_click&#x27;,{&#x27;article_slug&#x27;:&#x27;humidity-100-percent&#x27;,&#x27;episode_number&#x27;:86})">
+            <span class="article-promo-label">この回の話を記事で読む</span>
+            <strong class="article-promo-title">湿度100%って、何が100%？</strong>
+            <span class="article-promo-desc">湿度100%は空気が水になった状態ではありません。空気が取り込める水蒸気の限界に対する割合というしくみを、霧・季節・露点から説明し、乾燥や調湿の装置の計算につなげます。</span>
+          </a>
+        </div>
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">参考資料</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://www.jma.go.jp/jma/kishou/know/yougo_hp/kori.html" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">霧や霜の定義</span>
+                <span class="ref-url">https://www.jma.go.jp/jma/kishou/know/yougo_hp/kori.html</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">ケムファクの関連記事と計算ツール</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://chem-fac.com/humid-air-drying/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:86})">
+                <span class="ref-title">記事：湿度図表（空気線図）の読み方</span>
+                <span class="ref-url">https://chem-fac.com/humid-air-drying/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://tools.chem-fac.com/tools/moisture/humid-air/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;tool&#x27;,&#x27;episode_number&#x27;:86})">
+                <span class="ref-title">計算ツール：湿球温度・湿り空気状態量</span>
+                <span class="ref-url">https://tools.chem-fac.com/tools/moisture/humid-air/</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-transcript">
+          <h2 class="ep-detail-transcript-heading">文字起こし</h2>
+          <div class="transcript-body">
+            <h3 class="transcript-heading">00:02</h3>
+            <p>こんにちはかねまるです。 プラントライフは、化学プラントの技術者が、化学を軸に、皆さんの視野を広げていく番組です。</p>
+            <p>今回は、湿度の話をします。 ちょうどこの収録をしている4月21日に、Xで話題になっていた話があったので、それを元に話をしようと思っています。</p>
+            <p>その話が、湿度100%で溺死するかどうかっていう話なんです。</p>
+            <p>結論から言うと、湿度100%では絶対に溺死するようなことはないんですけど、</p>
+            <p>元々のポストでは湿度100%で溺死しますよっていうような記載があって、</p>
+            <p>そこに対してまあまあ辛辣なコメントが書いてあったり、</p>
+            <p>中学で習う話ですよとか書いてあったりとは言ってもですね、湿度って皆さん説明できますか?</p>
+            <p>義務教育で勉強したかもしれないけど,</p>
+            <p>なんとなく感じてると思いますが、義務教育で学んだことなんて忘れてますよね。</p>
+            <p>ということで今回は、湿度について改めて理解してみましょうという話と、</p>
+            <p>できるのであればちょっと豆知識みたいな話も織り込んでいきたいかなと思っております。</p>
+            <p>それではいきます。</p>
+            <p>まずは湿度ってそもそも何っていう話からです。</p>
+            <p>大体の人がイメージしているのは空気の中に含まれる水分の割合っていうところぐらいじゃないでしょうか。</p>
+            <p>だからこそ湿度が100%になったら空気の中が水分100%になって溺死するかも。</p>
+            <p>プールの中みたいになっているかもってイメージするのもおかしくはないんですよね。</p>
+            <p>空気中に含まれている水分の割合でも間違ってはないんですけどちょっと足りないっていう感じです。</p>
+            <p>まず前提として空気の中に含まれる水分の量って温度で変わるんですよね。</p>
+            <p>温度ごとに取り込める水分が違うということで、この温度の時にこれだけ取り込めますよっていう値は、</p>
+            <p>飽和水蒸気量と言います。</p>
+            <p>この飽和水蒸気量が限界値です。</p>
+            <h3 class="transcript-heading">03:03</h3>
+            <p>そしてその限界値に対して水分が何%入っているかを示しているのが湿度です。</p>
+            <p>湿度0%はイメージしやすくて、全然水分が空気中になくてまだまだいけませんっていう状態。</p>
+            <p>湿度50%になると今まさにこの温度で空気が取り込むことができる水分の量が半分くらい。</p>
+            <p>湿度100%になるともうこれ以上空気中には水分が取り込めませんよっていう状態。</p>
+            <p>そしてそこからさらに水分が増えた状態。</p>
+            <p>あんまり言わないですけど、湿度120%みたいな状態になったら、</p>
+            <p>100%を超えた残り20%っていうのは水として出てきます。</p>
+            <p>水分っていうとややこしいですけど、空気が取り込んでいるのは液体の水ではなくて、気体の水蒸気です。</p>
+            <p>空気が取り込める気体の水蒸気の量を限界突破したとき、</p>
+            <p>つまり飽和水蒸気量を超える水分が空気中にあるとき、残りは水として出てきます。</p>
+            <p>その時に起きる現象が霧です。</p>
+            <p>空気中に大量の水蒸気がある関係で、</p>
+            <p>ちっちゃい文字通り霧状の水滴が空気中に漂います。</p>
+            <p>霧の中も湿度100%です。</p>
+            <p>べちゃべちゃになりますけど、歩けますし、全然苦しくはならないと思います。</p>
+            <p>溺死しないっていうことなんですけど、</p>
+            <p>結局湿度っていうのは空気が取り込める水分の限界値に対してどれだけあるかっていう相対湿度という指標なんです。</p>
+            <p>そしてその取り込める空気の量は温度で変わります。</p>
+            <p>だからこそ、夏と冬で温度が違うので、</p>
+            <p>それぞれ湿度50%とは言いつつも、空気中に含まれる水分の量は違います。</p>
+            <p>夏の方が温度が高くてたくさん水分を取り込めるので、</p>
+            <p>同じ湿度50%でも夏の方が絶対的な水分の量は増えています。</p>
+            <p>逆に言うと冬場で湿度50%とか60%とか言って、</p>
+            <h3 class="transcript-heading">06:02</h3>
+            <p>まあまあ水分量ありそうに聞こえますけど、意外と少なくて、</p>
+            <p>だからこそ冬場は乾燥して喉が乾きやすくなってしまうんです。</p>
+            <p>じゃあ、わかりやすく空気中に何グラムの水分が含まれているっていう指標は使わないんですかって言われたら、ないこともないです。</p>
+            <p>1立方メートルの空気の中に含まれている水分が何グラムですよっていう絶対湿度の使い方もあるんですけど、</p>
+            <p>実際に使われる指標は露点という言葉で表現されます。</p>
+            <p>この露点という言葉、産業、特に製造業ではよく使う言葉でして、</p>
+            <p>今の空気を冷やしていって結露が始まる時の温度を露点と言います。</p>
+            <p>まず、今空気があって、その空気はまだまだ水蒸気を取り込めますよっていう状態だったとします。</p>
+            <p>そこから空気の温度を冷やしていくと、だんだんと取り込める水蒸気の量っていうのが減ってきます。</p>
+            <p>こうして冷やしていく過程でも、空気中に含まれている水分の量っていうのは変わらないので、</p>
+            <p>冷やしていくとだんだん湿度が50%、60%と増えていきながら、低い温度でどんどん限界値に近づいていきます。</p>
+            <p>冷やして冷やして、ついに湿度100%になったところで、結露が始まります。</p>
+            <p>この時の温度が露点なんです。</p>
+            <p>もともと空気中に含まれている水分の量が少ないほど、どんどん冷やせますよ、絶対結露させませんよっていう状態になるので、露点は低くなります。</p>
+            <p>だから露点は空気中に含まれている水分の絶対量を表しています。</p>
+            <p>単位は温度の度で表します。</p>
+            <p>例えば、じめじめした環境でその製品が耐えられるか試験するときは、露点90度ぐらいで試験しますよとか、</p>
+            <p>反対に、絶対水分がないドライな環境で製品を作る。</p>
+            <p>例えば半導体の産業だと、マイナス80度ぐらいの露点が求められます。</p>
+            <p>ちなみになんですけど、空気の飽和水蒸気量、つまり取り込める水分の量っていうのはもう決まっているので、</p>
+            <h3 class="transcript-heading">09:08</h3>
+            <p>この温度の時に湿度何%だったら何グラムの水分が含まれていますっていうのは計算できます。</p>
+            <p>だから温度と湿度があったら露点も計算できます。</p>
+            <p>逆もそうですね。温度と露点がわかったら湿度は算出できます。</p>
+            <p>別に天気予報でも、今日の温度と露点っていう言い方をしても間違ってはないんですけど、</p>
+            <p>例えば気温が25度で露点が20度ですって言われたら分かりづらいですよね。</p>
+            <p>ただの想像なんですけど、温度と%で表した方が聞き取りやすいので、</p>
+            <p>露点じゃなくて湿度を使ってるんじゃないかなと思います。</p>
+            <p>今回は湿度の話と露点の話をしてみました。</p>
+            <p>こうやって露点も含めて偉そうに話してますけど、私も多分仕事を始めるまでは覚えてなかったです。</p>
+            <p>だから特に誰かを叩くようなことはしなくていいんですけど、</p>
+            <p>なんで露点とか湿度とかの細かい話を知ってるかというと、</p>
+            <p>化学産業で湿度調整って結構大事な要素になってまして、</p>
+            <p>化学工学という量産するための学問があるんですけど、</p>
+            <p>そこには湿度を調整すると書いて調湿という分野があります。</p>
+            <p>そもそもですね、化学反応って結構水に弱かったりするんですよ。</p>
+            <p>水分があると反応性が悪くなって全然反応が進まないってことはよくありまして、</p>
+            <p>だからこそ反応の前に容器の中を空気から窒素に置き換えるような操作を行ったりします。</p>
+            <p>私も仕事で経験あるんですけど、</p>
+            <p>めちゃめちゃ乾燥させて水分をなくせばいいっていうわけでもなかったりして、</p>
+            <p>わずかに水分は欲しいけどあんまり水分増やさないでねみたいなものすごくややこしい反応とかもあったりするわけです。</p>
+            <p>だから全員が全員ってわけではないんですけど、</p>
+            <p>意外と化学の現場の人は湿度のことをよく知っています。</p>
+            <p>露点も知っていると思います。</p>
+            <p>意外と知らない露点という言葉、そして湿度の意味、ぜひとも誰かに話してみてください。</p>
+            <h3 class="transcript-heading">12:04</h3>
+            <p>今回はここまでです。</p>
+            <p>プラントライフは化学や工場に関するトピックを扱っています。</p>
+            <p>配信は毎週水曜日と日曜日の朝6時を予定しています。</p>
+            <p>番組の感想や質問があれば、</p>
+            <p>ハッシュタグプラントライフをつけてXで投稿するか、</p>
+            <p>概要欄のお便りフォームからお待ちしております。</p>
+            <p>また、ノートでメンバーシップかねまるのここだけの話を公開しています。</p>
+            <p>あまりオープンな場では言いにくいけど、残しておきたい本音をお届けしておりまして、</p>
+            <p>4月は最近行った転職について、</p>
+            <p>本当の理由とか、収入の変化とか、生活環境の変化とか、</p>
+            <p>そういった本音の部分を書いています。</p>
+            <p>近々公開予定ですので、ぜひ興味があれば覗いてみてください。</p>
+            <p>それではお聞きいただきありがとうございました。</p>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-related">
+          <h2 class="ep-detail-related-heading">関連するエピソード</h2>
+          <div class="ep-related-grid">
+            <a href="/episodes/120/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/120-c3d9dbd488-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#120</span>
+                <span class="ep-related-title">読まずに引く本、便覧を読もう！</span>
+              </div>
+            </a>
+            <a href="/episodes/118/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/118-41f0749aa1-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#118</span>
+                <span class="ep-related-title">水をかけると沸騰する不思議な現象（#2リメイク）</span>
+              </div>
+            </a>
+            <a href="/episodes/56/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/56-1511b359e8-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#56</span>
+                <span class="ep-related-title">【お便り回】温度の単位&amp;硬さと粗さの表現</span>
+              </div>
+            </a>
+            <a href="/episodes/41/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/41-ec377689a0-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#41</span>
+                <span class="ep-related-title">化学の日に向けてモル(mol)について学んでみよう！</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="ep-detail-nav"><a href="../85/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #85</span><span class="ep-nav-title">人生史：私を構成する30のコンテンツ</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../87/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#87 →</span><span class="ep-nav-title">素晴らしき機能美！撹拌翼（かくはんよく）の世界</span></a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=20261018e"></script>
+</body>
+</html>

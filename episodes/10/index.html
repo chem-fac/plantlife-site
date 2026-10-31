@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#10 無料の化学プロセスシミュレータCOCO/ChemSep(ぎりぎりっすん) | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/10/" />
+  <meta name="description" content="無料の化学プロセスシミュレータ「COCO/ChemSep」を使えるようになる！そんな目標を掲げて「ぎりぎりっすん」という企画に参加しました。シミュレーションの基本を学び、メタノールと水の蒸留プロセスを再現！">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="#10 無料の化学プロセスシミュレータCOCO/ChemSep(ぎりぎりっすん) | プラントライフ">
+  <meta property="og:description" content="無料の化学プロセスシミュレータ「COCO/ChemSep」を使えるようになる！そんな目標を掲げて「ぎりぎりっすん」という企画に参加しました。シミュレーションの基本を学び、メタノールと水の蒸留プロセスを再現！">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/10/">
+  <meta property="og:image" content="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/DUAcCChjLg0Fgd3wF2EhlW5k3Xk23TEUcrGrmHyy_resized.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=20261018e">
+  <link rel="stylesheet" href="../../episode.css?v=20261018e">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "url": "https://plantlife.chem-fac.com/episodes/10/", "name": "#10 無料の化学プロセスシミュレータCOCO/ChemSep(ぎりぎりっすん)", "episodeNumber": 10, "datePublished": "2025-03-31", "description": "無料の化学プロセスシミュレータ「COCO/ChemSep」を使えるようになる！そんな目標を掲げて「ぎりぎりっすん」という企画に参加しました。シミュレーションの基本を学び、メタノールと水の蒸留プロセスを再現！", "image": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/DUAcCChjLg0Fgd3wF2EhlW5k3Xk23TEUcrGrmHyy_resized.png", "partOfSeries": {"@type": "PodcastSeries", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}, "timeRequired": "PT10M20S", "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/PzNcfwl0b2zqUsKEkkmIsuB8SEL24ow88ZAxZxYR.mp3", "encodingFormat": "audio/mpeg"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード一覧", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "#10", "item": "https://plantlife.chem-fac.com/episodes/10/"}]}</script>
+</head>
+<body class="episode-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="../../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ep-detail-main" id="main-content">
+    <div class="container">
+      <div class="ep-detail-nav"><a href="../9/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #9</span><span class="ep-nav-title">化学プラントの司令塔〜DCSを知れば見えてくる工場の裏側</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../11/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#11 →</span><span class="ep-nav-title">知っておきたい化学物質管理者のこと(科学系ポッドキャストの日)</span></a></div>
+
+      <article class="ep-detail-article">
+        <div class="ep-detail-head">
+          <div class="ep-detail-artwork">
+            <img src="/images/episodes/10-25959f9a17-800.webp" srcset="/images/episodes/10-25959f9a17-400.webp 400w, /images/episodes/10-25959f9a17-800.webp 800w" sizes="280px" alt="#10 無料の化学プロセスシミュレータCOCO/ChemSep(ぎりぎりっすん)" width="400" height="400" fetchpriority="high">
+          </div>
+          <div class="ep-detail-info">
+            <div class="ep-detail-meta">
+              <span class="ep-detail-number">#10</span>
+              <time class="ep-detail-date">2025-03-31</time>
+              <span class='ep-detail-duration'><svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:10:20</span>
+            </div>
+            <h1 class="ep-detail-title">#10 無料の化学プロセスシミュレータCOCO/ChemSep(ぎりぎりっすん)</h1>
+            <a href="#ep-listen" class="ep-play-btn" data-ep-play><svg class="ep-play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path class="ep-play-icon-play" d="M3 1.6v10.8a.6.6 0 0 0 .9.5l8.6-5.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z" fill="currentColor"/><path class="ep-play-icon-pause" d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor"/></svg><span class="ep-play-label">再生する</span></a>
+            <p class="ep-detail-desc">無料の化学プロセスシミュレータ「COCO/ChemSep」を使えるようになる！そんな目標を掲げて「ぎりぎりっすん」という企画に参加しました。シミュレーションの基本を学び、メタノールと水の蒸留プロセスを再現！詳しい解説はブログにまとめていますので、ぜひチェックしてみてください。</p>
+            <p class="ep-detail-tags"><span class="ep-detail-tags-label">テーマ</span><a href="/episodes/?tag=%E5%8C%96%E5%AD%A6%E5%B7%A5%E5%AD%A6" class="ep-tag-link">化学工学</a><a href="/episodes/?tag=%E8%A8%88%E6%B8%AC%E3%83%BB%E5%88%B6%E5%BE%A1%E3%83%BBDX" class="ep-tag-link">計測・制御・DX</a></p>
+            
+          </div>
+        </div>
+
+        <div class="ep-detail-platforms" id="ep-listen">
+          <h2 class="ep-detail-platforms-heading">この回を聴く</h2>
+          
+          <div class="ep-detail-player">
+            <audio class="ep-audio" controls controlslist="nodownload" preload="none" oncontextmenu="return false">
+              <source src="https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/PzNcfwl0b2zqUsKEkkmIsuB8SEL24ow88ZAxZxYR.mp3" type="audio/mpeg">
+              お使いのブラウザは音声プレーヤーに対応していません。下のリンクからお聴きください。
+            </audio>
+          </div>
+          <p class="ep-detail-platforms-sub">アプリで購読する</p>
+          <div class="ep-detail-platforms-grid">
+            
+          <a href="https://listen.style/p/14rlng1w/jjbnpwfp" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 26px;">
+            <img src="../../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/episode/76k4MksehMzQJlYIE9duDc" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/jp/podcast/10-%E7%84%A1%E6%96%99%E3%81%AE%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BFcoco-chemsep-%E3%81%8E%E3%82%8A%E3%81%8E%E3%82%8A%E3%81%A3%E3%81%99%E3%82%93/id1789911793?i=1000701481773&amp;uo=4" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 32px;">
+            <img src="../../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg" alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/31edab3a-94ed-405e-a29e-10b2f08a3b1e/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-10-%E7%84%A1%E6%96%99%E3%81%AE%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BFcoco-chemsep-%E3%81%8E%E3%82%8A%E3%81%8E%E3%82%8A%E3%81%A3%E3%81%99%E3%82%93" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg" alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/watch?v=fpWQ4PIaozY" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 44px;">
+            <img src="../../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+          <a href="https://stand.fm/episodes/67e9b62b4e79ac6a9882690f" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 24px;">
+            <img src="../../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+          </a>
+          </div>
+
+          <div class="ep-detail-note" style="margin-top: 2rem;">
+            <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promo-card-mini">
+              <div class="note-icon-mini"><img src="../../images/note_icon.png" alt="note" loading="lazy"></div>
+              <div class="note-text-mini">
+                <strong>リンク・図解つきのnote版を読む</strong>
+                <span>本文中に参考リンクを添えた読みやすい記事版はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        
+
+        
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">ケムファクの関連記事と計算ツール</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://chem-fac.com/coco-chemsep-install/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:10})">
+                <span class="ref-title">記事：無料プロセスシミュレータ COCO/ChemSep のインストールと基本操作の方法</span>
+                <span class="ref-url">https://chem-fac.com/coco-chemsep-install/</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-transcript">
+          <h2 class="ep-detail-transcript-heading">文字起こし</h2>
+          <div class="transcript-body">
+            <h3 class="transcript-heading">企画の紹介と目標の設定</h3>
+            <p>どうも、かねまるです。</p>
+            <p>プラントライフは、化学プラントの技術者である私、かねまるが、</p>
+            <p>化学と工場に関するトピックを分かりやすく紹介して、身近に感じてもらう番組です。</p>
+            <p>毎週水曜日公開のプラントライフですが、今回は企画に参加している関係で、3月31日月曜日の公開です。</p>
+            <p>企画の名前は、ぎりぎりっすん、高橋クリスのFAラジオさん主催のイベントです。</p>
+            <p>2024年にやろうと思ってたのに、実はできなかったこと、ありませんか?</p>
+            <p>でも、ちょっと待ってください。</p>
+            <p>それ、本当に2024年の目標ですか?</p>
+            <p>もしかして、2024年度だったんじゃありませんか?</p>
+            <p>まだ終わっていない。まだぎりぎり滑り込める。</p>
+            <p>ポッドキャストイベントにカコつけて、やりたいなぁとふんわり思っていたことをやりきりましょう、という趣旨の企画です。</p>
+            <p>私ができなかったことは、ココ・ケムセップというものを使えるようになる、ということです。</p>
+            <p>これは無料の化学プロセスシミュレーターです。</p>
+            <p>3月29日にやっと基本的な操作ができるようになりました。</p>
+            <p>そもそも、ココ・ケムセップとは、という話ですけれども、これはフリーソフトの化学プロセスシミュレーターです。</p>
+            <p>プロセスシミュレーターは、反応や蒸留・抽出など、主に化学プラントで使われる化学工学操作をシミュレーションできるソフトです。</p>
+            <p>市販品は高価で、個人や学生には手が届かない代物になっています。</p>
+            <p>そんなプロセスシミュレーターが無料で手に入る。素晴らしいものです。</p>
+            <p>ココ・ケムセップと言っていますが、ココが化学プロセスのフローを描いたり、ベースのソフトになるものです。</p>
+            <p>そこにケムセップという、蒸留や吸収・抽出など、化学工学的な分離操作のシミュレーションに特化したソフトを組み合わせて使えるようになったものになっています。</p>
+            <p>化学プラントに関係する技術情報発信活動というのを私はしておりまして、これが使えるようになっていると解説の幅が広がりますので、ぜひ使ってみたいと思っていました。</p>
+            <p>まずギリギリっすんで決めた目標は、無料の化学プロセスシミュレーターであるココ・ケムセップを使えるようになるということです。</p>
+            <h3 class="transcript-heading">シミュレーションプロセスの解説</h3>
+            <p>このソフトの数少ない解説書籍を買いました。</p>
+            <p>例題で学ぶ化学プロセスシミュレーター、これを読み進めようと頑張っていたんですけれども、結局十数ページしか終わりませんでした。</p>
+            <p>それでも何とかインストールして、シミュレーション完了するところまで達成できました。</p>
+            <p>メタノールと水が混ざった液から蒸留して、メタノールを取り出すというプロセスをシミュレーションしました。</p>
+            <p>理科の実験で使う蒸留は単蒸留と呼ばれます。</p>
+            <p>一回加熱して分離して終わり。</p>
+            <p>化学プラントだと蒸留物をさらに蒸留して、とも何十回も繰り返して相当きれいにする操作を行います。</p>
+            <p>蒸留して容器に移し替えるような操作ではなくて、蒸留塔という数十メートルもある長い塔を使います。</p>
+            <p>塔の中に大量の仕切りが設けてあって、一つの仕切りを通ることで一回蒸留したような効果が得られる構造になっています。</p>
+            <p>塔の中で加熱して塔の上から出てきた時にはきれいな蒸留物が得られる仕組みになっています。</p>
+            <p>この蒸留塔の設計が大変で、プロセスシミュレーターを使って様々な成分比率や原料供給速度、蒸留塔の構造条件などでシミュレーションをして設計します。</p>
+            <p>今回実施したメタノールと水の混合系でも蒸留塔を使ったシミュレーションを行いました。</p>
+            <p>プロセスシミュレーターは便利なんですけれども、ただシミュレーションをかければ済むような内容ではありません。</p>
+            <p>扱うのは目に見えない一つ一つがナノメートルサイズの分子なので、色々な計算モデルがあります。</p>
+            <p>分子同士が衝突するのか、分子の重さは考慮するのかなど様々な状況を考慮したモデルがあります。</p>
+            <p>身近な例だと、高校化学で習う理想気体の状態方程式、PVイコールNRTという計算式があります。</p>
+            <p>理想気体のとつくくらいなので、理想気体でしか成り立たない理論です。</p>
+            <p>理想気体は分子に大きさがなくて分子間力が働かない気体を意味します。</p>
+            <p>分子間力が働かないというのは、分子同士が反発したり引き合ったりしないということを意味します。</p>
+            <p>もしかしたら分子間力のイメージはつかないかもしれないんですけれども、</p>
+            <p>もう一つの条件である分子に大きさがないというのは、これは体積がゼロという意味を成します。</p>
+            <p>この体積がゼロっていうのはあり得ないということは何となくわかるんじゃないかなと思います。</p>
+            <p>高校化学のようなレベルでは、計算しやすいようにリアルな状況から離れつつも、計算結果が遠くならないような式が使われています。</p>
+            <p>化学プラントで使う場合には、リアルな挙動を計算しないと製品が作れないなんて状況に陥ってしまいます。</p>
+            <p>使用する分子の特徴に合わせて、計算に使うモデルを選択するところが肝になります。</p>
+            <p>リアルな環境に近くなるほど、計算式は当然複雑になってきます。</p>
+            <p>実際はExcelのSolverやGoal Seekという機能を使ったら、計算できないことはありません。</p>
+            <p>作業自体にすごく時間がかかるので、高価ですけれども、プロセスシミュレーターを使う方が楽になってきます。</p>
+            <h3 class="transcript-heading">今後の展望と感謝の言葉</h3>
+            <p>この楽というのは、実は計算機能が充実しているだけではなくて、プロセスシミュレーターには計算に必要な係数というのが収録されています。</p>
+            <p>特に市販品はその係数が充実しています。</p>
+            <p>COCO/ChemSepにも基本的なデータは収録されているので、少しでも興味を持っていただけたら、ぜひ使ってみていただきたいです。</p>
+            <p>私のブログに相当丁寧にチュートリアル記事を書きましたので、概要欄からアクセスしてみてください。</p>
+            <p>最近は技術士試験というのを受けるようになって、勉強始めとしてやりたいことがたくさんあって、時間が取りづらいなと思っていることがありました。</p>
+            <p>このぎりぎりっすんという企画がなかったら、忙しさを理由に絶対やらなかっただろうなと思っています。</p>
+            <p>高橋クリスのFAラジオさんには非常に感謝しております。この場を借りてお礼申し上げます。ありがとうございます。</p>
+            <p>配信をしようと思う時間が6時。</p>
+            <p>この音声をちょうど収録しているのが5時43分現在です。</p>
+            <p>ここから編集して6時に間に合うのかっていうのはちょっと私もわからないんですけれども、もうギリギリになっていますね。</p>
+            <p>はい、今から頑張ります。</p>
+            <p>プラントライフでは化学や工場に関するトピックを扱っています。</p>
+            <p>毎週水曜日の朝6時に定期配信していますので、通勤時間や朝の準備などにお聞きください。</p>
+            <p>今回の公開が少しずれましたけれども、次回は4月9日を予定しています。</p>
+            <p>プラント技術に関する専門的な内容はchemfacというブログで解説しています。</p>
+            <p>また番組への質問や意見、お便り、やって欲しいトークテーマなどを募集しています。</p>
+            <p>概要欄にあるお便りフォームから投稿ください。</p>
+            <p>ご視聴ありがとうございました。</p>
+            <p>最後に、このプラントライフがいいなと思っていただけたら、番組のフォローや各ポッドキャスターアプリから評価をお願いします。</p>
+            <p>そうしていただけると今後の励みになります。</p>
+            <p>それではお聞きいただきありがとうございました。</p>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-related">
+          <h2 class="ep-detail-related-heading">関連するエピソード</h2>
+          <div class="ep-related-grid">
+            <a href="/episodes/99/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/99-4abced331c-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#99</span>
+                <span class="ep-related-title">化学工学計算の支援ツールを公開しました！</span>
+              </div>
+            </a>
+            <a href="/episodes/58/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/58-508dab4850-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#58</span>
+                <span class="ep-related-title">測れない…を打ち破るソフトセンサーの魅力と注意点</span>
+              </div>
+            </a>
+            <a href="/episodes/135/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/135-ddc49601c0-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#135</span>
+                <span class="ep-related-title">首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜</span>
+              </div>
+            </a>
+            <a href="/episodes/134/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/134-016c10a4eb-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#134</span>
+                <span class="ep-related-title">お知らせ！ビデオポッドキャスト化に書籍出版</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="ep-detail-nav"><a href="../9/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #9</span><span class="ep-nav-title">化学プラントの司令塔〜DCSを知れば見えてくる工場の裏側</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../11/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#11 →</span><span class="ep-nav-title">知っておきたい化学物質管理者のこと(科学系ポッドキャストの日)</span></a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=20261018e"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水をかけると沸騰するのはなぜ？ | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/everyday-chemical-engineering/water-boils-when-cooled/" />
+  <meta name="description" content="冷やしたのに沸騰するのは、沸点が周りの圧力で決まるからです。フラスコの実験を蒸気圧で説明し、工場の減圧蒸留につなげます。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="水をかけると沸騰するのはなぜ？ | プラントライフ">
+  <meta property="og:description" content="冷やしたのに沸騰するのは、沸点が周りの圧力で決まるからです。フラスコの実験を蒸気圧で説明し、工場の減圧蒸留につなげます。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/everyday-chemical-engineering/water-boils-when-cooled/">
+  <meta property="og:image" content="https://plantlife.chem-fac.com/images/articles/water-boils-when-cooled.jpg?v=9ffd2526">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261018d">
+  <link rel="stylesheet" href="/article.css?v=20261018d">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "水をかけると沸騰するのはなぜ？", "description": "冷やしたのに沸騰するのは、沸点が周りの圧力で決まるからです。フラスコの実験を蒸気圧で説明し、工場の減圧蒸留につなげます。", "image": "https://plantlife.chem-fac.com/images/articles/water-boils-when-cooled.jpg?v=9ffd2526", "keywords": "台所, 蒸気圧, 蒸留", "datePublished": "2026-10-09", "dateModified": "2026-10-10", "url": "https://plantlife.chem-fac.com/everyday-chemical-engineering/water-boils-when-cooled/", "author": {"@type": "Person", "name": "かねまる", "sameAs": ["https://x.com/chem_fac", "https://note.com/chem_fac"]}, "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "身近な化学工学", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/"}, {"@type": "ListItem", "position": 3, "name": "水をかけると沸騰するのはなぜ？", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/water-boils-when-cooled/"}]}</script>
+</head>
+<body class="article-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link active">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="article-main" id="main-content">
+    <div class="article-container">
+      <nav class="article-breadcrumb" aria-label="パンくず">
+        <a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/everyday-chemical-engineering/">身近な化学工学</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">水をかけると沸騰するのはなぜ？</span>
+      </nav>
+
+      <article class="article-detail">
+        <header class="article-header">
+          <div class="article-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><a href="/everyday-chemical-engineering/?tag=%E5%8F%B0%E6%89%80" class="article-tag article-tag--everyday">台所</a></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><a href="/everyday-chemical-engineering/?tag=%E8%92%B8%E6%B0%97%E5%9C%A7" class="article-tag article-tag--chemeng">蒸気圧</a><a href="/everyday-chemical-engineering/?tag=%E8%92%B8%E7%95%99" class="article-tag article-tag--chemeng">蒸留</a></span></div>
+          <h1 class="article-title">水をかけると沸騰するのはなぜ？</h1>
+          <div class="article-meta">
+            <time datetime="2026-10-09">2026-10-09</time>
+            <span class="article-meta-sep">・</span>
+            <span>放送回 #118・#2 から</span>
+          </div>
+        </header>
+
+        <div class="article-body">
+        <p>丸底フラスコの水を沸騰させてゴム栓でふたをし、外から冷たい水をかけると、中の水が再び沸騰し始めます。YouTubeで「水は冷やすと沸騰する」として紹介されている実験です（ガラスが割れることがあるので、家庭では試さないでください）。冷やしたのに、なぜ沸騰するのでしょうか？</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-boils-steps.webp?v=78c8d7d3" alt="丸底フラスコの水を沸騰させ、ゴム栓でふたをして水をかけると、中から泡が出る4段階の図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>出典：<a href="https://www.youtube.com/watch?v=rxp0Agf8iGI" target="_blank" rel="noopener">Dr.bobobo「【解説付き】水は冷やすと沸騰する」</a>の手順をもとに作図</figcaption></figure>
+        <p>水をかけると、フラスコの中の水蒸気が冷えて水に戻り、中の圧力が下がります。沸点は周りの圧力で決まるので、圧力が下がれば沸点も下がり、まだ熱い水が沸騰するのです。</p>
+        <p><strong>冷やしたのに沸騰したのは、水の温度が上がったからではなく、沸点が下がったからです。</strong></p>
+        <h2>沸点を決めるのは「蒸気圧」</h2>
+        <p>水面からは水の分子が絶えず飛び出し、一部は戻ってきます。同じ時間に飛び出す数と戻る数が釣り合ったときの水蒸気の圧力が蒸気圧で、温度が高いほど大きくなります。液体が沸騰するのは、蒸気圧が周りの圧力に届いたときです。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-boils-shift.webp?v=bcc0c507" alt="水の蒸気圧の曲線に、1気圧で100℃、富士山頂の約88℃、圧力鍋の110〜130℃を示した図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>周りの圧力が低いほど、低い温度で沸騰する</figcaption></figure>
+        <p>平地の1気圧で、水の蒸気圧が1気圧に届くのが100℃です。気圧の低い富士山の山頂では約88℃、圧力を高めた圧力鍋の中では110〜130℃ほどが沸点になります。冷やしたフラスコの中で起きたのは、富士山の山頂と同じく、周りの圧力が下がったことです。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-boils-flask.webp?v=114a6fba" alt="ふたをしたフラスコの中で、下の水はまだ熱く、中の圧力が一気に下がったために沸騰している図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>水をかけて冷えるのは、まず水の上の水蒸気</figcaption></figure>
+        <h2>化学工学では、圧力で沸点を操る</h2>
+        <p>化学工場では、この関係を使って沸点を操ります。代表的なのが減圧蒸留です。原油の重い成分は、大気圧のままでは沸点が高く、蒸留できる温度まで上げると熱で分解してしまいます。そこで圧力を下げて沸点を下げ、分解しない温度で蒸留します。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/water-boils-vacuum-distillation.webp?v=115e4ff8" alt="重い成分の沸点が熱分解の始まる温度より高いため、圧力を下げて沸点を下げてから蒸留することを示す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>常圧の蒸留で残った重い油は、減圧蒸留で分ける</figcaption></figure>
+        <h2>まとめ</h2>
+        <p>沸点は決まった温度ではなく、周りの圧力で変わります。冷やして沸騰するフラスコも、工場の減圧蒸留も、同じ蒸気圧のしくみで説明できます。</p>
+        </div>
+
+        <aside class="article-episode-cta">
+          <p class="article-episode-cta-label">この話を声で聴く</p>
+          <a href="/episodes/118/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;water-boils-when-cooled&#x27;,&#x27;episode_number&#x27;:118})">
+            <div class="article-episode-thumb"><img src="/images/episodes/118-41f0749aa1-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#118　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:20:31</span>
+              <span class="article-episode-title">水をかけると沸騰する不思議な現象（#2リメイク）</span>
+              <span class="article-episode-hint">エピソードページで聴く</span>
+            </div>
+          </a>
+          <a href="/episodes/2/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;water-boils-when-cooled&#x27;,&#x27;episode_number&#x27;:2})">
+            <div class="article-episode-thumb"><img src="/images/episodes/2-36e340eecb-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#2　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:10:43</span>
+              <span class="article-episode-title">水を冷やすと沸騰する！？知れば納得の物理現象</span>
+              <span class="article-episode-hint">エピソードページで聴く</span>
+            </div>
+          </a>
+        </aside>
+
+      <div class="article-related">
+        <h2 class="article-related-heading">あわせて読む</h2>
+        <div class="article-related-grid">
+          <a href="/everyday-chemical-engineering/humidity-100-percent/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/humidity-100-percent.jpg?v=d3c1211b" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">蒸気圧・調湿</span>
+              <span class="article-related-title">湿度100%って、何が100%？</span>
+            </div>
+          </a>
+          <a href="/everyday-chemical-engineering/spiritus-96-percent/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/spiritus-96-percent.jpg?v=172827bb" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">相平衡・蒸留</span>
+              <span class="article-related-title">スピリタスはなぜ96度なの？</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </article>
+
+      <div class="article-backlink">
+        <a href="/everyday-chemical-engineering/">「身近な化学工学」の記事一覧へ戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js?v=20261018d"></script>
+</body>
+</html>

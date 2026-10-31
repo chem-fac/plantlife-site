@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#102 化学プラントの神経系！状態を伝える「計装」の世界 | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/102/" />
+  <meta name="description" content="プラントはどうやって異常に気づくのか？化学プラント中に張り巡らされる神経系である計装について話しました！">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="#102 化学プラントの神経系！状態を伝える「計装」の世界 | プラントライフ">
+  <meta property="og:description" content="プラントはどうやって異常に気づくのか？化学プラント中に張り巡らされる神経系である計装について話しました！">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/102/">
+  <meta property="og:image" content="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/17ZXlKgQazX6tq5Aqo8xwOhDHCZrYKkV7HGyftE8_resized.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=20261018e">
+  <link rel="stylesheet" href="../../episode.css?v=20261018e">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "url": "https://plantlife.chem-fac.com/episodes/102/", "name": "#102 化学プラントの神経系！状態を伝える「計装」の世界", "episodeNumber": 102, "datePublished": "2026-06-14", "description": "プラントはどうやって異常に気づくのか？化学プラント中に張り巡らされる神経系である計装について話しました！", "image": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/17ZXlKgQazX6tq5Aqo8xwOhDHCZrYKkV7HGyftE8_resized.png", "partOfSeries": {"@type": "PodcastSeries", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}, "timeRequired": "PT18M15S", "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/4nEaV7SLmprBaadQQYrpSSt1xDJSAFHI5GvY9b6K.mp3", "encodingFormat": "audio/mpeg"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード一覧", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "#102", "item": "https://plantlife.chem-fac.com/episodes/102/"}]}</script>
+</head>
+<body class="episode-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="../../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ep-detail-main" id="main-content">
+    <div class="container">
+      <div class="ep-detail-nav"><a href="../101/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #101</span><span class="ep-nav-title">実験室ではうまくいくのに？スケールアップ効果の話</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../103/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#103 →</span><span class="ep-nav-title">学びを無駄にしない、学習×発信のススメ</span></a></div>
+
+      <article class="ep-detail-article">
+        <div class="ep-detail-head">
+          <div class="ep-detail-artwork">
+            <img src="/images/episodes/102-ce851a9ee0-800.webp" srcset="/images/episodes/102-ce851a9ee0-400.webp 400w, /images/episodes/102-ce851a9ee0-800.webp 800w" sizes="280px" alt="#102 化学プラントの神経系！状態を伝える「計装」の世界" width="400" height="400" fetchpriority="high">
+          </div>
+          <div class="ep-detail-info">
+            <div class="ep-detail-meta">
+              <span class="ep-detail-number">#102</span>
+              <time class="ep-detail-date">2026-06-14</time>
+              <span class='ep-detail-duration'><svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:18:15</span>
+            </div>
+            <h1 class="ep-detail-title">#102 化学プラントの神経系！状態を伝える「計装」の世界</h1>
+            <a href="#ep-listen" class="ep-play-btn" data-ep-play><svg class="ep-play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path class="ep-play-icon-play" d="M3 1.6v10.8a.6.6 0 0 0 .9.5l8.6-5.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z" fill="currentColor"/><path class="ep-play-icon-pause" d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor"/></svg><span class="ep-play-label">再生する</span></a>
+            <p class="ep-detail-desc">プラントはどうやって異常に気づくのか？化学プラント中に張り巡らされる神経系である計装について話しました！</p>
+            <p class="ep-detail-tags"><span class="ep-detail-tags-label">テーマ</span><a href="/episodes/?tag=%E8%A8%88%E6%B8%AC%E3%83%BB%E5%88%B6%E5%BE%A1%E3%83%BBDX" class="ep-tag-link">計測・制御・DX</a><a href="/episodes/?tag=%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E8%A8%AD%E5%82%99%E3%83%BB%E8%A3%85%E7%BD%AE" class="ep-tag-link">プラント設備・装置</a><a href="/episodes/?tag=%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%83%BB%E9%81%8B%E8%BB%A2%E7%AE%A1%E7%90%86" class="ep-tag-link">プロセス・運転管理</a></p>
+            
+          </div>
+        </div>
+
+        <div class="ep-detail-platforms" id="ep-listen">
+          <h2 class="ep-detail-platforms-heading">この回を聴く</h2>
+          
+          <div class="ep-detail-player">
+            <audio class="ep-audio" controls controlslist="nodownload" preload="none" oncontextmenu="return false">
+              <source src="https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/4nEaV7SLmprBaadQQYrpSSt1xDJSAFHI5GvY9b6K.mp3" type="audio/mpeg">
+              お使いのブラウザは音声プレーヤーに対応していません。下のリンクからお聴きください。
+            </audio>
+          </div>
+          <p class="ep-detail-platforms-sub">アプリで購読する</p>
+          <div class="ep-detail-platforms-grid">
+            
+          <a href="https://listen.style/p/14rlng1w/eqwj2wrf" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 26px;">
+            <img src="../../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/episode/6SegeBbXxxhW7gIqbq32uz" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/jp/podcast/102-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E7%A5%9E%E7%B5%8C%E7%B3%BB-%E7%8A%B6%E6%85%8B%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B-%E8%A8%88%E8%A3%85-%E3%81%AE%E4%B8%96%E7%95%8C/id1789911793?i=1000772566218&amp;uo=4" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 32px;">
+            <img src="../../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg" alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/db5d52a3-a1c4-4382-81f7-3169bb32a366/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-102-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E7%A5%9E%E7%B5%8C%E7%B3%BB%EF%BC%81%E7%8A%B6%E6%85%8B%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%80%8C%E8%A8%88%E8%A3%85%E3%80%8D%E3%81%AE%E4%B8%96%E7%95%8C" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg" alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/watch?v=yYbvq_verT0" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 44px;">
+            <img src="../../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+          <a href="https://stand.fm/episodes/6a8d373ad07c9ea08e1571ec" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 24px;">
+            <img src="../../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+          </a>
+          </div>
+
+          <div class="ep-detail-note" style="margin-top: 2rem;">
+            <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promo-card-mini">
+              <div class="note-icon-mini"><img src="../../images/note_icon.png" alt="note" loading="lazy"></div>
+              <div class="note-text-mini">
+                <strong>リンク・図解つきのnote版を読む</strong>
+                <span>本文中に参考リンクを添えた読みやすい記事版はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-article-link">
+          <a href="/everyday-chemical-engineering/how-water-meter-counts/" class="article-promo-card" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_article_click&#x27;,{&#x27;article_slug&#x27;:&#x27;how-water-meter-counts&#x27;,&#x27;episode_number&#x27;:102})">
+            <span class="article-promo-label">この回の話を記事で読む</span>
+            <strong class="article-promo-title">水道メーターは、どうやって数えるの？</strong>
+            <span class="article-promo-desc">水道メーターは、水の流れで羽根車を回し、回った数から使った水の量を出します。流量を測るしくみを説明し、工場で測った値を4〜20mAの電気の信号で制御室へ送る計装につなげます。</span>
+          </a>
+        </div>
+
+        
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">ケムファクの関連記事と計算ツール</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://chem-fac.com/current-voltage-signal/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:102})">
+                <span class="ref-title">記事：4-20mAと1-5Vの違いと変換方法</span>
+                <span class="ref-url">https://chem-fac.com/current-voltage-signal/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://chem-fac.com/electrical-instrumentation/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:102})">
+                <span class="ref-title">記事：計装と電気の違い</span>
+                <span class="ref-url">https://chem-fac.com/electrical-instrumentation/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://tools.chem-fac.com/tools/instrumentation-control/ma-signal/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;tool&#x27;,&#x27;episode_number&#x27;:102})">
+                <span class="ref-title">計算ツール：4-20mA信号換算（スケーリング・開平）</span>
+                <span class="ref-url">https://tools.chem-fac.com/tools/instrumentation-control/ma-signal/</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-transcript">
+          <h2 class="ep-detail-transcript-heading">文字起こし</h2>
+          <div class="transcript-body">
+            <h3 class="transcript-heading">計装とは何か？化学プラントの神経系</h3>
+            <p>こんにちは、かねまるです。 プラントライフは、化学プラントの技術者が、化学を軸に皆さんの視野を広げていく番組です。</p>
+            <p>今回は、計装というあまり馴染みのない言葉をテーマに話をしてみます。 化学プラントでは、制御室みたいな場所で運転の状況を確認して、問題がないか</p>
+            <p>管理されています。 じゃあ、その情報ってどこから持ってきているのかっていうと、それが計装という技術です。</p>
+            <p>化学プラントを体で表すと、制御室が脳の部分です。 そして、目や耳、神経に当たる部分が計装というものです。</p>
+            <p>そういう大事な化学プラントの感覚器官とか神経に当たる部分について、今回は話をしていきます。</p>
+            <p>まず、計装という言葉の意味から考えていきますと、 計測器を装備する,もしくは計測して装備するっていう意味合いを計装と言います。</p>
+            <p>計測器はセンサーのことです。 だから、化学プラントの至るところに計測装置、センサーを取り付けるっていう意味合いになります。</p>
+            <p>そのセンサーのデータを電気信号で制御室まで届ける。 それが一連の計装という技術にあたります。</p>
+            <h3 class="transcript-heading">なぜ計装が必要なのか？</h3>
+            <p>大前提として、化学プラントは外から見たところで何が起きているのかは全くわかんないです。</p>
+            <p>ほとんどの装置は鉄やステンレスといった金属製のものです。 その中に液体や気体を入れて反応させたりします。</p>
+            <p>身近なもので考えると水筒が結構近いんですけど、 水筒の中身って今どれくらい入っているかって触らずに置いてある状態でわかんないですよね。</p>
+            <p>どれくらい保温されているか温度もわからないです。</p>
+            <p>そんな感じで容器の中っていうのは何かしらで測定しないとわかんないんです。</p>
+            <p>ちなみに水筒については中身の量って持ってちょっと振ったらわかるんですけど、</p>
+            <p>化学プラントの容器は何千リットル何万リットルっていうでっかい容器なのでさすがに動かすことはできないです。</p>
+            <p>なんなら何十メートルっていう高い塔みたいなものもあるので、</p>
+            <p>基本的には置いてあるものに何かセンサーを差し込んで測定をするということになります。</p>
+            <p>原理にはよりますけど、すごくごつい体温計みたいな形で先端が少し細くなっているものが多いですね。</p>
+            <p>それを装置の中に差し込んで測定をします。</p>
+            <h3 class="transcript-heading">化学プラントの主要な測定項目</h3>
+            <p>化学プラントで測定したいものっていうのは大きく4つです。</p>
+            <p>温度と圧力と流量と液面です。</p>
+            <p>温度はイメージしやすいですね。超高級体温計みたいなのをつけます。</p>
+            <p>1本10万円はくだらないでしょうね。</p>
+            <p>測定の精度をものすごく高くするために測定原理がそもそも違って材料にプラチナを使ったりしています。</p>
+            <p>それに使用する場所が外だったり、化学プラントっていう環境の悪い場所だったりするので、長く使うためにごついものとか壊れにくいものが使われています。</p>
+            <p>まさに超高級体温計っていう感じですね。</p>
+            <p>今度は圧力計を見てみます。</p>
+            <p>化学プラントで圧力を測定する理由っていうのはいろいろあるんですけど、一番わかりやすいのは水圧を見るっていうことですね。</p>
+            <p>ポンプを使って水とかいろんな液体を押し出して違うところに運ぶのが基本です。</p>
+            <p>その時にどれくらいの力で押しているかっていうのを測ります。</p>
+            <p>圧力の一番よくやる測り方ですと、ダイヤフラムっていう弾力性のある膜があるんですけど、</p>
+            <p>その膜を装置のところに取り付けておいて、力がかかったら少しべこってへこむ感じを測定します。</p>
+            <p>膜がたくさんへこむほど圧力が高いって考えられますので、</p>
+            <p>そのへこみ具合で圧力を判断します。</p>
+            <p>今度は流量の話。</p>
+            <p>液体とか気体の流れている量を測定します。</p>
+            <p>1分間に何リットル流れていますかっていう情報を収集するんですけど、</p>
+            <p>わかりやすいのが水車みたいな原理ですね。</p>
+            <p>川の流れに合わせて水車がくるくる回ると思うんですけど、</p>
+            <p>それと同じで羽根車がついた流量計っていうのがあります。</p>
+            <p>1分間に回った量で何リットル流れたっていう換算をしています。</p>
+            <p>流量計は使う場所でいろいろ制約があるので、測定原理が特にたくさんあります。</p>
+            <p>液体が流れることで発生する渦の数を数えたり、</p>
+            <p>微弱な電気を測定したり、超音波で測定したり、さまざまです。</p>
+            <p>私たちが使う水道のメーターについては、羽根車が回ってその量を測っているみたいです。</p>
+            <p>最後に化学プラントで見ているデータ、液面です。</p>
+            <p>あまりイメージがつかないかもしれないんですけど、</p>
+            <p>容器の中にどれくらいの高さまで液体が入ってますかっていう意味です。</p>
+            <p>基本的にはセンサーを使って液の高さを見ているんですけど、見たいものは液量ですね。</p>
+            <p>今どれくらい入っているのか、あとどれくらい入れられるのかっていうのを見ます。</p>
+            <p>実は液面の高さは圧力で測定します。</p>
+            <p>先ほど話した圧力計と同じ原理がよく使われておりまして、</p>
+            <p>装置の下の方にダイヤフラム、膜をつけて、その水圧で測ります。</p>
+            <p>高いところまで液体が入っているほど圧力が高いので、</p>
+            <p>その圧力の高さを液面の高さとして換算して、さらに液量として換算します。</p>
+            <p>液面だけややこしいんですけど、測定するのは何キロパスカルっていう圧力が測定されて、</p>
+            <p>そのデータを基に自動的に、だいたい何キロパスカルだったら何メートルの高さまで液体入ってますよっていう情報が得られます。</p>
+            <p>装置の直径がこれくらいだから、直径と高さを使って体積を計算することで何リットル入っているかっていうのがわかるようになります。</p>
+            <h3 class="transcript-heading">測定データの伝達方法：4-20mA信号</h3>
+            <p>いろんな測定データがあって、いろんな測定方法があって、そのデータってどうやって制御室に伝えていると思いますか。</p>
+            <p>例えば流量だったら、これくらい羽根車回ってるんですけどっていうデータ。</p>
+            <p>圧力だったら膜がこれくらいへこみましたよっていうデータ。</p>
+            <p>ただそういう情報を伝えられても、制御室側はイメージつかないですよね。</p>
+            <p>もうちょっとわかりやすい数字で教えてくれっていう話になるんですけど、その情報を伝えるための世界標準があります。</p>
+            <p>ものすごく簡単に言うと、測定した結果を電気信号にして送りましょうっていうことなんです。</p>
+            <p>化学プラントで使うセンサー類が高いのは、この関係もあるんですけど、</p>
+            <p>物理的に測定したセンサーのデータを電気信号に変換するためのいろんな装置が入っています。</p>
+            <p>もちろん電子基板も入っています。</p>
+            <p>でもそれだけじゃなくて、いろんな物理的な情報を電気信号に変えるところまではいいんですけど、</p>
+            <p>その電気ってすごく微弱なもので弱かったりするんですよね。</p>
+            <p>だから制御室まで届けるために電気の強さを増幅させたり、</p>
+            <p>世界共通の電気信号の形に変換したり、そんなこともしています。</p>
+            <p>じゃあ世界標準って何なのって話なんですけど、</p>
+            <p>基本的には4mAから20mAの範囲で電流を流してくださいねっていう基準があります。</p>
+            <p>センサーから情報を受け取る側は電流計がついています。</p>
+            <p>センサーからの情報が4mAだったら0%。</p>
+            <p>反対に20mAも流れたら100%と考えましょうっていう意味合いです。</p>
+            <p>1個例を出しますと、圧力計を考えます。</p>
+            <p>センサーを買うときは何が0%で何が100%なのかを決めて買います。</p>
+            <p>分かりやすい数字で出しますけど、圧力計が0kPaのときに0%、</p>
+            <p>100kPaのときに100%として買ったとします。</p>
+            <p>そうすると圧力計が0kPaを測定したら、</p>
+            <p>自動的に4mA流れるような回路が組まれています。</p>
+            <p>反対に圧力計が100kPa、100%を測定したときは、</p>
+            <p>自動的に20mAが流れるように作られています。</p>
+            <p>これは途中の値ももちろんそうで、</p>
+            <p>半分の圧力、50kPaのときは12mA流れるようになっています。</p>
+            <p>こうした4から20mAの共通の電流信号にすると、</p>
+            <p>何がいいのかというと、圧力とか流量とか、</p>
+            <p>全然違う情報を同じ信号として手に入れることができます。</p>
+            <p>だから制御室がいつも受け取っているのは、</p>
+            <p>0から100%のうち何パーセントですかという情報だけなんです。</p>
+            <p>受け取る情報はすごく簡素になってわかりやすくて、</p>
+            <p>あとは制御室側で、この番号の信号を受けたときは圧力ですよ。</p>
+            <p>そしてこの圧力は何kPaから何kPaまでの範囲で情報を送ってくれますよというのをすべて登録しておきます。</p>
+            <h3 class="transcript-heading">4-20mA信号の利点と0mAを使わない理由</h3>
+            <p>これのすごく便利なところは、</p>
+            <p>同じ電気信号、配線を使って新しい圧力計を買ったときも同じなんです。</p>
+            <p>0kPaから200kPaまで測定できますよっていうのを買ったときに、</p>
+            <p>送られてくる信号は4から20mAの同じものです。</p>
+            <p>あとは制御室側で、</p>
+            <p>200kPaに増えたのねっていうことで、</p>
+            <p>設定値を100から200に変更するだけで終わります。</p>
+            <p>パーセントで情報を伝えているっていうのがすごく大事なとこです。</p>
+            <p>ちなみになんですけど、</p>
+            <p>4から20mAってものすごく中途半端じゃないですか。</p>
+            <p>なんで20までなんていう話ももちろんあるんですけど、</p>
+            <p>一番気持ち悪いのは0から始めてくれよって話じゃないですかね。</p>
+            <p>0から20mAにしたら半分は単純に10mAって簡単に計算できるんですけど、</p>
+            <p>4から20の半分は12って何かわかりにくいんですよね。</p>
+            <p>ここまでわかりにくくしても、</p>
+            <p>4から始めたい理由っていうのがありまして、</p>
+            <p>0mAというものに意味を持たせたかったんです。</p>
+            <p>0っていう数字に2種類の意味が実はあるんですけど、</p>
+            <p>本当にちゃんと測定できてるけど、</p>
+            <p>例えば液体が流れてない、0ですよっていう情報と、</p>
+            <p>実際は流れてるけど電気信号を伝える電線が切れてて、</p>
+            <p>つまり断線してて電気が伝わっていなくて、</p>
+            <p>0mAっていう場合もあるんです。</p>
+            <p>つまりはちゃんと0なのか、壊れて0なのかがわかりにくいんです。</p>
+            <p>それをはっきりさせるために、</p>
+            <p>ちゃんと0の時は4mAの信号を実際に流しておきましょうっていうことにしました。</p>
+            <p>実際に断線して電気が流れなくなった時は、</p>
+            <p>ずっと4mA流れていたところから0に変わってしまうので、</p>
+            <p>それで断線したんだなっていうのがわかるようになります。</p>
+            <h3 class="transcript-heading">計装の重要性とメンテナンスの課題</h3>
+            <p>今回は計装の話をしてみました。</p>
+            <p>化学プラントの安全・安心を支えるような設備たちでして、</p>
+            <p>まさに感覚器官・神経といって差し支えありません。</p>
+            <p>一応補足しておくと、今回話した4-20mAの信号だけじゃなくて、</p>
+            <p>1から5Vで電圧で信号を送りましょうっていう種類もあったりとか、</p>
+            <p>温度計だと抵抗値、つまりオームの値を測りましょうとか、</p>
+            <p>流量計だと歯車が一周するたびにカチカチさせて、</p>
+            <p>そのカチカチの数を数えましょうっていうパルス流量計みたいなものもあったり、</p>
+            <p>いろいろ種類はあります。</p>
+            <p>今回はすごく一般的で共通して話せる4-20mAの信号の話をしました。</p>
+            <p>こういう大量のセンサーと信号が何百と張り巡らされていまして、</p>
+            <p>でも意外と気づかない縁の下の力持ちみたいな感じです。</p>
+            <p>ちなみにそのセンサーが何百とあって、</p>
+            <p>それを10年20年って使っていくと、もちろん劣化してくるんですよ。</p>
+            <p>その劣化があると、なんかデータがおかしいなっていう感じになってきて、</p>
+            <p>私の方で原因を調査して対策を考えたりするわけです。</p>
+            <p>だいたいただ劣化しただけっていうのはほとんどなくて、</p>
+            <p>製品の作り方が悪くて二次災害的にセンサー側にも悪影響を与えたりとかっていうことも多いです。</p>
+            <p>毎日よくわかんない異常に対して原因を調べて、特定して、対策して、大変です。</p>
+            <p>そうやって私たちの化学製品が支えられているんだなっていうことは覚えておいてもらえると嬉しいです。</p>
+            <h3 class="transcript-heading">エンディング</h3>
+            <p>今回はここまでです。</p>
+            <p>プラントライフでは、化学や工場に関するトピックを扱っています。</p>
+            <p>配信は毎週水曜日と日曜日の朝6時を予定しています。</p>
+            <p>番組への質問やご感想は概要欄のお便りフォームからお待ちしております。</p>
+            <p>XのDMでも大丈夫ですし、</p>
+            <p>ハッシュタグプラントライフをつけて感想を言っていただいても大丈夫です。</p>
+            <p>お便りとか感想とかもらえると嬉しいので、ぜひお願いします。</p>
+            <p>それではお聞きいただきありがとうございました。</p>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-related">
+          <h2 class="ep-detail-related-heading">関連するエピソード</h2>
+          <div class="ep-related-grid">
+            <a href="/episodes/131/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/131-e7d43f653d-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#131</span>
+                <span class="ep-related-title">搬送に価値はあるのか？ムダと呼ばれる理由と、それでもコンベアが好きな話</span>
+              </div>
+            </a>
+            <a href="/episodes/123/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/123-d6fe3fbe2a-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#123</span>
+                <span class="ep-related-title">結局は人頼み｜化学プラントの手仕込み</span>
+              </div>
+            </a>
+            <a href="/episodes/117/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/117-03b7235bbc-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#117</span>
+                <span class="ep-related-title">水の種類いくつ言える？化学プラントの「水」入門</span>
+              </div>
+            </a>
+            <a href="/episodes/57/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/57-802aba5c03-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#57</span>
+                <span class="ep-related-title">化学プラントも『自動運転』の時代へ！ 自律制御AIが描く未来</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="ep-detail-nav"><a href="../101/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #101</span><span class="ep-nav-title">実験室ではうまくいくのに？スケールアップ効果の話</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../103/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#103 →</span><span class="ep-nav-title">学びを無駄にしない、学習×発信のススメ</span></a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=20261018e"></script>
+</body>
+</html>

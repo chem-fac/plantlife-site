@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>はじめての方へ | プラントライフ</title>
+    <link rel="canonical" href="https://plantlife.chem-fac.com/start/" />
+    <meta name="description"
+        content="プラントライフを初めて聴く方へ。100を超えるエピソードから、あなたに合った「まず聴く3本」をタイプ別にご案内します。">
+    <meta property="og:site_name" content="プラントライフ">
+    <meta property="og:title" content="はじめての方へ | プラントライフ">
+    <meta property="og:description" content="100を超えるエピソードから、あなたに合った「まず聴く3本」をタイプ別にご案内します。">
+    <meta property="og:url" content="https://plantlife.chem-fac.com/start/">
+    <meta property="og:image" content="https://plantlife.chem-fac.com/images/ogp/start.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://plantlife.chem-fac.com/images/ogp/start.png">
+    <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」"
+        href="https://rss.listen.style/p/14rlng1w/rss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://image.listen.style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=20261018d">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <style>
+        /* はじめての方へ。おすすめの回を先に、罫線で区切った一覧で見せる（2026-10-18） */
+        .start-main {
+            padding-top: calc(var(--header-h) + 40px);
+            padding-bottom: 80px;
+            min-height: 80vh;
+        }
+
+        .start-intro {
+            max-width: 940px;
+            margin-bottom: 8px;
+        }
+
+        .start-intro p {
+            font-size: 1rem;
+            color: var(--ink);
+            line-height: 1.9;
+            line-break: strict;
+        }
+
+        .start-group {
+            margin-top: 40px;
+        }
+
+        .start-group-head {
+            display: flex;
+            align-items: baseline;
+            gap: 4px 16px;
+            flex-wrap: wrap;
+            padding-top: 12px;
+            border-top: 2px solid var(--ink);
+            margin-bottom: 4px;
+        }
+
+        .start-group-head h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .start-group-sub {
+            font-size: 0.9375rem;
+            color: var(--ink-2);
+        }
+
+        /* 番組表のように1行に1回：左に番号、中央に題と選んだ理由、右に再生時間 */
+        .start-cards {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .start-card {
+            display: grid;
+            grid-template-columns: 9.5em minmax(0, 1fr) 9em;
+            grid-template-areas:
+                "num title dur"
+                "num why dur";
+            column-gap: 20px;
+            row-gap: 2px;
+            align-items: baseline;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .start-card-num {
+            grid-area: num;
+        }
+
+        .start-card-title {
+            grid-area: title;
+        }
+
+        .start-card-why {
+            grid-area: why;
+        }
+
+        .start-card-duration {
+            grid-area: dur;
+            text-align: right;
+        }
+
+        .start-card-num {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--brand);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .start-card-note {
+            display: block;
+        }
+
+        .start-card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.55;
+            text-underline-offset: 3px;
+            transition: color var(--t);
+        }
+
+        .start-card:hover .start-card-title {
+            color: var(--brand);
+            text-decoration: underline;
+        }
+
+        .start-card-why {
+            font-size: 0.9375rem;
+            color: var(--ink-2);
+            line-height: 1.8;
+        }
+
+        .start-card-duration {
+            font-size: 0.875rem;
+            color: var(--ink-2);
+        }
+
+        .start-card-duration time {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* 受賞などの補足は、塗りのバッジでなく文字で */
+        .start-card-note {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--ink-2);
+        }
+
+        .start-listen {
+            margin-top: 56px;
+        }
+
+        .start-listen-head {
+            padding-top: 12px;
+            border-top: 2px solid var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .start-listen h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .start-listen p {
+            font-size: 0.9375rem;
+            color: var(--ink-2);
+            margin-bottom: 18px;
+        }
+
+        /* 配信先は同じ大きさの枠で並べる（ロゴ画像は加工しない） */
+        .start-platforms {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .start-platforms a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 64px;
+            padding: 0 12px;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-box);
+            transition: border-color var(--t);
+        }
+
+        .start-platforms a:hover {
+            border-color: var(--brand);
+        }
+
+        .start-platforms img {
+            height: var(--logo-height, 26px);
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        @media (max-width: 1120px) {
+            .start-platforms {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                max-width: 640px;
+            }
+        }
+
+        /* 狭い画面では番号と再生時間を題の上に並べる */
+        @media (max-width: 700px) {
+            .start-card {
+                grid-template-columns: auto 1fr;
+                grid-template-areas:
+                    "num dur"
+                    "title title"
+                    "why why";
+            }
+
+            .start-card-duration {
+                text-align: left;
+            }
+        }
+
+        /* スマホは2列×3段 */
+        @media (max-width: 600px) {
+            .start-platforms {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .start-platforms a {
+                height: 56px;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B3DFR92WNS');
+    </script>
+</head>
+
+<body>
+    <a href="#start-groups" class="skip-link">本文へスキップ</a>
+    <header class="header scrolled" id="header">
+        <div class="header-inner">
+            <a href="/" class="header-logo">
+                <img src="../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+            </a>
+            <nav class="header-nav" id="header-nav">
+                <a href="/" class="nav-link">ホーム</a>
+                <a href="/start/" class="nav-link active">はじめての方へ</a>
+                <a href="/episodes/" class="nav-link">エピソード</a>
+                <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+                <a href="/goods/" class="nav-link">グッズ</a>
+                <a href="/#about" class="nav-link">番組について</a>
+                <a href="/#contact" class="nav-link">お問い合わせ</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="start-main">
+        <div class="container">
+            <h1 class="section-heading">はじめての方へ</h1>
+            <div class="start-intro">
+                <p>
+                    「プラントライフ」は化学プラントの技術者かねまるが、化学を軸に視野が広がる話をお届けするポッドキャストです。<br>
+                    エピソードは100本以上。どこから聴こうか迷ったら、あなたに近いところから選んでみてください。<br>
+                    毎週 水曜・日曜に更新しています。
+                </p>
+            </div>
+
+            <div id="start-groups">
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>まずは身近な化学から</h2>
+                        <span class="start-group-sub">一般・学生の方へ</span>
+                    </div>
+                    <div class="start-cards">
+                        <a href="/episodes/104/" class="start-card">
+                            <span class="start-card-num">#104</span>
+                            <span class="start-card-title">日焼け止めはどうやって紫外線を防ぐのか？</span>
+                            <span class="start-card-why">毎日使うものに隠れた化学。「身近なのに知らない」を解きほぐす入口にぴったりの回です。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT15M3S">15:03</time></span>
+                        </a>
+                        <a href="/episodes/66/" class="start-card">
+                            <span class="start-card-num">#66</span>
+                            <span class="start-card-title">教養として知りたいリチウムイオン電池の基礎知識</span>
+                            <span class="start-card-why">ニュースでよく聞く電池の話を、基礎からやさしく。仕組みが分かると世界の見え方が変わります。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT21M38S">21:38</time></span>
+                        </a>
+                        <a href="/episodes/68/" class="start-card">
+                            <span class="start-card-num">#68</span>
+                            <span class="start-card-title">温泉の「あたたか〜い」を支える設備の話</span>
+                            <span class="start-card-why">身近な温泉を入口に、熱を運ぶ装置の世界へ。プラントの話が一気に親しみやすくなります。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT16M53S">16:53</time></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>現場と技術をもっと深く</h2>
+                        <span class="start-group-sub">プラント・技術職の方へ</span>
+                    </div>
+                    <div class="start-cards">
+                        <a href="/episodes/87/" class="start-card">
+                            <span class="start-card-num">#87</span>
+                            <span class="start-card-title">素晴らしき機能美！撹拌翼（かくはんよく）の世界</span>
+                            <span class="start-card-why">何気なく使う撹拌翼を技術者目線で。「なぜこの形なのか」を語る、現場派に刺さる回です。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT23M20S">23:20</time></span>
+                        </a>
+                        <a href="/episodes/101/" class="start-card">
+                            <span class="start-card-num">#101</span>
+                            <span class="start-card-title">実験室ではうまくいくのに？スケールアップ効果の話</span>
+                            <span class="start-card-why">ラボと実機のギャップという、プロセス開発の永遠のテーマを分かりやすく解説します。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT23M30S">23:30</time></span>
+                        </a>
+                        <a href="/episodes/123/" class="start-card">
+                            <span class="start-card-num">#123</span>
+                            <span class="start-card-title">結局は人頼み｜化学プラントの手仕込み</span>
+                            <span class="start-card-why">大変なら自動化すればいい？ スペース・作業速度・防爆の壁から、化学プラントで手作業が残る理由を考えます。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT22M36S">22:36</time></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>番組とかねまるを知る</h2>
+                        <span class="start-group-sub">まず雰囲気をつかみたい方へ</span>
+                    </div>
+                    <div class="start-cards">
+                        <a href="/episodes/100/" class="start-card">
+                            <span class="start-card-num">#100</span>
+                            <span class="start-card-title">あらためて自己紹介します！私の仕事と情報発信5年の振り返り</span>
+                            <span class="start-card-why">ホストの人となりと番組の背景がまるごと分かる、通算100回の節目の回です。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT22M8S">22:08</time></span>
+                        </a>
+                        <a href="/episodes/23/" class="start-card">
+                            <span class="start-card-num">#23 <span class="start-card-note">真夏の科ポキアワード大賞</span></span>
+                            <span class="start-card-title">とろとろストレスと戦え！粘度のおはなし</span>
+                            <span class="start-card-why">科学系ポッドキャストのアワードで大賞を受賞した回。番組の魅力が詰まっています。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT18M39S">18:39</time></span>
+                        </a>
+                        <a href="/episodes/98/" class="start-card">
+                            <span class="start-card-num">#98</span>
+                            <span class="start-card-title">リラックスの香りはプラントから！（対談：ハジメテアロマ 蜜のあじ子さん）</span>
+                            <span class="start-card-why">ゲストとの対談回。化学が思わぬところでつながる、聴いていて楽しい人気回です。</span>
+                            <span class="start-card-duration">再生時間 <time datetime="PT29M21S">29:21</time></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="start-group">
+                    <div class="start-group-head">
+                        <h2>テーマから選ぶ</h2>
+                        <span class="start-group-sub">聴きたい話題が決まっている方へ</span>
+                    </div>
+                    <div class="start-cards start-cards--two">
+                        <a href="/episodes/" class="start-card">
+                            <span class="start-card-num">テーマ・キーワード</span>
+                            <span class="start-card-title">エピソード一覧</span>
+                            <span class="start-card-why">すべての回を、テーマのタグやキーワードで絞り込めます。気になる言葉から探したいときに。</span>
+                        </a>
+                        <a href="/elements/" class="start-card">
+                            <span class="start-card-num">周期表</span>
+                            <span class="start-card-title">周期表から探す</span>
+                            <span class="start-card-why">元素ごとに、取り上げた回をまとめた周期表です。状態や金属・非金属の色分けにも切り替えられます。</span>
+                        </a>
+                        <a href="/nobel-chemistry/" class="start-card">
+                            <span class="start-card-num">ノーベル化学賞</span>
+                            <span class="start-card-title">ノーベル化学賞から探す</span>
+                            <span class="start-card-why">1901年からの受賞を年ごとに並べ、番組で取り上げた受賞には関連する回を付けています。</span>
+                        </a>
+                        <a href="/companies/" class="start-card">
+                            <span class="start-card-num">企業</span>
+                            <span class="start-card-title">企業から探す</span>
+                            <span class="start-card-why">番組に出てきた会社を、原料から暮らしの製品までの流れに並べました。1社を読み解く「企業研究」シリーズもここから。</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start-listen">
+                <div class="start-listen-head">
+                    <h2>お好きな<wbr>プラットフォームで<wbr>聴く</h2>
+                </div>
+                <p>各エピソードのページでは、サイト上でそのまま再生もできます。フォローすると新着を見逃しません。</p>
+                <div class="start-platforms">
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener" style="--logo-height:26px;">
+                        <img src="../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+                    </a>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener"
+                        style="--logo-height:28px;">
+                        <img src="../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+                    </a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1789911793" target="_blank" rel="noopener"
+                        style="--logo-height:30px;">
+                        <img src="../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg"
+                            alt="Apple Podcastsで聴く" loading="lazy">
+                    </a>
+                    <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
+                        rel="noopener" style="--logo-height:25px;">
+                        <img src="../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg"
+                            alt="Amazon Musicで聴く" loading="lazy">
+                    </a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener"
+                        style="--logo-height:40px;">
+                        <img src="../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く"
+                            loading="lazy">
+                    </a>
+                    <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener"
+                        style="--logo-height:22px;">
+                        <img src="../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+                </div>
+                <div class="footer-nav-group">
+                    <h4>探す</h4>
+                    <a href="/episodes/">エピソード一覧</a>
+                    <a href="/elements/">周期表から探す</a>
+                    <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+                    <a href="/companies/">企業から探す</a>
+                    <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>つながる</h4>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+                    <a href="/history/">番組の歩み</a>
+                    <a href="/#contact">お問い合わせ</a>
+                    <a href="/privacy/">プライバシーポリシー</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>聴く</h4>
+                    <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1789911793" target="_blank" rel="noopener">Apple
+                        Podcasts</a>
+                    <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+                </div>
+                <div class="footer-nav-group">
+                    <h4>&nbsp;</h4>
+                    <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank"
+                        rel="noopener">Amazon Music</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+                    <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+                <div class="footer-socials">
+                    <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+                    <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+                    <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=20261018d"></script>
+</body>
+
+</html>

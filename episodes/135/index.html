@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#135 首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜 | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/135/" />
+  <meta name="description" content="Wordpressでサイトを運営していた関係で、急にPHPの脆弱性で孤独に対応せざるを得なかった件について私の体験を話しました。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="#135 首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜 | プラントライフ">
+  <meta property="og:description" content="Wordpressでサイトを運営していた関係で、急にPHPの脆弱性で孤独に対応せざるを得なかった件について私の体験を話しました。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/135/">
+  <meta property="og:image" content="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/oGjWTK5JADA9jKkA7WueompiOizDGvmrGeQsAC3R.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=20261018e">
+  <link rel="stylesheet" href="../../episode.css?v=20261018e">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "url": "https://plantlife.chem-fac.com/episodes/135/", "name": "#135 首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜", "episodeNumber": 135, "datePublished": "2026-10-25", "description": "Wordpressでサイトを運営していた関係で、急にPHPの脆弱性で孤独に対応せざるを得なかった件について私の体験を話しました。", "image": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/oGjWTK5JADA9jKkA7WueompiOizDGvmrGeQsAC3R.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}, "timeRequired": "PT42M8S", "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/texSZp9wI0maMzNICbFdSbkJi1pP9mciSlBhehaS.mp3", "encodingFormat": "audio/mpeg"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード一覧", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "#135", "item": "https://plantlife.chem-fac.com/episodes/135/"}]}</script>
+</head>
+<body class="episode-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="../../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ep-detail-main" id="main-content">
+    <div class="container">
+      <div class="ep-detail-nav"><a href="../134/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #134</span><span class="ep-nav-title">お知らせ！ビデオポッドキャスト化に書籍出版</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../136/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#136 →</span><span class="ep-nav-title">試験片の仕事を深掘りしよう！（ゲスト：クルマの中からこんにちは”ひろひろし”さん）</span></a></div>
+
+      <article class="ep-detail-article">
+        <div class="ep-detail-head">
+          <div class="ep-detail-artwork">
+            <img src="/images/episodes/135-ddc49601c0-800.webp" srcset="/images/episodes/135-ddc49601c0-400.webp 400w, /images/episodes/135-ddc49601c0-800.webp 800w" sizes="280px" alt="#135 首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜" width="400" height="400" fetchpriority="high">
+          </div>
+          <div class="ep-detail-info">
+            <div class="ep-detail-meta">
+              <span class="ep-detail-number">#135</span>
+              <time class="ep-detail-date">2026-10-25</time>
+              <span class='ep-detail-duration'><svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:42:08</span>
+            </div>
+            <h1 class="ep-detail-title">#135 首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜</h1>
+            <a href="#ep-listen" class="ep-play-btn" data-ep-play><svg class="ep-play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path class="ep-play-icon-play" d="M3 1.6v10.8a.6.6 0 0 0 .9.5l8.6-5.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z" fill="currentColor"/><path class="ep-play-icon-pause" d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor"/></svg><span class="ep-play-label">再生する</span></a>
+            <p class="ep-detail-desc">Wordpressでサイトを運営していた関係で、急にPHPの脆弱性で孤独に対応せざるを得なかった件について私の体験を話しました。</p>
+            <p class="ep-detail-tags"><span class="ep-detail-tags-label">テーマ</span><a href="/episodes/?tag=%E5%AE%89%E5%85%A8%E3%83%BB%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB" class="ep-tag-link">安全・トラブル</a><a href="/episodes/?tag=%E8%A8%88%E6%B8%AC%E3%83%BB%E5%88%B6%E5%BE%A1%E3%83%BBDX" class="ep-tag-link">計測・制御・DX</a><a href="/episodes/?tag=%E4%BB%95%E4%BA%8B%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2" class="ep-tag-link">仕事・キャリア</a></p>
+            
+          </div>
+        </div>
+
+        <div class="ep-detail-platforms" id="ep-listen">
+          <h2 class="ep-detail-platforms-heading">この回を聴く</h2>
+          
+          <div class="ep-detail-player">
+            <audio class="ep-audio" controls controlslist="nodownload" preload="none" oncontextmenu="return false">
+              <source src="https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/texSZp9wI0maMzNICbFdSbkJi1pP9mciSlBhehaS.mp3" type="audio/mpeg">
+              お使いのブラウザは音声プレーヤーに対応していません。下のリンクからお聴きください。
+            </audio>
+          </div>
+          <p class="ep-detail-platforms-sub">アプリで購読する</p>
+          <div class="ep-detail-platforms-grid">
+            
+          <a href="https://listen.style/p/14rlng1w/php-vulnerability-prime-minister-called-night-decided-site-shutdown" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 26px;">
+            <img src="../../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/episode/0ylyGQd2zBqxpiKfKjpfI0" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/jp/podcast/135-%E9%A6%96%E7%9B%B8%E3%82%82%E5%91%BC%E3%81%B3%E3%81%8B%E3%81%91%E3%81%9Fphp%E3%81%AE%E8%84%86%E5%BC%B1%E6%80%A7-%E3%82%B5%E3%82%A4%E3%83%88%E5%81%9C%E6%AD%A2%E3%82%92%E5%AD%A4%E7%8B%AC%E3%81%AB%E6%B1%BA%E3%82%81%E3%81%9F%E5%A4%9C/id1789911793?i=1000797953628&amp;uo=4" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 32px;">
+            <img src="../../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg" alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/2f6508d2-7bb2-41f5-aab4-2d3a5c82dacc/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-135-%E9%A6%96%E7%9B%B8%E3%82%82%E5%91%BC%E3%81%B3%E3%81%8B%E3%81%91%E3%81%9Fphp%E3%81%AE%E8%84%86%E5%BC%B1%E6%80%A7%EF%BD%9C%E3%82%B5%E3%82%A4%E3%83%88%E5%81%9C%E6%AD%A2%E3%82%92%E5%AD%A4%E7%8B%AC%E3%81%AB%E6%B1%BA%E3%82%81%E3%81%9F%E5%A4%9C" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg" alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/watch?v=7O8MApBCx8U" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 44px;">
+            <img src="../../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+          <a href="https://stand.fm/episodes/6add5fe8e3ca1d281d0337da" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 24px;">
+            <img src="../../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+          </a>
+          </div>
+
+          <div class="ep-detail-note" style="margin-top: 2rem;">
+            <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promo-card-mini">
+              <div class="note-icon-mini"><img src="../../images/note_icon.png" alt="note" loading="lazy"></div>
+              <div class="note-text-mini">
+                <strong>リンク・図解つきのnote版を読む</strong>
+                <span>本文中に参考リンクを添えた読みやすい記事版はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">参考資料</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://www.php.net/archive/2026.php" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">PHP公式 2026年のお知らせ（10/20の予告、10/21の修正版）</span>
+                <span class="ref-url">https://www.php.net/archive/2026.php</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.php.net/supported-versions.php" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">PHP公式「Supported Versions</span>
+                <span class="ref-url">https://www.php.net/supported-versions.php</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.php.net/eol.php" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">PHP公式「Unsupported Branches</span>
+                <span class="ref-url">https://www.php.net/eol.php</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">IPA【事前準備のお願い】PHPのセキュリティリリース公開予定について</span>
+                <span class="ref-url">https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://x.com/takaichi_sanae/status/2112890642590564386" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">高市早苗首相のXの投稿（10/21）</span>
+                <span class="ref-url">https://x.com/takaichi_sanae/status/2112890642590564386</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">OpenAI「Patch the Planet</span>
+                <span class="ref-url">https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.wiz.io/blog/php2shell-php-rce" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">Wiz「PHP2Shell</span>
+                <span class="ref-url">https://www.wiz.io/blog/php2shell-php-rce</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://blog.cloudflare.com/php-vulnerabilities-waf-protection" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">Cloudflare（攻撃の観測）</span>
+                <span class="ref-url">https://blog.cloudflare.com/php-vulnerabilities-waf-protection</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.watch.impress.co.jp/docs/news/2150159.html" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">Impress Watch「国内大手サービスで緊急メンテやサービス停止 PHP脆弱性で対策</span>
+                <span class="ref-url">https://www.watch.impress.co.jp/docs/news/2150159.html</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://gigazine.net/news/20261021-php-php2shell-maintenance" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">GIGAZINE（各社のメンテナンス）</span>
+                <span class="ref-url">https://gigazine.net/news/20261021-php-php2shell-maintenance</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://w3techs.com/technologies/overview/programming_language" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">W3Techs サーバー側の言語の利用状況</span>
+                <span class="ref-url">https://w3techs.com/technologies/overview/programming_language</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">W3Techs WordPressの利用状況</span>
+                <span class="ref-url">https://w3techs.com/technologies/details/cm-wordpress</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.xserver.ne.jp/news_detail.php?view_id=19734" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">エックスサーバー「予防的な安全対策に伴う公式サイト・管理画面等の一時停止のお知らせ</span>
+                <span class="ref-url">https://www.xserver.ne.jp/news_detail.php?view_id=19734</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.conoha.jp/wing/news/?ap=2015054897" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">ConoHa WING 緊急メンテナンスのお知らせ（10/21）</span>
+                <span class="ref-url">https://www.conoha.jp/wing/news/?ap=2015054897</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.conoha.jp/wing/news/?ap=2015054903" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">ConoHa WING【重要】PHPの脆弱性への弊社対応について</span>
+                <span class="ref-url">https://www.conoha.jp/wing/news/?ap=2015054903</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.conoha.jp/wing/news/?ap=2015054907" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">ConoHa WING【重要】PHPの脆弱性への弊社対応状況について（第2報）</span>
+                <span class="ref-url">https://www.conoha.jp/wing/news/?ap=2015054907</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.conoha.jp/wing/news/?ap=2015054909" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">ConoHa WING【重要】PHPの脆弱性への弊社対応完了のお知らせ（終報）</span>
+                <span class="ref-url">https://www.conoha.jp/wing/news/?ap=2015054909</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">Cloudflare「Introducing EmDash</span>
+                <span class="ref-url">https://blog.cloudflare.com/emdash-wordpress/</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+
+        
+        <div class="ep-detail-transcript">
+          <h2 class="ep-detail-transcript-heading">文字起こし</h2>
+          <div class="transcript-body">
+            <h3 class="transcript-heading">PHP・WordPressと脆弱性の仕組み</h3>
+            <p>こんにちは、かねまるです。</p>
+            <p>プラントライフは、化学プラントの技術者が、化学を軸に、皆さんの視野を広げていく番組です。</p>
+            <p>今回は、PHPというプログラミング言語の重大な脆弱性の話をします。</p>
+            <p>この件で、私も関係がありまして、</p>
+            <p>現在運営しているプラント技術の解説サイト、ケムファクというものを、</p>
+            <p>この話題を知って急いで止めました。</p>
+            <p>AIの力を借りて一気に対応できたんですけど、夜中まで起きて判断したのは結局自分一人でした。</p>
+            <p>その時に感じた孤独感とか、</p>
+            <p>あとは現在働いている化学プラントの異常対応との違いも合わせて話してみようかなと思います。</p>
+            <p>一応PHPとかWordpressとか、話には出ていますので、</p>
+            <p>今回の件をきっかけに、PHPですとかWordpressって言葉を知った方もいらっしゃると思いますので、</p>
+            <p>せっかくなので、仕組みから順番に説明しながら、体験談としてお話ししていこうと思います。</p>
+            <p>まずPHPとWordpressの話からいきましょう。</p>
+            <p>ウェブサイトのページっていうのは、インターネットにつながったどこかのコンピューターに置いてあります。</p>
+            <p>こういうコンピューターをサーバーって言うんですよね。</p>
+            <p>スマホのページなんかもそうです。</p>
+            <p>スマホでページを開くとサーバーがそのページを送ってくれるっていう仕組みです。</p>
+            <p>そして今回一番話題になったアルファベット三つのPHPというものは、</p>
+            <p>このサーバーの上で動くプログラミング言語だと思ってください。</p>
+            <p>ページを開いた人に合わせてその場でそのページを組み立てます。</p>
+            <p>もう一つ、XとかだとWordpressっていう言葉も話題になってましたね。</p>
+            <p>そのWordpress自体は私も使っておりまして、個人でウェブサイト作ったりするときにすごく楽なものなんですよね。</p>
+            <p>ブログとかホームページを作るような道具になってまして、</p>
+            <p>基本的にプログラムを書かない、コードを打たなくてもウェブサイトのデザインとかいろんな機能を入れたりできます。</p>
+            <p>だからこそ当時私も技術的な知識が何もなかった上で、いろいろ調べながらウェブサイトを作ることができました。</p>
+            <p>ということで、Wordpressで私のChemFacという技術サイトを作っておりまして、そのWordpressの中でPHPが動いています。</p>
+            <p>調べたところだと世界のサイトの4割がWordpressを使っていて、サーバー側で使っている言語がわかるサイトの中で大体7割ぐらいPHPが使ってあるみたいです。</p>
+            <p>というわけで、今回結構な範囲のサイトが影響を受けたっていうことです。</p>
+            <p>そしてもう一つ、みんながサイトをWordpressで作って、PHPでページを組み立てる、それだけだとうまくいかなくて。</p>
+            <p>最初に話したサーバーっていうのが要ります。</p>
+            <p>サーバーを自分で用意して動かし続けるっていうのはできないことはないんですけど大変なので、多くの人はサーバーを貸してくれる会社と契約します。</p>
+            <p>これがレンタルサーバーっていうものです。</p>
+            <p>Xでよく聞いたのはConoHa WINGですとか、Xサーバーっていう名前のサイトが有名ですかね。</p>
+            <p>Xサーバーは特に契約者が多くてですね、国内シェアナンバーワンを謳ってます。</p>
+            <p>私はConoHa WINGを使っていました。</p>
+            <h3 class="transcript-heading">修正版公開前の攻撃リスクと各社の対応</h3>
+            <p>今回ですね、PHPの開発のチームが重大なセキュリティの穴、脆弱性っていうのがあるって発表されたんですけど、</p>
+            <p>そのセキュリティの重大性と言いますか深刻さが、細かい指標は私も理解はできてないんですけど、</p>
+            <p>10点満点で9.2ってことで、数字だけ見ると結構深刻だなっていう予告でした。</p>
+            <p>その重大な脆弱性2件に対して、修正版を日本時間の10月21日23時に出すと予告がありました。</p>
+            <p>今回どういう穴があったかって言いますと、ログインしてない第三者から好きなプログラムを動かされてしまうっていうものでして、</p>
+            <p>よくあるのがログイン情報を奪われて勝手にいろんな操作されるとかっていう話は聞きますけど、</p>
+            <p>今回の場合ログインしてない人からでもなんかいろんなことをされちゃうってことで、</p>
+            <p>当時はわからなかったですけど、発表されるとこれなかなかヤバいやつだなっていうのがわかりました。</p>
+            <p>家の鍵を持ってない人が勝手に外から入り込んで奥の金庫開けたりとか、家のもの自由に持って行ったりできるような感じですかね。</p>
+            <p>なんならリフォームとかまでできちゃうような、そんな感じです。やりたい放題です。</p>
+            <p>っていう感じで、自分にいっぱい被害が及ぶだけだったらよかったんですけど、</p>
+            <p>内容によってはいろんな会社に迷惑をかけるとか、いろんなウェブサイトに攻撃をするとか、</p>
+            <p>そういうこともできてもおかしくないですよね。</p>
+            <p>だから自分が困るってより、他の人に迷惑をかけるリスクがあります。</p>
+            <p>こういうことも、発表当時っていうのは内容が公開されてないので、</p>
+            <p>どこまでのリスクがある、危険性があるっていうのはブラックボックスの状態です。</p>
+            <p>ただわかるのは深刻さ10点満点中の9.2っていう話です。</p>
+            <p>じゃあこの問題どうするかっていうと、修正パッチって言うんですけど、</p>
+            <p>この問題の穴を塞ぐ処理をしてもらいます。</p>
+            <p>こういう処理ができるのが、10月21日、内容が発表される23時。</p>
+            <p>そのタイミングで問題が公表されて、みんなで修正をしていきます。</p>
+            <p>問題わかったらすぐ公表したらいいんじゃないのっていう話ではあるんですけど、</p>
+            <p>それはそれで困るんですよね。</p>
+            <p>例えば急に問題がありましたって情報が公開されるとしますね。</p>
+            <p>その瞬間に悪い人たちは、ああこういう穴があるんだなっていうことで攻撃を仕掛けられるようになります。</p>
+            <p>情報を公開するっていうのは、いい人だけじゃなくて悪い人にも情報が行っちゃうので、タイミングって大事なんですよね。</p>
+            <p>だから理想は公開される前に修正するって話なんですけど、さすがにそれは理論的に難しいと思いますので、</p>
+            <p>公開した直後に修正する。即座に修正するっていうのが現実的な話です。</p>
+            <p>だからこそこの日この時間に公開しますよ。覚悟しといてくださいねっていう感じで今回も連絡がありました。</p>
+            <p>例にもれず私も23時まで起きてたんですけど、最初に発表を見た限りで23時かって思いました。</p>
+            <p>その情報が出たのが水曜日ですよ。</p>
+            <p>平日ど真ん中で翌日仕事もあるのに23時まで起きて、そこからいろんな対応をして、すぐ翌日仕事かってなるんですよね。</p>
+            <p>でもやるしかないですよね。</p>
+            <p>何が起きるかわかんないような話を言われて、さすがに眠れないです。</p>
+            <p>というより23時までは少なくとも起きて、どういう問題があるかって把握した上で寝たいですよね。</p>
+            <p>蓋を開けてみたら23時には自分は何にもできませんでした。</p>
+            <p>というのもですね、私の運営しているウェブサイトワードプレスで作っていて、</p>
+            <p>ConoHa WINGのサーバーを借りて発信していたわけなんですけど、結局ConoHaが全部やってくれたんです。</p>
+            <p>だから23時に自分が何もできるわけでもなくて、ただ待つだけでした。</p>
+            <p>12時前には寝ましたかね、たぶん。</p>
+            <p>ちょっとXとか見たくなるじゃないですか。リアルタイムなところ。</p>
+            <p>そういう好奇心が勝って1時間くらい起きてて、すぐもう寝ちゃいました。</p>
+            <p>仕事あるんですよね。</p>
+            <p>せっかくなので、当時どんな感じでいろんな会社が動いてたかっていうと、</p>
+            <p>私の使っているConoHa WINGと並んで有名なレンタルサーバーであるXサーバーは、</p>
+            <p>16時から管理画面などを止めてまして、</p>
+            <p>夜には有名なPixivとかDMM、ニコニコなども緊急メンテナンスに入りましたね。</p>
+            <p>あとはウマ娘とかグランブルーファンタジーみたいなゲームも止まっています。</p>
+            <p>じゃあなんで各社が一斉に止めたのかっていうと、</p>
+            <p>理由は修正版が出る時刻が前もって決まってたからです。</p>
+            <p>修正版とか脆弱性の情報が公開されると、</p>
+            <p>攻撃する側はそれを手がかりに攻撃のプログラムを作って、</p>
+            <p>まだ直してないサイトを狙います。</p>
+            <p>皆さんもご存知の通り、</p>
+            <p>最近はAIの発達がすごくて、どんどんプログラムを書いてくれますね。</p>
+            <p>攻撃するプログラムもあっという間に作ってくれます。</p>
+            <p>守る側はちゃんと守らないといけないのに、</p>
+            <p>攻撃する側はどんどん無差別にやっていけばいいので、</p>
+            <p>やっぱり相手側の方が有利です。</p>
+            <p>23時は守る側が直せるようになる時刻であると同時に、</p>
+            <p>攻める側が一気に攻撃を仕掛けてくる時刻です。</p>
+            <p>しかももっとややこしいのが、予告前から情報が漏れていたらしくて、</p>
+            <p>攻撃の試みも報告されています。</p>
+            <p>仕事終わりになんとなーくダラダラXを見ようとしてたら、</p>
+            <p>そういういろんな情報が入ってきて、</p>
+            <p>ざっと内容を見た限りこれヤバそうだなーって思って、</p>
+            <h3 class="transcript-heading">ケムファクを停止した夜の判断</h3>
+            <p>急いで車の中で対応を考えました。</p>
+            <p>22時前には高市首相もXで、</p>
+            <p>今夜に対応していただきたい大至急のお願いってことで投稿されてましたね。</p>
+            <p>それぐらいよっぽどなことが起きてました。</p>
+            <p>多分ウェブサイトを持ってなかったらあんまり意識しないかもしれませんね。</p>
+            <p>でも契約しているサービスがPHPを使ってたら無視することができません。</p>
+            <p>例えば、学校から家のところに情報を伝えるサイトがPHPを使ってたら、</p>
+            <p>もちろん無視はできません。</p>
+            <p>というより、いろんなゲームとかも止まってるので、</p>
+            <p>もうひとごとじゃなかったですね。</p>
+            <p>完全な対策は、PHPを修正版に更新することだけです。</p>
+            <p>もしくはサイトをやめるか。</p>
+            <p>ただし、レンタルサーバーを使っている場合、私もそうです。</p>
+            <p>PHPを更新するのはサーバー会社で、自分では直せません。</p>
+            <p>ここからは私のその夜の話をしたいと思います。</p>
+            <p>最初に情報を知ったのは17時か18時ごろぐらいですかね。</p>
+            <p>その時に深刻さを感じて、早々にウェブサイトの公開を止めました。</p>
+            <p>その時は車の中で遠隔でしかできなかったんですけど、</p>
+            <p>ありがたいことにAIの力でスマホ経由でも一気に進められます。</p>
+            <p>1人なので対応がバタバタなんですよね。</p>
+            <p>情報を仕入れたりするのもAIのおかげで何とかなりました。</p>
+            <p>一応セキュリティの情報で変なのがアクセスとか攻撃とかしてないとか調べたりもしましたかね。</p>
+            <p>あとはPHPのバージョンっていうのもありまして、古いのほどやっぱり脆弱なんですよね。</p>
+            <p>だから今どんなバージョンになってたかなって一応確認して、</p>
+            <p>ほぼ最新に近い状態だったので、まあ大丈夫かなっていうことでそのままにしてました。</p>
+            <p>で私のところのConoHa WINGレンタルサーバーは19時ぐらいから緊急メンテナンスが入って、</p>
+            <p>サーバーの設定自体も何もできなくなっちゃいました。</p>
+            <p>間に合ってよかったです。</p>
+            <p>というのもですね、PHPのバージョン変更するのってサーバーの会社の設定のところに行かないといけないので、</p>
+            <p>そのサイトがメンテナンスに入っちゃったらもう何もできないんです。</p>
+            <p>X見ててよくあったのが、もう昔使っていたブログをワードプレスで書いてたけど放置してたとか、</p>
+            <p>そういうことで古いバージョンのまま置きっぱなしにしてたみたいなんですよね。</p>
+            <p>で急いで対応しようと思ってもサーバーのページが開けないので、</p>
+            <p>古い脆弱な状態で放置しておかないといけないっていうことになっちゃいました。</p>
+            <p>この状態怖くて、なんというか家の鍵を開けて旅行に出かけちゃった感じに近いかもしれないです。</p>
+            <p>でその状態で旅行先からこの付近で空き巣が多発してますっていう連絡を受けて、</p>
+            <p>うちには入らないでくれって祈ってるような感じですかね。</p>
+            <p>だから後は自分のサイトが脆弱だってPHPのバージョンが低いって分かった状態で、</p>
+            <p>レンタルサーバーの設定画面が開けるのを祈って、</p>
+            <p>レンタルサーバーの会社の緊急メンテナンスが終わって変更できるまでずっと待つことになります。</p>
+            <p>ここで初動がどうだったかで気持ちの持ちようが違ったと思います。</p>
+            <p>結局自分のサイトが被害を受けたかって分かんないんですよね。</p>
+            <p>っていうのも攻撃側からしたら当然足跡って残さないように攻撃すると思うじゃないですか。</p>
+            <p>私も詳しいことは分かりませんけど、</p>
+            <p>素人が見て何もなかったな、よかったよかったって終われるようなことはあんまりないんじゃないかなと思ってます。</p>
+            <p>だから古いバージョンのPHPで公開されている状態で23時はなるべく迎えたくなかったです。</p>
+            <p>あと、より新しいバージョンのPHPもどうだか分からないので、早々に公開を停止してリスクを極限まで下げるっていうのが一番いいかなと思ってました。</p>
+            <p>人によってはサーバー側が修正するために公開したままにしておくって話も聞くには聞いたんですけど、そこら辺はもう個人の判断次第ですかね。</p>
+            <p>私はもう怖くてサーバー側が本当に対応できるかも不透明だったので、とりあえず公開をやめておきました。</p>
+            <p>気持ち的に一番楽だったですね。</p>
+            <p>ちなみにクラウドフレアという会社が最初に攻撃を報告したのは日本時間の21日16時43分だったそうです。</p>
+            <p>23時の修正が入る前から攻撃って始まってたみたいなんですよね。</p>
+            <p>止めといて正解でした。</p>
+            <p>あと22時台発表の直前あたりはサーバーのところの管理画面がすごく重くてアクセスも殺到してましたのでなかなか開けませんでしたね。</p>
+            <p>結局X見ながらAIにいろいろやってもらって情報を集めていろいろ覚悟しながらその時間を迎えたと思います。</p>
+            <p>私のサイトが対応が終わったのがConoHa WINGサーバー側の対応の完了に合わせてでして、</p>
+            <p>終わったのが22日の20時45分。</p>
+            <p>1日かかってるんです。</p>
+            <p>その1日を丸腰で過ごすのか、サイト止めて比較的安心した状態で過ごすのかって全然違ったと思います。</p>
+            <p>そもそも日中仕事をしているので落ち着かないですよね。</p>
+            <p>何かあっても急には動けません。</p>
+            <p>社会人の性です。</p>
+            <p>代わりに動いてくれる人もいません。</p>
+            <p>運営は一人だったからです。</p>
+            <p>私に似た気持ちの人多かったと思うんですよね。</p>
+            <h3 class="transcript-heading">個人サイト運営の不安と更新の難しさ</h3>
+            <p>そもそもこれワードプレスが関係してますので、何年か前に個人でブログを書いて稼ぎましょうって一気に広がってるんです。</p>
+            <p>だからこそ個人のウェブサイトっていっぱいありました。</p>
+            <p>難しいことは抜きにして手軽に始められて副業収入が手に入る。</p>
+            <p>そのつもりでサイトを運営してたけど、</p>
+            <p>人によっては思ったより稼げなくて、とりあえず広告収入が得られるからサイトは開いて定期的なお小遣いだけもらっとこうかなみたいな人もいらっしゃるんじゃないでしょうかね。</p>
+            <p>そういう人って全然メンテナンスしないので、今回大変なことになってたと思います。</p>
+            <p>実際に被害を受けたかっていうと気が気じゃなかったっていう方が正しいですかね。</p>
+            <p>情報を知ってうちのブログ大丈夫かなって急いでサーバーのページに行ったらメンテナンスでアクセスすらできない。</p>
+            <p>ただ被害を受けないのを祈るだけっていう状態。恐ろしいです。</p>
+            <p>自動でバージョンアップすればいいんじゃないって思うかもしれないんですけど、この辺がややこしい話でPHPのバージョン上げない人もいるんですよね。</p>
+            <p>というのもバージョンが変わるとウェブサイトの表示とか色々変わったりしますので、場合によっては画面が白くなって正しく表示できないとかあるんです。</p>
+            <p>だから私もですけどバージョンアップするときは特に直前でしっかりバックアップをとって復活できるようにします。</p>
+            <p>皆さんもスマホのOSを新しくすると古いアプリが起動しなくなることとかなかったですか。</p>
+            <p>それと同じで古いPHPに合わせて作られたデザインのテーマとか追加機能のプラグインとかがバージョンアップによって止まってしまうってことが往々にしてあります。</p>
+            <p>私も1,2回画面消えた記憶がありますね。</p>
+            <p>ログインすらできなくなってて、というより画面すら表示ができなくて何にも触れなくて、もう一旦このウェブサイトを公開するのやめようかなって思った時もありました。</p>
+            <p>っていう感じでAIがなかった当時っていうのはバージョン上げるのも一苦労だったので、</p>
+            <p>とりあえず今小銭が入ってきてる状態を維持してればいいんだったらそのまんまにするっていうのもわからないことはないんです。</p>
+            <p>今だったらもう楽にできるんですけど、ちゃんとバックアップをとってバージョンアップしてワードプレスの表示、プラグインの機能、全部動くのを確かめる。おかしかったら元に戻す。</p>
+            <p>そういうことをちゃんとやるのってもうめんどくさくてめんどくさくて。</p>
+            <p>本当にいい時代になりました。</p>
+            <p>でもそのせいでちょっとした小銭のためになかなかのリスクを抱えて過ごさないといけないっていうことになっちゃったんです。</p>
+            <p>ここまでは私の体験を話したんですけど、自分のサイトの場合すぐに公開を一旦止めていいかなっていう判断ができました。</p>
+            <p>その決断のおかげで話がスムーズに済んだんですけど、ウェブサイトも会社の大事な機能だったら一旦止めるのを躊躇しちゃうと思うんですよね。</p>
+            <p>止めるのどうしようかなってなると思います。</p>
+            <p>その一方で私のサイトはもうとりあえず止めとこうって普通に思いました。</p>
+            <p>昔は精力的に記事を書いて公開していったんですけど、今はもう年数回記事を公開するぐらいになっちゃってて、結局ポートフォリオとしてサイトを公開してるだけだったんです。</p>
+            <p>だから今伸ばそうとしてたりとか積極的に見てもらおうとしているようなものじゃないっていうことを改めて気づきました。</p>
+            <p>もちろんまだPV、アクセス自体もだいぶあるのでいろんな人が見てはくれてるんですけど、私の更新意欲っていうのは低空飛行でした。</p>
+            <p>っていう感じで更新も減ってきて過去のものを維持しているような状態だったので、もうすぐ止める判断がつきました。</p>
+            <p>ただ、そう考えると自分が運営していた技術解説のサイトってその程度のものだったんだなーって逆に思っちゃいましたね。</p>
+            <p>もう少し愛が持てるようなものを作った方がいいかなってうっすら思いました。</p>
+            <p>とは言っても、大企業のいろんなサイトが停止するぐらいなので、愛があったとしても今回は止めるべきだったと私は思っています。</p>
+            <p>でもこれからちゃんと記事書いたりとか、綺麗にウェブサイト作ったりとか、もう少し大事にしようかなと思いました。</p>
+            <h3 class="transcript-heading">AI支援と一人で背負う最終判断</h3>
+            <p>今回の一件っていうのはAIがたくさん支援してくれて、ネットで情報をたくさん調べて、作業も大体やってくれました。</p>
+            <p>アシスタント何十人いるんやろうってぐらいの速度感です。</p>
+            <p>でも結局活動自体は一人で行ってます。</p>
+            <p>なんだかいろんな人の助けを得ているように見えて、実は孤独なんだなーっていうのも感じました。</p>
+            <p>今回のPHPの穴を見つけたのもAIを使ったセキュリティの研究者だったそうですね。</p>
+            <p>見つける側も守る側もAIを使ってまして、もう欠かせないものになっちゃいました。</p>
+            <p>でもAIはいろいろ手伝ってはくれたんですけど、公開を止めたり、情報を取捨選択したり、そういうことを決めたのは自分です。</p>
+            <p>AIにいろいろ聞くことはできるけど、その結果はどうするかっていう判断は自分でしないといけません。</p>
+            <p>ほんのちょっとのことなんですけど、やっぱりそこに悩みました。</p>
+            <p>どれだけ調べても最終的には自分が判断しなければならないっていうそこがすごくもどかしくて苦しかったです。</p>
+            <p>一応私も5年ぐらいウェブサイトを運営しているので最低限の知識は持ってますけど、さすがに今回の話は素人すぎてたくさん勉強しました。</p>
+            <p>その上で判断するって難しいですね。</p>
+            <p>いろんな情報をもとにAIがこれどうしますかっていっぱい聞いてはくれますけど、判断するのは自分。</p>
+            <p>しかもAIがこれどうしますかって言うのは言うけど、ちゃんと理解してなくて判断することもできないですよね。</p>
+            <p>これ本当に大丈夫なのっていう聞き方ができるかどうかで、だいぶ使い方も変わると思います。</p>
+            <p>その辺はクロードコードにコーデックスに2つうまいことを組み合わせながら抜けないようにやって、何とか自分一人で孤独ながらもやっていけたと思います。</p>
+            <p>そういえば今回の処理をするのに、コーデックスもクロードコードもいろんなセッション立ち上げてそれぞれ作業させてたんですけど、</p>
+            <p>この作業終わってるとかどういう状況なのとか、これどういう意味なんとかいっぱい聞きながらやってたんですよね。</p>
+            <p>立場的には私は責任者で、AIにいろいろ作業の指示をさせて、ある程度の統括のAIも置いたりして、その辺が中間管理職ですよね。</p>
+            <p>私みたいなどうなってんのとか、これどういう意味とか、これ終わったのとか聞いてくれる人めっちゃ邪魔じゃないですか。</p>
+            <p>なんかやってて客観的に見て、これ相手AIでよかったなってちょっと思っちゃいましたね。</p>
+            <p>しばらくしたら自分も管理側に会社ではなると思うんで、気をつけようって思いました。</p>
+            <p>孤独ではありましたけど、人に迷惑をかけなくてよかったなって思いました。</p>
+            <h3 class="transcript-heading">化学プラントの異常対応との違い</h3>
+            <p>ちなみに化学プラントの異常の対応の仕方ってどんな感じか。</p>
+            <p>人が多くて情報はしっかりすぐ伝わります。</p>
+            <p>指揮系統もあります。</p>
+            <p>特にコンビナート地帯だと、どういう形で消火活動をしますとか、地震の時はこういう対応をしますとか、しっかり作っとかないといけません。</p>
+            <p>指揮系統も情報伝達もしっかりしてはいますけど、なんだかんだ個人の方が当然早いです。</p>
+            <p>でも化学プラントはいろんな設備とか電気とかプロセスとか、情報もそうですね、安全関係も。</p>
+            <p>いろんな専門家がいて、困ったらそういう人たちにすぐ聞けて、ちゃんと責任を持って判断する人もいます。</p>
+            <p>情報を集めて、なんならリリースをしてくれる、会社の公開情報として出してくれる人もいます。</p>
+            <p>いろんな役割とか専門性を持った人たちが集まって、孤独じゃないっていうのもいいですよね。</p>
+            <p>あとプラントだと24時間運転してますので、夜中の担当の人もいたりします。</p>
+            <p>ちょっと話が違うかもしれないんですけど、個人で発信してる身だと、夜中に起きてられるのは自分だけなので、やっぱり代わりに起きてくれる人がいるとか、作業してくれる人がいるっていうのはすごくありがたい</p>
+            <p>存在です。</p>
+            <h3 class="transcript-heading">静的サイトへの移行と代替サービス</h3>
+            <p>今回助かったのは、サイトのバックアップを前日にちょうど取っていたことです。</p>
+            <p>ワードプレス自体やめようとしてたんですよね。</p>
+            <p>前日の10月20日に新しいサイトへ移る準備ってことで、記事も画像もデータベースも丸ごと全部控えをローカルに取っていました。</p>
+            <p>やっぱりバックアップって時間かかるので、公開記事が159本、画像が2900点ぐらい。</p>
+            <p>控えをちゃんとパソコンとGoogleドライブと入れられていました。</p>
+            <p>それはちょうどやっててよかったなって思いました。</p>
+            <p>発覚して急いでバックアップを取って、ちゃんと取れる保証もなかったですからね。</p>
+            <p>そんな矢先に今回のセキュリティ問題が発生してまして、そもそもワードプレスやめるっていうのも早めに動いとけばよかったなって今更反省してます。</p>
+            <p>もともとPHPとかワードプレスに脆弱性があるっていうのはなんとなく理解はしてたんですよね。</p>
+            <p>もちろんセキュリティのソフトは入れてたんですけど、</p>
+            <p>今の今まで変えずに使い続けてしまっていました。</p>
+            <p>移すっていうのを後回しにしてました。</p>
+            <p>じゃあこれどうするかっていうと、静的サイトに移行する予定です。</p>
+            <p>静かな的と書いて静的サイトなんですけど、</p>
+            <p>これが完全に安全なサイトに変わるってわけではないものの、</p>
+            <p>単純にシンプルなページに変えるみたいなイメージですかね。</p>
+            <p>ワードプレスっていうのは管理画面があって、いろんなプラグインを入れて追加機能も足せます。</p>
+            <p>あとはサイトのデザイン用のテーマというものもありまして、</p>
+            <p>それを使えば簡単にデザインも規定のものを使うことができます。</p>
+            <p>自由にカスタマイズもできます。</p>
+            <p>目次入れたりとか、リンクのカード入れたりとか、</p>
+            <p>アクセス数の解析にアフィリエイトの管理、いろんなものをプラグインで出せます。</p>
+            <p>そういうのをプラグインの設定許可、押すだけですぐできるんですよね。</p>
+            <p>だから私みたいにウェブサイトをコードでちゃんと組めないような人は楽に作れるので、</p>
+            <p>ワードプレスでずっとやってたんですけど、</p>
+            <p>そういう機能って最近はAIでいろいろ作れるようになってますので、</p>
+            <p>詳細のこだわりがなければ、とりあえずプラグインとかテーマとか使わずに、</p>
+            <p>同じような機能は再現できます。</p>
+            <p>ワードプレスって今話した以外の機能もいっぱいあるんですけど、</p>
+            <p>そのほとんどを私使ってなかったんですよね。</p>
+            <p>一番の目的は素人でもウェブサイトが作れるっていうところだけだったので、</p>
+            <p>そういうのは関係なくAIで作れるってなると、もういらないんですよね。</p>
+            <p>ただセキュリティ上のリスクが上がっているだけになってました。</p>
+            <p>実際ウェブサイトの管理画面っていうのもログインして使いますので、</p>
+            <p>外から変に誰かに入られたら問題です。</p>
+            <p>こういう管理画面もこれからは使わなくなります。</p>
+            <p>AIのチャット欄で済みます。</p>
+            <p>ちなみに参考にですけど、私のサイトの9月1日のアクセス、</p>
+            <p>知らない名前で1日だけで117回のログイン失敗がありました。</p>
+            <p>ちゃんとすべて弾いてはくれてるんですけど、こういうリスクがあるわけです。</p>
+            <p>ということで、とりあえず今回の問題がありましたので、早々にウェブサイトを切り替えました。</p>
+            <p>見ていただいたら、多分サイトが変わって機能自体も問題ないってことがわかると思います。</p>
+            <p>あと参考に、私は使う予定はないんですけど、最近EmDashっていうものが話題になってまして、</p>
+            <p>WordPressの代わりに使えるものが公開されていますので、</p>
+            <p>もしWordPressに似たようなものを使いたいなって思ったら、EmDashというものを活用してみてください。</p>
+            <p>今回とは直接は関係しにくいと思いますけど、</p>
+            <p>WordPressのセキュリティの多くがプラグインから来てますので、</p>
+            <p>そのプラグインを隔離して影響を最小限に抑えているようなイメージだと思ってください。</p>
+            <p>あとEmDashにこだわらないんだったら、もしかするとnoteとかハテナブログで記事を書くのも管理面ではいいかなって思います。</p>
+            <p>それぞれ管理している会社さんもいらっしゃって、</p>
+            <p>サーバーもプログラムも画面デザインも運営の会社が面倒を見てくれます。</p>
+            <p>書く側がPHPのバージョン気にしたりとか、パッチを当てたりとかっていうのも当然不要です。</p>
+            <p>デメリットとしてはカスタマイズがしにくかったり、独自のものを入れづらかったりします。</p>
+            <p>noteについてはアフィリエイトはブログほど自由には入れられません。</p>
+            <p>Amazonくらいでしたっけ?</p>
+            <p>確かその辺は使えたんですけど、他のアフィリエイトは入れられなかったと思います。</p>
+            <p>ちなみにnoteはPHPじゃなかったらしいですね。</p>
+            <p>裏側がRuby on Railsで、ハテナブログの方はPerlでした。</p>
+            <h3 class="transcript-heading">AI時代にも必要なエンジニアの判断</h3>
+            <p>こうやっていろいろ私も話はしているものの、完全にWebに関してはド素人です。</p>
+            <p>AIが出てきてエンジニアがオワコンみたいな話もよく聞くんですけど、</p>
+            <p>やっぱり今回の一件を見るとエンジニアがオワコンでいなくなるなんていうことはないと思います。</p>
+            <p>どれだけAIが発達しても、状況を整理して早々に異常に対応するっていうのは人がいてくれるといいですね。</p>
+            <p>特に専門家、理解して判断してくれる人が大事です。</p>
+            <p>コードを書かなくても、エンジニアってコードが書ける人じゃなくて、</p>
+            <p>いろんな設計ができて、もちろんコードも書ける人ですからね。</p>
+            <p>皆さんはオワコンなんて言わないでくださいね。</p>
+            <p>何も知らん人って思われちゃいます。恥ずかしいです。</p>
+            <p>今回はPHPの重大な脆弱性の話に関連して、私のサイトのバタバタした対応について話をしてきました。</p>
+            <p>そういえば一緒に技術サイトを書いてきた人たちっていうのはだいぶ減ってきてて、</p>
+            <p>リアルタイムでいろいろ言ってる人って減ったなーってしみじみ思いました。</p>
+            <p>昔はいっぱい記事書いてみんなで頑張ってたんですけど、</p>
+            <p>AIも出てきて思ったより稼げなくて忙しいし、みんな辞めていっちゃったんですよね。</p>
+            <p>寂しいです。</p>
+            <p>ちなみにものづくりnoラジオの番組をされているしぶちょーさんも同じ仲間です。</p>
+            <p>あまりポッドキャストはされてないですけど、りびぃの「もの技ラジオ」のりびぃさんも仲間です。</p>
+            <p>一緒に頑張ってきた方々、今どうしてますかね。</p>
+            <p>アカウントも消えてる方もいらっしゃって、</p>
+            <p>私はまだここにいますのでぜひ覚えてますかってコメントとかお便りとかください。</p>
+            <p>なんならプラントライフに出て一緒に話をしましょうということでお便り待ってます。</p>
+            <p>あと皆さんの体験談。</p>
+            <p>この一件でいろいろバタバタした方多いと思いますので、</p>
+            <p>私のところはこうでしたとかぜひ教えてください。</p>
+            <p>今回はここまでです。</p>
+            <p>プラントライフでは化学や工場に関するトピックを扱っています。</p>
+            <p>配信は毎週水曜日と日曜日の朝6時を予定しています。</p>
+            <p>もし感想とか質問とかありましたら概要欄のお便りフォームですとか、</p>
+            <p>Xのハッシュタグプラントライフをつけてコメントをするとかしていただけますと嬉しいです。</p>
+            <p>そしてnoteでメンバーシップかねまるのここだけの話というものを公開しています。</p>
+            <p>今後の発信の戦略、技術者としてどう生きていくか、</p>
+            <p>といったオープンな場では少し話しにくいけど残しておきたい本音をお届けしています。</p>
+            <p>もし興味がありましたら覗いてみてください。</p>
+            <p>それではお聞きいただきありがとうございました。</p>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-related">
+          <h2 class="ep-detail-related-heading">関連するエピソード</h2>
+          <div class="ep-related-grid">
+            <a href="/episodes/134/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/134-016c10a4eb-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#134</span>
+                <span class="ep-related-title">お知らせ！ビデオポッドキャスト化に書籍出版</span>
+              </div>
+            </a>
+            <a href="/episodes/119/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/119-508c4528c1-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#119</span>
+                <span class="ep-related-title">続・発信の倫理｜生成AIへのもやもや（ゲスト：しゃべり足りない部”まいこう”さん）</span>
+              </div>
+            </a>
+            <a href="/episodes/77/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/77-23e33caa9a-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#77</span>
+                <span class="ep-related-title">プログラムを勉強したいと言われて伝えたこと</span>
+              </div>
+            </a>
+            <a href="/episodes/136/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/136-3a605b2a86-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#136</span>
+                <span class="ep-related-title">試験片の仕事を深掘りしよう！（ゲスト：クルマの中からこんにちは”ひろひろし”さん）</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="ep-detail-nav"><a href="../134/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #134</span><span class="ep-nav-title">お知らせ！ビデオポッドキャスト化に書籍出版</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../136/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#136 →</span><span class="ep-nav-title">試験片の仕事を深掘りしよう！（ゲスト：クルマの中からこんにちは”ひろひろし”さん）</span></a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=20261018e"></script>
+</body>
+</html>

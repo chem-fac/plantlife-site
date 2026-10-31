@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#16 専門回「DCSについてFAの方向けに説明してみる」 | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/16/" />
+  <meta name="description" content="今回は専門回としてプラント制御に関してDCSの視点で深掘りしました。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="#16 専門回「DCSについてFAの方向けに説明してみる」 | プラントライフ">
+  <meta property="og:description" content="今回は専門回としてプラント制御に関してDCSの視点で深掘りしました。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/16/">
+  <meta property="og:image" content="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/uG2ymTeLI9sDSeNiPbm2nc4IYVT6MlitQYfAOItM_resized.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=20261018e">
+  <link rel="stylesheet" href="../../episode.css?v=20261018e">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "url": "https://plantlife.chem-fac.com/episodes/16/", "name": "#16 専門回「DCSについてFAの方向けに説明してみる」", "episodeNumber": 16, "datePublished": "2025-05-14", "description": "今回は専門回としてプラント制御に関してDCSの視点で深掘りしました。", "image": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/uG2ymTeLI9sDSeNiPbm2nc4IYVT6MlitQYfAOItM_resized.png", "partOfSeries": {"@type": "PodcastSeries", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}, "timeRequired": "PT14M50S", "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/rhgjvVUqCCtg3leSTFtQoPCjczyJroYaB2hPQ8tC.mp3", "encodingFormat": "audio/mpeg"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード一覧", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "#16", "item": "https://plantlife.chem-fac.com/episodes/16/"}]}</script>
+</head>
+<body class="episode-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="../../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ep-detail-main" id="main-content">
+    <div class="container">
+      <div class="ep-detail-nav"><a href="../15/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #15</span><span class="ep-nav-title">デジタル化だけじゃない！電子実験ノート(科学系ポッドキャストの日)</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../17/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#17 →</span><span class="ep-nav-title">自己紹介の代わりでNotebookLMに紹介してもらった</span></a></div>
+
+      <article class="ep-detail-article">
+        <div class="ep-detail-head">
+          <div class="ep-detail-artwork">
+            <img src="/images/episodes/16-25fd8523bb-800.webp" srcset="/images/episodes/16-25fd8523bb-400.webp 400w, /images/episodes/16-25fd8523bb-800.webp 800w" sizes="280px" alt="#16 専門回「DCSについてFAの方向けに説明してみる」" width="400" height="400" fetchpriority="high">
+          </div>
+          <div class="ep-detail-info">
+            <div class="ep-detail-meta">
+              <span class="ep-detail-number">#16</span>
+              <time class="ep-detail-date">2025-05-14</time>
+              <span class='ep-detail-duration'><svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:14:50</span>
+            </div>
+            <h1 class="ep-detail-title">#16 専門回「DCSについてFAの方向けに説明してみる」</h1>
+            <a href="#ep-listen" class="ep-play-btn" data-ep-play><svg class="ep-play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path class="ep-play-icon-play" d="M3 1.6v10.8a.6.6 0 0 0 .9.5l8.6-5.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z" fill="currentColor"/><path class="ep-play-icon-pause" d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor"/></svg><span class="ep-play-label">再生する</span></a>
+            <p class="ep-detail-desc">今回は専門回としてプラント制御に関してDCSの視点で深掘りしました。</p>
+            <p class="ep-detail-tags"><span class="ep-detail-tags-label">テーマ</span><a href="/episodes/?tag=%E8%A8%88%E6%B8%AC%E3%83%BB%E5%88%B6%E5%BE%A1%E3%83%BBDX" class="ep-tag-link">計測・制御・DX</a><a href="/episodes/?tag=%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E8%A8%AD%E5%82%99%E3%83%BB%E8%A3%85%E7%BD%AE" class="ep-tag-link">プラント設備・装置</a></p>
+            <nav class="ep-detail-indexes" aria-label="特集ページで見る"><a href="/companies/#c-yokogawa" class="ep-feature-link"><span class="ep-feature-key">企業</span><span class="ep-feature-text">横河電機を企業の一覧で見る</span></a><a href="/companies/#c-mitsubishi-electric" class="ep-feature-link"><span class="ep-feature-key">企業</span><span class="ep-feature-text">三菱電機を企業の一覧で見る</span></a></nav>
+          </div>
+        </div>
+
+        <div class="ep-detail-platforms" id="ep-listen">
+          <h2 class="ep-detail-platforms-heading">この回を聴く</h2>
+          
+          <div class="ep-detail-player">
+            <audio class="ep-audio" controls controlslist="nodownload" preload="none" oncontextmenu="return false">
+              <source src="https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/rhgjvVUqCCtg3leSTFtQoPCjczyJroYaB2hPQ8tC.mp3" type="audio/mpeg">
+              お使いのブラウザは音声プレーヤーに対応していません。下のリンクからお聴きください。
+            </audio>
+          </div>
+          <p class="ep-detail-platforms-sub">アプリで購読する</p>
+          <div class="ep-detail-platforms-grid">
+            
+          <a href="https://listen.style/p/14rlng1w/9ojsukzg" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 26px;">
+            <img src="../../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/episode/1BwFrkAHd187vKqIKFKaKb" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/jp/podcast/16-%E5%B0%82%E9%96%80%E5%9B%9E-dcs%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6fa%E3%81%AE%E6%96%B9%E5%90%91%E3%81%91%E3%81%AB%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/id1789911793?i=1000708378060&amp;uo=4" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 32px;">
+            <img src="../../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg" alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/44b35826-d479-4a18-be62-3f2d6bc413c0/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-16-%E5%B0%82%E9%96%80%E5%9B%9E%E3%80%8Cdcs%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6fa%E3%81%AE%E6%96%B9%E5%90%91%E3%81%91%E3%81%AB%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B%E3%80%8D" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg" alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/watch?v=kQV6Xny38ko" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 44px;">
+            <img src="../../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+          <a href="https://stand.fm/episodes/67fae0721dd5f66898a7d35a" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 24px;">
+            <img src="../../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+          </a>
+          </div>
+
+          <div class="ep-detail-note" style="margin-top: 2rem;">
+            <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promo-card-mini">
+              <div class="note-icon-mini"><img src="../../images/note_icon.png" alt="note" loading="lazy"></div>
+              <div class="note-text-mini">
+                <strong>リンク・図解つきのnote版を読む</strong>
+                <span>本文中に参考リンクを添えた読みやすい記事版はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        
+
+        
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">ケムファクの関連記事と計算ツール</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://chem-fac.com/scada-dcs-plc/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:16})">
+                <span class="ref-title">記事：SCADA、DCS、PLCの違い</span>
+                <span class="ref-url">https://chem-fac.com/scada-dcs-plc/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://chem-fac.com/dcs-feature/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:16})">
+                <span class="ref-title">記事：【新人向け】DCSの基礎知識</span>
+                <span class="ref-url">https://chem-fac.com/dcs-feature/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://chem-fac.com/industrial-network/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:16})">
+                <span class="ref-title">記事：産業用ネットワークの基礎知識</span>
+                <span class="ref-url">https://chem-fac.com/industrial-network/</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-transcript">
+          <h2 class="ep-detail-transcript-heading">文字起こし</h2>
+          <div class="transcript-body">
+            <h3 class="transcript-heading">DCSの基本概念</h3>
+            <p>どうも、かねまるです。</p>
+            <p>プラントライフは、化学プラントの技術者が、化学や工場に関するトピックを分かりやすく紹介する番組です。</p>
+            <p>今回は、初の取り組みで専門回というものをやってみたいと思います。</p>
+            <p>テーマは、DCSについてFAの方向けに説明してみる、です。</p>
+            <p>工場の自動化といえば、加工や組み立てのイメージが強いかもしれません。</p>
+            <p>それでは、化学プラントの自動化というのはどういうものなのでしょうか。</p>
+            <p>一般に加工や組み立ての自動化というと、ファクトリーオートメーション、FAと呼ばれたりしますね。</p>
+            <p>反対にプラントの方は、プロセスオートメーション、PAと呼ばれたりします。</p>
+            <p>今回はFAの方向けにプラントの制御、特にDCSの部分についてお話しします。</p>
+            <p>このテーマは、初心者用に話した内容から続くテーマです。</p>
+            <p>まだそれを聞いていない方は、#9番の化学プラントの司令塔、</p>
+            <p>DCSを知れば見えてくる工場の裏側というものを最初に聞いてみてください。</p>
+            <p>まずFAとの違いなんですけれども、やっぱりPID制御が多いことにつきますね。</p>
+            <p>主にプロセスというのは、温度や圧力や流量というのを一定の条件にするように制御していきます。</p>
+            <p>扱うものは液体や気体のような流体を扱います。</p>
+            <p>流体はタンクや蒸留塔やろ過器などで処理されます。</p>
+            <p>それらの機器間はポンプを使って配管を通って送られます。</p>
+            <p>主に制御で使われる更新周期は1秒程度になっています。</p>
+            <p>FAで使うPLCだとミリセックオーダーが多いと思うんですけれども、</p>
+            <p>これはプロセスの違いによるものです。</p>
+            <p>バルブを動かしたりポンプを動かしたりするというのはミリセックオーダーで当然行わないので、</p>
+            <p>1秒周期でも特に問題ないという状態になっています。</p>
+            <p>個別で早い周期が必要な場合は、機器の動作の接点だけ取ってDCSから指令を出して個別の機器でPLC制御をしたりします。</p>
+            <p>ですので専用の化学機械は個別運転することも多いです。</p>
+            <h3 class="transcript-heading">プロセスの特性</h3>
+            <p>ここから現場の経験についてお話ししますと、主となる信号線というのは4–20mAのアナログ信号です。</p>
+            <p>その中でも2線式伝送方式が使われます。</p>
+            <p>これは2本の配線のみで電源と信号線の2つを兼ねているものです。</p>
+            <p>プロセス系は特にアナログ入出力の計器が多いので、こうして2本と4本の電線の違いというのは大きく影響を受けます。</p>
+            <p>場所も遠いですからね。</p>
+            <p>そしてプロセスが連続プロセスなのか、バッチプロセスなのかでも変わってきます。</p>
+            <p>連続プロセスだと温度や液面を一定に保つような操作が行われます。</p>
+            <p>ですのでPID制御での処理が多くなってきます。</p>
+            <p>反対にバッチプロセスになってくると少し状況が変わってきまして、</p>
+            <p>タンクの中に液体や粉体を入れてかき混ぜて、それが終わったら次のプロセスに送るという操作になりますので、</p>
+            <p>液体を入れるためのバルブを開けたり、抜いたりするバルブを開けたり、</p>
+            <p>移送のタイミングでポンプを動かしたり、比較的デジタル入出力というのも増えてきます。</p>
+            <p>各現場からの配線というのはすべて制御装置の中に入力されるわけではなくて、リモートI/Oも使ったりします。</p>
+            <p>そしてプロセス制御関係で一番重要になるのが防爆の関係ですね。</p>
+            <p>特に本質安全防爆のものや耐圧防爆のものというのも使われるようになります。</p>
+            <p>バルブは主に空気圧で動作させます。</p>
+            <p>また最近DXというのが話題になってますけれども、</p>
+            <p>例えばカメラやタブレットを入れようとした時にそれが防爆になるといくらぐらいすると思いますか?</p>
+            <p>実は防爆のものを買うだけで100万円ぐらい1台あたりするっていうことは普通にあり得ます。</p>
+            <p>だんだんとエリアを区切って、防爆のエリアと防爆でないエリアを区別してカメラやタブレットが使えるようにしましょうという取り組みもあるんですけれども、</p>
+            <p>なかなか思うようには済んでいません。</p>
+            <p>ここからDCSの話をしていきます。</p>
+            <p>国内では横河電機のものがDCSでは有名ですね。</p>
+            <p>比較として、こちらも国内で有名な三菱電機製のPLCで比較してみたいと思います。</p>
+            <p>ネットワークについては、画面と制御装置間の通信というのは横河電機製のものだとVNET-IPという専用の産業用イーサネットの規格があります。</p>
+            <p>これは二重化にも対応した高精度で高速度な産業用のネットワークになっています。</p>
+            <p>情報系のネットワークではOPC UAが採用されていたりします。</p>
+            <p>プログラムの作り方に関しては、DCSにはラダーのイメージがありません。</p>
+            <p>じゃあどうやって書くのかと言われますと、テーブル形式でシーケンスプログラムを書いています。</p>
+            <p>Excel の表のような見た目をしておりまして、上の方は条件、下の方は処理に分かれている状態ですね。</p>
+            <p>直感的に何を条件にして何を実行するのかが分かりやすくなっています。</p>
+            <p>主に制御はPID制御になってきますので、ベースはファンクションブロックで作成します。</p>
+            <p>入力と出力をファンクションブロックにつなげて、操作の画面でチューニングのパラメータを調節します。</p>
+            <p>またプロセスは長い工程になってきますので、SFC の形で機能ごとに分割してつなげて、それが一連の工程となって使われます。</p>
+            <p>演算については ST の言語が使われている印象ですね。</p>
+            <p>そして DCS の中の基本単位はタグと呼ばれるものが使われます。</p>
+            <p>これは計装タグとも言われます。</p>
+            <p>この計装タグの名称というのは JIS の Z8204 で決まっておりまして、これが計装用記号の規格になっています。</p>
+            <p>例えば FIC-101 というような名前の付け方をしています。</p>
+            <p>これが何を意味するかというと、流量を表示して調節する機能になっています。</p>
+            <h3 class="transcript-heading">DCSの運用と今後の展望</h3>
+            <p>この FIC-101 というタグに流量計とコントロールバルブセットになった PID 調節の機能を持たせたものという形で一つのタグとして登録します。</p>
+            <p>ここから現場よりの話、操作について話しますと、操作はフェースプレートやチューニング画面というものを出して操作します。</p>
+            <p>フェースプレートは各値ですとか機器のシンボルを選択すると表示される細長いウィンドウになってまして、そこに現在値とか設定値などが表示されています。</p>
+            <p>このフェースプレートの設定値を変更したり、現在値を見たり、そういう形で運転の操作、監視を行っています。</p>
+            <p>またチューニング画面に関しては細かい PID のパラメーターとか、ハイの設定、ローの設定などそういったものの変更になります。</p>
+            <p>DCS は様々な計器を一手に集約して集中制御室のような形で機能させるという役割があります。</p>
+            <p>ですのでアラームやガイダンス、あとはロギングや帳表出力の機能といった集中して管理したり統合したりするという機能が充実しています。</p>
+            <p>また操作権限というのも複数設けられまして、そのユーザーによってできる操作。</p>
+            <p>例えばこの人は監視するだけ、この人は操作もできる、この人は細かいパラメーターの設定ができるなど細かく調節できます。</p>
+            <p>そして DCS は24時間365日運転することを前提に作られています。</p>
+            <p>ですので運転しながら改造がしやすいという特徴があります。</p>
+            <p>ハード面で言いますと、フォトカップラーですとか端子間の絶縁というものは当然行われていまして、運転中に入出力のユニットも外せるようになっています。</p>
+            <p>またプログラムの面では三菱電機でいうRUN中書き込みというのも当然のように行われます。</p>
+            <p>あと冗長化の面では二重化が行われています。</p>
+            <p>単純に機器を2台並べているだけではなくて、CPUの演算を2台で行って、その結果がおかしかったらすぐに二重化している片側に待機系に切り替えるという機能もあったりします。</p>
+            <p>ただこれだけ充実した機能もあるのでその分高くなっています。</p>
+            <p>このあたりの話は前回の#9番のところでも話していますね。</p>
+            <p>最後にDCSの置き換えの話をしてみたいと思います。</p>
+            <p>これまではPLCの性能の関係もあって、プロセス制御はDCSが一択になっていました。</p>
+            <p>今はPLCの性能も上がってきて、PLC計装という形でDCSを再現した製品というのも増えてきています。</p>
+            <p>安定稼働を強く求めなかったり、規模が中程度だったらコストが抑えられるメリットがあります。</p>
+            <p>オムロンはSCADAとPLCを組み合わせてDCSの機能を持たせることになります。</p>
+            <p>PLCについては大量のPID制御ができるような機種が選ばれます。</p>
+            <p>三菱電機やオムロンや横河電機については、PLC計装対応機器として専用のものがラインナップとしてあったりします。</p>
+            <p>三菱電機のものだとメルセック計装という名前で呼ばれていたりします。</p>
+            <p>こちらは三菱電機のメルセックIQ-Rをベースとして、例えばSCADAでジェネシスを使うということがありますね。</p>
+            <p>また三菱の方は、取説にもありますけれども、JoyWatcherという東京ガスのSCADAと組み合わせるのも標準になっています。</p>
+            <p>こうして2種類のソフトを組み合わせて使うことになりますので、バージョンの管理というところが大変になってきます。</p>
+            <p>また、PCのOSの相性というのもありますので、ソフト間の相性ですとかOSの相性などうまく機能するかってところは常に気をつけておかなければなりません。</p>
+            <p>また、PLCはFAベースの機器にやっぱりなってしまうので、プロセス制御用のファンクションブロックがDCSに比べて充実していないというところもやっぱりあります。</p>
+            <p>その点は諦めて新しくプログラムを作らないといけません。</p>
+            <p>もし、PLC計装で実装する場合は、Mシステム技研、今はMGという名前に変わっていますけれども、そこのリモートI/Oが対応するネットワークも増えていて充実しています。</p>
+            <p>ここまでDCSについてFA寄りの目線で紹介してきました。</p>
+            <p>もし何かわからないようなことがあれば、番組の概要欄にあるお便りフォームからぜひ投稿ください。</p>
+            <p>今回はここまでです。</p>
+            <p>プラントライフでは、化学や工場に関するトピックを扱っています。</p>
+            <p>毎週水曜日の朝6時に定期配信していますので、通勤時間や朝の準備などにお聞きください。</p>
+            <p>プラント技術に関する専門的な内容は、chemfacというブログで解説しています。</p>
+            <p>最後に、このプラントライフがいいなと思っていただけたら、番組のフォローや各ポッドキャスターアプリから評価をお願いします。</p>
+            <p>そうしていただけると今後の励みになります。</p>
+            <p>それではお聞きいただきありがとうございました。</p>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-related">
+          <h2 class="ep-detail-related-heading">関連するエピソード</h2>
+          <div class="ep-related-grid">
+            <a href="/episodes/102/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/102-ce851a9ee0-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#102</span>
+                <span class="ep-related-title">化学プラントの神経系！状態を伝える「計装」の世界</span>
+              </div>
+            </a>
+            <a href="/episodes/9/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/9-3ee428f749-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#9</span>
+                <span class="ep-related-title">化学プラントの司令塔〜DCSを知れば見えてくる工場の裏側</span>
+              </div>
+            </a>
+            <a href="/episodes/135/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/135-ddc49601c0-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#135</span>
+                <span class="ep-related-title">首相も呼びかけたPHPの脆弱性｜サイト停止を孤独に決めた夜</span>
+              </div>
+            </a>
+            <a href="/episodes/134/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/134-016c10a4eb-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#134</span>
+                <span class="ep-related-title">お知らせ！ビデオポッドキャスト化に書籍出版</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="ep-detail-nav"><a href="../15/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #15</span><span class="ep-nav-title">デジタル化だけじゃない！電子実験ノート(科学系ポッドキャストの日)</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../17/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#17 →</span><span class="ep-nav-title">自己紹介の代わりでNotebookLMに紹介してもらった</span></a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=20261018e"></script>
+</body>
+</html>

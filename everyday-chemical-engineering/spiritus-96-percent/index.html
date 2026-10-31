@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スピリタスはなぜ96度なの？ | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/everyday-chemical-engineering/spiritus-96-percent/" />
+  <meta name="description" content="スピリタスの96度は、蒸留で濃くできる限界のすぐ手前です。限界を決める共沸を説明し、共沸点を越える工場の吸着（モレキュラーシーブ）につなげます。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="スピリタスはなぜ96度なの？ | プラントライフ">
+  <meta property="og:description" content="スピリタスの96度は、蒸留で濃くできる限界のすぐ手前です。限界を決める共沸を説明し、共沸点を越える工場の吸着（モレキュラーシーブ）につなげます。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/everyday-chemical-engineering/spiritus-96-percent/">
+  <meta property="og:image" content="https://plantlife.chem-fac.com/images/articles/spiritus-96-percent.jpg?v=172827bb">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261018d">
+  <link rel="stylesheet" href="/article.css?v=20261018d">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "スピリタスはなぜ96度なの？", "description": "スピリタスの96度は、蒸留で濃くできる限界のすぐ手前です。限界を決める共沸を説明し、共沸点を越える工場の吸着（モレキュラーシーブ）につなげます。", "image": "https://plantlife.chem-fac.com/images/articles/spiritus-96-percent.jpg?v=172827bb", "keywords": "飲みもの, 相平衡, 蒸留, 吸着", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "url": "https://plantlife.chem-fac.com/everyday-chemical-engineering/spiritus-96-percent/", "author": {"@type": "Person", "name": "かねまる", "sameAs": ["https://x.com/chem_fac", "https://note.com/chem_fac"]}, "isPartOf": {"@type": "WebSite", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "身近な化学工学", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/"}, {"@type": "ListItem", "position": 3, "name": "スピリタスはなぜ96度なの？", "item": "https://plantlife.chem-fac.com/everyday-chemical-engineering/spiritus-96-percent/"}]}</script>
+</head>
+<body class="article-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="/images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link active">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="article-main" id="main-content">
+    <div class="article-container">
+      <nav class="article-breadcrumb" aria-label="パンくず">
+        <a href="/">ホーム</a><span class="article-breadcrumb-sep">›</span><a href="/everyday-chemical-engineering/">身近な化学工学</a><span class="article-breadcrumb-sep">›</span><span aria-current="page">スピリタスはなぜ96度なの？</span>
+      </nav>
+
+      <article class="article-detail">
+        <header class="article-header">
+          <div class="article-tags"><span class="article-tag-group" role="group" aria-label="身近な要素"><a href="/everyday-chemical-engineering/?tag=%E9%A3%B2%E3%81%BF%E3%82%82%E3%81%AE" class="article-tag article-tag--everyday">飲みもの</a></span><span class="article-tag-group" role="group" aria-label="化学工学の分野"><a href="/everyday-chemical-engineering/?tag=%E7%9B%B8%E5%B9%B3%E8%A1%A1" class="article-tag article-tag--chemeng">相平衡</a><a href="/everyday-chemical-engineering/?tag=%E8%92%B8%E7%95%99" class="article-tag article-tag--chemeng">蒸留</a><a href="/everyday-chemical-engineering/?tag=%E5%90%B8%E7%9D%80" class="article-tag article-tag--chemeng">吸着</a></span></div>
+          <h1 class="article-title">スピリタスはなぜ96度なの？</h1>
+          <div class="article-meta">
+            <time datetime="2026-10-10">2026-10-10</time>
+            <span class="article-meta-sep">・</span>
+            <span>放送回 #115 から</span>
+          </div>
+        </header>
+
+        <div class="article-body">
+        <p>スピリタスは、アルコール度数96度のウォッカです。お酒の「度」は、15℃のときの体積に占めるエタノールの割合（%）を表します。強さが売りのお酒なら、いっそ100度にした方が目立ちそうなものです。なぜ96度なのでしょうか？</p>
+        <p>96度で止まっているのは、お酒を濃くする蒸留に、越えられない濃さがあるからです。お酒を蒸留していくと、ある濃さで、出てくる蒸気と元の液の濃さが同じになります。この現象を共沸（きょうふつ）と言い、1気圧では度数で約97%のところで起こります。</p>
+        <p><strong>スピリタスの96度は、蒸留で濃くできる限界のすぐ手前の濃さです。</strong></p>
+        <h2>蒸留は、共沸点で止まる</h2>
+        <p>蒸留は、液体を加熱して、沸点の違いで成分を分ける操作です。エタノールの沸点は78.4℃、水は100℃なので、お酒を温めて出てくる蒸気は、エタノールが多めで、水も混じっています。この蒸気を冷やして集めたものが、元より濃いお酒です。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/spiritus-vapor.webp?v=dc131479" alt="お酒を温めると、液から出る蒸気にはエタノールの粒が多めに入り、水の粒も混じる様子を示す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>1回の蒸留で取り出せるのは、元より濃いお酒まで</figcaption></figure>
+        <p>濃くなったお酒をまた蒸留すれば、さらに濃くなります。ところが、エタノールと水では、濃くなるほど1回の蒸留で上がる幅が小さくなり、ある濃さで、蒸気と液の濃さが同じになります。この濃さが共沸点です。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/spiritus-azeotrope.webp?v=9121beed" alt="蒸気と液のどちらも、エタノールと水の割合が同じ帯で示され、濃さが同じになることを表す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>参考：化学工学便覧 改訂六版 10・6・1</figcaption></figure>
+        <p>共沸点では、出てくる蒸気が元の液と同じ濃さなので、何度蒸留しても濃さが変わりません。エタノールと水の共沸点は、1気圧では質量の割合でエタノール約96%、お酒の度数に直すと約97%です。</p>
+        <p>輸入元の説明によると、スピリタスは蒸留を数十回繰り返して、96度に仕上げています。蒸留だけでたどり着ける限界の、すぐ手前まで濃くしたお酒です。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/spiritus-limit.webp?v=ed1126a0" alt="90%から100%の目盛りに、共沸点の約97%の線と、そのすぐ手前のスピリタスの96%を示した図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>共沸点の組成：<a href="https://crd.ndl.go.jp/reference/entry/index.php?id=1000101823&amp;page=ref_view" target="_blank" rel="noopener">国立国会図書館レファレンス協同データベース</a>にまとめられた化学便覧などの値。度数は<a href="https://unit.aist.go.jp/qualmanmet/legalmetman/doc/alchol120530.pdf" target="_blank" rel="noopener">産業技術総合研究所のアルコール表</a>（15℃）で換算</figcaption></figure>
+        <h2>化学工学では、吸着で共沸点を越える</h2>
+        <p>化学工場でエタノールを濃くするのは、蒸留の繰り返しを1つの装置にまとめた蒸留塔です。それでも共沸点の先へは進めないので、薬局や実験室にある99.5%以上の無水エタノールを作るには、ふつうの蒸留とは別の工夫が要ります。</p>
+        <p>その工夫には、別の成分を加えて蒸留する共沸蒸留や、膜で水を分ける方法、そして吸着があります。吸着は、固体の表面に分子をとらえて取り除く操作です。</p>
+        <p>エタノールの脱水に使う吸着剤は、モレキュラーシーブ（分子ふるい）という合成ゼオライトです。決まった大きさの細かい穴がたくさん開いていて、名前のとおり、分子を大きさでふるい分けます。</p>
+        <p>エタノールに向く3A型の穴は、約0.3nmです。水の分子（約0.26nm）はこの穴に入れますが、それより大きいエタノールの分子は入れないので、液を通すと水だけがとらえられます。</p>
+        <figure class="article-figure article-figure--sized" style="max-width:100%"><img src="/images/articles/spiritus-molecular-sieve.webp?v=687008c7" alt="モレキュラーシーブの穴に、小さな水の分子は入り、大きなエタノールの分子は入らない様子を示す図" width="1600" height="900" loading="lazy" decoding="async"><figcaption>穴の大きさと水の分子の大きさ：<a href="https://www.kanto.co.jp/dcms_media/other/RGA-03.pdf" target="_blank" rel="noopener">関東化学「モレキュラーシーブ」</a></figcaption></figure>
+        <p>ただし、モレキュラーシーブがとらえられる水は、自分の重さの2割ほどまでです。そこで、まず蒸留で共沸点の近くまで濃くし、残ったわずかな水を吸着で取り除きます。</p>
+        <h2>まとめ</h2>
+        <p>お酒を濃くする蒸留は、蒸気と液の濃さが同じになる共沸点で止まります。スピリタスの96度はこの限界のすぐ手前の濃さで、共沸点を越えるには、吸着のような、ふつうの蒸留とは別の工夫が要ります。</p>
+        </div>
+
+        <aside class="article-episode-cta">
+          <p class="article-episode-cta-label">この話を声で聴く</p>
+          <a href="/episodes/115/" class="article-episode-card" onclick="gtag(&#x27;event&#x27;,&#x27;article_to_episode_click&#x27;,{&#x27;article_slug&#x27;:&#x27;spiritus-96-percent&#x27;,&#x27;episode_number&#x27;:115})">
+            <div class="article-episode-thumb"><img src="/images/episodes/115-0f2624abdb-400.webp" alt="" loading="lazy"></div>
+            <div class="article-episode-body">
+              <span class="article-episode-num">#115　<svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:18:04</span>
+              <span class="article-episode-title">なんでスピリタスは100度じゃないの？越えられない96度の壁</span>
+              <span class="article-episode-hint">エピソードページで聴く</span>
+            </div>
+          </a>
+        </aside>
+
+      <div class="article-related">
+        <h2 class="article-related-heading">あわせて読む</h2>
+        <div class="article-related-grid">
+          <a href="/everyday-chemical-engineering/water-boils-when-cooled/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/water-boils-when-cooled.jpg?v=9ffd2526" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">蒸気圧・蒸留</span>
+              <span class="article-related-title">水をかけると沸騰するのはなぜ？</span>
+            </div>
+          </a>
+          <a href="/everyday-chemical-engineering/does-vinegar-freeze/" class="article-related-card">
+            <div class="article-related-thumb"><img src="/images/articles/does-vinegar-freeze.jpg?v=3b4870f9" alt="" loading="lazy"></div>
+            <div class="article-related-body">
+              <span class="article-related-scene">相平衡・伝熱</span>
+              <span class="article-related-title">お酢は凍るの？　酢酸は冬に凍るって本当？</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </article>
+
+      <div class="article-backlink">
+        <a href="/everyday-chemical-engineering/">「身近な化学工学」の記事一覧へ戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js?v=20261018d"></script>
+</body>
+</html>

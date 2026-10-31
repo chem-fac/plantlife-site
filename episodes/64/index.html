@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3DFR92WNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3DFR92WNS');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#64 プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策 | プラントライフ</title>
+  <link rel="canonical" href="https://plantlife.chem-fac.com/episodes/64/" />
+  <meta name="description" content="リスナーさんから寄せられた「耐食（腐食対策）に関する教育資料作成」についてのお便りをきっかけに、化学プラントにとって避けては通れない重要課題「腐食」について深掘りします。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="プラントライフ">
+  <meta property="og:title" content="#64 プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策 | プラントライフ">
+  <meta property="og:description" content="リスナーさんから寄せられた「耐食（腐食対策）に関する教育資料作成」についてのお便りをきっかけに、化学プラントにとって避けては通れない重要課題「腐食」について深掘りします。">
+  <meta property="og:url" content="https://plantlife.chem-fac.com/episodes/64/">
+  <meta property="og:image" content="https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/TdDD9pwqlCu9MLoLPhoZDeb5ufJ7aHSyPOdFLQBC.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="技術者かねまるの「プラントライフ」" href="https://rss.listen.style/p/14rlng1w/rss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=20261018e">
+  <link rel="stylesheet" href="../../episode.css?v=20261018e">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "url": "https://plantlife.chem-fac.com/episodes/64/", "name": "#64 プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策", "episodeNumber": 64, "datePublished": "2026-01-21", "description": "リスナーさんから寄せられた「耐食（腐食対策）に関する教育資料作成」についてのお便りをきっかけに、化学プラントにとって避けては通れない重要課題「腐食」について深掘りします。", "image": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/TdDD9pwqlCu9MLoLPhoZDeb5ufJ7aHSyPOdFLQBC.png", "partOfSeries": {"@type": "PodcastSeries", "name": "技術者かねまるの「プラントライフ」", "url": "https://plantlife.chem-fac.com/"}, "timeRequired": "PT14M57S", "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/DWFlkAwlzmcs23TehAYCWsujypQRJnQzra7iP9Iy.mp3", "encodingFormat": "audio/mpeg"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://plantlife.chem-fac.com/"}, {"@type": "ListItem", "position": 2, "name": "エピソード一覧", "item": "https://plantlife.chem-fac.com/episodes/"}, {"@type": "ListItem", "position": 3, "name": "#64", "item": "https://plantlife.chem-fac.com/episodes/64/"}]}</script>
+</head>
+<body class="episode-page">
+  <a href="#main-content" class="skip-link">本文へスキップ</a>
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="../../images/plantlife_logo_nameonly.png" alt="プラントライフ" class="header-logo-img">
+      </a>
+      <nav class="header-nav" id="header-nav">
+        <a href="/" class="nav-link">ホーム</a>
+        <a href="/start/" class="nav-link">はじめての方へ</a>
+        <a href="/episodes/" class="nav-link active">エピソード</a>
+        <a href="/everyday-chemical-engineering/" class="nav-link">身近な化学工学</a>
+        <a href="/goods/" class="nav-link">グッズ</a>
+        <a href="/#about" class="nav-link">番組について</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ep-detail-main" id="main-content">
+    <div class="container">
+      <div class="ep-detail-nav"><a href="../63/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #63</span><span class="ep-nav-title">「責任を取るとは痛みを負うこと」技術者の行動を変えた漫画『宇宙兄弟』と『ONE OUTS』</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../65/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#65 →</span><span class="ep-nav-title">実生活とつながる視点｜大学入学共通テスト「化学」2026</span></a></div>
+
+      <article class="ep-detail-article">
+        <div class="ep-detail-head">
+          <div class="ep-detail-artwork">
+            <img src="/images/episodes/64-905a710429-800.webp" srcset="/images/episodes/64-905a710429-400.webp 400w, /images/episodes/64-905a710429-800.webp 800w" sizes="280px" alt="#64 プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策" width="400" height="400" fetchpriority="high">
+          </div>
+          <div class="ep-detail-info">
+            <div class="ep-detail-meta">
+              <span class="ep-detail-number">#64</span>
+              <time class="ep-detail-date">2026-01-21</time>
+              <span class='ep-detail-duration'><svg class="icon-clock" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.9 1.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> 00:14:57</span>
+            </div>
+            <h1 class="ep-detail-title">#64 プラントの天敵「腐食」：金属とプラスチックの劣化メカニズムと対策</h1>
+            <a href="#ep-listen" class="ep-play-btn" data-ep-play><svg class="ep-play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path class="ep-play-icon-play" d="M3 1.6v10.8a.6.6 0 0 0 .9.5l8.6-5.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z" fill="currentColor"/><path class="ep-play-icon-pause" d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor"/></svg><span class="ep-play-label">再生する</span></a>
+            <p class="ep-detail-desc">リスナーさんから寄せられた「耐食（腐食対策）に関する教育資料作成」についてのお便りをきっかけに、化学プラントにとって避けては通れない重要課題「腐食」について深掘りします。</p>
+            <p class="ep-detail-tags"><span class="ep-detail-tags-label">テーマ</span><a href="/episodes/?tag=%E5%AE%89%E5%85%A8%E3%83%BB%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB" class="ep-tag-link">安全・トラブル</a><a href="/episodes/?tag=%E5%8C%96%E5%AD%A6%E7%89%A9%E8%B3%AA%E3%83%BB%E6%9D%90%E6%96%99" class="ep-tag-link">化学物質・材料</a></p>
+            <nav class="ep-detail-indexes" aria-label="特集ページで見る"><a href="/elements/#Fe" class="ep-feature-link"><span class="ep-feature-key">Fe</span><span class="ep-feature-text">鉄を周期表で見る</span></a></nav>
+          </div>
+        </div>
+
+        <div class="ep-detail-platforms" id="ep-listen">
+          <h2 class="ep-detail-platforms-heading">この回を聴く</h2>
+          
+          <div class="ep-detail-player">
+            <audio class="ep-audio" controls controlslist="nodownload" preload="none" oncontextmenu="return false">
+              <source src="https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/DWFlkAwlzmcs23TehAYCWsujypQRJnQzra7iP9Iy.mp3" type="audio/mpeg">
+              お使いのブラウザは音声プレーヤーに対応していません。下のリンクからお聴きください。
+            </audio>
+          </div>
+          <p class="ep-detail-platforms-sub">アプリで購読する</p>
+          <div class="ep-detail-platforms-grid">
+            
+          <a href="https://listen.style/p/14rlng1w/rhrpapty" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 26px;">
+            <img src="../../images/platforms/LISTEN_logo_h.svg" alt="LISTENで聴く" loading="lazy">
+          </a>
+          <a href="https://open.spotify.com/episode/1YERkKy04zARoXb8HBgQiW" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Spotify_Full_Logo_RGB_Green.png" alt="Spotifyで聴く" loading="lazy">
+          </a>
+          <a href="https://podcasts.apple.com/jp/podcast/64-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%A4%A9%E6%95%B5-%E8%85%90%E9%A3%9F-%E9%87%91%E5%B1%9E%E3%81%A8%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%AE%E5%8A%A3%E5%8C%96%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E3%81%A8%E5%AF%BE%E7%AD%96/id1789911793?i=1000745949757&amp;uo=4" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 32px;">
+            <img src="../../images/platforms/Apple_Podcast_Listen_on_Lockup_RGB_Blk_USGB-EN_CI_111825.svg" alt="Apple Podcastsで聴く" loading="lazy">
+          </a>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/c9b0ec25-0f15-4345-91f7-8a8e91816026/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-64-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%A4%A9%E6%95%B5%E3%80%8C%E8%85%90%E9%A3%9F%E3%80%8D%EF%BC%9A%E9%87%91%E5%B1%9E%E3%81%A8%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E3%81%AE%E5%8A%A3%E5%8C%96%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E3%81%A8%E5%AF%BE%E7%AD%96" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 30px;">
+            <img src="../../images/platforms/Amazon_Music_Logo_Horizontal_RGB_Entertainment_Dark_MASTER.svg" alt="Amazon Musicで聴く" loading="lazy">
+          </a>
+          <a href="https://www.youtube.com/watch?v=-UyrfQZOAQk" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 44px;">
+            <img src="../../images/platforms/YouTube_logo_fullcolor_almostblack_digital.png" alt="YouTubeで聴く" loading="lazy">
+          </a>
+          <a href="https://stand.fm/episodes/6a8d1783c3f307d81992ab00" target="_blank" rel="noopener" class="ep-detail-platform" style="--logo-height: 24px;">
+            <img src="../../images/platforms/standfm_logo.png" alt="stand.fmで聴く" loading="lazy">
+          </a>
+          </div>
+
+          <div class="ep-detail-note" style="margin-top: 2rem;">
+            <a href="https://note.com/chem_fac/m/m2f17adb88af5" target="_blank" rel="noopener" class="note-promo-card-mini">
+              <div class="note-icon-mini"><img src="../../images/note_icon.png" alt="note" loading="lazy"></div>
+              <div class="note-text-mini">
+                <strong>リンク・図解つきのnote版を読む</strong>
+                <span>本文中に参考リンクを添えた読みやすい記事版はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-article-link">
+          <a href="/everyday-chemical-engineering/why-stainless-resists-rust/" class="article-promo-card" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_article_click&#x27;,{&#x27;article_slug&#x27;:&#x27;why-stainless-resists-rust&#x27;,&#x27;episode_number&#x27;:64})">
+            <span class="article-promo-label">この回の話を記事で読む</span>
+            <strong class="article-promo-title">ステンレスの食器はなぜ錆びにくい？</strong>
+            <span class="article-promo-desc">ステンレスの食器を守る薄い不動態皮膜と、塩分などの条件で起こる腐食を説明します。工場で液の性質に合わせて材料を選び、すき間や滞留を減らす考え方につなげます。</span>
+          </a>
+          <a href="/everyday-chemical-engineering/why-wet-iron-rusts/" class="article-promo-card" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_article_click&#x27;,{&#x27;article_slug&#x27;:&#x27;why-wet-iron-rusts&#x27;,&#x27;episode_number&#x27;:64})">
+            <span class="article-promo-label">この回の話を記事で読む</span>
+            <strong class="article-promo-title">濡れたままの鉄はなぜそこだけ錆びる？</strong>
+            <span class="article-promo-desc">鉄が錆びるのは、表面に残った水の中で小さな電池のような反応が進むからです。濡れた所だけ錆びる理由を説明し、工場の配管が保温材の下で錆びる問題と点検につなげます。</span>
+          </a>
+        </div>
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">参考資料</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://open.spotify.com/episode/5Ay6saq9VhX20QltYW8gqs" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">#38 プラスチックって何でこんなに種類が多いの？</span>
+                <span class="ref-url">https://open.spotify.com/episode/5Ay6saq9VhX20QltYW8gqs</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://www.tts-inspection.com/ja/learn-maintenance/2102-maintenance_02/?doing_wp_cron=1768941587.2059180736541748046875" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">保温材下腐食（CUI）</span>
+                <span class="ref-url">https://www.tts-inspection.com/ja/learn-maintenance/2102-maintenance_02/?doing_wp_cron=1768941587.2059180736541748046875</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://aims-online.com/apps/note/causes-of-plastic-degradation-and-countermeasures/?srsltid=AfmBOorXGLP6__2MrACIuQLl0_kxVuBDMJC7CkRbSzjqF8ZjxT4we1_z" target="_blank" rel="noopener" class="ref-link">
+                <span class="ref-title">プラスチックの劣化原因とは？</span>
+                <span class="ref-url">https://aims-online.com/apps/note/causes-of-plastic-degradation-and-countermeasures/?srsltid=AfmBOorXGLP6__2MrACIuQLl0_kxVuBDMJC7CkRbSzjqF8ZjxT4we1_z</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-references">
+          <h2 class="ep-detail-references-heading">ケムファクの関連記事と計算ツール</h2>
+          <ul class="ref-list">
+            
+            <li class="ref-item">
+              <a href="https://chem-fac.com/pipe-rust/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:64})">
+                <span class="ref-title">記事：配管の腐食原因と対策</span>
+                <span class="ref-url">https://chem-fac.com/pipe-rust/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://chem-fac.com/iron-anticorrosion/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:64})">
+                <span class="ref-title">記事：鉄の防食方法（防錆方法）と特徴</span>
+                <span class="ref-url">https://chem-fac.com/iron-anticorrosion/</span>
+              </a>
+            </li>
+            <li class="ref-item">
+              <a href="https://chem-fac.com/material-selection/" target="_blank" rel="noopener" class="ref-link" onclick="gtag(&#x27;event&#x27;,&#x27;episode_to_chemfac_click&#x27;,{&#x27;link_kind&#x27;:&#x27;article&#x27;,&#x27;episode_number&#x27;:64})">
+                <span class="ref-title">記事：装置・配管の材質の選び方</span>
+                <span class="ref-url">https://chem-fac.com/material-selection/</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="ep-detail-transcript">
+          <h2 class="ep-detail-transcript-heading">文字起こし</h2>
+          <div class="transcript-body">
+            <h3 class="transcript-heading">腐食の基本概念</h3>
+            <p>こんにちは、かねまるです。</p>
+            <p>プラントライフは、化学プラントの技術者が、化学を軸に、皆さんの視野を広げていく番組です。</p>
+            <p>今回は、意外と身近な腐食について取り上げます。</p>
+            <p>人参さんからお便りをいただきました。</p>
+            <p>ちょっと抜粋して読ませていただきます。</p>
+            <p>プラスチックを中心に、防食に関する教育資料を作られている。</p>
+            <p>とのことで、技術者の観点から防食について何かアドバイスあれば嬉しいです。</p>
+            <p>とのことです。</p>
+            <p>お便りありがとうございます。</p>
+            <p>そして、遅くなってごめんなさい。</p>
+            <p>このお便りって11月末ぐらいにもらってますので、ちょっと時間が経ってしまいました。</p>
+            <p>その他お便りいただいている方々もいらっしゃいますけど、準備ができ次第放送します。</p>
+            <p>さて、まず防食っていう言葉をお便りいただきました。</p>
+            <p>腐食に耐えると書いて防食です。</p>
+            <p>つまりは、腐食対策みたいな感じですね。</p>
+            <p>化学プラントだと避けて通れないキーワードです。</p>
+            <p>今回は、まず腐食とはそもそも何なのかという話から、</p>
+            <p>次は金属の腐食の話をして、最後にプラスチックの腐食の話をして終わろうと思います。</p>
+            <h3 class="transcript-heading">金属の腐食メカニズム</h3>
+            <p>まず、腐食って何なんでしょうか。</p>
+            <p>金属が分かりやすくて、錆も腐食の一つです。</p>
+            <p>特定の物質が周りの環境、水とか酸素とか、</p>
+            <p>そういうものと化学的に反応して、物質が劣化していくようなイメージです。</p>
+            <p>金属の腐食で言うと、電気化学の分野になります。</p>
+            <p>エレクトロケミストリー。</p>
+            <p>イメージとしては、金属表面に小さな電池が勝手にできる感じです。</p>
+            <p>金属表面の中で、場所によって役割が分かれています。</p>
+            <p>アノードとカソードと電解質。</p>
+            <p>高校化学とか中学の化学でやったかもしれないですね。</p>
+            <p>調べたらすぐ見つかるので、別にアノードとかカソードとか覚えなくても大丈夫です。</p>
+            <p>電池で言うところのプラス側とマイナス側っていう意味です。</p>
+            <p>そもそも電池っていうのは、片側の物質からもう片側の物質に向かって電子を送る、</p>
+            <p>そんな反応が電池なんです。</p>
+            <p>電子を送る側。これは金属がイオンになっています。</p>
+            <p>鉄の場合は鉄イオンに変わります。</p>
+            <p>化学的に言うとFEっていう金属の元素の形からFE2プラスというイオンの形に変わります。</p>
+            <p>酸化反応っていうものですね。</p>
+            <p>鉄を例に見ると、こうして金属の鉄から鉄イオンに変わると、その後この鉄イオンっていうのは酸化鉄になります。</p>
+            <p>赤錆です。錆っていうのは鉄が水分と酸素のある環境に置かれると発生します。</p>
+            <p>鉄がイオンを放出して、受け取る側っていうのは酸素と水が反応しています。</p>
+            <p>酸素と水が反応してOHマイナス、水酸化物イオンができます。</p>
+            <p>反応を整理すると片側で鉄イオンができて、もう片側で水酸化物イオンができます。</p>
+            <p>その後お互いが反応して赤錆に変わっていきます。</p>
+            <p>電池は片側からもう片側へ電子を送らないといけません。</p>
+            <p>その電子を送れる場所が電解質です。</p>
+            <p>水分が電解質としての役割を果たしています。</p>
+            <p>普段の生活でもイメージつくんじゃないでしょうか。</p>
+            <p>鉄って水に濡れて放置しているとその部分だけ錆びてきますよね。</p>
+            <p>ジャバジャバ水をかけるだけじゃなくて、水の薄い膜とか結露とか、もしくは湿気とか、</p>
+            <p>イオンを運ぶための媒体っていうのはいっぱいあります。</p>
+            <p>実は身近なものでものすごく錆びやすい液体があります。</p>
+            <p>それが海水なんです。</p>
+            <p>海水の中には塩が入っていますね。</p>
+            <p>塩は水の中でナトリウムイオンと塩化物イオンになって、</p>
+            <p>まさにしっかりした電解質として働きます。</p>
+            <p>電気がすごく流れやすいということなので、電池の反応が起こりやすいです。</p>
+            <p>海水なんかだとステンレスが錆びることもあります。</p>
+            <p>そもそもステンレスって錆びるんですよね。</p>
+            <p>もっと言うとステンレスって山のように種類があります。</p>
+            <p>食器を見てもらうと、もしかすると304って数字が書いてあるかもしれないです。</p>
+            <p>これはステンレスを表す番号でして、サス304って呼んだりするんですけど、すごく一般的なステンレスです。</p>
+            <p>一番普及しています。</p>
+            <p>この一般的なものよりも、もうちょっと腐食の耐性を持たせたいなって思ったら、</p>
+            <p>サス316とか316Lっていう型番があります。</p>
+            <p>基本的なステンレスの元素が一緒で、若干モリブデンっていう元素を入れたり、炭素の含有量を減らしたり、</p>
+            <p>そういう処理をすることで錆びにもっと強いステンレスを作ることができます。</p>
+            <p>私はあまり仕事で海水というものを使ったことがないんですけど、</p>
+            <p>調べてみるとステンレスの中でも特に強いものを選んでいるみたいです。</p>
+            <p>もしくはチタンを使うっていう場合もあります。</p>
+            <p>高級ですね。</p>
+            <p>腐食の対策方法、いっぱいあります。</p>
+            <p>ここまで話したのは金属の種類、つまり材料での対策です。</p>
+            <p>その他には環境の対策ができますね。</p>
+            <p>電解質となり得る液体から酸素を取り除いたり、水分の少ない環境にしたり、</p>
+            <p>pHをなるべく酸性に偏らせないっていう対策もありますね。</p>
+            <p>プラントを設計する上では、隙間とか滞留をなくすっていう設計方法をします。</p>
+            <p>水たまりをなくすっていう意味ですね。</p>
+            <p>化学プラントで腐食っていうのがよく問題になるんですけど、</p>
+            <p>中でも配管、鉄のパイプの周りに保温材をまきます。</p>
+            <p>つまり断熱剤をまくっていうことです。</p>
+            <p>この断熱剤が結構プラントで問題になってまして、</p>
+            <p>もちろん加熱する設備の断熱っていうのは大事なんですけど、</p>
+            <p>外からグラスウールみたいなもこもこしたものを巻いて、</p>
+            <p>さらに外側からブリキのカバーをつけています。</p>
+            <p>保護する形で巻くんですけど、</p>
+            <p>そうなってくると真ん中の配管部分っていうのは全く見えないんですよね。</p>
+            <p>その見えない状態で、結露のせいで配管の周りに水が溜まっていったり、</p>
+            <p>もしくは雨水が伝って染み込んできたり、</p>
+            <p>そうすると気づかないうちに錆が起きて、</p>
+            <p>配管に穴が開いて、漏れにつながります。</p>
+            <p>扱っているものによりますけど、薬品系が多いので、</p>
+            <p>漏れるともちろん危ないです。</p>
+            <p>この保温材下の腐食っていうのはCUIと言ったりするんですけど、</p>
+            <p>プラントを長く運転すればするほど腐食が蓄積していきますので、</p>
+            <p>トラブルのリスクが高まります。</p>
+            <p>特に危険性の高いところっていうのは、</p>
+            <p>例えば超音波を使って配管の厚みを測定したりっていうのもするんですけど、</p>
+            <p>やっぱり数も膨大でコストもかかるので、</p>
+            <p>全て行うっていうのは難しいと思います。</p>
+            <p>この腐食の対策を今後どうしていくかというのが、</p>
+            <p>長年運転しているプラントの課題となっています。</p>
+            <h3 class="transcript-heading">プラスチックの腐食と対策</h3>
+            <p>最後にプラスチックの防食の話をします。</p>
+            <p>実は金属と発想が違うんですよね。</p>
+            <p>樹脂の腐食っていうのはまた電気化学的なものとは違って、</p>
+            <p>例えば溶媒に溶けてしまったり、</p>
+            <p>溶媒を吸って膨潤したり、</p>
+            <p>膨潤っていうのは水分とか溶媒を吸い込んで、</p>
+            <p>ちょっと膨らみながら柔らかくなるような感じです。</p>
+            <p>その他には抽出といって、</p>
+            <p>プラスチックに入っている添加剤が溶け出して脆くなっていくっていうこともあります。</p>
+            <p>そして忘れちゃいけないのが、加水分解というものです。</p>
+            <p>昔、プラスチックの回で話したことがあるかもしれません。</p>
+            <p>樹脂そのものが水の存在下で分解していく、そんな状況があります。</p>
+            <p>似た話で酸化劣化、熱や酸素で脆くなるっていうのもあります。</p>
+            <p>お便りでいただいた内容を考えると、</p>
+            <p>かなりこの辺りの話は詳しいのかなって思うんですけど、</p>
+            <p>私なりに注意したいところを話すと、</p>
+            <p>樹脂の耐薬品性というものがあります。</p>
+            <p>エタノールは大丈夫とか、</p>
+            <p>硫酸は大丈夫とか、</p>
+            <p>だけどアンモニアはダメとか、</p>
+            <p>そういう耐薬品性っていうのがあるんですけど、</p>
+            <p>それはそのまま受け止めるのは注意した方がいいです。</p>
+            <p>耐薬品性っていうのは便利なんですけど、</p>
+            <p>温度とか濃度とか、混ざっているものとか、</p>
+            <p>力がかかっているかどうか、そういう情報が抜けています。</p>
+            <p>なので、どういう条件で丸なのかっていうのは注意した方がいいです。</p>
+            <p>そして、液に浸かっている部分だけ気にするっていうことが多いんですけど、</p>
+            <p>実際の使用環境だと、</p>
+            <p>気体になって空気中にあるとか、</p>
+            <p>結露したら反応性が変わるとか、</p>
+            <p>そういう状況もあり得ます。</p>
+            <p>なので、単純な運転状況だけじゃなくて、</p>
+            <p>使用環境全体、製造の始まりから終わりまで、</p>
+            <p>そして運転していない時も含めて、</p>
+            <p>どういう状況が考えられるかっていうところを広く見積もって、</p>
+            <p>大丈夫かっていうところを判断しないといけないです。</p>
+            <p>これ難しいんですけどね。私も正直できないです。</p>
+            <p>そして大事なのが、応力、力のかかるところを注意しとかないといけないですね。</p>
+            <p>締め付けたり、曲げたり、加工で切ったり、</p>
+            <p>そういう時に機械的な力を加えたまま残っている場合があります。</p>
+            <p>残留応力って言ったりしますね。</p>
+            <p>もし教育資料で何か作られる場合は、</p>
+            <p>単純な教科書的なことだけじゃなくて、</p>
+            <p>実際に人参さんが使われる場所が、</p>
+            <p>どんな状況になるのかっていうところを意識して作られると良いと思います。</p>
+            <p>特に耐薬品性のところは、温度が常温だったりしますので、</p>
+            <p>加熱する場合は注意してください。</p>
+            <p>今回は腐食の話をしてみました。</p>
+            <p>身近なもので錆っていうのがありましたね。</p>
+            <p>そういう錆を見た時に、この放送を思い出してもらえると嬉しいです。</p>
+            <p>人参さんお便りありがとうございました。</p>
+            <p>今回はここまでです。</p>
+            <p>プラントライフでは、化学や工場に関するトピックを扱っています。</p>
+            <p>毎週水曜日と日曜日の朝6時に定期配信しています。</p>
+            <p>番組へのお便りは、概要欄にあるお便りフォームから投稿ください。</p>
+            <p>そして、このプラントライフがいいなと思っていただけたら、</p>
+            <p>番組のフォローや各ポッドキャストアプリから評価をお願いします。</p>
+            <p>Xで発信していただける場合は、ハッシュタグプラントライフをつけてください。</p>
+            <p>それではお聞きいただきありがとうございました。</p>
+          </div>
+        </div>
+
+        
+        <div class="ep-detail-related">
+          <h2 class="ep-detail-related-heading">関連するエピソード</h2>
+          <div class="ep-related-grid">
+            <a href="/episodes/112/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/112-41ef8e0bcc-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#112</span>
+                <span class="ep-related-title">凍って！燃えて！金属も溶かす！？お酢の意外な素顔</span>
+              </div>
+            </a>
+            <a href="/episodes/108/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/108-3d9d102f46-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#108</span>
+                <span class="ep-related-title">油圧で使うアルコール？水グリコール系作動油の世界</span>
+              </div>
+            </a>
+            <a href="/episodes/80/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/80-709c12ec09-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#80</span>
+                <span class="ep-related-title">硫酸ジメチル事故から考える 化学物質の怖さとSDSの重要性</span>
+              </div>
+            </a>
+            <a href="/episodes/66/" class="ep-related-card">
+              <div class="ep-related-thumb"><img src="/images/episodes/66-d15ed6382e-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async"></div>
+              <div class="ep-related-body">
+                <span class="ep-related-num">#66</span>
+                <span class="ep-related-title">教養として知りたいリチウムイオン電池の基礎知識</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="ep-detail-nav"><a href="../63/" class="ep-nav-link ep-nav-prev"><span class="ep-nav-arrow">← #63</span><span class="ep-nav-title">「責任を取るとは痛みを負うこと」技術者の行動を変えた漫画『宇宙兄弟』と『ONE OUTS』</span></a><a href="/episodes/" class="ep-nav-link ep-nav-home">エピソード一覧</a><a href="../65/" class="ep-nav-link ep-nav-next"><span class="ep-nav-arrow">#65 →</span><span class="ep-nav-title">実生活とつながる視点｜大学入学共通テスト「化学」2026</span></a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../../images/logo-footer.png" alt="PLANT LIFE" class="footer-logo-img">
+        </div>
+        <div class="footer-nav-group">
+          <h4>探す</h4>
+          <a href="/episodes/">エピソード一覧</a>
+          <a href="/elements/">周期表から探す</a>
+          <a href="/nobel-chemistry/">ノーベル化学賞から探す</a>
+          <a href="/companies/">企業から探す</a>
+          <a href="/everyday-chemical-engineering/">身近な化学工学</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>つながる</h4>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/chem_fac/membership" target="_blank" rel="noopener">メンバーシップ</a>
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="/history/">番組の歩み</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>聴く</h4>
+          <a href="https://open.spotify.com/show/4YLUGddgxbE2ipMBHFYIIX" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE-%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/id1789911793"
+            target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://listen.style/p/14rlng1w" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>&nbsp;</h4>
+          <a href="https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4" target="_blank" rel="noopener">Amazon
+            Music</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://stand.fm/channels/67485bb369bc2015d0725bd2" target="_blank" rel="noopener">stand.fm</a>
+          <a href="https://rss.listen.style/p/14rlng1w/rss" target="_blank" rel="noopener">RSS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://chem-fac.com/about-chemfac/" style="text-decoration:underline">ケムファク</a></p>
+        <div class="footer-socials">
+          <a href="https://x.com/chem_fac" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/chem_fac" target="_blank" rel="noopener">note</a>
+          <a href="https://www.youtube.com/@chem_fac" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=20261018e"></script>
+</body>
+</html>
