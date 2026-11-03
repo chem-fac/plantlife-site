@@ -1212,6 +1212,7 @@ time,
 
 .related-link-logo {
   height: 56px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1221,6 +1222,33 @@ time,
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+}
+
+/* Match the visible marks, including the whitespace in the note asset. */
+.related-link-logo--chemfac img,
+.related-link-logo--monoist img,
+.related-link-logo--membership img {
+  width: 96px;
+  height: auto;
+}
+
+.related-link-logo--tools img,
+.related-link-logo--pe img {
+  width: 48px;
+  height: auto;
+}
+
+.related-link-logo--note img {
+  width: 120%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  flex-shrink: 0;
+}
+
+.related-link-logo--x img {
+  width: 32px;
+  height: auto;
 }
 
 .related-link-text h3 {
@@ -1254,6 +1282,15 @@ time,
 
   .related-link-logo {
     height: 44px;
+  }
+
+  .related-link-logo--tools img,
+  .related-link-logo--pe img {
+    width: 40px;
+  }
+
+  .related-link-logo--x img {
+    width: 28px;
   }
 }
 
