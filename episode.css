@@ -735,7 +735,6 @@
 
     .back-to-top {
         right: 14px;
-        bottom: 76px;
     }
 }
 
@@ -877,18 +876,27 @@ body.has-mini-player .back-to-top {
     bottom: 88px;
 }
 
-@media (max-width: 768px) {
-    /* スマホは画面の下に共有ボタンの帯があるので、その上に出す */
+/* 1240px以下は画面の下に共有ボタンの帯がある（styles.css と同じ幅で切り替える）ので、その上に出す */
+@media (max-width: 1240px) {
+    .back-to-top {
+        bottom: 76px;
+    }
+
     .ep-mini-player {
         bottom: 68px;
+    }
+
+    body.has-mini-player .back-to-top {
+        bottom: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ep-mini-player {
         grid-template-columns: auto minmax(0, 1fr);
     }
 
     .ep-mini-link {
         display: none;
-    }
-
-    body.has-mini-player .back-to-top {
-        bottom: 140px;
     }
 }

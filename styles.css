@@ -1783,7 +1783,13 @@ time,
   }
 }
 
-@media (max-width: 768px) {
+/* 本文の幅は1120pxなので、1240px以下では左の余白に縦の列が収まらない。
+   画面下の帯にして、本文の文字とボタンを重ねない。 */
+@media (max-width: 1240px) {
+  .share-btn[data-tooltip]::after {
+    display: none;
+  }
+
   .share-buttons {
     position: fixed;
     left: 0;
