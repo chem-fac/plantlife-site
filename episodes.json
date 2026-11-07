@@ -6972,5 +6972,80 @@
     ],
     "thumb_s": "/images/episodes/138-af2f331843-400.webp",
     "thumb_l": "/images/episodes/138-af2f331843-800.webp"
+  },
+  {
+    "number": "139",
+    "title": "#139 化学プラントの開けてビックリ開放点検",
+    "pub_date": "2026-11-08",
+    "description": "#科学系ポッドキャストの日 の共通テーマ「サプライズ」に関連して、化学プラントの開放点検について話しました！開けたら最後、もう後には引けません……11月のホストはサイエントークさんです。企画の告知はコチラ https://x.com/SciEn_TALK/status/2109251509309649068科学系ポッドキャストの日とは？https://scien-talk.com/science_podcast/2027年1月17日（日）11時〜16時、大田区産業プラザPiOで開かれるモルマーケット（化学工業日報社主催）に「ケムファク」として出店します！入場無料・事前の来場登録制です。来場登録...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/Oc2fqyAbJxcRp9V62lVVNsiUjG3KoXlqdbBushR8.jpg",
+    "duration": "00:23:23",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/published-937847f6-83e4-416e-995b-b144b7a0cb98/O1pFkKEfNzRK7JQe6YmKSJGSyfFoFIMLjtdmz5hj.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/chemical-plant-surprising-open-inspection",
+      "apple": "https://podcasts.apple.com/jp/podcast/139-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E9%96%8B%E3%81%91%E3%81%A6%E3%83%93%E3%83%83%E3%82%AF%E3%83%AA%E9%96%8B%E6%94%BE%E7%82%B9%E6%A4%9C/id1789911793?i=1000800452428&uo=4",
+      "spotify": "https://open.spotify.com/episode/1YW7VwGS7E1VNIkOmWqNgD",
+      "youtube": "https://www.youtube.com/watch?v=2CepQ6ugpXs",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/a35f442e-93f8-4925-8bc3-467526b69661/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-139-%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AE%E9%96%8B%E3%81%91%E3%81%A6%E3%83%93%E3%83%83%E3%82%AF%E3%83%AA%E9%96%8B%E6%94%BE%E7%82%B9%E6%A4%9C"
+    },
+    "references": [
+      {
+        "url": "https://x.com/SciEn_TALK/status/2109251509309649068",
+        "title": "11月のホストはサイエントークさんです。企画の告知はコチラ"
+      },
+      {
+        "url": "https://scien-talk.com/science_podcast/",
+        "title": "科学系ポッドキャストの日とは？"
+      },
+      {
+        "url": "https://peatix.com/event/5114464",
+        "title": "2027年1月17日（日）11時〜16時、大田区産業プラザPiOで開かれるモルマーケット（化学工業日報社主催）に「ケムファク」として出店します！入場無料・事前の来場登録制です。来場登録はコチラ"
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/347M50002000033",
+        "title": "ボイラー及び圧力容器安全規則（第37条・第40条・第72条・第73条・第75条）｜e-Gov法令検索"
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/341M50000400053",
+        "title": "一般高圧ガス保安規則（第79条・第82条・第94条の7の13）｜e-Gov法令検索"
+      },
+      {
+        "url": "https://hdl.handle.net/11094/46855",
+        "title": "長期供用下の石油精製圧力容器の脆化現象と補修溶接性に関する研究（茅野林造、大阪大学 博士論文の要旨、2006）"
+      },
+      {
+        "url": "https://www.meti.go.jp/policy/safety_security/industrial_safety/sangyo/hipregas/sp-nintei/index.html",
+        "title": "認定事業者制度 ｜経済産業省"
+      },
+      {
+        "url": "https://www.chemicaldaily.co.jp/molmarket",
+        "title": "モルマーケット｜化学工業日報社"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-22",
+        "title": "著書『技術士第一次試験 化学部門 専門科目 テーマ別完全攻略』（Kindle）"
+      }
+    ],
+    "tags": [
+      "安全・トラブル",
+      "プラント設備・装置",
+      "番組・コラボ企画"
+    ],
+    "keywords": [
+      "開放点検",
+      "定期修理",
+      "定修",
+      "腐食",
+      "割れ",
+      "補修溶接",
+      "残留応力",
+      "認定事業者",
+      "スーパー認定事業者",
+      "保安検査",
+      "科学系ポッドキャストの日",
+      "モルマーケット"
+    ],
+    "thumb_s": "/images/episodes/139-c766d3492d-400.webp",
+    "thumb_l": "/images/episodes/139-c766d3492d-800.webp"
   }
 ]
