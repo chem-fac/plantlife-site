@@ -7048,5 +7048,120 @@
     ],
     "thumb_s": "/images/episodes/139-c766d3492d-400.webp",
     "thumb_l": "/images/episodes/139-c766d3492d-800.webp"
+  },
+  {
+    "number": "140",
+    "title": "#140 水族館は小さなプラント｜水槽の裏側で起きていること",
+    "pub_date": "2026-11-11",
+    "description": "水族館は生き物の住環境を整えるために大切な水処理プラントを持っています。まるで化学プラントのよう！そんな水族館の裏側を紹介しました。📚参考資料海水の成分 https://www.umeshunkyo.or.jp/marinevoice21/umidas/259/index.htmlHORIBA「京都水族館をはかる[1] 国内初！人工海水100%の水族館」 https://www.jp.horiba.com/hakaruba/archives/157/index.htmlHORIBA「京都水族館をはかる[2] 海水の塩分濃度を「はかる」」 https://www.jp.horiba.com/ha...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/Rt1k41OpSd655f2ymfzatg84W4uBypDlptXinIXB.jpg",
+    "duration": "00:41:14",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/published-71bf30cb-f8d2-4062-86e7-dea4c03fb62a/1IBUSxhX6B8vlIftKUPOFEC9Wi9qeeabt2pNafb4.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/140-aquariums-are-small-plants-behind-the-tank",
+      "apple": "https://podcasts.apple.com/jp/podcast/140-%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%81%AF%E5%B0%8F%E3%81%95%E3%81%AA%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88-%E6%B0%B4%E6%A7%BD%E3%81%AE%E8%A3%8F%E5%81%B4%E3%81%A7%E8%B5%B7%E3%81%8D%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/id1789911793?i=1000801069285&uo=4",
+      "spotify": "https://open.spotify.com/episode/6b2w82ODP8liN3Xt0fll9x",
+      "youtube": "https://www.youtube.com/watch?v=W-vtXtui6ro",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/235878aa-b25c-47f7-bff6-8d79b4582892/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-140-%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%81%AF%E5%B0%8F%E3%81%95%E3%81%AA%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%EF%BD%9C%E6%B0%B4%E6%A7%BD%E3%81%AE%E8%A3%8F%E5%81%B4%E3%81%A7%E8%B5%B7%E3%81%8D%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8"
+    },
+    "references": [
+      {
+        "url": "https://www.umeshunkyo.or.jp/marinevoice21/umidas/259/index.html",
+        "title": "海水の成分"
+      },
+      {
+        "url": "https://www.jp.horiba.com/hakaruba/archives/157/index.html",
+        "title": "HORIBA「京都水族館をはかる[1] 国内初！人工海水100%の水族館"
+      },
+      {
+        "url": "https://www.jp.horiba.com/hakaruba/archives/401/index.html",
+        "title": "HORIBA「京都水族館をはかる[2] 海水の塩分濃度を「はかる"
+      },
+      {
+        "url": "https://churaumi.okinawa/area/the-kuroshio/kuroshio/",
+        "title": "沖縄美ら海水族館「黒潮の海」（容量7,500m³）"
+      },
+      {
+        "url": "https://www.matsui-corp.co.jp/knowledge/special/aquaculture-contents/biofiltration.html",
+        "title": "マツイ「見えないところもきれいにしよう！生物ろ過の基本"
+      },
+      {
+        "url": "https://churaumi.okinawa/sp/outline/",
+        "title": "沖縄美ら海水族館「施設概要」（濾過システム：圧力式密閉縦型濾過槽、展示槽濾過器 直径2.8〜3m・62基、濾材は硅砂）"
+      },
+      {
+        "url": "https://www.giho.mitsubishielectric.co.jp/giho/pdf/1993/9302.pdf",
+        "title": "四元初男・小沢建樹「水族館，養魚場の海水浄化」三菱電機技報 Vol.67 No.2 p.24〜27（1993）（オゾン処理、オキシダントの除去）"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/west-coast/science-data/experimental-aquarium",
+        "title": "NOAA Southwest Fisheries Science Center「Experimental Aquarium」（砂ろ過→オゾン→紫外線→活性炭、温海水・冷海水の熱交換器）"
+      },
+      {
+        "url": "http://hdl.handle.net/2433/178990",
+        "title": "京都大学瀬戸臨海実験所年報14「水族館設備機器（給水・給気・加温・冷却装置等）の概要（2000年末現在）」（プレート式チタン製の熱交換器、ヒートポンプチラー、非常用自家発電装置）"
+      },
+      {
+        "url": "https://pr.mono.ipros.com/elgalabwater/product/detail/2000430905/",
+        "title": "ヴェオリア・ジェネッツ（ELGA）超純水の説明（比抵抗18.2 MΩ・cm以上）"
+      },
+      {
+        "url": "https://blog.veoliawatertechnologies.co.uk/conductivity-vs-resistivity-in-ultrapure-water",
+        "title": "Veolia Water Technologies「Conductivity vs Resistivity in Ultrapure Water」（25℃で18.2 MΩ·cmが理論上の上限）"
+      },
+      {
+        "url": "https://waterfaq.horiba.com/inquiries/754ecfb35998dcfd2a21",
+        "title": "HORIBA 水質計測Q&amp;A（電気抵抗率の逆数が電気伝導率）"
+      },
+      {
+        "url": "https://www.horiba.com/aut/water-quality/support/electrochemistry/measurement-of-ion/measurement-example-of-compact-ion-meter/water-quality-check-for-aquarium/",
+        "title": "HORIBA「Water quality check for aquarium」（人工海水の電気伝導率 49 mS/cm）"
+      },
+      {
+        "url": "https://www.env.go.jp/nature/dobutsu/aigo/2_data/pamph/h2508c/05_06_07.pdf",
+        "title": "環境省「東日本大震災における被災動物対応記録集」（2013年6月）（アクアマリンふくしまの被害と動物の移送、p.204〜205）"
+      },
+      {
+        "url": "https://www.aquamarine.or.jp/curator-message/no47/",
+        "title": "アクアマリンふくしま「アクアマリンふくしま被災報告（第一報）"
+      },
+      {
+        "url": "https://www.reconstruction.go.jp/311kyoukun/pdf/zireishu/saisei_14.pdf",
+        "title": "復興庁「同業者支援による観光施設の復旧 アクアマリンふくしま」（126日後の7月15日に再開）"
+      },
+      {
+        "url": "https://www.notoaqua.jp/uploads/page/175962005380644400.pdf",
+        "title": "のとじま水族館「のとアクアニュース」2024.10 No.82（配管の破損、断水、9種63点の移送、7月20日に一部再開）"
+      },
+      {
+        "url": "https://www.pref.ishikawa.lg.jp/kisya/r5/documents/0110_1730_fureaikosha.pdf",
+        "title": "石川県県民ふれあい公社「ジンベエザメ（ハク）の死亡について」（循環ポンプ水没、ろ過設備の停止）"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-22",
+        "title": "著書『技術士第一次試験 化学部門 専門科目 テーマ別完全攻略』（Kindle）"
+      }
+    ],
+    "tags": [
+      "プラント設備・装置",
+      "安全・トラブル",
+      "科学・雑学"
+    ],
+    "keywords": [
+      "水族館",
+      "人工海水",
+      "電気伝導率",
+      "ろ過",
+      "硝化",
+      "アンモニア",
+      "オゾン殺菌",
+      "熱交換器",
+      "冗長化",
+      "高圧受電",
+      "震災",
+      "美ら海水族館"
+    ],
+    "thumb_s": "/images/episodes/140-e91c75b848-400.webp",
+    "thumb_l": "/images/episodes/140-e91c75b848-800.webp"
   }
 ]
