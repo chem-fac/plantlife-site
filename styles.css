@@ -1998,7 +1998,7 @@ time,
 [data-tag="業界・ビジネス"],.ep-tag-link[href$="?tag=%E6%A5%AD%E7%95%8C%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9"]{--cat:var(--accent-kon)}
 [data-tag="科学・雑学"],.ep-tag-link[href$="?tag=%E7%A7%91%E5%AD%A6%E3%83%BB%E9%9B%91%E5%AD%A6"]{--cat:var(--accent-bengara)}
 [data-tag="番組・コラボ企画"],.ep-tag-link[href$="?tag=%E7%95%AA%E7%B5%84%E3%83%BB%E3%82%B3%E3%83%A9%E3%83%9C%E4%BC%81%E7%94%BB"]{--cat:var(--ink)}
-/* テーマ名の前に色の■。安全・トラブルは三角 */
+/* テーマ名の前に色の■ */
 .ep-filter-chip[data-tag]:not([data-tag=""])::before,
 .all-ep-tag[data-tag]::before,
 .ep-tag-link::before {
@@ -2009,11 +2009,4 @@ time,
   margin-right: 0.4em;
   vertical-align: 0.06em;
   background: var(--cat, var(--ink-2));
-}
-.ep-filter-chip[data-tag="安全・トラブル"]::before,
-.all-ep-tag[data-tag="安全・トラブル"]::before,
-.ep-tag-link[href$="?tag=%E5%AE%89%E5%85%A8%E3%83%BB%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB"]::before {
-  width: 0.72em;
-  height: 0.64em;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
