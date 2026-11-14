@@ -7164,5 +7164,93 @@
     ],
     "thumb_s": "/images/episodes/140-e91c75b848-400.webp",
     "thumb_l": "/images/episodes/140-e91c75b848-800.webp"
+  },
+  {
+    "number": "141",
+    "title": "#141 地震が来たら化学プラントはどうなる？",
+    "pub_date": "2026-11-15",
+    "description": "最近地震多いですね……では、実際に地震が起きたら化学プラントはどうなるのでしょうか？？📚参考資料令和８年10月16日12時40分に発表した緊急地震速報（警報）について（第３報）｜気象庁 https://www.jma.go.jp/jma/press/2610/16d/202610162240.html緊急地震速報の特性や限界、利用上の注意｜気象庁 https://www.jma.go.jp/jma/kishou/know/jishin/eew/shikumi/tokusei.html長周期地震動とスロッシング（よくある質問）｜消防研究センター https://nrifd.fdma.go.jp/...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/tSjAKtU8ykyR23A7Z9y4UKbyjYC2pcClJ2ngEbpv.jpg",
+    "duration": "00:27:01",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/published-ff5a4fe9-08b6-4c75-85ce-23f8d0ad59d5/Dn8fzslCjpO0zyu9lfJVmhuWHPnAorODE5MktVY5.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/cuap5kpb",
+      "spotify": "https://open.spotify.com/episode/2J6TphVMAzp2gVOyVDE2Nz",
+      "apple": "https://podcasts.apple.com/jp/podcast/141-%E5%9C%B0%E9%9C%87%E3%81%8C%E6%9D%A5%E3%81%9F%E3%82%89%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B/id1789911793?i=1000801967620&uo=4",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/6412390f-d24a-4a88-b8a1-5e96b9b496c8/%E6%8A%80%E8%A1%93%E8%80%85%E3%81%8B%E3%81%AD%E3%81%BE%E3%82%8B%E3%81%AE%E3%80%8C%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%80%8D-141-%E5%9C%B0%E9%9C%87%E3%81%8C%E6%9D%A5%E3%81%9F%E3%82%89%E5%8C%96%E5%AD%A6%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%EF%BC%9F",
+      "youtube": "https://www.youtube.com/watch?v=iziEGknFqgE"
+    },
+    "references": [
+      {
+        "url": "https://www.jma.go.jp/jma/press/2610/16d/202610162240.html",
+        "title": "令和８年10月16日12時40分に発表した緊急地震速報（警報）について（第３報）｜気象庁"
+      },
+      {
+        "url": "https://www.jma.go.jp/jma/kishou/know/jishin/eew/shikumi/tokusei.html",
+        "title": "緊急地震速報の特性や限界、利用上の注意｜気象庁"
+      },
+      {
+        "url": "https://nrifd.fdma.go.jp/public_info/faq/choshukijishindou/index.html",
+        "title": "長周期地震動とスロッシング（よくある質問）｜消防研究センター"
+      },
+      {
+        "url": "https://www.fdma.go.jp/publication/hakusho/h23/cat-2/2/537.html",
+        "title": "平成23年版 消防白書「危険物施設の被害」｜消防庁"
+      },
+      {
+        "url": "https://www.fdma.go.jp/singi_kento/kento/items/kento100_14_shiryo3-2.pdf",
+        "title": "過去の地震による石油コンビナートの被害事例｜消防庁"
+      },
+      {
+        "url": "https://www.khk.or.jp/Portals/0/resources/activities/incident_investigation/hpg_incident/pdf/2011-078r1.pdf",
+        "title": "高圧ガス事故概要報告 2011-078（千葉の製油所のLPG球形貯槽）｜高圧ガス保安協会"
+      },
+      {
+        "url": "https://www.pref.kanagawa.jp/documents/4603/10_1.pdf",
+        "title": "高圧ガス施設地震時緊急停止システム指針｜神奈川県"
+      },
+      {
+        "url": "https://www.azbil.com/jp/corporate/pr/library/review/pdf/2013_04_5.pdf",
+        "title": "インテリジェント地震緊急停止システムの開発｜azbil Technical Review 2013年4月号"
+      },
+      {
+        "url": "https://www.fdma.go.jp/laws/tutatsu/assets/240821_ki197.pdf",
+        "title": "危険物施設の地震・津波対策に係る予防規程の策定について（消防危第197号）｜消防庁"
+      },
+      {
+        "url": "https://www.fdma.go.jp/publication/hakusho/r7/chapter1/section3/para2/69293.html",
+        "title": "令和7年版 消防白書「特定事業所における防災体制」｜消防庁"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-22",
+        "title": "著書『技術士第一次試験 化学部門 専門科目 テーマ別完全攻略』（Kindle）"
+      }
+    ],
+    "tags": [
+      "安全・トラブル",
+      "プラント設備・装置",
+      "計測・制御・DX"
+    ],
+    "keywords": [
+      "緊急停止",
+      "ESD",
+      "エマージェンシーシャットダウン",
+      "インターロック",
+      "2 out of 3",
+      "地震計",
+      "緊急地震速報",
+      "液状化",
+      "津波",
+      "スロッシング",
+      "浮き屋根式タンク",
+      "石災法",
+      "高圧ガス保安法",
+      "消防法",
+      "防油堤",
+      "新潟地震",
+      "東日本大震災"
+    ],
+    "thumb_s": "/images/episodes/141-92906bdf79-400.webp",
+    "thumb_l": "/images/episodes/141-92906bdf79-800.webp"
   }
 ]
