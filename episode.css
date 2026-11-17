@@ -12,22 +12,53 @@
     min-height: 80vh;
 }
 
-/* 前後の回へのナビ（文字のリンク。前後の矢印は慣習として残す） */
+/* 前後の回へのナビ（文字のリンク。前後の矢印は慣習として残す）。
+   一覧へのリンクは、ふだんは真ん中に置く。次の回が無い最新の回では右の端に、前の回が無い #1 では左の端に置く。
+   3つとも上の行（← #番号・エピソード一覧・#番号 →）の高さをそろえる */
 .ep-detail-nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: start;
     gap: 16px;
     margin-bottom: 32px;
     padding: 10px 0;
     border-bottom: 1px solid var(--rule);
 }
 
+.ep-detail-nav > span:empty {
+    display: none;
+}
+
+.ep-detail-nav > .ep-nav-prev {
+    grid-column: 1;
+    justify-self: start;
+}
+
+.ep-detail-nav > .ep-nav-home {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.ep-detail-nav > .ep-nav-next {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.ep-detail-nav:not(:has(> .ep-nav-next)) > .ep-nav-home {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.ep-detail-nav:not(:has(> .ep-nav-prev)) > .ep-nav-home {
+    grid-column: 1;
+    justify-self: start;
+}
+
 .ep-nav-link {
     display: inline-flex;
     flex-direction: column;
     gap: 2px;
-    max-width: 40%;
+    max-width: 100%;
     padding: 4px 0;
     font-size: 0.9375rem;
     font-weight: 500;
@@ -46,7 +77,7 @@
 
 .ep-nav-home {
     flex-direction: row;
-    align-self: center;
+    white-space: nowrap;
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -730,7 +761,7 @@
     }
 
     .ep-nav-link {
-        max-width: 42%;
+        max-width: 100%;
     }
 
     .back-to-top {

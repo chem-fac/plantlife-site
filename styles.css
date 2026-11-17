@@ -246,16 +246,18 @@ time,
   padding: calc(var(--header-h) + 56px) 0 24px;
 }
 
-/* 見せ場は番組アート（無加工・枠や影なし）。文字は左、アートは右に大きく */
+/* 見せ場は番組アート（無加工・枠や影なし）。文字は左、アートは右に大きく。文字の固まりはアートの上下の真ん中に置く */
 .masthead-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 380px;
   grid-template-areas:
+    ". art"
     "title art"
     "desc art"
     "facts art"
-    "actions art";
-  grid-template-rows: auto auto auto 1fr;
+    "actions art"
+    ". art";
+  grid-template-rows: 1fr auto auto auto auto 1fr;
   column-gap: 72px;
   align-items: start;
 }
@@ -268,6 +270,11 @@ time,
   color: var(--ink);
   font-feature-settings: "palt";
   margin-bottom: 20px;
+}
+
+/* 題は「化学を軸に、」の後ろでだけ折り返す（入る幅では1行） */
+.masthead-title-line {
+  display: inline-block;
 }
 
 .masthead-desc {
