@@ -180,7 +180,7 @@ time,
   padding: 0 12px;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--ink-2);
   transition: color var(--t), border-color var(--t);
@@ -433,7 +433,7 @@ time,
   align-items: baseline;
   gap: 0 14px;
   margin-bottom: 6px;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink-2);
   font-variant-numeric: tabular-nums;
 }
@@ -454,7 +454,7 @@ time,
 
 .ep-latest-feature-title {
   max-width: 34em;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.45;
   font-feature-settings: "palt";
@@ -498,7 +498,7 @@ time,
 
 .ep-latest-row time,
 .ep-latest-dur {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink-2);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -525,7 +525,7 @@ time,
   }
 
   .ep-latest-feature-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 0;
   }
 
@@ -669,7 +669,7 @@ time,
 }
 
 .theme-tag-count {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink-2);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -706,7 +706,7 @@ time,
 }
 
 .theme-feature > span {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--ink-2);
 }
@@ -748,7 +748,7 @@ time,
 }
 
 .news-date {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink-2);
   flex-shrink: 0;
   min-width: 6.2em;
@@ -778,7 +778,7 @@ time,
 }
 
 .news-desc {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--ink-2);
 }
@@ -871,7 +871,7 @@ time,
 }
 
 .news-detail-body h2 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--ink);
   margin-top: 2.2em;
@@ -931,7 +931,7 @@ time,
   }
 
   .news-detail-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1023,7 +1023,7 @@ time,
 }
 
 .note-promo-content h3 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 2px;
@@ -1107,7 +1107,7 @@ time,
 }
 
 .subsection-heading {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--ink);
   padding-top: 12px;
@@ -1143,7 +1143,7 @@ time,
 }
 
 .personality-name {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 4px;
@@ -1265,8 +1265,8 @@ time,
   text-decoration: underline;
 }
 
-.related-link-text p {
-  font-size: 0.875rem;
+.related-link-kind {
+  font-size: 0.8125rem;
   color: var(--ink-2);
   line-height: 1.6;
 }
@@ -1314,7 +1314,7 @@ time,
 }
 
 .contact-item h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 4px;
@@ -1395,7 +1395,7 @@ time,
 
 .footer-nav-group a {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink-2);
   padding: 4px 0;
   transition: color var(--t);
@@ -1426,7 +1426,7 @@ time,
 }
 
 .footer-socials a {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink-2);
   transition: color var(--t);
 }
@@ -1518,7 +1518,7 @@ time,
   }
 
   .masthead-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
     margin-bottom: 12px;
   }
 
@@ -1545,7 +1545,7 @@ time,
   }
 
   .section-heading {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .footer-top {
@@ -1571,7 +1571,7 @@ time,
 
 @media (max-width: 480px) {
   .masthead-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .masthead-actions {
@@ -1615,7 +1615,7 @@ time,
 }
 
 .timeline-text h3 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--ink);
   line-height: 1.6;
@@ -1669,7 +1669,7 @@ time,
   }
 
   .timeline-date {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     padding-top: 2px;
   }
 }
@@ -1697,7 +1697,7 @@ time,
 }
 
 .share-buttons__label {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--ink-2);
   text-align: center;
@@ -1881,7 +1881,7 @@ time,
   align-items: center;
   gap: 8px;
   margin-bottom: 14px;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.75;
   color: var(--ink-2);
   white-space: nowrap;
@@ -1925,7 +1925,7 @@ time,
 }
 
 .fx-browse-label {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--ink-2);
 }
@@ -1965,7 +1965,7 @@ time,
 @media (max-width: 480px) {
   .fx-browse-link {
     padding: 0 8px;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
 
   /* 4つを1行に収めるため「テーマ・キーワード」を「テーマ」に縮める */

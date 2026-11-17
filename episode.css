@@ -104,7 +104,7 @@
 
 .ep-detail-date,
 .ep-detail-duration {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--ink-2);
     font-variant-numeric: tabular-nums;
 }
@@ -212,7 +212,7 @@
     border: 1px solid var(--rule);
     border-radius: var(--radius-box);
     color: var(--ink);
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 500;
     transition: border-color var(--t), color var(--t);
 }
@@ -236,7 +236,7 @@
 }
 
 .ep-detail-platforms-heading {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--ink);
     margin-bottom: 16px;
@@ -331,7 +331,7 @@
 }
 
 .note-text-mini span {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     color: var(--ink-2);
 }
 
@@ -375,7 +375,7 @@
     }
 
     .ep-detail-title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         margin-top: 16px;
     }
 
@@ -384,7 +384,7 @@
     }
 
     .ep-nav-link {
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
     }
 
     /* ページ上部の前後ナビは番号だけにして詰める（タイトル付きのナビはページ下部にある） */
@@ -425,7 +425,7 @@
 
 .ep-detail-references-heading,
 .ep-detail-transcript-heading {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--ink);
     margin-bottom: 16px;
@@ -498,7 +498,7 @@
 }
 
 .transcript-body .transcript-heading {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--ink);
     margin: 2em 0 0.8em;
@@ -542,7 +542,7 @@
 }
 
 .ep-detail-related-heading {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--ink);
     margin-bottom: 16px;
@@ -586,7 +586,7 @@
 }
 
 .ep-related-num {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: var(--brand);
     font-variant-numeric: tabular-nums;
@@ -700,7 +700,7 @@
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     line-height: 44px;
     text-align: center;
     box-shadow: var(--shadow-float);
@@ -765,13 +765,13 @@
 }
 
 .article-promo-label {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     color: var(--ink-2);
 }
 
 .article-promo-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
     line-height: 1.6;
     text-wrap: balance;
     word-break: auto-phrase;
@@ -829,7 +829,7 @@
     background: var(--brand);
     color: #fff;
     font-family: var(--font-body);
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     cursor: pointer;
     transition: background-color var(--t), border-color var(--t);
@@ -848,7 +848,7 @@
 }
 
 .ep-mini-title {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: var(--ink);
     white-space: nowrap;
