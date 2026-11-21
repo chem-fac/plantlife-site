@@ -7376,5 +7376,88 @@
     ],
     "thumb_s": "/images/episodes/142-d38e9f179a-400.webp",
     "thumb_l": "/images/episodes/142-d38e9f179a-800.webp"
+  },
+  {
+    "number": "143",
+    "title": "#143 化学の世界に町工場ってある？削らない・組み立てない小さな工場",
+    "pub_date": "2026-11-22",
+    "description": "化学の世界にも町工場はあるのでしょうか？小さくとも技術が光る会社さんを紹介しました。📚参考資料町工場｜デジタル大辞泉（コトバンク） https://kotobank.jp/word/%E7%94%BA%E5%B7%A5%E5%A0%B4-634609工場｜精選版 日本国語大辞典（コトバンク） https://kotobank.jp/word/%E5%B7%A5%E5%A0%B4-62289中小企業・小規模企業者の定義｜中小企業庁 https://www.chusho.meti.go.jp/soshiki/teigi.html建築基準法 別表第二｜e-Gov法令検索 https://laws.e...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/ZwdtLf0N40acbUOkhNNB2pbP5sDp6r9Ot5lBTo1m.jpg",
+    "duration": "00:25:53",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/published-71f605fe-a89f-49c8-89c5-465011d4e89c/0WtvXUQmp1AKHftX0Hs2LpBu9v6JhbqKyzd0IHJ2.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/143-small-factories-in-chemistry",
+      "apple": "https://podcasts.apple.com/jp/podcast/143-%E5%8C%96%E5%AD%A6%E3%81%AE%E4%B8%96%E7%95%8C%E3%81%AB%E7%94%BA%E5%B7%A5%E5%A0%B4%E3%81%A3%E3%81%A6%E3%81%82%E3%82%8B-%E5%89%8A%E3%82%89%E3%81%AA%E3%81%84-%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%81%AA%E3%81%84%E5%B0%8F%E3%81%95%E3%81%AA%E5%B7%A5%E5%A0%B4/id1789911793?i=1000803339451&uo=4",
+      "spotify": "https://open.spotify.com/episode/0SGr4JkZGSyaDkx0scSn7J",
+      "youtube": "https://www.youtube.com/watch?v=vFgKtEbS3sI",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/b12d70d9-566c-451c-963f-e0c73f495e31/null-143-",
+      "standfm": "https://stand.fm/episodes/6b021b41b8e8e3639d3922c7"
+    },
+    "references": [
+      {
+        "url": "https://kotobank.jp/word/%E7%94%BA%E5%B7%A5%E5%A0%B4-634609",
+        "title": "町工場｜デジタル大辞泉（コトバンク）"
+      },
+      {
+        "url": "https://kotobank.jp/word/%E5%B7%A5%E5%A0%B4-62289",
+        "title": "工場｜精選版 日本国語大辞典（コトバンク）"
+      },
+      {
+        "url": "https://www.chusho.meti.go.jp/soshiki/teigi.html",
+        "title": "中小企業・小規模企業者の定義｜中小企業庁"
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+        "title": "建築基準法 別表第二｜e-Gov法令検索"
+      },
+      {
+        "url": "https://www.meti.go.jp/statistics/tyo/kkj/pdf/seizo_gaikyo2025.pdf",
+        "title": "2025年経済構造実態調査 製造業事業所調査の概況｜経済産業省"
+      },
+      {
+        "url": "https://www.ikegami-toryou-kougyou.com/",
+        "title": "池上塗料工業"
+      },
+      {
+        "url": "https://www.mitsumarukagaku.jp/",
+        "title": "三丸化学"
+      },
+      {
+        "url": "https://schem.jp/",
+        "title": "新成化学"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-22",
+        "title": "著書『技術士第一次試験 化学部門 専門科目 テーマ別完全攻略』（Kindle）"
+      }
+    ],
+    "tags": [
+      "業界・ビジネス",
+      "化学物質・材料"
+    ],
+    "keywords": [
+      "町工場",
+      "中小企業",
+      "小規模企業者",
+      "組み立て加工系",
+      "プロセス系",
+      "流体",
+      "スラリー",
+      "懸濁液",
+      "配合",
+      "塗料",
+      "OEM",
+      "溶剤リサイクル",
+      "蒸留再生",
+      "廃液",
+      "固液分離",
+      "受託合成",
+      "特注合成",
+      "建築基準法",
+      "準工業地域",
+      "工業専用地域"
+    ],
+    "thumb_s": "/images/episodes/143-ca2d02f502-400.webp",
+    "thumb_l": "/images/episodes/143-ca2d02f502-800.webp"
   }
 ]

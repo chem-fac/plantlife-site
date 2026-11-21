@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/companies/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/1/</loc>
@@ -763,5 +763,9 @@
   <url>
     <loc>https://plantlife.chem-fac.com/episodes/142/</loc>
     <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://plantlife.chem-fac.com/episodes/143/</loc>
+    <lastmod>2026-11-22</lastmod>
   </url>
 </urlset>
