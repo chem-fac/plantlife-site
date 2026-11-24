@@ -7459,5 +7459,103 @@
     ],
     "thumb_s": "/images/episodes/143-ca2d02f502-400.webp",
     "thumb_l": "/images/episodes/143-ca2d02f502-800.webp"
+  },
+  {
+    "number": "144",
+    "title": "#144 家で化学の実験をするときに意識しておきたいこと（おうちラボ）",
+    "pub_date": "2026-11-25",
+    "description": "Xで話題になったおうちラボ（自宅ラボ）に関連して、化学プラントを例に家で化学の実験をするときに気をつけたり、意識しておいたりした方が良いことを話しました。📚参考資料エネルギー回収型廃棄物処理施設整備マニュアル 用語集（湿式排ガス処理）｜環境省 https://www.env.go.jp/recycle/misc/energy/energy_r0105.pdf凝集沈殿法（重金属類含有排水処理）｜横浜市 環境創造局 https://www.city.yokohama.lg.jp/business/bunyabetsu/kankyo-koen-gesui/kiseishido/minasama/so...",
+    "thumbnail": "https://image.listen.style/p/01jha0bchxcjkzh7627g4cn752/images/6g59DJAR072DnpSamokTLSx11Lk4vSKBXd0EzITK.jpg",
+    "duration": "00:28:51",
+    "audio": "https://cdn.listen.style/p/01jha0bchxcjkzh7627g4cn752/audio/published-24ad6c23-3148-4a3e-9f21-55383fd38e9d/ZY5C4H9mMvE9ek1H7jw1z71w8HeNaaM25ZO0To7Z.mp3",
+    "urls": {
+      "listen": "https://listen.style/p/14rlng1w/144-home-chemistry-experiment-tips",
+      "apple": "https://podcasts.apple.com/jp/podcast/144-%E5%AE%B6%E3%81%A7%E5%8C%96%E5%AD%A6%E3%81%AE%E5%AE%9F%E9%A8%93%E3%82%92%E3%81%99%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AB%E6%84%8F%E8%AD%98%E3%81%97%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8-%E3%81%8A%E3%81%86%E3%81%A1%E3%83%A9%E3%83%9C/id1789911793?i=1000803862993&uo=4",
+      "spotify": "https://open.spotify.com/episode/2tmNObFAnaQjF2HoGwGJh6",
+      "youtube": "https://www.youtube.com/watch?v=0P9vfgfmjLU",
+      "amazon": "https://music.amazon.co.jp/podcasts/1e2240a9-b053-46b3-b0a9-62b321a6eeb4/episodes/3fb801ca-8198-4519-af01-fcde81b65710/null-144-"
+    },
+    "references": [
+      {
+        "url": "https://www.env.go.jp/recycle/misc/energy/energy_r0105.pdf",
+        "title": "エネルギー回収型廃棄物処理施設整備マニュアル 用語集（湿式排ガス処理）｜環境省"
+      },
+      {
+        "url": "https://www.city.yokohama.lg.jp/business/bunyabetsu/kankyo-koen-gesui/kiseishido/minasama/sokutei/18.files/2026_slide_A-2.pdf",
+        "title": "凝集沈殿法（重金属類含有排水処理）｜横浜市 環境創造局"
+      },
+      {
+        "url": "https://www.env.go.jp/content/000126051.pdf",
+        "title": "排出事業者責任に基づく措置に係るチェックリスト（2023年3月一部改訂）｜環境省"
+      },
+      {
+        "url": "https://www.kagome.co.jp/company/sustainability/global-environment/04.html",
+        "title": "水の保全｜カゴメ株式会社"
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/334CO0000000306",
+        "title": "危険物の規制に関する政令（別表第三）｜e-Gov法令検索"
+      },
+      {
+        "url": "https://www.fdma.go.jp/laws/laws/items/20260331_joureirei.pdf",
+        "title": "火災予防条例（例）（第30条・第46条）｜消防庁"
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000303",
+        "title": "毒物及び劇物取締法（第3条の4・第14条）｜e-Gov法令検索"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11120000/001557798.pdf",
+        "title": "毒物及び劇物取締法 参照条文（毒物及び劇物の保管管理について 昭和52年3月26日薬発第313号を含む）｜厚生労働省"
+      },
+      {
+        "url": "https://anzeninfo.mhlw.go.jp/anzen/gmsds/67-64-1.html",
+        "title": "化学物質：アセトン（モデルSDS）｜厚生労働省 職場のあんぜんサイト"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/B0HMZ7PPQX?tag=podcast00-22",
+        "title": "著書『技術士第一次試験 化学部門 専門科目 テーマ別完全攻略』（Kindle）"
+      }
+    ],
+    "tags": [
+      "安全・トラブル",
+      "環境・資源循環"
+    ],
+    "keywords": [
+      "おうちラボ",
+      "自宅ラボ",
+      "家で化学実験",
+      "有機合成",
+      "消防法",
+      "危険物",
+      "指定数量",
+      "少量危険物",
+      "特殊引火物",
+      "ジエチルエーテル",
+      "防油堤",
+      "防爆",
+      "静電気",
+      "毒物及び劇物取締法",
+      "毒劇物",
+      "SDS",
+      "排ガス処理",
+      "スクラバー",
+      "吸着",
+      "活性炭",
+      "排水処理",
+      "活性汚泥",
+      "COD",
+      "BOD",
+      "SS",
+      "産業廃棄物",
+      "マニフェスト",
+      "溶剤回収",
+      "SOx",
+      "NOx",
+      "麻薬",
+      "化学物質管理者"
+    ],
+    "thumb_s": "/images/episodes/144-f8b66c675c-400.webp",
+    "thumb_l": "/images/episodes/144-f8b66c675c-800.webp"
   }
 ]
